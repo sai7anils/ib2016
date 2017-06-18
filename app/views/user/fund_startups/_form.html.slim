@@ -1,0 +1,60 @@
+= form_for [:user, @fund_startup], html: { class: 'form-fund-startup', multipart: true }  do |f|
+  - if flash[:notice]
+    .alert.alert-danger
+      = flash[:notice]
+  - if !@fund_startup.errors.full_messages.count.zero?
+    .alert.alert-danger style="margin: 20px;"
+      ul.list-message-error
+        - @fund_startup.errors.full_messages.each do |error_message|
+            li.alert-alert-error.alert-danger
+              = error_message
+  - if flash[:created_fund_error]
+     .alert.alert-danger style="margin: 20px;"
+        ul.list-message-error
+          li.alert-alert-error.alert-danger
+            = flash[:created_business_error]
+  = f.fields_for :fund_startup do |b|
+    = render partial: "product_service", locals: {f: f, b: b}
+    = render partial: "business_potential", locals: {f: f, b: b}
+    = render partial: "financial", locals: {f: f, b: b}
+    = render partial: "legal_advisor", locals: {f: f, b: b}
+    = render partial: "valuation", locals: {f: f, b: b}
+    = render partial: "fund_pitch_burn", locals: {f: f, b: b}
+
+  button.btn-submit.btn-submit-fund type="submit" Submit
+  button#btn-next.btn-next.btn-next-fund type="button" Next
+  // button.btn-validate type="button" disabled="" Validate
+
+// = render "modal"
+// = render "modal_error"
+<div class="modal-loading"><!-- Place at bottom of page --></div>
+
+javascript:
+  $body = $("body");
+
+  $(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+    ajaxStop: function() { $body.removeClass("loading"); }
+  });
+  $('button.btn-submit').click(function(){
+    $('.form-fund-startup').submit();
+  });
+  $( document ).ready(function() {
+    $('textarea[pattern=".{100, 600}"]').tooltip({'trigger':'focus', 'title': tooltipTitleLarge(),
+    'template': '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner large"></div></div>' });
+    $('textarea[pattern=".{100, 600}"]').on('keyup', function(){
+      var text = $(this).val().length;
+      $('#lenght-text').remove();
+      var html = '<i id="lenght-text">Length : '+text+'</i>';
+      $(html).insertAfter($(this));
+    });
+
+    $('textarea[pattern=".{100, 300}"]').tooltip({'trigger':'focus', 'title': tooltipTitleSmall(),
+    'template': '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner large"></div></div>' });
+    $('textarea[pattern=".{100, 300}"]').on('keyup', function(){
+      var text = $(this).val().length;
+      $('#lenght-text').remove();
+      var html = '<i id="lenght-text">Length : '+text+'</i>';
+      $(html).insertAfter($(this));
+    });
+  });

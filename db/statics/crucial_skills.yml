@@ -1,0 +1,11 @@
+---
+- id: 1
+  name: Management
+- id: 2
+  name: Technical Expertise
+- id: 3
+  name: Domain Expertise
+- id: 4
+  name: Marketing & Sales
+- id: 5
+  name: Yet to be analysed

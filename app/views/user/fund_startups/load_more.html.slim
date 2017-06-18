@@ -1,0 +1,58 @@
+- (@ideas || []).each do |idea|
+  -if idea.business_idea.present?
+    .event-element.container-fluid
+      - if idea.business_idea.try(:ip_patent).to_i == 100
+        .img-logo
+          = image_tag 'icon-logo-business-idea.png'
+      .element-left.business-idea-left
+        .image-business
+          = link_to get_profile(idea.user) do
+            = image_tag idea.user.avatar
+        h5.title-name = idea.user.fullname
+        h6.sub-title = idea.user.entrepreneur.pro_type_name
+        h6.sub-title = idea.user.country_name
+        h6.view
+          = link_to get_profile(idea.user), class: 'view-profile' do
+           | View Profile
+        p.date = idea.created_at.strftime('%m-%d-%y %H:%M:%S %p')
+        ul
+          li
+            = image_tag 'icon-eye.png'
+            p = idea.try(:views).to_i
+          li.icon-pig
+            = image_tag 'icon-pig.png'
+            p 0
+      .element-right
+        h4.title-1 = idea.business_idea.business_line_name
+        h4.title-2 = truncate(idea.try(:title).to_s, length: 100)
+        h6.subtitle Problem Statement
+        p.text = truncate(idea.business_idea.try(:problem_statement).to_s, length: 200)
+        h6.subtitle Solution
+        p.text = truncate(idea.business_idea.try(:solution).to_s, length: 200)
+        h6.subtitle.subtitle-left Current Idea Stage :
+        p.text.text-left = idea.business_idea.idea_stage_name
+        .subtitle-group
+          h6.subtitle.subtitle-left Capital :
+          p.text.text-left
+            = idea.business_idea.investment_scale.nil? ? "$0" : "$#{idea.business_idea.investment_scale.try(:fund_already).to_i}"
+          h6.subtitle.subtitle-left Seeking :
+          p.text.text-left
+            = idea.business_idea.investment_scale.nil? ? "$0" : "$#{idea.business_idea.investment_scale.try(:fund_you_seeking).to_i}"
+            | &nbsp;for&nbsp;
+            = idea.business_idea.investment_scale.nil? ? "0% stake" : "#{idea.business_idea.investment_scale.try(:offering_business).to_i}% stake"
+      = link_to ( idea.business_idea.access_learn_more?(current_user) ? idea.business_idea.learn_more_url(current_user) : '' ), class: 'btn-learn-more'
+        | Learn More
+        i.fa.fa-long-arrow-right
+      - if idea.user == current_user
+        = link_to "Edit", edit_user_business_idea_path(idea), class: "btn-edit"
+
+javascript:
+  $('.btn-learn-more').click(function(e){
+    e.preventDefault();
+    var url = $(this).attr('href');
+    if (url != ""){
+      window.location = url;
+    }else{
+      $('#modalIdentity').modal('show');
+    }
+  });

@@ -1,0 +1,780 @@
+zh-CN:
+
+  global:
+    entrepreneurs: '企业家'
+    investors: '投资者'
+    startups: '初创公司'
+    startup_events: '启动事件'
+    read_more: '阅读更多'
+    create_event: 'CREATE EVENT'
+    free: '自由'
+    events: '活动'
+    type_here_for_events: '在这里键入事件'
+    select_a_country: '选择一个国家'
+    select_a_date: '选择日期'
+    posted_by: '发布者'
+    find_out_more: '了解更多'
+    no_results: '没有结果所有'
+    all: '所有'
+    total: '总'
+
+  header:
+    entrepreneurs: '企业家'
+    investors: '投资者'
+    startups: '初创公司'
+    startup_events: '启动事件'
+    login: '登录'
+    signup: '注册'
+    logout: '登出'
+    profile: '简介'
+    type_to_search: '键入搜索内容...'
+
+  navabar:
+    behind_it_thoughts: 'IT背后的思考'
+    terms_of_use: '使用条款'
+    privacy_policy: '隐私政策'
+    what_next: "下一步是什么"
+    contact_us: '联系我们'
+
+  footer:
+    entrepreneurs: 'Entreprenuers'
+    investors: '投资者'
+    startups: '初创公司'
+    startup_events: '启动活动'
+    about_us: '关于我们'
+    behind_thoughts: '背后的思考'
+    how_it_works: '怎么运行的'
+    whats_next: '下一步是什么'
+    contact_us: '联系我们'
+    help: '帮帮我'
+    terms_privacy: '条款和隐私权'
+    locate_us: '找到我们'
+    join_with_us: '联同美国'
+
+  home:
+    first_main_heading: 'THINK.SHARE。'
+    last_main_heading: '增长。'
+    first_main_small_text: '分享您的想法和我们在一起。'
+    middle_main_small_text: ' 我们会找到正确的投资，使'
+    last_main_small_text: ' 你的想法大了去了'
+    how_it_work: '怎么运行的'
+    ideas: '思路'
+    startups: '初创公司'
+    investors: '投资者'
+    deals: '交易'
+
+    section_2:
+      first_heading: '分享你的'
+      first_heading_bold: ' IDEAS'
+      first_small_text: '为了使这个世界变得更美好'
+      second_heading: 'INNOVATIONS'
+      second_heading_bold: '找'
+      second_small_text: '投资，创建REVOLUTIONS'
+
+    section_3:
+      overview: ' 概述'
+      who_we_are: '我们是谁'
+      who_we_are_content: 'Idearburns是一个全球性的在线创意平台，人们可以在他们的想法中添加和分享给社会，尤其是目标，他们希望得到重视投资者。另外这就是初创公司和企业家可以与理想的投资者进行沟通，分享他们的想法和观点有更好的视野，提高了经营策略的地方。'
+      who_we_are_ans_1: '把你的伟大的创意转化为成功的企业。'
+      who_we_are_ans_2: '建立一个传统不是一个帝国。'
+      who_we_are_ans_3: '使人们的inspriration。'
+      who_we_are_ans_4: '打开你的激情转化为利润。'
+      who_we_are_ans_5: '连接online全球启动生态系统。'
+      what_we_do: '我们所做的'
+      what_we_do_ans_1: 'Nuturing想法ideaprenuers，企业家，初创公司和投资者。'
+      what_we_do_ans_2: '是连接初创公司和投资者的桥梁。'
+      what_we_do_ans_3: "世界上第一个网上创意评估工具。"
+      what_we_do_ans_4: '让您的网上业务的想法的安全。'
+      what_we_do_ans_5: '发布您的想法变成思想库及其他平台的用户和投资者得到反馈。'
+      what_we_do_ans_6: '选择是名牌大学的学生，热心的企业家最喜欢的平台之一。'
+      join_ideaburns: '现在就加入Ideaburns！'
+      join_ideaburns_ans_1: '填写我们的简单安全submision形式。'
+      join_ideaburns_ans_2: '发送它，并成为我们社会的一部分。投票与像你​​相信它会成功的想法。'
+      join_ideaburns_ans_3: '投票与像你​​相信它会成功的想法。'
+      join_ideaburns_ans_4: '消息，你会喜欢听到他们的意见有针对性的投资者。'
+
+    section_4:
+      heading: 'CONNECT企业家，初创公司和投资者在一个地方。'
+
+    section_5:
+      heading: '业务领域'
+      updating: '更新中...'
+
+  how_it_work:
+    first_heading: '它是怎么工作'
+    second_heading: '在这里，我们要告诉每个类型的用户是怎么做的活动'
+    entrepreneurs: '企业家'
+    startup: '启动'
+    investor: '投资者'
+    entrepreneurs_tab:
+      step_1: '第1步：Registeration - >登录'
+      step_1_1: '1. Registeration - 注册：如果你是新成员，一个企业家，请通过注册在主页的顶部右侧，registeration'
+      step_1_2: '2. Registeration - 登录：点击注册按钮，它会显示框填写信息 - 去下拉选择用户类型'
+      step_1_3: '3.完成后，请到您的电子邮件，以确认您的帐户'
+      step_1_4: '4.然后您就可以登录并加入我们的激动人心的平台。'
+
+      step_2: '第2步：基金经营理念 - >进入投资者 - >安排会议1.要私下提交您的想法的投资者，请到基金Leftside栏上的B-理念2.然后你会看到一个表格让我们填写您的所有业务的想法资讯'
+      step_2_1: '1.要私下提交您的想法的投资者，请到基金Leftside栏上的B-理念2.然后你会看到一个表格让我们填写您的所有业务的想法资讯'
+      step_2_2: '2.然后你会看到一个表格让我们填写您的所有业务的想法资讯'
+
+      step_3: '第3步：分享思想世界 - >像/评论/速率的想法'
+      step_3_1: '1.在这里，在左侧栏中，选择第二个图标 - 酝'
+      step_3_2: "2.点击'公共''，那么你将看到一个框填写你的想法。如果你不希望大家知道你的想法，除了投资者，可以选择'业务'，而不是"
+      step_3_3: "3.您的想法将选择“”提交“按钮具有完全信息的要求之后推出的广阔天地。在这里，你可以喜欢，因为你爱的伟大构想的份额，投票和评论"
+
+      step_4: '第4步：查看开办事件 - >添加事件'
+      step_4_1: '1.要了解哪些事件是怎么回事，单击事件leftside栏上'
+      step_4_2: '2.要创建自己的事件，选择添加事件'
+      step_4_3: '3.然后你会看到一个表中添加事件信息'
+
+      step_5: '第5步：查看其他企业家，初创企业和投资者简介'
+      step_5_1: '1.要看到我们的社会以及企业家，初创公司和投资者，请通过点击每个类别左侧边栏上'
+
+    startup_tab:
+      step_1: '第1步：Registeration - >登录'
+      step_1_1: '1.如果你是启动和您还没有账户，请前往注册的的主页的右边框'
+      step_2_2: '2.选择启动用户类型'
+
+      step_2: '第2步：基金启动业务 - >进入投资者 - >安排会议'
+      step_2_1: '1.在leftside栏，点击启动基金提交你的想法'
+      step_2_2: '2.在所有需要的框填写'
+
+      step_3: '第3步：分享思想世界 - >像/评论/速率的想法'
+      step_3_1: '1.在这里，在左侧栏中，选择第二个图标 - 酝'
+      step_3_2: "2.点击'公共''，那么你将看到一个框填写你的想法。如果你不希望大家知道你的想法，除了投资者，可以选择'业务'，而不是"
+      step_3_3: "3.您的想法将选择“”提交“按钮具有完全信息的要求之后推出的广阔天地。在这里，你可以喜欢，因为你爱的伟大构想的份额，投票和评论"
+
+      step_4: '第4步：查看开办事件 - >添加事件'
+      step_4_1: '1.要了解哪些事件是怎么回事，单击事件leftside栏上2.要创建自己的事件，选择添加事件'
+      step_4_2: '2.要创建自己的事件，选择添加事件'
+      step_4_3: '3.然后你会看到一个表中添加事件信息'
+
+      step_5: '第5步：查看其他企业家，初创企业和投资者简介'
+      step_5_1: '1.要看到我们的社会以及企业家，初创公司和投资者，请通过点击每个类别左侧边栏上'
+
+    investor_tab:
+      step_1: '第1步：注册 - >登录 - >基本投资'
+      step_1_1: '1.对于投资者而言，你是新成员？请到注册在主页的右边框2.选择用户类型投资'
+      step_1_2: '2.选择用户类型投资'
+
+      step_2: '第2步：分享思想世界 - >像/评论/速率的想法'
+      step_2_1: '1.在这里，在左侧栏中，选择第二个图标 - 酝'
+      step_2_2: "2.点击'公共''，那么你将看到一个框填写你的想法。如果你不希望大家知道你的想法，除了投资者，可以选择'业务'，而不是"
+      step_2_3: "3.您的想法将选择“”提交“按钮具有完全信息的要求之后推出的广阔天地。在这里，你可以喜欢，因为你爱的伟大构想的份额，投票和评论"
+
+      step_3: '第3步：查看开办事件 - >添加事件1.要了解哪些事件是怎么回事，单击事件leftside栏上'
+      step_3_1: '1.要了解哪些事件是怎么回事，单击事件leftside栏上'
+      step_3_2: '2.要创建自己的事件，选择添加事件3.然后你会看到一个表中添加事件信息'
+      step_3_3: '3.然后你会看到一个表中添加事件信息'
+
+      step_4: '第4步：查看其他企业家，初创企业和投资者简介'
+      step_4_1: '1.要看到我们的社会以及企业家，初创公司和投资者，请通过点击每个类别左侧边栏上'
+
+      step_5: '第5步：验证/认证的投资者'
+      step_5_1: "1.要查看投资B-理念/创业细节，例如当你投资于B-的想法，你想看到这个'三农'的详细信息，因此点击了解详情2.要创建自己的事件，选择添加事件"
+      step_5_2: '2.要创建自己的事件，选择添加事件'
+      step_5_3: '3.然后你会看到一个表中添加事件信息'
+
+      step_6: '第6步：投资经营理念'
+      step_6_1: "1.选择 '投资于B-观念' 的leftside栏上查看的经营理念名单，看看你是否可以投资于与否"
+
+
+      step_7: '第6步：投资启动商业计划书'
+      step_7_1: "1.要查看启动业务建议的列表中，单击“投资于启动”的leftside栏上"
+
+  behind_thoughts:
+    behind_thoughts: '思考背后'
+    heading: '我们需要提供背后的原因正在取得此产品的信息。'
+    story: '故事'
+    story_1: "我们的主要目标是要连接，要发展，并授权全球互联网初创生物群落。对于这些目标，我们在发起伟大的令人愉快的网页结果将被称作“IdeaBurns”。关于创业 - 一个小岛。"
+    story_2: "IdeaBurns是优业务有远见的全球SaaS的社会阶段，初创公司和投机者。我们的舞台调度1是组队一起给予了潜在的商业思想和早期公司的命题合格的投资者和角度投资者网络。我们缓解初创组打出到自己最大的能力。"
+
+    vision: '视力'
+    vision_1: '随着这个宇宙作为结算认沽健康初创生物群落，激发其个人冰雹出企业家的大脑新的创新。任务'
+
+    mission: '任务'
+    mission_1: '为不断支持发展中国家的必要性将向前迈进他们的小规模经济的努力。'
+
+  terms:
+    terms_conditions: '条款与条件'
+
+    legal_disclaimer: '法律免责声明'
+    legal_disclaimer_1: '这是服务条款理解为ideaburns.com。所有客户必须阅读并接受这种各部分和其他一些理解和战略给由ideaburns.com。在任何的机会，你不同意这些条款，你是从使用ideaburns.com或任何附属公司管理部门拒绝。此外，我们有权随时修改本协议时。'
+
+    rules: '基本规则'
+    rules_1: 'ideaburns.com的登记成功就考虑到它的个体的性质和一些基本的决定，每个人都拥有快。我们维持无论权威是需要拒绝提供协助，以在任何时候任何部分或即将部分'
+    rules_1_a: '一个。只有0-5岁的启动会报名参加与Ideaburns.com'
+    rules_1_b: '湾只有确认/行货投资者可以得到补贴的资助思路和启动的商业计划书。'
+    rules_1_c: 'C。只有认证的信息可以考虑商业问题。'
+
+    trademark: '商标侵权'
+    trademark_1: '与ideaburns.com相关联的所有名称和徽标都是Ideaburns的商标。未经本公司书面同意，不得使用任何方式任何商标。此外，用户可以不侵犯任何专利，商标或其他ideaburns用户或任何其他方的任何版权。 编辑'
+
+  sidebar:
+    edit: ' 编辑'
+    ideas: ' 思路'
+    ideate: ' 酝'
+    events: ' 活动'
+    add_events: ' 添加活动'
+    fund_b_idea: ' 基金B-理念'
+    fund_startup: ' 基金启动'
+    invest_in_b_ideas: ' 投资于B-思路'
+    invest_in_startup: ' 投资创业'
+    entreprenuers: ' Entreprenuers'
+    startups: ' 初创公司'
+    investors: ' 投资者'
+    my_ideas: ' 我的想法'
+    our_ideas: ' 我们的想法'
+    my_b_ideas: ' 我的B-思路'
+    our_b_ideas: '我们的B-理念'
+    my_events: ' 我的活动'
+    our_events: ' 我们的活动'
+
+  users_header:
+    type_keywords: '类型关键字'
+    messages: '消息'
+    notifications: '通知'
+    my_account: '我的帐户'
+    update_profile: '更新个人信息'
+    logout: '登出'
+    my_favourites: '我的最爱'
+    notifications_empty: "你有计数的通知"
+    messages_empty: "你有计数消息"
+    see_all: '查看全部'
+    reply: '回复'
+    view_all_mess: '查看所有留言'
+
+  idea:
+    post_your_idea: '发表您的IDEA'
+    closed_ideas: 'CLOSED IDEAS'
+    public_ideas: '公共观念'
+    total_views: '总浏览'
+    select_a_country: '选择一个国家'
+    select_a_category: '选择一个类别'
+    read_more: '里德更多'
+    load_more: '装载更多'
+    learn_more: '了解更多'
+    idea_details: 'IDEA详情'
+    edit: '编辑'
+    delete: '删除'
+    remove: '去掉'
+    update_success_mess: '做得好！主意已成功更新。'
+    are_you_sure: '你确定 ？'
+
+    normal:
+      instructions: '说明'
+      content_1: '分享您的创意世界。'
+      content_2: '与我们分享您的经验，您的同行。'
+      content_3: '帮助其他Entrpreneurs，创业者等的经营思路与创业excution。'
+      content_4: '提供创业社区的有效信息。'
+      idea_category: '想法类别*'
+      idea_title: '理念标题*'
+      upload_file: '上传文件*'
+      choose_file_to: '选择文件，'
+      upload: '上传'
+      idea_description: '理念说明*'
+      enter_idea_title_here: '在此输入标题理念'
+      submit: '提交'
+      select_idea_category: '- 选择理念分类 -'
+      idea_image: '主意图片'
+      change_image: '改变形象'
+      rate_this: '评价这个'
+      idea_type: '理念型'
+      comments: '注释'
+      top_view: '思想的最上方意见'
+      write_a_comment: '写一个评论'
+      be_the_first_like_this: '成为第一个这样的'
+      more_from: "更多来自作者"
+      no_more_to_load: '没有更多的加载'
+      no_results: '没有结果'
+      press_esc: '按Esc'
+      cancel: '取消'
+      reply: '回复'
+      post: '岗位'
+      like: '喜欢'
+      unlike: '不比'
+
+    business:
+      my_favourites: '我的最爱'
+      business_ideas: '经营理念'
+      search_by_location: '按地区搜索'
+      search_by_bussiness_line: '按业务线搜索'
+      search_by_idea_stage: '由创意阶段搜索'
+      search_by_patent: '通过专利检索'
+      view_profile: '查看资料'
+      problem_statement: '问题陈述 ：'
+      solution: '解决方案：'
+      current_idea_stage: '当前创意阶段：'
+      capital: '首都 ：'
+      seeking: '寻找：'
+      stake: '赌注'
+      next: '下一个'
+      validate: 'VALIDATE'
+      submit: '提交'
+      save: '保存'
+      clear: '明确'
+
+      primary_niceties_tab: '主要细微'
+      early_stage_analysis_tab: '前期分析'
+      team_capabilities_tab: '团队能力'
+      market_analysis_tab: '市场分析'
+      customer_analysis_tab: '客户分析'
+      investment_scale_tab: '投资规模'
+      profit_potential_tab: '盈利潜力'
+      competitors_scenery_tab: '竞争对手风景'
+      pitch_burns_tab: '间距伯恩斯'
+      exit_strategy_tab: '退出策略'
+
+      primary_details: '主要详情'
+      target_business_lines: '目标业务线（*）'
+      select_bussiness_lines: '- 选择业务线 -'
+      type_of_bussiness_idea: '经营理念的类型（*）'
+      select_type_bussiness_idea: '- 经营理念的选择类型 -'
+      idea_title: '理念标题（*）'
+      idea_tagline: '理念标语（*）'
+      problem_statement_2: '问题陈述 （*）'
+      solution_2: '溶液（*）'
+      select_current_idea_stage: '当前创意阶段？ （*）'
+      generation: '代'
+      assessment: '评定'
+      planning: '规划'
+      prototype: '执行力度'
+      implimentation: '有这种想法的IP或专利？ （*）'
+      ip_patent: '如果专利/ IP'
+      ip_patent_1: '有待'
+      ip_patent_2: '还没'
+      ip_patent_3: '注册号码'
+      ip_patent_4: '在这里输入注册号'
+      enter_regis_number_here: '在此输入文字'
+      enter_text_here: '加入团队'
+      add_team: '查看团队名单'
+      view_team_list: '- 选择力量 -'
+      select_strength: ''
+
+      early_stage_analysis_ques_1: '1.动机与愿景 - 什么是你创业的主要原因是什么？ （*）'
+      early_stage_analysis_ques_2: '2.如何多年的经验，你在其中开始的行业有哪些？ （*）'
+      early_stage_analysis_ques_3: '3.到什么程度你以前参与了初创的公司吗？ （*）'
+      early_stage_analysis_ques_4: '4.选择您的业务模式！ （*）'
+      early_stage_analysis_ques_5: '5.解释商业模式？你如何产生的钱？ （*）'
+      early_stage_analysis_ques_6: '6.什么是你要考虑它的想法执行的步骤？'
+
+      team_capabilities_ques_1: '1.关键技能 - 下面这个技能，你认为最重要的是你的经营理念。 （*）'
+      team_capabilities_ques_2: '2.你的团队实力（*）'
+      team_capabilities_ques_3: '4.团队属性 - 你或你的团队具备下列哪项资源和能力？ （*）'
+
+      enter_name: '输入名字'
+      enter_role: '进入角色已经采取了BusinessIdea'
+      enter_skills: '输入技能'
+      select_joined_in_team: '- 选择加入团队 -'
+      profile_image: '简介的图片'
+
+      market_analysis_ques_1: '1.这是理念新的市场？ YES / NO（*）'
+      market_analysis_ques_2: '2.请问这个想法对市场产生重大影响？ （*）'
+      market_analysis_ques_3: '3.市场趋势 - 在何种程​​度上是你的主要目标市场不断增长的？ （*）'
+      market_analysis_ques_4: '4.市场渠道 - 如何你要你的产品或服务销售给潜在客户？ （*）'
+      market_analysis_ques_5: '5，市场规模 - 什么是你的主要目标市场的年度总大小？ （*）'
+      market_analysis_ques_6: '6.执行能力，工具和生产设施实施的想法已经存在的内部？ （*）'
+
+      customer_analysis_ques_1: ''
+      customer_analysis_ques_2: ''
+      customer_analysis_ques_3: ''
+      customer_analysis_ques_4: ''
+      customer_analysis_ques_5: ''
+      customer_analysis_ques_6: ''
+      from_age: '从年龄（*）'
+      select_from_age: '- 从年龄 -'
+      to_age: '年龄（*）'
+      select_to_age: '- 选择年龄 -'
+      select_region: '- 选择地区 -'
+
+      investment_scale_quest_1: '1.多少总资本，你需要去产品生活？ （*）'
+      investment_scale_quest_2: '2.拿出多少资金，你已经有了？ （*）'
+      investment_scale_quest_3: '3.拿出多少资金，你想投资？ （*）'
+      investment_scale_quest_4: '4.多少资金，你找什么？ （*）'
+      investment_scale_quest_5: '5.提供业务的股份给投资者？ （*）'
+      investment_scale_quest_6: '6.您将如何使用这些资金？ （*）'
+      zero: '零'
+      of_whole_capital: '整个资本'
+      select_business_stake: '- 选择业务股权 -'
+
+      business_potencial: '商务Potencial'
+      business_potencial_heading_right: '预测 - 财务预测'
+      instructions: '说明'
+      profit_potential_content: 'Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Morbi坐阿梅德在暂准tincidunt commodo ORCL。 Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Morbi坐阿梅德在暂准tincidunt commodo ORCL。 Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Morbi坐阿梅德在暂准tincidunt commodo ORCL。'
+      profit_potential_ques_1: '1.什么类型的投影？ （*）'
+      profit_potential_ques_1_small_text: '（每月，每年）'
+      profit_potential_ques_2: '2.选择术语被投影号码？ （*）'
+      profit_potential_ques_2_small_text: '（1年，3年，5年）'
+      profit_potential_ques_3: '3.什么类型的收入来源？ （*）'
+      select_type_of_projection: '- 选择投影方式 -'
+      choose_term: '- 选择期限 -'
+      select_type: '- 选择类型 -'
+
+      competitors_scenery_ques_1: '用于至少一个Competators应增加'
+      competitors_scenery_ques_2: '2.在你的competators提供图形/表格（在图像格式）江苏实际？'
+      competitors_scenery_ques_3: '3.如何你的企业经营理念在现有的具有竞争力的世界维系？ （*）'
+      add_competitors: '加入竞争对手（*）'
+      view_competitors: '查看竞争对手'
+      enter_company_name: '输入公司名称'
+      enter_primary_business_line: '进入他们的主要业务线'
+      enter_revenue_if_know: '进入收入（如果知道）'
+      enter_website_url: '输入网站网址参考'
+
+      pitch_burns_quest_1: '1.上传自己的销售简报（*）'
+      pitch_burns_quest_1_small_text: '（这将只允许PPT及PDF）'
+      pitch_burns_quest_2: '2.上传视频的销售简报'
+      pitch_burns_quest_2_small_text: '（它将只允许视频文件）'
+      pitch_burns_quest_3: '3.上传任何研究文献/法律文件（如有）'
+      pitch_burns_quest_3_small_text: '添加多个文档'
+      pitch_burns_quest_4: '4.多远你的想法合法进入阶段？ （*）'
+
+      exit_strategy_quest_1: '1.当你喜欢出境？你如何定义你的业务的退出策略？解释一下。 （*）'
+      exit_strategy_quest_1_ex: '例：'
+      exit_strategy_quest_1_ex_1: '企业并购（M＆A）'
+      exit_strategy_quest_1_ex_2: '首次公开募股（IPO）'
+      exit_strategy_quest_1_ex_3: '清算和关闭'
+
+      modal:
+        messages: '消息'
+        pls_check: '1.请检查'
+        your_profile: ' 你的个人资料'
+        mess_1: '2.我们将提交您的想法，所有的投资者。'
+        mess_2: '3.我们会负责为这个提交和提供计划99美元。'
+        mess_3: '4.确保您的数据是初步认识和准确的。'
+        mess_4: '5.但是，你的文件不应该被共享到任何投资者没有你的批准。'
+        cancel: '取消'
+        paynow: '现在付款'
+        complete_required_mess: '请填写必填字段（*）。'
+        validation_required_mess: '请验证您的信息！'
+        total_score: '总得分'
+        good_to: '为了好'
+        go: '走'
+        send: '发送'
+
+      details:
+        business_idea_details: '经营理念详情'
+        views: '意见'
+        view_profile: '查看资料'
+        intrested: 'Intrested'
+        year: '年'
+        years: '年份'
+        per: '每'
+        unit: '单元'
+        capital: '首都 -'
+        seeking: '- 求 -'
+        stake: ' 赌注'
+        for: ' 对于'
+        ip_number: 'IP号码：'
+        team_strength: '团队力量'
+        motivation_vision: '动机和视觉-c'
+        industry_exp: '行业经验 -'
+        business_model: '商业模式 -'
+        startup_exp: '启动体验 -'
+        business_model_overview: '业务模型概述'
+        steps_4_this_idea_exc: '步骤这个想法执行'
+        projection_type: '投影类型'
+        projected_term: '预计期限'
+        revenue_stream: '收入来源'
+        views_sales_numbers: '查看销售数字'
+        view_competators_list: '查看Competators列表'
+        how_it_work: '它是如何工作的'
+        analysis_on_competators_business: "分析competator业务"
+        market_trend: '市场趋势'
+        market_channels: '市场渠道'
+        market_size: '市场大小'
+        yes: '是'
+        no: '没有'
+        details_ques_1: '这种想法新的市场？'
+        details_ques_2: '将这种想法对市场产生重大影响？'
+        details_ques_3: '做已经在实施这个想法的能力，工具和生产设施存在的内部？'
+        details_ques_4: '你如何解决客户的问题（问题）？'
+        details_ques_5: '难道这个想法解决一个明确界定客户问题的（根本）新的方式？说明？'
+        details_ques_6: '你如何便于学习你的潜在客户对你的产品或服务？'
+        3_customer: '三（3）大客户'
+        target_customer: '目标客户的地理区域'
+        age_target: '年龄打靶'
+        init_public_offering: '首次公开募股'
+        validation_score: '验证分数'
+        request_for_more_details: '要求更多细节'
+        deal: 'DEAL'
+        go_deal: 'GO DEAL'
+        investment_scale: '投资规模'
+        capital_required: '资本要求'
+        fund_already_have: '基金已经有'
+        fund_i_invest: '基金投资我'
+        seeking_fund: '寻找基金'
+        offering_business_stake: '提供企业股权'
+        documents: '文件'
+        documents_file: '文档（文件）'
+        forecast_financial_projection: 'orecast - 财务预测'
+        revenue: '收入 -'
+        market_valuation: '市场估值'
+        favo_this_deal: '收藏本交易'
+        skills: '技能'
+        joined: '加盟'
+        query_for: '查询'
+
+  event:
+    startup_events: '启动事件'
+    my_events: '我的活动'
+    create_event: 'CREATE EVENT'
+    up_coming_events: '即将举行的活动'
+    popular_events: '热门活动'
+    type_here_for_events: '在这里键入事件'
+    select_a_country: '选择一个国家'
+    select_date: '选择日期'
+    free: '自由'
+    load_more: '装载更多'
+    posted_by: "发贴者作者"
+    find_out_more: '了解更多'
+    edit_event: '编辑活动'
+    no_results: '没有结果'
+
+    event_title: '活动名称*'
+    event_entry_type: '事件条目类型*'
+    event_category: '事件类别*'
+    event_from: '事件从*'
+    event_to: '事件*'
+    time: '时间 *'
+    time_zone: '时区*'
+    website: '事件Reffence网站'
+    enter_website: '输入事件Reffence网站'
+    image: '事件图片'
+    add_event_partner: '添加事件合作伙伴'
+    event_description: '事件描述*'
+    enter_text_here: '在此输入文字'
+    event_venue: '活动地点'
+    address_line_1: '地址栏1*'
+    address_line_2: '地址行2 *'
+    country: '国家*'
+    region: '地区*'
+    city: '市*'
+    zip: '邮编/ Pin码'
+    pls_select_country: '请选择上述国家'
+    cancel: '取消'
+    submit: '提交'
+    select_entry_type: '- 选择事件条目类型 -'
+    select_category: '- 选择事件类别 -'
+    partner_logo: '部分标志'
+    remove: '去掉'
+    well_done: 'WEL完成！'
+    event_update_success: ' 活动已成功更新。'
+
+    event_details: '活动详情'
+    category: '类别'
+    overview: '概观'
+    schedule: '时间表'
+    location: '位置'
+    time_schedule: '时间表'
+    venue_address: '展会地址'
+
+
+  devise:
+    email: '电子邮件'
+    password: '密码'
+    confirm_password: '确认密码'
+    remember_me: '记住我'
+    forgot_your_password: '忘记密码了吗 ？'
+    username: '用户名'
+    select_user_type: '- 选择用户类型 -'
+    minimum_character: "最小％{num}个字符所需*"
+    login: '登录'
+    signup: '注册'
+    terms_conditions: '条款和条件'
+    enter_your_email: '输入你的电子邮箱：'
+    send_me_reset_pwd: '给我重置密码的说明'
+    get_regis_with_us: 'GET注册美国'
+
+    confirmations:
+      confirmed: "您的电子邮件地址已成功确认。"
+      send_instructions: "您将收到一封电子邮件，其中关于如何在几分钟内确认您的电子邮件地址的说明。"
+      send_paranoid_instructions: "如果您的电子邮件地址，在我们的数据库中存在，您将收到一封电子邮件，其中关于如何在几分钟内确认您的电子邮件地址的说明。"
+    failure:
+      already_authenticated: "您已经登录。"
+      inactive: "您的帐户尚未激活。"
+      invalid: "无效 authentication_keys或密码。"
+      locked: "您的帐户被锁定。"
+      last_attempt: "您又多了一个尝试自己的帐户被锁定了。"
+      not_found_in_database: "无效 authentication_keys或密码。"
+      timeout: "您的会话过期。请重新登录才能继续。"
+      unauthenticated: "您需要登录或继续之前注册。"
+      unconfirmed: "你必须在继续之前确认您的电子邮件地址。"
+    mailer:
+      confirmation_instructions:
+        subject: "欢迎IdeaBurns"
+      reset_password_instructions:
+        subject: "重置密码的说明"
+      unlock_instructions:
+        subject: "解锁指令"
+      password_change:
+        subject: "密码已更改"
+    omniauth_callbacks:
+      failure: "无法从那种因为原因验证你"
+      success: "从实物账户成功进行身份验证。"
+    passwords:
+      no_token: "未经密码重置邮件来了，你不能访问这个页面。如果你来自一个密码重置邮件，请确保您使用所提供的完整的URL。"
+      send_instructions: "您将收到一封电子邮件，如何在几分钟内重置密码。"
+      send_paranoid_instructions: "如果您的电子邮件地址，在我们的数据库中，您将收到在几分钟内您的电子邮件地址的密码恢复链接。"
+      updated: "您的密码已被更改成功。您现在登录。"
+      updated_not_active: "您的密码已被更改成功。"
+    registrations:
+      destroyed: "再见！您的帐户已经成功取消。我们希望很快再见到你。"
+      signed_up: "欢迎！您已成功签约。"
+      signed_up_but_inactive: "您已成功签约。但是，由于您的帐户尚未激活，我们不能签你进去。"
+      signed_up_but_locked: "您已成功签约。但是，由于您的帐户被锁定，我们不能签你进去。"
+      signed_up_but_unconfirmed: "一个确认链接的邮件已发送到您的电子邮件地址。请按照激活帐户的链接。"
+      update_needs_confirmation: "您已成功更新您的帐户，但我们需要验证您的新电子邮件地址。请检查您的电子邮件，并确认链接确认您的新电子邮件地址。"
+      updated: "您的帐户已成功更新。"
+    sessions:
+      signed_in: "签名成功。"
+      signed_out: "退出成功"
+      already_signed_out: "成功退出。"
+    unlocks:
+      send_instructions: "您将收到一封电子邮件，如何解开您的帐户在几分钟内说明。"
+      send_paranoid_instructions: "如果您的帐户存在，您会收到一封电子邮件，关于如何解锁几分钟的说明。"
+      unlocked: "您的帐户已经成功解锁。请登入继续。"
+  errors:
+    messages:
+      already_confirmed: "已经证实，请尝试在签约"
+      confirmation_period_expired: "需要在期间予以确认，请申请一个新的"
+      expired: "已过期，请申请一个新的"
+      not_found: "未找到"
+      not_locked: "没有锁"
+      not_saved:
+        one: "1错误，无法储存禁止此资源："
+        other: "％{count}个被保存禁止此资源错误："
+
+  user:
+    update_profile: '更新个人信息'
+    profile_details: '个人资料详细信息'
+    update_password: '更新密码'
+    profile_completion: '简介Compeletion'
+    last_updated_on: "最后更新日期"
+    personal: '个人'
+    profession: '职业'
+    education: '教育'
+    contact: '联系'
+    describe: '描述'
+    name: '名称'
+    first_name: '名字'
+    last_name: '姓'
+    email: '电子邮件'
+    email_primary: '主要电子邮件'
+    gender: '性别'
+    male: '男'
+    female: '女'
+    dob: 'DOB'
+    country: '国家'
+    select_country: '- 选择国家-'
+    region: '地区'
+    city: '市'
+    profession_type: '专业型'
+    select_profession_type: '- 选择行业类型 -'
+    company: '公司'
+    skills: '技能'
+    startup_experience: '启动体验'
+    select_startup_experience: '- 选择启动体验 -'
+    graduation: '毕业'
+    select_graduation: '- 选择毕业 -'
+    university_college: '大学学院'
+    mobile: '移动'
+    address: '地址'
+    email_secondary: '电子邮件 - 次'
+    skype_id: 'Skype帐号'
+    website: '网站'
+    about_you: '关于你'
+    inspire_quote: '激发报价'
+    linkedin: 'LinkedIn'
+    add_team: '加入团队+'
+    add_funding: '新增资金+'
+    office_head: '总部办公室'
+    socials_webapps: '社会与WEBAPPS'
+    investor_details: '投资者详细'
+    add_portfolio: '加入投资组合+'
+    next: '下一个'
+    update: 'UPDATE'
+    clear: '明确'
+    add: '加'
+    delete: '删除'
+    remove: '去掉'
+    date: '日期'
+    mess_success_update_profile: '做得好！您成功保存个人资料详细信息'
+    your_contact_phone_number: '您的联系电话号码'
+    any_useful_info_about_you: '关于你的任何有用信息'
+    investor_type: '投资者类型'
+    select_investor_type: '- 选择投资类型 -'
+    organization_name: '机构名称'
+    founded: '公司成立（年）'
+    business_lines: '业务线'
+    select_bussiness_lines: '- 选择经营业务线 -'
+    description: '描述'
+    mission_vision: '使命与愿景'
+    designation: '指定'
+    select_designation: '- 选择名称 -'
+    join_date: '注册日期'
+    team_logo: '队徽'
+    address_line_1: '地址栏1'
+    address_line_2: '地址行2'
+    state: '州'
+    startup_name: '启动名称'
+    type_funding: '资金的类型'
+    select_type_funding: '- 资金的选择类型 -'
+    funding_amount: '筹资金额'
+    startup_logo: '启动标志'
+    about_company: '公司简介'
+    primary_bussiness_lines: '主要经营业务线'
+    how_it_work: '它是如何工作的'
+    regis_company_name: '注册公司名称'
+    employee_strength: '员工力量'
+    select_employee_strength: '- 选择员工力量 -'
+    avatar: '阿凡达'
+    amount: '量'
+    by_investor: '按投资者'
+    any_useful_info_about_company: '有关公司的任何有用的信息'
+    pls_select_country_above: '请选择一个以上的国家'
+    current_password: '当前密码'
+    new_password: '新密码'
+    new_password_confirmation: '确认新密码'
+    your_current_pwd_mess: '（您当前密码，以确认您的更改）'
+    update_pwd_success_mess: '做得好 ！密码已成功更新。'
+    update_pwd_error_heading: '1错误禁止被保存在这个用户：'
+    update_pwd_error_mess: "新密码不能为空"
+
+    dashboard: '仪表板'
+    select_skill_type: '选择技能型'
+    select_profession_type: '选择职业类型'
+    select_country_input: '选择国家'
+    read_more: '阅读更多'
+    about : '关于'
+    personal_details: '个人出轨'
+    communication: '通讯'
+    only_investor_view_contact_details: '只有投资者可以查看联系信息'
+    profile_view: '资料查看'
+    load_more: '装载更多'
+    no_results: '没有结果'
+    select_state: '选择一个国家'
+    number_with_years: "数年"
+    not_have_func_yet: '不具备的功能还没有'
+    select_business_line_type: '选择经营业务线路类型'
+    select_funding_type_input: '选择资助类型'
+    select_investor_type_input: '选择投资类型'
+    our_team: '我们的队伍'
+    location: '位置'
+    portfolio: '投资组合'
+    business_type: '商业类型'
+    funding: '资金'
+    investor: '投资者'
+
+  notifications:
+    notifications: 'NOTIFICATIONS'
+    recent: '最近'
+    search: '搜索'
+    search_here: '这里搜索'
+    ago: ' 前'
+
+  messages:
+    to_day: '一天'
+    reply: '回复'
+    sent: '发送'
+    enter_text_here: '在此输入文字'
+

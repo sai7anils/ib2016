@@ -1,0 +1,12 @@
+<% publish_to api_idea_favorite_path do %>
+  <% if @favorite || false%>
+    $('.no-favorite').css({'display':'none', 'opacity':'0'});
+    $('.favorited').css({'display':'block'});
+    $('.favorited').animate({'opacity':'1'},1000);
+  <%else%>
+    $('.no-favorite').css({'display':'block'});
+    $('.favorited').css({'display':'none', 'opacity':'0'});
+    $('.no-favorite').animate({'opacity':'1'},1000);
+  <% end %>
+
+<% end %>

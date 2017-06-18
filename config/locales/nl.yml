@@ -1,0 +1,779 @@
+nl:
+
+  global:
+    entrepreneurs: 'ONDERNEMERS'
+    investors: 'BELEGGERS'
+    startups: 'startups'
+    startup_events: 'STARTUP EVENTS '
+    read_more: 'Lees verder '
+    create_event: 'CREATE EVENT '
+    free: 'Gratis'
+    events: 'EVENEMENTEN'
+    type_here_for_events: 'Typ hier voor evenementen'
+    select_a_country: 'Selecteer een land'
+    select_a_date: 'Datum selecterenGepost door'
+    posted_by: 'Gepost door'
+    find_out_more: 'Meer te weten komen'
+    no_results: 'Geen resultaten'
+    all: 'Alle'
+    total: 'Totaal '
+
+  header:
+    entrepreneurs: 'ONDERNEMERS'
+    investors: 'BELEGGERS'
+    startups: 'startups'
+    startup_events: 'STARTUP EVENTS'
+    login: 'LOG IN'
+    signup: 'AANMELDEN'
+    logout: 'UITLOGGEN'
+    profile: 'PROFIEL'
+    type_to_search: 'Typ om te zoeken ...'
+
+  navabar:
+    behind_it_thoughts: 'Daarachter Gedachten'
+    terms_of_use: 'Gebruiksvoorwaarden'
+    privacy_policy: 'Privacybeleid'
+    what_next: "Wat is het volgende"
+    contact_us: 'Neem contact met ons op'
+
+  footer:
+    entrepreneurs: 'entreprenuers'
+    investors: 'investeerders'
+    startups: 'startups'
+    startup_events: 'Startup Events'
+    about_us: 'OVER ONS'
+    behind_thoughts: 'achter Gedachten'
+    how_it_works: 'Hoe het werktWat is het volgende'
+    whats_next: 'Wat is het volgende'
+    contact_us: 'NEEM CONTACT MET ONS OP'
+    help: 'Hulp'
+    terms_privacy: 'Voorwaarden en privacy'
+    locate_us: 'Zoek Us'
+    join_with_us: 'Samen met ons'
+
+  home:
+    first_main_heading: 'THINK.SHARE.'
+    last_main_heading: 'GROEIEN.'
+    first_main_small_text: 'Deel uw ideeën met ons.'
+    middle_main_small_text: ' Wij zullen de juiste investeringen te vinden om te maken'
+    last_main_small_text: ' Uw ideeën TO GO BIG '
+    how_it_work: 'Hoe het werkt'
+    ideas: 'ideeën'
+    startups: 'startups'
+    investors: 'investeerders'
+    deals: 'aanbiedingen'
+
+    section_2:
+      first_heading: 'DEEL JE'
+      first_heading_bold: ' IDEEËN '
+      first_small_text: 'Om dit een betere wereld'
+      second_heading: 'INNOVATIONS'
+      second_heading_bold: 'VIND'
+      second_small_text: 'Om te investeren en MAKEN REVOLUTIES'
+
+    section_3:
+      overview: 'OVERZICHT '
+      who_we_are: 'Wie we zijn'
+      who_we_are_content: 'Idearburns is een wereldwijde creatieve online platform waar mensen hun ideeën kunnen toevoegen en delen met de gemeenschap en in het bijzonder aan de beleggers dat ze willen om aandacht te krijgen richten. Ook dit is een plek waar startups en ondernemers kunnen communiceren met ideale Investors, delen hun gedachten en ideeën om een ​​beter zicht te hebben en het verbeteren van de bedrijfsstrategie.'
+      who_we_are_ans_1: 'Zet uw geweldige ideeën in succesvolle bedrijven.'
+      who_we_are_ans_2: 'Bouw een erfenis niet een imperium.'
+      who_we_are_ans_3: 'Maak mensen uw inspriration.'
+      who_we_are_ans_4: 'Zet uw passie in winst.'
+      who_we_are_ans_5: 'Sluit online wereldwijde opstarten ecosysteem.'
+      what_we_do: 'Wat we doen'
+      what_we_do_ans_1: 'Nuturing ideeën voor ideaprenuers, ondernemers, starters en investeerders.'
+      what_we_do_ans_2: 'Wees de brug naar Startups en investeerders aan te sluiten.'
+      what_we_do_ans_3: "'S werelds eerste online creatieve ideeën assessment tool."
+      what_we_do_ans_4: 'Houd uw online business idee veilig.'
+      what_we_do_ans_5: 'Publiceer uw ideeën in de Idea Pool en feedback te krijgen van andere platform gebruikers en investeerders.'
+      what_we_do_ans_6: 'Gekozen tot één van de meest favoriete platform voor prestigieuze universiteiten studenten, enthousiaste ondernemers.'
+      join_ideaburns: 'Registreer je Ideaburns vandaag !!!'
+      join_ideaburns_ans_1: 'Vul ons eenvoudig beveiligde submision formulier.'
+      join_ideaburns_ans_2: 'Stuur het en een deel van onze gemeenschap.'
+      join_ideaburns_ans_3: 'Stem en dergelijke voor het idee dat je geloven dat het een succes zou worden.'
+      join_ideaburns_ans_4: 'Bericht naar de beoogde beleggers die je zou graag hun adviezen te horen.'
+
+    section_4:
+      heading: 'CONNECT ONDERNEMERS, Startups & BELEGGERS op een plaats.'
+
+    section_5:
+      heading: 'BUSINESS LINES'
+      updating: 'Bijwerken ...'
+
+  how_it_work:
+    first_heading: 'HOE HET WERKT'
+    second_heading: 'Hier proberen we om te vertellen hoe elk type gebruiker do activiteiten'
+    entrepreneurs: 'ONDERNEMERS'
+    startup: 'BEGINNEN'
+    investor: 'INVESTOR'
+    entrepreneurs_tab:
+      step_1: 'Stap 1: registeration -> Inloggen'
+      step_1_1: '1. registeration - Registreren: Als je nieuw lid en een ondernemer bent, ga dan door middel Registreren op de bovenkant rechterkant van webpagina voor registeration'
+      step_1_2: '2. registeration - Aanmelden: Klik Aanmelden knop, zal het de box aan de info in te vullen laten zien - ga naar drop-down om het type gebruiker kiezen'
+      step_1_3: '3. Na het voltooien, ga dan naar uw e-mail om uw account te bevestigen'
+      step_1_4: '4. Dan bent u in staat om in te loggen en deelnemen aan onze spannende platform'
+
+      step_2: 'Stap 2: Fonds Bedrijfs ideeën -> Toegang tot Investors -> Vergadering plannen'
+      step_2_1: '1. Als u uw idee particulier te leggen aan investeerders, ga dan naar B-idee op Leftside bar Fonds'
+      step_2_2: '2. Dan zal u een formulier te zien in al uw business idee info aan te vullen'
+
+      step_3: 'Stap 3: Share ideeën om wereld -> als / commentaar / Rate ideeën'
+      step_3_1: '1. Hier in de linkerkant bar, kies het tweede icoon - ideate'
+      step_3_2: "2. Klik op '' Public '' dan zul je een vak in uw idee in te vullen te zien. Als je niet wilt dat iedereen weet dat uw idee, behalve Investors, kunt u kiezen voor '' Business '' in plaats"
+      step_3_3: "3. Uw ideeën zullen direct na het selecteren '' Verzenden '' knop met volledig info eis worden gestart om de grote wereld. Bij hier kunt u wilt, delen, stem en commentaar voor een geweldig idee dat je liefde"
+
+      step_4: 'Stap 4: Bekijk start-up events -> Events toevoegen'
+      step_4_1: '1. Om te zien welke gebeurtenis aan de hand is, klikken op Event op de linkerkant bar'
+      step_4_2: '2. Als u uw eigen evenement te maken, kiest events toevoegen'
+      step_4_3: '3. Dan zal je een tafel evenement info toe te zien'
+
+      step_5: 'Stap 5: Bekijk andere Ondernemers, Start-ups & beleggers profiel'
+      step_5_1: '1. Om het onze gemeenschap zien als ondernemers, starters en investeerders, klik dan door elke categorie aan de linkerkant bar'
+
+    startup_tab:
+      step_1: 'Stap 1: registeration -> Inloggen'
+      step_1_1: '1. Als u het opstarten en u nog geen account hebt, ga dan naar box LID TE aan de rechterkant van de hompage'
+      step_2_2: '2. Kies startprocedure voor het type gebruiker'
+
+      step_2: 'Stap 2: Fonds Start-up Business -> Toegang tot Investors -> Vergadering plannen'
+      step_2_1: '1. Aan de linkerkant bar te klikken op Fund opstarten om uw idee in te dienen'
+      step_2_2: '2. Vul in alle vakken vereist'
+
+      step_3: 'Stap 3: Share ideeën om wereld -> als / commentaar / Rate ideeën'
+      step_3_1: '1. Hier in de linkerkant bar, kies het tweede icoon - ideate'
+      step_3_2: "2. Klik op '' Public '' dan zul je een vak in uw idee in te vullen te zien. Als je niet wilt dat iedereen weet dat uw idee, behalve Investors, kunt u kiezen voor '' Business '' in plaats"
+      step_3_3: "3. Uw ideeën zullen direct na het selecteren '' Verzenden '' knop met volledig info eis worden gestart om de grote wereld. Bij hier kunt u wilt, delen, stem en commentaar voor een geweldig idee dat je liefde"
+
+      step_4: 'Stap 4: Bekijk start-up events -> Events toevoegen'
+      step_4_1: '1. Om te zien welke gebeurtenis aan de hand is, klikken op Event op de linkerkant bar'
+      step_4_2: '2. Als u uw eigen evenement te maken, kiest events toevoegen'
+      step_4_3: '3. Dan zal je een tafel evenement info toe te zien'
+
+      step_5: 'Stap 5: Bekijk andere Ondernemers, Start-ups & beleggers profiel'
+      step_5_1: '1. Om het onze gemeenschap zien als ondernemers, starters en investeerders, klik dan door elke categorie aan de linkerkant bar'
+
+    investor_tab:
+      step_1: 'Stap 1: Registratie -> Login -> Basic Investor'
+      step_1_1: '1. Voor beleggers, je bent nieuw lid? Ga naar box LID TE aan de rechterkant van de homepage'
+      step_1_2: '2. Kies Investor voor gebruiker Type'
+
+      step_2: 'Stap 2: Share ideeën om wereld -> als / commentaar / Rate ideeën'
+      step_2_1: '1. Hier in de linkerkant bar, kies het tweede icoon - ideate'
+      step_2_2: "2. Klik op '' Public '' dan zul je een vak in uw idee in te vullen te zien. Als je niet wilt dat iedereen weet dat uw idee, behalve Investors, kunt u kiezen voor '' Business '' in plaats"
+      step_2_3: "3. Uw ideeën zullen direct na het selecteren '' Verzenden '' knop met volledig info eis worden gestart om de grote wereld. Bij hier kunt u wilt, delen, stem en commentaar voor een geweldig idee dat je liefde"
+
+      step_3: 'Stap 3: Bekijk start-up events -> Events toevoegen'
+      step_3_1: '1. Om te zien welke gebeurtenis aan de hand is, klikken op Event op de linkerkant bar'
+      step_3_2: '2. Als u uw eigen evenement te maken, kiest events toevoegen'
+      step_3_3: '3. Dan zal je een tafel evenement info toe te zien'
+
+      step_4: 'Stap 4: Bekijk andere Ondernemers, Start-ups & beleggers profiel'
+      step_4_1: '1. Om het onze gemeenschap zien als ondernemers, starters en investeerders, klik dan door elke categorie aan de linkerkant bar'
+
+      step_5: 'Stap 5: gecontroleerde / geaccrediteerde beleggers'
+      step_5_1: "1. Om Invest B-ideeën / Startups informatie, bijvoorbeeld zien wanneer u bij Invest in B-ideeën, wil je de details van deze 'Agriculture' te zien, dus klik Meer"
+      step_5_2: '2. Als u uw eigen evenement te maken, kiest events toevoegen'
+      step_5_3: '3. Dan zal je een tafel evenement info toe te zien'
+
+      step_6: 'Stap 6: Investeer in Business ideeën'
+      step_6_1: "1. Kies 'Invest in B-idee' aan de linkerkant balk naar de lijst van zakelijke ideeën bekijken en kijk of je kunt investeren in het of niet"
+
+
+      step_7: 'Stap 6: Investeer in Start-up zakelijke voorstellen'
+      step_7_1: "1. Om lijst met startup zakelijk voorstel te bekijken, klikt u op 'Invest in Startup' aan de linkerkant bar"
+
+  behind_thoughts:
+    behind_thoughts: 'ACHTER GEDACHTEN'
+    heading: 'We moeten om informatie te verstrekken over de reden achter dit product wordt gemaakt.'
+    story: 'VERHAAL'
+    story_1: "Ons primaire doel is om te verbinden, te ontwikkelen en te machtigen internet wereldwijde start-up biologische gemeenschap. Voor die doelgroep van, we zijn oorsprong meer dan voor de grote verrukkelijke web resultaat zal worden genoemd 'IdeaBurns'. -Een Isle over start-ups."
+    story_2: "IdeaBurns is een wereldwijde SaaS sociale podium voor de begaafde zakelijke visionairs, Start-up's en speculanten. Onze fase 1 verzending is om samen met de erkende beleggers en de hoek investeerders netwerk door het geven van potentiële zakelijke gedachten en vroeg stadium propositie bedrijf. We gemak start-up groep ontplooien in hun maximale capaciteit."
+
+    vision: 'VISIE'
+    vision_1: 'Met vestigen op dit universum als gezonder te maken aan het opstarten van biologische gemeenschap en inspireert tot nieuwe innovaties die de individuen afkomstig uit voor de hersenen ondernemer.'
+
+    mission: 'MISSIE'
+    mission_1: 'Om voortdurend te ondersteunen ontwikkelingslanden waarvan noodzakelijkheden zullen hun kleine omvang streven de economie vooruit te komen.'
+
+  terms:
+    terms_conditions: 'ALGEMENE VOORWAARDEN'
+    legal_disclaimer: 'LEGAL DISCLAIMER'
+    legal_disclaimer_1: 'Dit is de Terms of Service begrip voor ideaburns.com. Alle klanten moeten lezen en elk onderdeel van dit erkennen en een aantal andere begrip of strategie gaf door ideaburns.com. Op een kans dat u niet instemt met deze voorwaarden, wordt u ontzegd uit het gebruik van ideaburns.com of een dochteronderneming administraties. Bovendien, we hebben het recht om deze overeenkomst wanneer wijzigen.'
+
+    rules: 'De basisregels'
+    rules_1: 'De inschrijving van ideaburns.com slaagt op grond van de aard van haar burgers en een aantal fundamentele besluit dat iedereen houdt vast aan. We handhaven, ongeacht autoriteit nodig is om hulp te weigeren aan een deel of het eerstvolgende op elk moment'
+    rules_1_a: 'een. Alleen 0-5 jaar start-up zal gelden voor deelname aan Ideaburns.com'
+    rules_1_b: 'b. Alleen geaccepteerde / gelicentieerd beleggers kan worden gekregen tot gesubsidieerd gefinancierde ideeën en Start-up zakelijk voorstel.'
+    rules_1_c: 'c. Alleen kan gecertificeerde informatie in de Business zaak worden genomen.'
+
+    trademark: 'merkinbreuk'
+    trademark_1: "Alle namen en logo's in verband met ideaburns.com zijn handelsmerken van Ideaburns. U mag geen handelsmerk op enigerlei wijze niet gebruiken zonder onze schriftelijke toestemming. Bovendien kunnen gebruikers geen inbreuk maken op patenten, handelsmerken of andere auteursrechten van ideaburns gebruikers of andere partijen dan ook. "
+
+  sidebar:
+    edit: ' Bewerk'
+    ideas: ' ideeën'
+    ideate: ' begrip samenstellen'
+    events: ' Evenementen'
+    add_events: ' Events toevoegen'
+    fund_b_idea: ' Fonds B-Idea'
+    fund_startup: ' Fonds Startup'
+    invest_in_b_ideas: ' Investeer in B-Ideeën'
+    invest_in_startup: ' Investeer in Startups'
+    entreprenuers: ' entreprenuers'
+    startups: ' startups'
+    investors: ' investeerders'
+    my_ideas: ' My Ideas'
+    our_ideas: ' onze ideeën'
+    my_b_ideas: ' Mijn B-Ideeën'
+    our_b_ideas: 'Onze B-Ideeën'
+    my_events: ' mijn Events'
+    our_events: ' onze evenementen'
+
+  users_header:
+    type_keywords: 'Type zoekwoorden'
+    messages: 'berichten'
+    notifications: 'meldingen'
+    my_account: 'Mijn rekening'
+    update_profile: 'Profiel bijwerken'
+    logout: 'Uitloggen'
+    my_favourites: 'Mijn favorieten'
+    notifications_empty: "Je hebt %{count} meldingen"
+    messages_empty: "Je hebt %{count} berichten"
+    see_all: 'Alles zien'
+    reply: 'Antwoorden'
+    view_all_mess: 'Bekijk alle berichten'
+
+  idea:
+    post_your_idea: 'Plaats uw IDEA'
+    closed_ideas: 'GESLOTEN IDEEËN'
+    public_ideas: 'OPENBARE IDEEËN'
+    total_views: 'Total Views'
+    select_a_country: 'Selecteer een land'
+    select_a_category: 'Kies een categorie'
+    read_more: 'Reade Meer'
+    load_more: 'Laad meer'
+    learn_more: 'Kom meer te weten'
+    idea_details: 'IDEA DETAILS'
+    edit: 'Bewerk'
+    delete: 'Verwijder'
+    remove: 'Verwijderen'
+    update_success_mess: 'Goed gedaan! Idee is bijgewerkt.'
+    are_you_sure: 'Weet je het zeker ?'
+
+    normal:
+      instructions: "INSTRUCTIES"
+      content_1: "Deel uw ideeën te wereld."
+      content_2: "Deel uw ervaringen om uw collega's."
+      content_3: "Helpen om andere entrpreneurs, opstarten oprichters etc. op excution van bedrijf ideeën Startups."
+      content_4: "Geldige informatie over het opstarten van de gemeenschap."
+      idea_category: "Idee Categorie *"
+      idea_title: "Idea Titel *"
+      upload_file: "Upload bestand*"
+      choose_file_to: "Bestand kiezen om"
+      upload: "Uploaden"
+      idea_description: "Idea Omschrijving *"
+      enter_idea_title_here: "Voer Idea Titel hier"
+      submit: "LEGT"
+      select_idea_category: "- Kies Idea Categorie -"
+      idea_image: "Idea Afbeelding"
+      change_image: "Change Image"
+      rate_this: "Geef dit een cijfer"
+      idea_type: "Type Idea"
+      comments: "OPMERKINGEN"
+      top_view: "Top de meeste standpunten van Ideeën"
+      write_a_comment: "Schrijf een reactie"
+      be_the_first_like_this: "Wees de eerste als deze"
+      more_from: "Meer van %{author}"
+      no_more_to_load: "Geen laden"
+      no_results: "Geen resultaten"
+      press_esc: "Druk op Esc om"
+      cancel: "Annuleer"
+      reply: "Antwoorden"
+      post: "Post"
+      like: "Als"
+      unlike: "anders"
+
+    business:
+      my_favourites: 'Mijn favorieten'
+      business_ideas: 'Business Ideas'
+      search_by_location: 'Zoeken op locatie'
+      search_by_bussiness_line: 'Zoeken op Business Line'
+      search_by_idea_stage: 'Zoeken op Idea Stage'
+      search_by_patent: 'Zoeken op Patent'
+      view_profile: 'Bekijk profiel'
+      problem_statement: 'Probleemstelling :'
+      solution: 'Oplossing :'
+      current_idea_stage: 'Huidige Idee Stage:'
+      capital: 'Hoofdstad :'
+      seeking: 'Op zoek naar:'
+      stake: 'inzet'
+      next: 'NEXT'
+      validate: 'BEVESTIG'
+      submit: 'LEGT'
+      save: 'SAVE'
+      clear: 'DUIDELIJK'
+
+      primary_niceties_tab: 'Primaire Niceties'
+      early_stage_analysis_tab: 'Early Stage Analyse'
+      team_capabilities_tab: 'team Mogelijkheden'
+      market_analysis_tab: 'Markt analyse'
+      customer_analysis_tab: 'Customer Analyse'
+      investment_scale_tab: 'Investment Schaal'
+      profit_potential_tab: 'winstpotentieel'
+      competitors_scenery_tab: 'concurrenten Scenery'
+      pitch_burns_tab: 'Pitch Burns'
+      exit_strategy_tab: 'Exit Strategy'
+
+      primary_details: 'Primaire Details'
+      target_business_lines: 'Target Business Lines (*)'
+      select_bussiness_lines: '- Select Business Lines -'
+      type_of_bussiness_idea: 'Type Business Idea (*)'
+      select_type_bussiness_idea: '- Selecteer Type Business Idea -'
+      idea_title: 'Idea Titel (*)'
+      idea_tagline: 'Idea Tag (*)'
+      problem_statement_2: 'Probleemstelling (*)'
+      solution_2: 'Oplossing (*)'
+      select_current_idea_stage: 'Huidige Idea Stage? (*)'
+      generation: 'Generatie'
+      assessment: 'Beoordeling'
+      planning: 'Planning'
+      prototype: 'Prototype'
+      implimentation: 'implimentation'
+      ip_patent: 'Dit idee IP of octrooi? (*)'
+      ip_patent_1: 'Als Gepatenteerde / IP'
+      ip_patent_2: 'in afwachting van'
+      ip_patent_3: 'Nog niet'
+      ip_patent_4: 'Registratienummer'
+      enter_regis_number_here: 'Voer Register Number hier'
+      enter_text_here: 'Voer hier uw tekst'
+      add_team: 'Voeg Team'
+      view_team_list: 'Bekijk Team Lijst'
+      select_strength: '- Kies Kracht -'
+
+      early_stage_analysis_ques_1: '1. Motivatie en Vision - Wat is de voornaamste reden dat u het starten van een bedrijf? (*)'
+      early_stage_analysis_ques_2: '2. Hoeveel jaar ervaring heb je in de bedrijfstak waarin beginnen? (*)'
+      early_stage_analysis_ques_3: '3. In hoeverre heb je eerder betrokken geweest bij een start-up bedrijf? (*)'
+      early_stage_analysis_ques_4: '4. Kies uw Business-modus! (*)'
+      early_stage_analysis_ques_5: '5. Leg uit Business Model? Hoe je het geld te genereren? (*)'
+      early_stage_analysis_ques_6: '6. Wat zijn de stappen die je gaat om het te nemen voor de idee Execution?'
+
+      team_capabilities_ques_1: '1. Crucial Skills - Onder het een vaardigheid die je denkt dat het meest belangrijk voor uw business idee. (*)'
+      team_capabilities_ques_2: '2. Sterkte van je team (*)'
+      team_capabilities_ques_3: '4. Team Attributen - Welke van de volgende middelen en capaciteiten weet u of uw team te bezitten? (*)'
+
+      enter_name: 'Voer naam in'
+      enter_role: 'Voer Rol heeft genomen in BusinessIdea'
+      enter_skills: 'Voer Skills'
+      select_joined_in_team: '- Selecteer Geregistreerd in Team -'
+      profile_image: 'Profielfoto'
+
+      market_analysis_ques_1: '1. Is dit idee nieuw op de markt? Ja nee (*)'
+      market_analysis_ques_2: '2. Zou dit idee hebben een grote invloed op de markt? (*)'
+      market_analysis_ques_3: '3. Market Trend - In hoeverre is uw primaire doelgroep groeit? (*)'
+      market_analysis_ques_4: 'Kanalen 4. Market - Hoe gaat u om uw product of dienst te verkopen aan potentiële klanten? (*)'
+      market_analysis_ques_5: '5. Market Size - Wat is de totale jaarlijkse omvang van uw primaire doelgroep? (*)'
+      market_analysis_ques_6: '6. Doe de competentie, gereedschappen en productie-installaties voor de uitvoering van het idee al bestaan ​​in-house? (*)'
+
+      customer_analysis_ques_1: ''
+      customer_analysis_ques_2: ''
+      customer_analysis_ques_3: ''
+      customer_analysis_ques_4: ''
+      customer_analysis_ques_5: ''
+      customer_analysis_ques_6: ''
+      from_age: 'Van Age (*)'
+      select_from_age: '- Kies uit Age -'
+      to_age: 'Verouderen (*)'
+      select_to_age: '- Kies de leeftijd -'
+      select_region: '- Kies regio -'
+
+      investment_scale_quest_1: '1. Hoeveel het totale vermogen heb je nodig om te gaan product leven? (*)'
+      investment_scale_quest_2: '2. Hoeveel fonds heb je al? (*)'
+      investment_scale_quest_3: '3. Hoeveel fonds vind je het leuk om te investeren? (*)'
+      investment_scale_quest_4: '4. Hoeveel geld bent u op zoek? (*)'
+      investment_scale_quest_5: '5. Het aanbieden van zakelijke het spel voor de belegger? (*)'
+      investment_scale_quest_6: '6. Hoe gaat u deze middelen te gebruiken? (*)'
+      zero: 'Nul'
+      of_whole_capital: 'van de hele hoofdstad'
+      select_business_stake: '- Kies Zaken Stake -'
+
+      business_potencial: 'zakelijke Potencial'
+      business_potencial_heading_right: 'Forecast - Financiële projecties'
+      instructions: 'instructies'
+      profit_potential_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt Commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt Commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt Commodo.'
+      profit_potential_ques_1: '1. Welk type projectie? (*)'
+      profit_potential_ques_1_small_text: '(Maandelijks, Jaarlijks)'
+      profit_potential_ques_2: '2. Kies term voor Numbers te projecteren? (*)'
+      profit_potential_ques_2_small_text: '(1 jaar, 3 jaar, 5 jaar)'
+      profit_potential_ques_3: '3. Welk type inkomstenstroom? (*)'
+      select_type_of_projection: '- Selecteer het type Projectie -'
+      choose_term: '- Kies Term -'
+      select_type: '- Selecteer type -'
+
+      competitors_scenery_ques_1: 'Minstens één Competators moet worden toegevoegd'
+      competitors_scenery_ques_2: '2. Zorg voor grafiek / table (In beeldformaat) analaysis op uw competators?'
+      competitors_scenery_ques_3: '3. Hoe kan uw Business idee te ondersteunen in de bestaande concurrerende wereld? (*)'
+      add_competitors: 'Concurrenten toevoegen (*)'
+      view_competitors: 'Bekijk Concurrenten'
+      enter_company_name: 'Bedrijfsnaam invoeren'
+      enter_primary_business_line: 'Voer hun primaire Business Line'
+      enter_revenue_if_know: 'Voer Revenue (Als weten)'
+      enter_website_url: 'Voer URL van de website verwijzing'
+
+      pitch_burns_quest_1: '1. Upload uw eigen Pitch presentatie (*)'
+      pitch_burns_quest_1_small_text: '(Het zal laat alleen PPT en PDF)'
+      pitch_burns_quest_2: '2. Upload je video Pitch Presentatie'
+      pitch_burns_quest_2_small_text: '(Het zal laat alleen videobestanden)'
+      pitch_burns_quest_3: '3. Upload uw eventuele onderzoek documenten / Wettelijke documenten (indien aanwezig)'
+      pitch_burns_quest_3_small_text: 'Voeg meerdere documenten'
+      pitch_burns_quest_4: '4. Hoe ver uw idee legaal te krijgen in het podium? (*)'
+
+      exit_strategy_quest_1: '1. Wanneer u liever voor exit? Hoe kunt u uw bedrijf exit-strategie te definiëren? Leg uit. (*)'
+      exit_strategy_quest_1_ex: 'Voorbeeld:'
+      exit_strategy_quest_1_ex_1: 'Merger & Acquisition (M & A)'
+      exit_strategy_quest_1_ex_2: 'Initial Public Offering (IPO)'
+      exit_strategy_quest_1_ex_3: 'Liquidatie en dicht'
+
+      modal:
+        messages: 'berichten'
+        pls_check: '1. Controleer'
+        your_profile: ' jouw profiel'
+        mess_1: '2. We gaan uw idee in te dienen voor alle beleggers.'
+        mess_2: '3. We gaan kosten USD 99 voor deze inzending en het verstrekken van het plan.'
+        mess_3: '4. Zorg ervoor dat uw gegevens relavant en accuraat.'
+        mess_4: '5. Maar uw documenten mag niet worden gedeeld om een ​​belegger zonder uw goedkeuringen.'
+        cancel: 'Annuleer'
+        paynow: 'Betaal nu'
+        complete_required_mess: 'Vul verplichte velden (*).'
+        validation_required_mess: 'Gelieve bevestigen uw informatie!'
+        total_score: 'Totale score'
+        good_to: 'Goed voor'
+        go: 'GAAN'
+        send: 'sturen'
+
+      details:
+        business_idea_details: 'Business Idea Details'
+        views: 'Uitzichten'
+        view_profile: 'Bekijk profiel'
+        intrested: 'intresse'
+        year: 'Jaar'
+        years: 'jaren'
+        per: 'per'
+        unit: 'Eenheid'
+        capital: 'Hoofdstad -'
+        seeking: 'Op zoek naar -'
+        stake: ' Inzet'
+        for: ' Voor'
+        ip_number: 'IP-nummer:'
+        team_strength: 'team Sterkte'
+        motivation_vision: 'Motivatie en Vision -CErvaring in de industrie -'
+        industry_exp: 'Ervaring in de industrie -'
+        business_model: 'Bedrijfsmodel -'
+        startup_exp: 'Startup Experience -'
+        business_model_overview: 'Business Model overzicht'
+        steps_4_this_idea_exc: 'Stappen voor dit idee executie'
+        projection_type: 'projectie Typegeprojecteerd Term'
+        projected_term: 'geprojecteerd Term'
+        revenue_stream: 'Inkomstenstroom'
+        views_sales_numbers: 'Bekeken Sales Numbers'
+        view_competators_list: 'Bekijk Competators List'
+        how_it_work: 'Hoe het werkt'
+        analysis_on_competators_business: "Analyse op het bedrijfsleven competator's"
+        market_trend: 'Markt trend'
+        market_channels: 'Channels markt'
+        market_size: 'Omvang van de markt'
+        yes: 'Ja'
+        no: 'Nee'
+        details_ques_1: 'Is dit idee nieuw op de markt?'
+        details_ques_2: 'Zou dit idee hebben een grote invloed op de markt?'
+        details_ques_3: 'Doe de competentie, gereedschappen en productie-installaties voor de uitvoering van het idee al bestaan ​​in-house?'
+        details_ques_4: 'Hoe beoordeelt u de problemen van de klant (Kwesties) aan te pakken?'
+        details_ques_5: 'Betekent dit idee het oplossen van een duidelijk omschreven probleem van de klant in een (radicaal) nieuwe manier? Uitleggen?'
+        details_ques_6: 'Hoe ga je convience uw potentiële klanten over uw product of dienst?'
+        3_customer: 'Drie (3) grote klant'
+        target_customer: 'Target klanten in geografische regio'
+        age_target: 'leeftijd Targetting'
+        init_public_offering: 'Initial Public Offering'
+        validation_score: 'validatie Score'
+        request_for_more_details: 'Verzoek voor meer informatie'
+        deal: 'DEAL'
+        go_deal: 'GO DEAL'
+        investment_scale: 'Investment Schaal'
+        capital_required: 'kapitaal dat nodig is'
+        fund_already_have: 'Fonds alFinancieren ik beleggen'
+        fund_i_invest: 'Financieren ik beleggen'
+        seeking_fund: 'Op zoek naar het fonds'
+        offering_business_stake: 'Het aanbieden van zakelijke staak'
+        documents: 'documenten'
+        documents_file: 'Documenten (file)'
+        forecast_financial_projection: 'orecast - Financiële projecties'
+        revenue: 'Opbrengsten -'
+        market_valuation: 'marktwaardering'
+        favo_this_deal: 'Favoriete deze deal'
+        skills: 'skills'
+        joined: 'Geregistreerd'
+        query_for: 'query voor'
+
+  event:
+    startup_events: 'STARTUP EVENTS'
+    my_events: 'MY EVENTS'
+    create_event: 'CREATE EVENT'
+    up_coming_events: 'Aankomende evenementen'
+    popular_events: 'populaire evenementen'
+    type_here_for_events: 'Typ hier voor evenementen'
+    select_a_country: 'Selecteer een land'
+    select_date: 'Datum selecteren'
+    free: 'Gratis'
+    load_more: 'Laad meer'
+    posted_by: "Geplaatst door %{author}"
+    find_out_more: 'Meer te weten komen'
+    edit_event: 'Afspraak bewerken'
+    no_results: 'Geen resultaten'
+
+    event_title: 'Event Titel *'
+    event_entry_type: 'Event Entry Type *'
+    event_category: 'Evenement Categorie *'
+    event_from: 'Event Vanaf *'
+    event_to: 'Event To *'
+    time: 'Time *'
+    time_zone: 'Tijdzone*'
+    website: 'Event Reffence Website'
+    enter_website: 'Voer Event Reffence Website'
+    image: 'event Afbeelding'
+    add_event_partner: 'Voeg Event Partner'
+    event_description: 'Beschrijving van het evenement*'
+    enter_text_here: 'Voer hier uw tekst'
+    event_venue: 'evenementenlocatie'
+    address_line_1: 'Adres regel 1*'
+    address_line_2: 'Adres lijn 2*'
+    country: 'land *'
+    region: 'Regio*'
+    city: 'Stad*'
+    zip: 'Postcode / Pincode'
+    pls_select_country: 'Selecteer land boven'
+    cancel: 'Annuleer'
+    submit: 'voorleggen'
+    select_entry_type: '- Kies Event Entry Type -'
+    select_category: '- Kies Evenement Categorie -'
+    partner_logo: 'Part Logo'
+    remove: 'Verwijderen'
+    well_done: 'Goed gedaan !'
+    event_update_success: ' Event is bijgewerkt.'
+
+    event_details: 'DETAILS VAN HET EVENEMENT'
+    category: 'Categorie'
+    overview: 'Overzicht'
+    schedule: 'rooster'
+    location: 'plaats'
+    time_schedule: 'Tijdschema'
+    venue_address: 'Venue Adres'
+
+
+  devise:
+    email: 'E-mail'
+    password: 'Wachtwoord'
+    confirm_password: 'bevestig wachtwoord'
+    remember_me: 'Onthoud me'
+    forgot_your_password: 'Je wachtwoord vergeten ?'
+    username: 'Gebruikersnaam'
+    select_user_type: '- Selecteer User Type -'
+    minimum_character: "Minimum %{num} Characters Verplicht *"
+    login: 'LOG IN'
+    signup: 'AANMELDEN'
+    terms_conditions: 'algemene voorwaarden'
+    enter_your_email: 'Vul uw e-mail:'
+    send_me_reset_pwd: 'Stuur me reset wachtwoord INSTRUCTIES'
+    get_regis_with_us: 'GET Registreer bij ons'
+
+    confirmations:
+      confirmed: "Uw e-mailadres is met succes bevestigd."
+      send_instructions: "U ontvangt een e-mail met instructies over hoe u uw e-mailadres te bevestigen in een paar minuten."
+      send_paranoid_instructions: "Als uw e-mailadres in onze database bestaat, ontvangt u een e-mail met instructies over hoe u uw e-mailadres te bevestigen in een paar minuten."
+    failure:
+      already_authenticated: "Je bent al ingelogd."
+      inactive: "Jouw account is nog niet geactiveerd."
+      invalid: "Ongeldige authentication_keys of wachtwoord."
+      locked: "Je account is geblokkeerd."
+      last_attempt: "Je hebt nog één poging voordat je account is geblokkeerd."
+      not_found_in_database: "Ongeldige authentication_keys of wachtwoord."
+      timeout: "Uw sessie verlopen. Meld u aan om verder te gaan."
+      unauthenticated: "Je moet inloggen of registreren voordat u verder gaat."
+      unconfirmed: "Je moet je e-mail adres te bevestigen alvorens verder te gaan."
+    mailer:
+      confirmation_instructions:
+        subject: "Welkom bij IdeaBurns"
+      reset_password_instructions:
+        subject: "Reset wachtwoord instructies"
+      unlock_instructions:
+        subject: "unlock instructies"
+      password_change:
+        subject: "Wachtwoord veranderd"
+    omniauth_callbacks:
+      failure: "Kunt u niet verifiëren van %{type} omdat %{reason}."
+      success: "Succesvol geverifieerd van %{type} account."
+    passwords:
+      no_token: "U kunt deze pagina niet openen zonder uit een wachtwoord reset e-mail. Als je komt uit een wachtwoord reset e-mail, zorg ervoor dat u de volledige URL gebruikt."
+      send_instructions: "U ontvangt een e-mail met instructies over hoe u uw wachtwoord opnieuw in een paar minuten."
+      send_paranoid_instructions: "Als uw e-mailadres in onze database aanwezig is, krijgt u een password recovery link aan uw e-mailadres te ontvangen in een paar minuten."
+      updated: "Je wachtwoord is met succes veranderd. U bent nu aangemeld."
+      updated_not_active: "Je wachtwoord is met succes veranderd."
+    registrations:
+      destroyed: "Doei! Uw account is geannuleerd. Wij hopen u binnenkort weer te zien."
+      signed_up: "Welkom! U heeft zich aangemeld."
+      signed_up_but_inactive: "U heeft zich aangemeld. Echter, we konden u niet aanmelden omdat uw account nog niet is geactiveerd."
+      signed_up_but_locked: "U heeft zich aangemeld. Echter, we konden u niet aanmelden omdat uw account is geblokkeerd."
+      signed_up_but_unconfirmed: "Een bericht met een bevestigingslink is verzonden naar uw e-mailadres. Volg de link om je account te activeren."
+      update_needs_confirmation: "U op de hoogte van uw account met succes, maar we moeten uw nieuwe e-mailadres te verifiëren. Controleer uw e-mail en volg de bevestiging link naar uw nieuwe e-mailadres te bevestigen."
+      updated: "Je account is bijgewerkt."
+    sessions:
+      signed_in: "Ondertekend in succes."
+      signed_out: "Afgemeld met succes"
+      already_signed_out: "Ondertekend met succes."
+    unlocks:
+      send_instructions: "U ontvangt een e-mail met instructies over hoe u uw account in een paar minuten te ontgrendelen."
+      send_paranoid_instructions: "Als uw account bestaat, ontvangt u een e-mail met instructies voor hoe het te maken in een paar minuten."
+      unlocked: "Je account is succesvol ontgrendeld. Meld u aan om door te gaan."
+  errors:
+    messages:
+      already_confirmed: "werd al bevestigd, kun je je aanmelden"
+      confirmation_period_expired: "dient te worden bevestigd binnen periode, vraag dan een nieuw exemplaar"
+      expired: "verstreken is, vraag dan een nieuw exemplaar"
+      not_found: "niet gevonden"
+      not_locked: "niet vergrendeld"
+      not_saved:
+        one: "1 fout verboden dit %{bron} worden opgeslagen:"
+        other: " %{Count} fouten dit %{bron} verboden worden opgeslagen:"
+
+  user:
+    update_profile: 'PROFIEL BIJWERKEN'
+    profile_details: 'PROFIEL DETAILS'
+    update_password: 'UPDATE PASSWORD'
+    profile_completion: 'profiel Compeletion'
+    last_updated_on: "Laatst bijgewerkt op %{date}"
+    personal: 'persoonlijk'
+    profession: 'Beroep'
+    education: 'Onderwijs'
+    contact: 'Contact'
+    describe: 'Beschrijven'
+    name: 'Naam'
+    first_name: 'Voornaam'
+    last_name: 'Achternaam'
+    email: 'Email'
+    email_primary: 'E-mail primaire'
+    gender: 'Geslacht'
+    male: 'Mannetje'
+    female: 'Vrouw'
+    dob: 'DOB'
+    country: 'land'
+    select_country: '- Selecteer land-'
+    region: 'Regio'
+    city: 'stad'
+    profession_type: 'Type Profession'
+    select_profession_type: '- Kies een Profession Type -'
+    company: 'Bedrijf'
+    skills: 'skills'
+    startup_experience: 'Startup Experience'
+    select_startup_experience: '- Kies Startup Experience -'
+    graduation: 'Graduatie'
+    select_graduation: '- Kies Graduation -'
+    university_college: 'University / College'
+    mobile: 'mobiel'
+    address: 'Adres'
+    email_secondary: 'Email-Secondary'
+    skype_id: 'Skype identiteit'
+    website: 'Website'
+    about_you: 'Over jou'
+    inspire_quote: 'inspireer Quote'
+    linkedin: 'Linkedin'
+    add_team: 'Voeg Team +'
+    add_funding: 'Voeg Financiering +'
+    office_head: 'Office Headquarters'
+    socials_webapps: 'Sociale & Webapps'
+    investor_details: 'Investor Details'
+    add_portfolio: 'Voeg Portfolio +'
+    next: 'NEXT'
+    update: 'BIJWERKEN'
+    clear: 'DUIDELIJK'
+    add: 'Toevoegen'
+    delete: 'Verwijder'
+    remove: 'Verwijderen'
+    date: 'Datum'
+    mess_success_update_profile: 'Goed gedaan! Je succes profiel details bewaard'
+    your_contact_phone_number: 'Uw telefoonnummer'
+    any_useful_info_about_you: 'Alle nuttige informatie over u'
+    investor_type: 'Investor Type'
+    select_investor_type: '- Kies Investor Type -'
+    organization_name: 'organisatie naam'
+    founded: 'Opgericht (jaar)'
+    business_lines: 'Business Lines'
+    select_bussiness_lines: '- Kies Bussiness Lines -'
+    description: 'Beschrijving'
+    mission_vision: 'Missie visie'
+    designation: 'Aanwijzing'
+    select_designation: '- Selecteer Aanwijzing -'
+    join_date: 'Geregistreerd'
+    team_logo: 'team Logo'
+    address_line_1: 'Adres regel 1'
+    address_line_2: 'Adres lijn 2'
+    state: 'Staat'
+    startup_name: 'Startup Name'
+    type_funding: 'Soort Funding'
+    select_type_funding: '- Selecteer type financiering -'
+    funding_amount: 'financiering Bedrag'
+    startup_logo: 'Startup Logo'
+    about_company: 'over Company'
+    primary_bussiness_lines: 'Primaire Bussiness Lines'
+    how_it_work: 'Hoe het werkt'
+    regis_company_name: 'Registreer Bedrijfsnaam'
+    employee_strength: 'werknemer Strength'
+    select_employee_strength: '- Kies Werknemer Strength -'
+    avatar: 'avatar'
+    amount: 'Bedrag'
+    by_investor: 'door Investor'
+    any_useful_info_about_company: 'Alle nuttige informatie over het bedrijf'
+    pls_select_country_above: 'Selecteer een land boven'
+    current_password: 'huidig ​​wachtwoord'
+    new_password: 'nieuw paswoord'
+    new_password_confirmation: 'Nieuw wachtwoord Bevestiging'
+    your_current_pwd_mess: '(Uw huidige wachtwoord om de wijzigingen te bevestigen)'
+    update_pwd_success_mess: 'Goed gedaan ! Wachtwoord is met succes bijgewerkt.'
+    update_pwd_error_heading: '1 fout verboden deze gebruiker worden opgeslagen:'
+    update_pwd_error_mess: "Nieuw wachtwoord kan niet leeg zijn"
+
+    dashboard: 'DASHBOARD'
+    select_skill_type: 'Selecteer Skill Type'
+    select_profession_type: 'Selecteer Beroep Type'
+    select_country_input: 'Selecteer land'
+    read_more: 'Lees verder'
+    about : 'OVER'
+    personal_details: 'persoonlijke ontspoort'
+    communication: 'Communicatie'
+    only_investor_view_contact_details: 'Alleen Investor kunnen bekijken contactgegevens'
+    profile_view: 'profiel bekijken'
+    load_more: 'Laad meer'
+    no_results: 'Geen resultaten'
+    select_state: 'Selecteer een staat'
+    number_with_years: " %{Nummer} jaar"
+    not_have_func_yet: 'Niet nog functie'
+    select_business_line_type: 'Selecteer Bussiness Line Type'
+    select_funding_type_input: 'Selecteer Funding Type'
+    select_investor_type_input: 'Selecteer Investor Type'
+    our_team: 'Ons team'
+    location: 'plaats'
+    portfolio: 'Portefeuille'
+    business_type: 'bussiness Type'
+    funding: 'Funding'
+    investor: 'Investor'
+
+  notifications:
+    notifications: 'MELDINGEN'
+    recent: 'recent'
+    search: 'Zoeken'
+    search_here: 'Zoek hier'
+    ago: ' geleden'
+
+  messages:
+    to_day: 'tot dag'
+    reply: 'Antwoorden'
+    sent: 'verzonden'
+    enter_text_here: 'Voer hier uw tekst'
+

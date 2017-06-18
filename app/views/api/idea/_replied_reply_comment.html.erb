@@ -1,0 +1,87 @@
+<div class="col-md-12 mt20 plr0 " style="border-bottom:1px solid #ccc;">
+  <div class="col-sm-1 col-xs-2 pl0">
+    <%= image_tag cmt.user.avatar, width: 39, height: 37 %>
+  </div>
+  <div class="col-sm-11 col-xs-10 pr0">
+    <div class="form-group">
+      <p class="c-font-18 mb5">
+        <% if cmt.user.entrepreneur? %>
+          <%= link_to entrepreneur_path(cmt.user) do %>
+            <span9><%= cmt.user.fullname %></span9>
+          <% end %>
+        <% elsif cmt.user.investor? %>
+          <%= link_to investor_path(cmt.user) do %>
+            <span9><%= cmt.user.fullname %></span9>
+          <% end %>
+        <% elsif cmt.user.startup? %>
+          <%= link_to startup_path(cmt.user) do %>
+            <span9><%= cmt.user.fullname %></span9>
+          <% end %>
+        <% end %>
+      </p>
+      <div id="comment-container-<%= cmt.id %>" class="comment-container replied-reply-container"><%= cmt.message %></div>
+      <% if current_user.id == cmt.user.id %>
+        <div class="edit-replied-reply-hover"><a onclick="_editComment(<%= cmt.id %>);" href="javascript:void(0);" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a></div>
+        <div id="comment-id-<%= cmt.id %>" class="edit-comment-form">
+          <%= form_tag '#', remote: true do %>
+            <%= text_area_tag 'message', cmt.message, class: 'col-sm-12 form-control edit-replied-reply', placeholder: "Write a comment", id: "edit_comment_#{cmt.id}", "data-id" => "#{cmt.id}" %>
+          <% end %>
+          <div class="clearfix"></div>
+          <b>Press Esc to <i>cancel</i>.</b>
+        </div>
+      <% end %>
+      <p>
+        <%= render partial: 'api/idea/like_comment', locals: {cmt: cmt} %>
+        <span data-id="<%= cmt.parent_id %>" class="reply" style="color:#78C2E9;cursor:pointer;" onclick="repliedReply(<%= cmt.parent_id %>)">Reply </span>
+        <%= render partial: 'api/idea/more_like_comment', locals: {cmt: cmt} %>
+        <time class="timeago" datetime="<%= cmt.created_at.to_time.iso8601 %>"><%= cmt.created_at %></time>
+      </p>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('.edit-replied-reply').keydown(function(e){
+    var replied_reply_id = parseInt($(this).attr('data-id'));
+    if (e.keyCode == 13  && !e.shiftKey){
+      e.preventDefault();
+      var comment = $(this).val();
+      _updateComment(replied_reply_id, comment);
+      $("#comment-container-"+replied_reply_id).text(comment);
+      $('#comment-id-'+replied_reply_id).hide();
+      $('#comment-container-'+replied_reply_id).show();
+      return false;
+    }else if (e.keyCode == 27) {
+      $('#comment-id-'+replied_reply_id).hide();
+      $('#comment-container-'+replied_reply_id).show();
+    }
+  });
+
+  $('.comment-container').parent().hover(function(){
+    $(this).find('.edit-reply-hover').css({"visibility": "visible"})
+  });
+
+  $('.comment-container').parent().mouseleave(function(){
+    $(this).find('.edit-reply-hover').css({"visibility": "hidden"})
+  });
+
+  $('.replied-reply-container').parent().hover(function(){
+    $(this).find('.edit-replied-reply-hover').css({"visibility": "visible"});
+    $('.edit-reply-hover').css({"visibility": "hidden"});
+  });
+
+  $('.replied-reply-container').parent().mouseleave(function(){
+    $(this).find('.edit-replied-reply-hover').css({"visibility": "hidden"})
+  });
+
+  jQuery(document).ready(function() {
+    $("time.timeago").timeago();
+  });
+
+  var commenter = <%= cmt.user.id %>
+  if(uid != commenter ){
+    $('#comment-container-<%= cmt.id %>').next('.edit-replied-reply-hover').remove();
+    $('#comment-id-<%= cmt.id %>').remove();
+  }
+</script>

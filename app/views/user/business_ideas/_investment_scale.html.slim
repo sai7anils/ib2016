@@ -1,0 +1,29 @@
+= b.fields_for :investment_scale do |is|
+  .menu-content.container-fluid.investment-scale
+    h3 = t('idea.business.investment_scale_tab')
+    .question-other
+      h6 = t('idea.business.investment_scale_quest_1')
+      = is.number_field :total_capital, placeholder: t('idea.business.enter_text_here'), required: true
+    .question-other
+      h6 = t('idea.business.investment_scale_quest_2')
+      ul.question.question-2
+        - InvestmentScale::PERCENTAGE_FUND.each do|y|
+          li.radio-question
+            = is.radio_button :fund_already, y
+            span = (y.zero?) ? "#{t('idea.business.zero')}" : "#{y}% #{t('idea.business.of_whole_capital')}"
+    .question-other
+      h6 = t('idea.business.investment_scale_quest_3')
+      ul.question.question-2
+        - InvestmentScale::PERCENTAGE_FUND.each do|y|
+          li.radio-question
+            = is.radio_button :fund_like_to_invest, y
+            span = (y.zero?) ? "#{t('idea.business.zero')}" : "#{y}% #{t('idea.business.of_whole_capital')}"
+    .question-other
+      h6 = t('idea.business.investment_scale_quest_4')
+      = is.number_field :fund_you_seeking, placeholder: t('idea.business.enter_text_here'), required: true
+    .question-other
+      h6 = t('idea.business.investment_scale_quest_5')
+      = is.select :offering_business, InvestmentScale::PERCENTAGE.collect {|p| [ "#{p} %", p ] }, { include_blank: t('idea.business.select_business_stake') }, class: 'paid', required: true
+    .question-other
+      h6 = t('idea.business.investment_scale_quest_6')
+      = is.text_area :use_fund, placeholder: 'Enter text here', cols: 30, rows: 10, pattern: '.{80, 400}', required: true

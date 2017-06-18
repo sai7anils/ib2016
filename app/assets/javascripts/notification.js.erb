@@ -1,0 +1,129 @@
+function load_more_notification(pageno){
+  var last_id = $('.notification-element').last().index();
+  var search = document.getElementById("search").value;
+  $.ajax({
+    url: "/user/loadmorenotification",
+    data: {pageno: pageno, search: search},
+    success: function(result){
+      $("#load_detail").append(result);
+    }
+  })
+}
+$('.acount-section').ready(function() {
+  var currPage = 1;
+  $('#load_detail').scroll(function() {
+    $('#load_detail').scroll(function() {
+      if($('#load_detail').scrollTop() + $('#load_detail').height() > $('#load_detail')[0].scrollHeight - 300){
+        load_more_notification(++currPage);
+      }
+    });
+  });
+});
+var $notifications = $('ul.drp-notification');
+
+function notifications() {
+  $notifications.find('li.no-notification').remove();
+  $('.notifications-icon span.badge11').css({"display": "block"});
+}
+
+$('.notifications-box').on('click', function(){
+  $.get( "/api/notifications/seen" );
+  var url =  "/api/notifications/all";
+  $notifications.find('.notifications-block').load(url);
+  $('.notifications-icon span.badge11').css({"display": "none"});
+  $notifications.toggle();
+});
+
+$(document).ready(function() {
+  var url =  "/api/notifications/all";
+  $notifications.find('.notifications-block').load(url);
+  $('.profile_details_drop, .prof-img, .msg-icon, .lnr-chevron-down').on('click', function(){
+    $notifications.css({"display":"none"});
+  });
+
+  $('.profile_details_drop, .prof-img, .notifications-icon, .lnr-chevron-down').on('click', function(){
+    $('.dropdown-message').css({"display":"none"});
+  });
+
+  $('#page-wrapper').click(function(){
+    $('ul.drp-notification').css({"display": "none"});
+  });
+  var noti_page = 2;
+  /*$('.notifications-block').scroll(function() {
+    if($('.notifications-block').scrollTop() + $('.notifications-block').height() < $('.notifications-block')[0].scrollHeight - 100 ) {
+      $.ajax({
+        url: '/api/notifications/loadmore',
+        data: {page: noti_page},
+        success: function(data){
+          $('.notifications-block').append(data);
+        }
+      });
+      noti_page++;
+    }
+  });*/
+});
+
+$(document).mouseup(function (e){
+  var messageContainer = $('ul.dropdown-message').closest('li');
+  var notiContainer = $('ul.drp-notification').closest('li');
+
+  if (!messageContainer.is(e.target) // if the target of the click isn't the container...
+    && messageContainer.has(e.target).length === 0){ // ... nor a descendant of the container
+    messageContainer.find('ul.dropdown-message').hide();
+  }
+
+  if (!notiContainer.is(e.target) // if the target of the click isn't the container...
+    && notiContainer.has(e.target).length === 0){ // ... nor a descendant of the container
+    notiContainer.find('ul.drp-notification').hide();
+  }
+
+});
+
+var $messages = $('ul.dropdown-message');
+
+function messages() {
+  $('.messages-icon span.badge11').css({"display": "block"});
+}
+
+$('.messages-box').on('click', function(){
+  $.get( "/api/messages/seen" );
+  var url =  "/api/messages/all";
+  $messages.load(url);
+  $('.msg-icon span.badge11').css({"display": "none"});
+  $messages.toggle();
+});
+
+$(document).ready(function() {
+  var url =  "/api/messages/all";
+  $messages.load(url);
+  $('#page-wrapper').click(function(){
+    $('ul.drp-notification').css({"display": "none"});
+  });
+  var noti_page = 2;
+});
+
+$('.fa-reply-all').on('click', function(){
+  alert($(this).parents('.message-element').index())
+});
+
+$('#expand-messages').on('click', function(){
+  this.style.display = 'none'
+});
+var click = 0;
+$('.menu-collapsed').on('click', function(){
+  // document.getElementsByClassName("modal-dialog").style.paddingLeft = "183px";
+
+  if (click % 2 == 0)
+    $(".modal-dialog").animate({'padding-left':'183px'}, 350);
+  else
+    $(".modal-dialog").animate({'padding-left':'0px'}, 350);
+  click ++;
+});
+// $('.toggle-btn').on('click', function(){
+//   // document.getElementsByClassName("modal-dialog").style.paddingLeft = "183px";
+//   $(".modal-dialog").animate({'padding-left':'0px'});
+// });
+
+function changeText(e) {
+  $('.title-idea h4').first().text(e);
+}

@@ -1,0 +1,277 @@
+.event-details {
+  overflow-y: none;
+  .header-left {
+    width: 70% !important;
+  }
+
+  .header-right {
+    width: 30% !important;
+  }
+
+  .acount-section {
+    padding-bottom: 50px !important;
+  }
+
+  .detail-info {
+    min-height: 500px;
+  }
+
+  .detail-content {
+    margin-bottom: 40px;
+  }
+}
+
+.input-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.input-file::before {
+  //content: 'Browse File From';
+  display: inline-block;
+  border: none;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: normal;
+  font-size: 10pt;
+  color: #a5a5a5 !important;
+}
+
+.opacity {
+  opacity: 0.3;
+}
+
+input#datepicker, input#datepicker2, input#timepicker {
+  padding-left: 25px;
+}
+
+input[type=file] {
+  color: #333 !important;
+}
+
+.btn-group-event {
+  border-bottom: none !important;
+}
+
+.btn-add-partner {
+  position: absolute;
+  left: 150px;
+  top: 525px;
+}
+
+.btn-partner-image {
+  background-color: #f0f0f0;
+  border: 1px solid #d7d7d7;
+  padding: 2px 15px;
+  border-radius: 3px;
+  float: right;
+  margin: 25px 0px 5px;
+  font-size: 13px;
+}
+
+.event-left {
+  min-height: 680px !important;
+}
+
+.event-details-image {
+  width: 100%;
+}
+
+.child-partner {
+  padding: 0 !important;
+  margin-top: 10px;
+
+  .child-partner-img {
+    width: 120px;
+  }
+}
+
+.list-events {
+  min-height: 800px;
+  margin-bottom: 50px;
+
+  .select-block {
+    padding: 2px !important;
+    padding-right: 10px !important;
+
+    .fa-map-marker {
+      margin-right: 5px !important;
+    }
+  }
+
+  .select-event-country {
+    width: 150px;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid transparent;
+    outline: 0;
+    font-size: 15px;
+    text-transform: none;
+  }
+
+  .select2-container--default .select2-selection--single {
+    border: none !important;
+    background: transparent !important;
+  }
+
+  .event-calendar {
+    width: 120px !important;
+    display: inline-block;
+    outline: none;
+  }
+
+  .event-calendar-block {
+    padding: 2px 5% 8px 10px !important;
+  }
+
+  input.keyword {
+    outline: none;
+  }
+  .select2-container {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.event-content {
+  margin-bottom: 100px;
+}
+
+.event-details {
+  .detail-content {
+    overflow-y: auto;
+  }
+}
+
+.load-more {
+  bottom: 10px;
+}
+
+.sticky-header.left-side-collapsed {
+  footer {
+    padding-left: 0%;
+    padding-right: 79%;
+  }
+}
+
+.sticky-header {
+  footer {
+    padding-left: 20%;
+    padding-right: 70%;
+  }
+}
+
+.acount-section.event-section {
+  overflow-y: none;
+}
+
+.partner-main {
+  position: absolute;
+  left: 200px;
+  top: 550px;
+}
+
+.sticky-header {
+  .partner-main {
+    width: 230px;
+  }
+}
+
+.sticky-header.left-side-collapsed {
+  .partner-main {
+    width: 330px;
+  }
+}
+
+.partner-element {
+  background-color: #f8ebb0;
+  padding: 0px 6px;
+  border-radius: 3px;
+  height: 23px;
+  margin-right: 5px;
+  float: right;
+  margin-bottom: 6px;
+
+  h6 {
+    font-size: 12px !important;
+    color: #232323 !important;
+    float: left !important;
+    margin-top: 6px !important;
+  }
+
+  .btn-remove {
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 5px;
+    padding-right: 0px;
+    font-weight: 400;
+  }
+}
+
+.element-edit-action {
+  position: absolute;
+  width: 100px;
+  right: -40px;
+
+  a {
+    color: #333;
+    visibility: hidden;
+  }
+}
+
+.event-element:hover .element-edit-action {
+  a {
+    visibility: visible;
+  }
+}
+
+#event_description::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+#event_description::-webkit-scrollbar:horizontal {
+  width: 5px;
+  border-radius: 10px;
+}
+
+#event_description::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+#event_description::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 208, 0);
+  outline: none;
+  -webit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.update-event-message {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+  margin: 20px;
+}
+
+.event-message-error {
+  margin: 20px;
+}
+
+div#partners{
+  margin-top: 140px;
+}
+#event_timezone{
+  padding-bottom: 2px;
+}
+.custom-file-modify{
+  margin-top: 27px !important;
+  .file-upload-input{
+    margin-left: 20px;
+    width: 200px !important;
+  }
+  .file-upload-button{
+    float: right;
+  }
+}

@@ -1,0 +1,85 @@
+= b.fields_for :business_potencial do |bp|
+  .menu-content.container-fluid.business-potencial
+    h3.h3-left = t('idea.business.business_potencial')
+    h4.h4-right = t('idea.business.business_potencial_heading_right')
+    .menu-info
+      .instructions
+        .question-other
+          h6 = t('idea.business.instructions')
+          p = t('idea.business.profit_potential_content')
+      .question-other
+        h6
+          = t('idea.business.profit_potential_ques_1')
+          label
+            = t('idea.business.profit_potential_ques_1_small_text')
+        = bp.select :projection_type, BusinessPotencial::PROJECTIONS.collect {|k, v| [ k, v ] }, { include_blank: t('idea.business.select_type_of_projection') }, class: 'paid', required: true
+
+      .question-other
+        h6
+          = t('idea.business.profit_potential_ques_2')
+          label
+            = t('idea.business.profit_potential_ques_2_small_text')
+        = bp.select :term_number, BusinessPotencial::TERMS.collect {|k, v| [ k, v ] }, { include_blank: t('idea.business.choose_term') }, class: 'paid', required: true
+
+      .question-other
+        h6 = t('idea.business.profit_potential_ques_3')
+        = bp.select :revenue_type, BusinessPotencial::REVENUES.collect {|k, v| [ k, v ] }, { include_blank: t('idea.business.select_type') }, class: 'paid', required: true
+        /! Per Unit
+        = bp.fields_for :per_unit do |pu|
+          = pu.hidden_field :sale, {}
+          = pu.hidden_field :price, {}
+
+        /! Per Hour
+        = bp.fields_for :per_hour do |ph|
+          = ph.hidden_field :billable, {}
+          = ph.hidden_field :hour_rate, {}
+
+        /! Own Model
+        = bp.fields_for :own_model do |om|
+          = om.hidden_field :revenue, {}
+
+        /! Recurring
+        = bp.fields_for :recurring do |r|
+          = r.hidden_field :no_account, {}
+          = r.hidden_field :charge, {}
+          = r.hidden_field :churn_rate, {}
+
+        /! Modal
+        #perUnit.modal.fade role="dialog"
+          .modal-dialog
+            /! Modal content
+            .modal-content
+              .modal-header
+                button.close data-dismiss="modal" type="button"  &times;
+                h4.modal-title Type of Revenue
+              .modal-body
+                h4.params-1
+                  | Sales in Number of units
+                  label Projected numbers starts from next month. Allows only number. (No of units)
+                h4.params-2.hide
+                  | Prices per each sale
+                  label Projected numbers starts from next month. Allows only number. (Cost/UNIT)
+                h4.params-3.hide
+                  | Prices per each sale
+                  label Projected numbers starts from next month. Allows only number. (Cost/UNIT)
+                .btn-group
+                  button.params-1.active type="button" Parameter 1
+                  button.params-2 type="button" Parameter 2
+                  button.params-3 type="button" style="color: #333" Parameter 3
+                .list-month.hide#params-1
+                .list-month.hide#params-2
+                .list-month.hide#params-3
+
+              .modal-footer
+                button#per-unit-save type="button" Save
+                button#per-unit-clear type="button"  Clear
+        .list-sales.hide
+          h4 Sales in Number of Units
+          .btn-group
+            button.btn-edit.btn-edit-per-unit type="button"
+              i.fa.fa-pencil-square-o
+              | Edit
+            button.btn-delete type="button"
+              i.fa.fa-trash-o
+              | Delete
+          table.table-list

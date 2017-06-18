@@ -1,0 +1,97 @@
+<style type="text/css">
+  .read-more-state {
+    display: none;
+  }
+
+  .read-more-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+  }
+
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    opacity: 1;
+    // font-size: inherit;
+    max-height: 999em;
+  }
+
+  .read-more-state ~ .read-more-trigger:before {
+    content: '+';
+  }
+
+  .read-more-state:checked ~ .read-more-trigger:before {
+    content: '-';
+  }
+
+  .read-more-trigger {
+   background-color: #ffd100;
+   //  border: 1px solid #ddd;
+   border-radius: 50%;
+   color: #fff;
+   cursor: pointer;
+   //  display: inline-block;
+   font-size: 25px;
+   height: 30px;
+   line-height: 30px;
+   //  padding: 0 0.5em;
+   position: absolute;
+   text-align: center;
+   width: 30px;
+   margin: 0;
+   top:45.5%;
+   left: 45%;
+ }
+</style>
+<div id="page-wrapper">
+
+  <div class="switches">
+   <div class="col-4">
+
+    <div class="col-md-9 p0">
+      <div class="col-md-6 col-xs-12">  <h3 class="c-font-17" style="line-height:2;"></h3></div>
+
+      <div class="clear"></div>
+
+      <div class="col-md-12 mb30 mb30-custom ">
+       <aside >
+         <div class="col-md-4 p0 " >
+          <div class="switch-right-grid  " >
+            <div class="switch-right-grid1 " style="background-color: #f9f9f9">
+              <div class="col-md-12 idea-left">
+                <h3><%= t('idea.normal.instructions') %></h3>
+              </div>
+               <div class="tip-info">
+                 <ul class="list-tip-info">
+                   <li><%= t('idea.normal.content_1') %></li>
+                   <li><%= t('idea.normal.content_2') %></li>
+                   <li><%= t('idea.normal.content_3') %></li>
+                   <li><%= t('idea.normal.content_4') %></li>
+                 </ul>
+               </div>
+
+               <label for="post-2" class="read-more-trigger"><i class="fa fa-plus"></i></label>
+             <hr class="idea-border">
+           </div>
+
+         </div>
+
+         <div align="center" class="idea-margin">
+           <%= image_tag asset_path('open-idea.png'), class: 'img-resposive center' %>
+         </div>
+       </div>
+
+     </aside>
+
+     <div class="mid-content col-md-8 " style="background-color: #fff">
+      <%= render 'form' %>
+    </div>
+  </div>
+</div>
+
+<%= render 'applications/closed_ideas' %>
+<div class="clearfix"></div>
+</div>
+</div>
+
+</div>

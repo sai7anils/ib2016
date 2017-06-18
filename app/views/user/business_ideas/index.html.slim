@@ -1,0 +1,151 @@
+#page-wrapper
+  .switches
+    .acount-section.business-idea-section
+      .acount-title.container-fluid
+        - if controller_name == "investors"
+          h2 = t('idea.business.my_favourites')
+        - else
+          h2 = t('idea.business.business_ideas')
+      .profile
+        .profile-content.upcoming-content
+          .entrepreneur-content.container-fluid.list-idea
+            = render 'user/business_ideas/filter'
+            - (@ideas || []).each do |idea|
+              - idea = iterable?(idea)
+              - if idea.business_idea.present?
+                .event-element.container-fluid id="item-#{idea.id}"
+                  - if controller_name == "investors"
+                    .my_favourites
+                      i.fa.fa-star.fa-2x aria-hidden="true" onclick='unlike(event, "#{idea.id}");'
+                  - if idea.business_idea.try(:ip_patent).to_i == 100
+                    .img-logo
+                      = image_tag 'icon-logo-business-idea.png'
+                  .element-left.business-idea-left
+                    .image-business
+                      = link_to get_profile(idea.user) do
+                        = image_tag idea.user.avatar
+                    h5.title-name = idea.user.fullname
+                    h6.sub-title = idea.user.entrepreneur.pro_type_name if idea.user.entrepreneur.present?
+                    h6.sub-title = idea.user.country_name
+                    h6.view
+                      = link_to get_profile(idea.user), class: 'view-profile' do
+                       = t('idea.business.view_profile')
+                    p.date = idea.created_at.strftime('%m-%d-%y %H:%M:%S %p')
+                    ul
+                      li
+                        = image_tag 'icon-eye.png'
+                        p = idea.try(:views).to_i
+                      li.icon-pig
+                        = image_tag 'icon-pig.png'
+                        p 0
+                  .element-right
+                    h4.title-1 = idea.business_idea.business_line_name
+                    - if idea.user == current_user
+                      span.dropdown.options
+                        a.dropdown-toggle data-toggle="dropdown" area-expanded="false" href="#"
+                          i.lnr.lnr-chevron-down
+                        ul.dropdown-menu
+                          li = link_to t('idea.edit'), edit_user_business_idea_path(idea)
+                          li = link_to t('idea.delete'), user_business_idea_path(idea), method: :delete, data: { confirm: t('idea.are_you_sure') }
+                    h4.title-2 = truncate(idea.try(:title).to_s, length: 100)
+                    h6.subtitle = t('idea.business.problem_statement')
+                    p.text = truncate(idea.business_idea.try(:problem_statement).to_s, length: 200)
+                    h6.subtitle = t('idea.business.solution')
+                    p.text = truncate(idea.business_idea.try(:solution).to_s, length: 200)
+                    h6.subtitle.subtitle-left = t('idea.business.current_idea_stage')
+                    p.text.text-left = idea.business_idea.idea_stage_name
+                    .subtitle-group
+                      h6.subtitle.subtitle-left = t('idea.business.capital')
+                      p.text.text-left
+                        = idea.business_idea.investment_scale.nil? ? "$0" : "$#{idea.business_idea.investment_scale.try(:fund_already).to_i}"
+                      h6.subtitle.subtitle-left = t('idea.business.seeking')
+                      p.text.text-left
+                        = idea.business_idea.investment_scale.nil? ? "$0" : "$#{idea.business_idea.investment_scale.try(:fund_you_seeking).to_i}"
+                        | &nbsp;for&nbsp;
+                        = idea.business_idea.investment_scale.nil? ? "0% #{t('idea.business.stake')}" : "#{idea.business_idea.investment_scale.try(:offering_business).to_i}% #{t('idea.business.stake')}"
+                  = link_to ( idea.business_idea.access_learn_more?(current_user) ? idea.business_idea.learn_more_url(current_user) : '' ), class: 'btn-learn-more'
+                    = t('idea.learn_more')
+                    i.fa.fa-long-arrow-right
+            - if @ideas.count.zero?
+              .col-md-12 = t('global.no_results')
+      .load-more
+        i.fa.fa-spinner.fa-spin
+        = t('idea.load_more')
+      = render 'user/business_ideas/closed_ideas'
+      = render 'user/business_ideas/identity_modal'
+  .clearfix
+
+css:
+  .acount-section p.text {
+    min-height: 0px !important;
+  }
+
+javascript:
+  $(document).ready(function () {
+    $(".select-location").select2({
+      placeholder: "#{t('idea.business.search_by_location')}",
+      allowClear: true
+    });
+    $(".select-idea-stage").select2({
+      placeholder: "#{t('idea.business.search_by_idea_stage')}",
+      allowClear: true
+    });
+    $(".select-business-line").select2({
+      placeholder: "#{t('idea.business.search_by_bussiness_line')}",
+      allowClear: true
+    });
+    $(".select-patent").select2({
+      placeholder: "#{t('idea.business.search_by_patent')}",
+      allowClear: true
+    });
+    $(".select-business-line").on('change', function(){
+      window.location = "?business_line="+$('.select-business-line').val()+"&idea_stage=#{params[:idea_stage]}&patent=#{params[:patent]}&location=#{params[:location]}";
+    });
+    $(".select-idea-stage").on('change', function(){
+      window.location = '?idea_stage='+$(".select-idea-stage").val()+"&business_line=#{params[:business_line]}&patent=#{params[:patent]}&location=#{params[:location]}";
+    });
+    $(".select-patent").on('change', function(){
+      window.location = "?idea_stage=#{params[:idea_stage]}&business_line=#{params[:business_line]}&patent=" + $('.select-patent').val()+'&location=#{params[:location]}';
+    });
+    $(".select-location").on('change', function(){
+      window.location = "?idea_stage=#{params[:idea_stage]}&business_line=#{params[:business_line]}&patent=#{params[:patent]}&location=" + $('.select-location').val();
+    });
+    $('.clear-search-business-idea').click(function(){
+        window.location = "?idea_stage=&business_line=&patent=&location=";
+    });
+    // Set z-index for footer
+    $('footer').css('z-index', 1000);
+    // Load more business ideas
+    var controller_name = "#{controller_name}";
+    if(controller_name == "investors"){
+      url = "/user/investors/load_more_business";
+    }else{
+      url = "#{load_more_user_business_ideas_path}";
+    }
+    var page = 1;
+    page++;
+    $(window).scroll(function() {
+      if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+        $('.load-more').show();
+        $.ajax({
+          url: url,
+          data:{idea_stage: '#{params[:idea_stage]}', business_line: '#{params[:business_line]}', patent: '#{params[:patent]}', location: '#{params[:location]}', page: page},
+          success: function(data){
+            $('.load-more').hide();
+            $('.list-idea').append(data);
+          }
+        });
+        page++;
+      }
+    });
+
+    $('.btn-learn-more').click(function(e){
+      e.preventDefault();
+      var url = $(this).attr('href');
+      if (url != ""){
+        window.location = url;
+      }else{
+        $('#modalIdentity').modal('toggle');
+      }
+    });
+  });

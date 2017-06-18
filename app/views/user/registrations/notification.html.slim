@@ -1,0 +1,59 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 = t('notifications.notifications')
+      .notification
+        .content-notification
+          ul.type-notification.container-fluid
+            li
+              = link_to "#{t('notifications.recent')} (#{@count_notification})", notification_path, :remote =>true
+            / li
+            /   = link_to "Message Request", message_path, :remote =>true
+            / li
+            /   = link_to "Unread Message(#{@notifications_unread_count})", unread_path, :remote =>true
+            li
+              = form_tag notification_path, method: 'get', id: "my_form" do
+                label = t('notifications.search')
+                = text_field_tag :search, "#{@search}", placeholder: t('notifications.search_here')
+                button
+                  i.fa.fa-search  onclick="document.getElementById('my_form').submit();"
+          #load_detail
+            - @notifications.each do |noti|
+              .notification-element.container-fluid
+                .noti-info-left
+                  - if noti.commented?
+                    i class="fa fa-comments-o "
+                  - elsif noti.liked?
+                    i class="fa fa-thumbs-o-up"
+                  - else
+                    i class="fa fa-star"
+                  = link_to user_idea_path(noti.idea_id)
+                    h5 #{noti.message.humanize}
+                // = image_tag ''
+                .noti-info-right
+                  - if noti.user
+                    = link_to get_profile(noti.user)
+                      = image_tag (noti.user.avatar), title: "#{noti.user.username.capitalize}: #{noti.user.email} "
+                  end
+                  h5 #{time_ago_in_words(noti.created_at)} #{t('notifications.ago')}
+
+      ul.your-idea.block-fixed
+        li.title
+          = image_tag 'icon-postyouridea.png'
+          h4
+            = link_to t('idea.post_your_idea'), new_user_idea_path
+        li.close-idea = t('idea.closed_ideas')
+        - (@closed_ideas || []).each do |idea|
+          li.idea
+            = link_to user_idea_path(idea) do
+              h4 = idea.title
+            end
+            h5 = truncate(idea.try(:description), length: 70 )
+
+        li.btn-plus
+          = link_to "#" do
+            button
+              i.fa.fa-plus
+          end
+  .clearfix

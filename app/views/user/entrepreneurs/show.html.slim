@@ -1,0 +1,126 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 = @user.fullname
+        h3 = t('user.profile_view')
+      .profile
+        .profile-content
+          .profile-image
+            = image_tag @user.avatar
+            .icon-share.container-fluid
+              = button_to "http://#{@info.try(:linkedin)}",:method => :get, target: '_blank', class:'left'  do
+                i.fa.fa-linkedin
+              button.right
+                i.fa.fa-question
+            = image_tag 'icon-text-profile.png', :class => 'icon-text-profile'
+            p.text = truncate(@info.try(:inspire_quote).to_s, length: 150)
+            /! p.text - Steve Jobs
+          .profile-info
+            h3 = t('user.about ')
+            p.user-about = @info.try(:about)
+            ul.list-info.entrepreneur-list-info
+              li.active = t('user.personal_details')
+              li = t('user.profession')
+              li = t('user.education')
+              li class=(current_user.investor? ? '' : 'disabled')
+                = t('user.communication')
+                button
+                  i.fa.fa-question
+            .info-content.container-fluid
+              .info-element
+                = image_tag '1.png'
+                = @user.fullname
+              .info-element
+                = image_tag '2.png'
+                = "#{@info.try(:dob)}"
+              .info-element
+                = image_tag '5.png'
+                = @info.try(:address)
+              .info-element
+                = image_tag '3.png'
+                = @info.try(:profession_company)
+              .info-element
+                = image_tag '7.png'
+                = @user.try(:country_name)
+            .info-content.container-fluid
+              .info-element
+                i.fa.fa-info.img
+                = @info.try(:pro_type_name)
+              .info-element
+                i.fa.fa-hand-o-right.img
+                = @info.try(:pro_skill_name)
+              .info-element
+                = image_tag '3.png'
+                = @info.try(:profession_company)
+              .info-element
+                i.fa.fa-briefcase.img
+                = t('user.number_with_years', :number => @info.try(:profession_experience).to_i)
+            .info-content.container-fluid
+              .info-element
+                i.fa.fa-graduation-cap.img
+                = @info.try(:graduation_info)
+              .info-element
+                i.fa.fa-university.img
+                = @info.try(:university)
+            .info-content.container-fluid
+              .info-element
+                i.fa.fa-phone.img &nbsp;
+                = @info.try(:mobile)
+              .info-element
+                = image_tag '4.png'
+                = @user.email
+              .info-element
+                = image_tag '5.png'
+                = @info.try(:address)
+              .info-element
+                = image_tag '4.png'
+                = @info.try(:email_second)
+              .info-element
+                i.fa.fa-globe.img &nbsp;
+                = @info.try(:website)
+              .info-element
+                i.fa.fa-linkedin.img &nbsp;
+                = @info.try(:linkedin)
+              .info-element
+                i.fa.fa-skype.img &nbsp;
+                = @info.try(:skype)
+      ul.your-idea
+        li.title
+          = image_tag 'icon-postyouridea.png'
+          h4
+            = link_to t('idea.post_your_idea'), new_user_idea_path
+        li.close-idea = t('idea.closed_ideas')
+        - (@ideas || []).each do |idea|
+          li.idea
+            = link_to user_idea_path(idea) do
+              h4 = idea.title
+            end
+            h5 = truncate(idea.try(:description).to_s, length: 70)
+
+        li.btn-plus
+          = link_to "#" do
+            button
+              i.fa.fa-plus
+          end
+  .clearfix
+.modal-comunication.container-fluid
+  = render 'applications/modal'
+
+javascript:
+  $('ul.entrepreneur-list-info li.disabled').on('click', function(){
+    var message = "#{t('user.only_investor_view_contact_details')}";
+    $('.modal-body').html(message);
+    $('.modal-dialog').css({
+      "float": "left",
+      "margin-left": "62px",
+      "width": $('.profile').width() +"px"
+    });
+    $('#alertModal').modal('show');
+  });
+  $('.icon-share.container-fluid button.right').on('click', function(){
+    var message = "#{t('user.not_have_func_yet')}";
+    $('.modal-body').html(message);
+    $('#alertModal').modal('show');
+  });
+

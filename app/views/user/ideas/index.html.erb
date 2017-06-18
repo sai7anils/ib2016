@@ -1,0 +1,173 @@
+<div id="page-wrapper">
+  <% flash.each do |name, value| %>
+    <% if value.is_a?(String) or value.is_a?(Array) %>
+      <div class="alert alert-<%= name == 'notice' ? "success" : "danger" %>">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= content_tag :div, id: "flash_#{name}" do %>
+          <%= [value].flatten.map { |v| strip_tags(v) }.join('<br>').html_safe %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="switches">
+    <div class="col-4">
+
+      <div class="col-md-9 p0">
+        <div class="col-md-6 col-xs-12">  <h3 class="c-font-17" style="line-height:2;"><%= t('idea.public_ideas') %></h3></div>
+        <div class="col-md-3 col-xs-12 p0" style="padding-left: 15px">
+          <select class="select-country country form-control" >
+            <option value=""></option>
+            <%= options_for_select(CS.countries.collect {|k,v| [ v, k ] }, selected: params[:country]) %>
+          </select>
+        </div>
+
+        <!-- SIXTH EXAMPLE -->
+        <div class="col-md-3 col-xs-12 p0">
+          <select class="category form-control select-category" >
+            <option value=""></option>
+            <%= options_for_select(Category.all.collect {|p| [ p.name, p.id ] }, selected: params[:c]) %>
+          </select>
+        </div>
+        <div class="clear"></div>
+
+        <section class="list-idea">
+          <% if @ideas.present? %>
+          <% @ideas.each do |idea| %>
+          <div class="col-md-6 mb30 idea-block">
+
+            <div class="switch-right-grid ">
+              <div class="switch-right-grid1">
+                <div class="col-md-12 activity-rows">
+
+                  <div class="col-xs-3">
+                    <%= link_to get_profile(idea.user) do %>
+                      <%= image_tag asset_path(idea.user.avatar), class: 'img-responsive img-circle' %>
+                    <% end %>
+                  </div>
+                  <div class="col-xs-9 activity-desc pl0">
+                    <h5>
+                      <%= link_to get_profile(idea.user) do %>
+                        <%= idea.user.fullname %>
+                      <% end %>
+                    </h5>
+                    <p><%= idea.category.name %></p>
+                  </div>
+                  <div class="clearfix"></div>
+
+                </div>
+                <div class="col-md-12 bg-white p0 info-location">
+                  <p class="col-md-8 text-left">
+                    <%= image_tag asset_path('location-icon-grey.png'), style: 'vertical-align:top;' %>
+                    <%= idea.user.location %>
+                  </p>
+                  <p class="text-right date-time-dashboard">
+                    <%= image_tag asset_path('submitdate-icon.png'), style: 'vertical-align:top;' %>
+                    <%= idea.created_at.strftime('%B %d, %Y') %>
+                  </p>
+                </div>
+                <div class="col-md-12 switch-right-grid-desc">
+                  <h3><%= idea.title.truncate(50) %></h3>
+                  <p> <%= idea.description.truncate(250) %></p>
+                  <p>
+                    <% if (action_name == 'my_ideas') && idea.my_idea?(current_user)  %>
+                      <div class="idea-edit-action">
+                        <%= link_to edit_user_idea_path(idea), "data-toggle" => "tooltip", title: 'Edit idea' do %>
+                          <i class="fa fa-edit"></i>
+                        <% end %>
+                      </div>
+                    <% end %>
+                    <%= link_to t('idea.read_more'), user_idea_path(idea), class: 'readmore' %>
+                  </p>
+                </div>
+                <div class="col-md-12 comment">
+                  <div class="col-md-7 col-xs-12 p-left">
+                    <div class="col-md-4 col-xs-3"><center>
+                      <%= image_tag asset_path('Views-Icon-small.png') %>
+                      <br />
+                      <span><%= idea.views %></span>
+                    </center>
+                  </div>
+                  <div class="col-md-4 col-xs-4"><center>
+                    <%= image_tag asset_path('Like-icons-small.png') %>
+                    <br />
+                    <span><%= idea.likes.count %></span>
+                  </center>
+                </div>
+                <div class="col-md-4 col-xs-3"><center>
+                  <%= image_tag asset_path('comments-icons-small.png') %>
+                  <br />
+                  <span><%= idea.comments.count %></span>
+                </center>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="col-md-5 ">
+              <div class="disabled-rating"></div>
+              <%= rating_for idea, "visual_effects", stars: 10, enable_half: false, path: 'star_on', class: 'rating' %>
+              <div class="clear"></div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <% end %>
+    <% else %>
+    <div class="col-md-12">
+      <%= t('idea.normal.no_results') %>
+    </div>
+    <% end %>
+  </section>
+  <div class="load-more"><i class="fa fa-spinner fa-spin"></i> <%= t('idea.load_more') %></div>
+</div>
+<%= render 'applications/closed_ideas' %>
+<div class="clearfix"></div>
+</div>
+</div>
+
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.state').next().find('input').attr('placeholder', 'Select A State');
+    $(".country").select2({
+      placeholder: "<%= t('idea.select_a_country') %>",
+      allowClear: true
+    });
+    $(".category").select2({
+      placeholder: "<%= t('idea.select_a_category') %>",
+      allowClear: true
+    });
+    $(".country, .category").on('change', function(){
+      window.location = '?country=' + $('.country').val() + '&c=' + $('.category').val() + '&q=<%= params[:q].to_s %>' + '&action_page=<%= action_name %>';
+    });
+  });
+  var page = 1;
+  page++;
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+      $('.load-more').show();
+      $.ajax({
+        url: '/user/ideas/load_more/',
+        data: {c: '<%= params[:c] %>', q: '<%= params[:q].to_s %>', country: '<%= params[:country] %>', page: page, action_page: '<%= action_name %>'},
+        success: function(data){
+          $('.load-more').hide();
+          $('.list-idea').append(data);
+        }
+      });
+      page++;
+    }
+  });
+</script>
+<style type="text/css">
+  .readmore{
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+  }
+</style>

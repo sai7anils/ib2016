@@ -1,0 +1,11 @@
+---
+- id: 1
+  name: Under $1M
+- id: 2
+  name: $1M - $10M
+- id: 3
+  name: $10M - $50M
+- id: 4
+  name: $50M - $250M
+- id: 5
+  name: $250M+

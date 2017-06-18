@@ -1,0 +1,107 @@
+/! Modal
+#validate.modal.fade role="dialog"
+  .modal-dialog.modal-dialog-validate
+    /! Modal content
+    .modal-content
+      .modal-header
+        button.close data-dismiss="modal" type="button"  &times;
+        h4.modal-title My Business Idea VALIDATION
+      .modal-body
+        .modal-validation-element
+          h5.txt-title = t('idea.business.primary_niceties_tab')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.primary-details-chart
+            label 0
+            | %
+        .modal-validation-element
+          h5.txt-title = t('idea.business.early_stage_analysis_tab')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.stage-analysis-chart
+            label 0
+            | %
+        .modal-validation-element
+          h5.txt-title = t('idea.business.team_capabilities_tab')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.team-capabilities-chart
+            label 0
+            | %
+        .modal-validation-element
+          h5.txt-title = t('idea.business.market_analysis_tab')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.market-analysis-chart
+            label 0
+            | %
+        .modal-validation-element
+          h5.txt-title = t('idea.business.customer_analysis_tab')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.customer-analysis-chart
+            label 0
+            | %
+        .modal-validation-element
+          h5.txt-title = t('idea.business.investment_scale_tab')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.investment-scale-chart
+            label 0
+            | %
+        .modal-validation-element
+          h5.txt-title = t('idea.business.business_potencial')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.business-potencial-chart
+            label 0
+            | %
+        .modal-validation-element
+          h5.txt-title = t('idea.business.competitors_scenery_tab')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.competitors-scenery-chart
+            label 0
+            | %
+        .modal-validation-element
+          h5.txt-title = t('idea.business.pitch_burns_tab')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.pitch-burns-chart
+            label 0
+            | %
+        .modal-validation-element
+          h5.txt-title = t('idea.business.exit_strategy_tab')
+          .percentage
+            .percentage-under
+            .percentage-above
+          h5.txt-percentage.exit-strategy-chart
+            label 0
+            | %
+      .modal-footer.container-fluid
+        .modal-footer-validate
+          h4
+            = t('idea.business.modal.total_score')
+            label 0
+            | %
+          .percentage-circle
+            .percentage-circle-current
+            .percentage-circle-current-left
+            .txt-percentage
+              lable 0
+              | %
+        .modal-footer-validate
+          h4.chart-go-to
+            = t('idea.business.modal.good_to')
+            p
+              = t('idea.business.modal.go')
+              i.fa.fa-arrow-right

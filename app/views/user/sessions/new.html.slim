@@ -1,0 +1,48 @@
+/! Login  page
+.c-layout-page.mt72
+  .c-content-box.c-size-md.c-bg-light-grey
+    .container
+      .row
+        .col-md-3
+        .col-md-6.col-sm-6
+          .c-opt-1.login-box
+            h3.c-font-35.login-head.mb40 = t('devise.login')
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              - flash.each do |key, value|
+                .alert.alert-danger
+                  = value
+              /!.form-group
+                = select("user", "user_type", UserType.all.collect {|p| [ p.name, p.id ] }, { include_blank: '- Select User Type -' }, class: 'form-control dd')
+              .form-group
+                = f.label :email, for: 'login-email', class: 'hide'
+                = f.text_field :email, class: 'form-control input-lg c-square', id: 'icon-email', placeholder: t('devise.email')
+              .form-group
+                = f.label :password, for: 'login-password', class: 'hide'
+                = f.password_field :password, autocomplete: "off", class: 'form-control input-lg c-square', id: 'icon-password', placeholder: t('devise.password')
+              .form-group
+                .col-md-6.col-xs-6.pl0
+                  .c-checkbox
+                    = f.check_box :remember_me, class: 'c-check', id: 'login-rememberme'
+                    label.c-font-thin.c-font-14 for="login-rememberme"
+                      span
+                      span.check
+                      span.box
+                      = t('devise.remember_me')
+                .col-md-6.col-xs-6.pr0.text-right
+                  = link_to t('devise.forgot_your_password'), new_user_password_path, class: 'c-btn-forgot c-font-14 forgot', 'data-target' => '#forget-password-form', 'data-dismiss' => 'modal'
+              .form-group.mb30
+                button.btn.c-theme-btn.btn-fwidth.btn-md.c-btn-uppercase.c-btn-square.c-btn-login type="submit" = t('devise.login')
+              .clearfix
+              .form-group
+                = link_to new_user_registration_path do
+                  .c-content-divider.c-divider-sm.c-icon-bg.c-bg-grey.c-margin-b-20
+                    span = t('devise.signup')
+
+= render "applications/sections"
+
+javascript:
+  setTimeout(function() {
+    var $checkbox = $('.c-check');
+    $('.new-checkbox').remove();
+    $checkbox.insertAfter($('.c-checkbox > input[type=hidden]'));
+  }, 0);

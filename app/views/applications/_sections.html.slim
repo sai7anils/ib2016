@@ -1,0 +1,55 @@
+.entrepreneur-section#entrepreneur
+  .entrepreneur-title.container-fluid
+    h4.title-link
+      | Ideaburns
+      .icon-caret
+    h4.title-text = t('global.entrepreneurs')
+    .load-homepage.fa.fa-spinner.fa-spin.fa-2x
+
+    button.btn-close X
+  .entrepreneur-content.container-fluid#entrepreneur
+    - get_header_data(@users, 'entrepreneur').each do |user|
+      .entrepreneur-element
+        = image_tag (user.avatar)
+        .entrepreneur-info
+          h4 #{user.username}
+          h5 #{user.city} #{user.country}
+          .line
+          .a-tag-homepage
+            = link_to t('global.read_more'), entrepreneur_path(user), class: 'btn'
+.entrepreneur-section#investor
+  .entrepreneur-title.container-fluid
+    h4.title-link
+      | Ideaburns
+      .icon-caret
+    h4.title-text = t('global.investors')
+    button.btn-close X
+  .entrepreneur-content.container-fluid#investor
+    - get_header_data(@users, 'investor').each do |user|
+      .entrepreneur-element
+        = image_tag (user.avatar)
+        .entrepreneur-info
+          h4 #{user.username}
+          h5 #{user.city} #{user.country}
+          .line
+          .a-tag-homepage
+            = link_to t('global.read_more'), investor_path(user), class: 'btn'
+.entrepreneur-section#startup
+  .entrepreneur-title.container-fluid
+    h4.title-link
+      | Ideaburns
+      .icon-caret
+    h4.title-text = t('global.startups')
+    button.btn-close X
+  .entrepreneur-content.container-fluid#startup
+    - get_header_data(@users, 'startup').each do |user|
+      .entrepreneur-element
+        = image_tag (user.avatar)
+        .entrepreneur-info
+          h4 #{user.username}
+          h5 #{user.city} #{user.country}
+          .line
+          .a-tag-homepage
+            = link_to t('global.read_more'), startup_path(user), class: 'btn'
+
+= render 'applications/events'

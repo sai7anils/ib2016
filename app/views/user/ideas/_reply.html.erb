@@ -1,0 +1,110 @@
+<% from_time = Time.now %>
+<div class="col-md-12 mt20 plr0" style="border-bottom:1px solid #ccc;">
+  <div class="col-sm-1 col-xs-2 pl0">
+    <%= image_tag @comment.user.avatar, width: 39, height: 37 %>
+  </div>
+  <div class="col-sm-11 col-xs-10 pr0">
+    <div class="form-group">
+      <p class="c-font-18 mb5">
+        <% if @comment.user.entrepreneur? %>
+          <%= link_to entrepreneur_path(@comment.user) do %>
+            <span9><%= @comment.user.fullname %></span9>
+          <% end %>
+        <% elsif @comment.user.investor? %>
+          <%= link_to investor_path(@comment.user) do %>
+            <span9><%= @comment.user.fullname %></span9>
+          <% end %>
+        <% elsif @comment.user.startup? %>
+          <%= link_to startup_path(@comment.user) do %>
+            <span9><%= @comment.user.fullname %></span9>
+          <% end %>
+        <% end %>
+      </p>
+      <div id="comment-container-<%= @comment.id %>" class="comment-container"><%= @comment.message %></div>
+      <% if current_user.id == @comment.user.id %>
+        <div class="edit-reply-hover"><a onclick="_editComment(<%= @comment.id %>);" href="javascript:void(0);" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a></div>
+        <div id="comment-id-<%= @comment.id %>" class="edit-comment-form">
+          <%= form_tag '#', remote: true do %>
+            <%= text_area_tag 'message', @comment.message, class: 'col-sm-12 form-control', placeholder: t('idea.normal.write_a_comment'), id: "edit_comment_#{@comment.id}", "data-id" => "#{@comment.id}" %>
+          <% end %>
+          <div class="clearfix"></div>
+          <b><%= t('idea.normal.press_esc') %> <i><%= t('idea.normal.cancel') %></i>.</b>
+        </div>
+      <% end %>
+      <p>
+        <%= render partial: 'api/idea/like_comment', locals: {cmt: @comment} %>
+        <span data-id="<%= @comment.id %>" class="reply" style="color:#78C2E9;cursor:pointer;" onclick="repliedReply(<%= @comment.id %>)">Reply </span>
+        <%= render partial: 'api/idea/more_like_comment', locals: {cmt: @comment} %>
+        <time class="timeago" datetime="<%= @comment.created_at.to_time.iso8601 %>"><%= @comment.created_at %></time>
+      </p>
+      <div id="replied_reply_<%= @comment.id %>"></div>
+      <div class="col-md-12 mt20 plr0 replied_reply_form" id="form_replied_reply_<%= @comment.id %>">
+        <div class="col-sm-11 col-xs-10 pr0 reply-comment-container">
+          <div class="form-group">
+            <%= form_tag '#', remote: true do %>
+            <%= text_area_tag 'message', '', class: 'col-sm-12 form-control replied-reply-area', placeholder: t('idea.normal.write_a_comment'), id: "message_#{@comment.id}", "data-id" => "#{@comment.id}" %>
+            <% end %>
+            <div class="clearfix"></div>
+            <b><%= t('idea.normal.press_esc') %> <i><%= t('idea.normal.cancel') %></i>.</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('#edit_comment_<%= @comment.id %>').keydown(function(e){
+    var cmt_id = parseInt($(this).attr('data-id'));
+    if (e.keyCode == 13  && !e.shiftKey){
+      e.preventDefault();
+      var comment = $(this).val();
+      _updateComment(cmt_id, comment);
+      _editComment(cmt_id);
+      $("#comment-container-<%= @comment.id %>").text(comment);
+      return false;
+    }else if (e.keyCode == 27) {
+      $('#form_reply_'+cmt_id).toggleClass('d_none');
+    }
+  });
+
+  $('#comment-container-<%= @comment.id %>').parent().hover(function(){
+    $(this).find('.edit-reply-hover').css({"visibility": "visible"})
+  });
+
+  $('#comment-container-<%= @comment.id %>').parent().mouseleave(function(){
+    $(this).find('.edit-reply-hover').css({"visibility": "hidden"})
+  });
+
+  $('.click-reply').on('click',function(){
+    $('#form_reply_'+$(this).attr('id')).toggleClass('d_none');
+  });
+  jQuery(document).ready(function() {
+    $("time.timeago").timeago();
+  });
+
+  $('.replied-reply-area').keydown(function(e){
+    var reply_id = $(this).attr('data-id');
+    if (e.keyCode == 13  && !e.shiftKey){
+      countEnterReplied++;
+      if(countEnterReplied == 1){
+        repliedReplyIdea(reply_id);
+      }
+    }else if (e.keyCode == 27) {
+      $('#form_replied_reply_'+reply_id).toggle();
+      countEnterReplied = 0;
+    }
+  });
+
+  function repliedReply(reply_id) {
+    $('#form_replied_reply_'+reply_id).toggle();
+  }
+
+  var commenter = <%= @comment.user.id %>
+  if(uid != commenter ){
+    $('#comment-container-<%= @comment.id %>').next('.edit-reply-hover').remove();
+    $('#comment-id-<%= @comment.id %>').remove();
+  }
+</script>

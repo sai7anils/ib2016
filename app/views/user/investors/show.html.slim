@@ -1,0 +1,149 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2
+          = @user.fullname
+          - if @user.investor.present? && @user.investor.verified?
+            = image_tag 'verified.png', class: 'verified'
+        h3 style="margin-top: 7px" = t('user.profile_view')
+      .profile
+        .profile-content style="min-height:680px;margin-bottom:50px"
+          .profile-image.startupdetail-image
+            = image_tag @user.avatar
+          .profile-info
+            h3 = t('user.about ')
+            p.user-about = @user.investor.try(:description)
+            ul.list-info.startupdetail-info.investor-list-info
+              li.active = t('user.investor_details')
+              li = t('user.our_team')
+              li = t('user.location')
+              li Porfolio
+              li class=(current_user.investor? ? '' : 'disabled') = t('user.socials_webapps')
+          .container-fluid.invester-content
+            .info-element
+              h4 = t('user.investor_type')
+              h5 = @user.investor.try(:type_name)
+            .info-element
+              h4 = t('user.organization_name')
+              h5 = @user.investor.try(:name)
+            .info-element
+              h4 = t('user.founded')
+              h5 = @user.investor.try(:founded)
+            .info-element style = "max-width: 280px"
+              h4 = t('user.business_type')
+              h5 = @user.investor.try(:business_type)
+            .info-element
+              h4 = t('user.website')
+              h5 = @user.investor.try(:website)
+            h4 = t('user.description')
+            p = @user.investor.try(:description)
+            h4 = t('user.mission_vision')
+            p = @user.investor.try(:mission)
+            ul.list-info.startupdetail-info
+          .container-fluid.invester-content
+            - (@user.investor.try(:investor_teams) || []).each do |team|
+              .element-info.container-fluid.team-row
+                .info-image
+                  = image_tag team.try(:image)
+                .info
+                  h3 = team.try(:name)
+                  h5 = team.designation_name
+                  .info-detail
+                    label = t('user.join_date')
+                    label = team.try(:joined_date)
+                  .info-detail
+                    i.fa.fa-mobile
+                    p = team.try(:mobile)
+                  .info-detail
+                    i.fa.fa-envelope-o
+                    p = team.try(:email)
+                  .info-detail
+                    i.fa.fa-skype
+                    p = team.try(:skype)
+                  .info-detail
+                    i.fa.fa-linkedin
+                    p = team.try(:linkedin)
+          .container-fluid.invester-content
+            .info-element
+              h4 = t('user.address_line_1')
+              p = @user.investor.try(:address_line_1)
+            .info-element
+              h4 = t('user.address_line_2')
+              p = @user.investor.try(:address_line_2)
+            .info-element
+              h4 = t('user.country')
+              p = @user.country_name
+            .info-element
+              h4 = t('user.region')
+              p = @user.region_name
+            .info-element
+              h4 = t('user.city')
+              p = @user.city
+            ul.list-info.startupdetail-info
+          .container-fluid.invester-content
+            - (@user.investor.try(:portfolios) || []).each do |portfolio|
+              .element-info.container-fluid.team-row
+                .info-image
+                  = image_tag portfolio.try(:logo)
+                .info
+                  h3 = portfolio.try(:name)
+                  h5 = portfolio.try(:type_name)
+                  .info-detail
+                    i.fa.fa-globe
+                    label = portfolio.try(:website)
+                  .info-detail
+                    i.fa.fa-money
+                    p = number_to_currency(portfolio.try(:amount).to_i, :unit => "$ ")
+          .container-fluid.invester-content
+            .info-element
+              h4 Facebook
+              h5 = @user.investor.try(:facebook)
+            .info-element
+              h4 Twitter
+              h5 = @user.investor.try(:twitter)
+            .info-element
+              h4 Linkedin
+              h5 = @user.investor.try(:linkedin)
+            .info-element
+              h4 IOS App
+              h5 = @user.investor.try(:ios_app)
+            .info-element
+              h4 Android App
+              h5 = @user.investor.try(:adroid_app)
+            .info-element
+              h4 Windows App
+              h5 = @user.investor.try(:windows_app)
+      ul.your-idea
+        li.title
+          = image_tag 'icon-postyouridea.png'
+          h4.mt7
+            = link_to t('idea.post_your_idea'), new_user_idea_path
+        li.close-idea = t('idea.closed_ideas')
+        - (@closed_ideas || []).each do |idea|
+          - if idea.business_idea.present?
+            li.idea
+              = link_to idea.business_idea.learn_more_url(current_user) do
+                h4 = idea.title
+              h5 = truncate(idea.business_idea.try(:problem_statement).to_s, :length => 50)
+
+        li.btn-plus
+          = link_to "#" do
+            button
+              i.fa.fa-plus
+          end
+  .clearfix
+
+= render 'applications/modal'
+
+javascript:
+  $('ul.investor-list-info li.disabled').on('click', function(){
+    var message = "#{t('user.only_investor_view_contact_details')}";
+    $('.modal-body').html(message);
+    $('.modal-dialog').css({
+      "float": "left",
+      "margin-left": "62px",
+      "width": $('.profile').width() +"px"
+    });
+    $('#alertModal').modal('show');
+  });

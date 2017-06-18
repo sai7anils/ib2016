@@ -1,0 +1,141 @@
+<%= form_for(@event, url: admin_event_path, html: { method: :patch, class: ''}) do |f| %>
+  <% if !@event.errors.full_messages.count.zero? %>
+    <div class="alert alert-danger" style="margin: 20px;">
+      <ul class="list-message-error">
+        <% @event.errors.full_messages.each do |error_message| %>
+          <li class="alert-alert-error alert-danger">
+            <%= error_message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Title *</label>
+      <%= f.text_field :title, class: 'form-control', placeholder: 'Title', required: true %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Event Entry Type *</label>
+      <%= f.select :entry_type, Event::EVENT_ENTRY_TYPE, {include_blank: "- Select Event Entry Type -"}, {class: 'form-control', required: true } %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>If Paid Entry Cost Minimum</label>
+      <%= f.number_field :paid_entry_cost_min, placeholder: 'Enter here', min: '1', class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Event Category *</label>
+      <%= f.select :event_category, Event::EVENT_CATEGORY_TYPE, {include_blank: "- Select Event Category -"}, {class: 'form-control', required: true } %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Event From *</label>
+      <%= f.text_field :event_from, id: 'datepicker', required: true, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Event To *</label>
+      <%= f.text_field :event_to, id: 'datepicker2', required: true, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Time *</label>
+      <%= f.text_field :event_time, class: 'time ui-timepicker-input form-control', id: 'timepicker', required: true %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Timezone *</label>
+      <%= f.time_zone_select :timezone, ActiveSupport::TimeZone.all.sort, model: ActiveSupport::TimeZone, default: Time.zone.name, class: 'dd' %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Event Refference Website</label>
+      <%= f.text_field :website, placeholder: 'Enter Event Refference Website', class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Event Image</label>
+      <% if @event.try(:event_image).blank? == false %>
+      <%= image_tag(@event.try(:event_image), class: 'event-details-image js_image_preview') %>
+      <% end %>
+      <%= f.file_field :event_image, class: 'image input-file form-control js_image', accept: 'image/png,image/gif,image/jpeg', id: 'event-image', :data => { :max_file_size => 5.megabytes} %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Address line 1 *</label>
+      <%= f.text_field :address_line_1, placeholder: 'Enter here', required: true, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Address line 2 *</label>
+      <%= f.text_field :address_line_2, placeholder: 'Enter here', required: true, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Country *</label>
+      <%= f.country_select :country, {priority: %w(US CA), prompt: '- Slect A Country -'}, class: 'country-2 form-control', required: true, 'data-country_select' => '' %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Region *</label>
+      <%= render partial: 'subregion_select', locals: {parent_region: f.object.country} %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>City *</label>
+      <%= render partial: 'subcity_select', locals: {parent_region: f.object.country, parent_city: f.object.region, f:f} %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Zip/Pin Code *</label>
+      <%= f.text_field :zipcode, placeholder: 'Enter here', required: true, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="form-group">
+      <label>Event Description *</label>
+      <%= f.text_area :description, required: true, placeholder: 'Enter text here', cols: 30, rows: 5, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="col-sm-12 text-right">
+    <div class="form-group">
+      <%= f.submit 'Update', class: 'btn btn-primary'%>
+    </div>
+  </div>
+<% end %>

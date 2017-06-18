@@ -1,0 +1,147 @@
+#page-wrapper
+  .switches
+    .acount-section.event-section
+      .acount-title.container-fluid
+        h2 Create Event
+      .event-content
+        .event.container-fluid
+          .event-left
+            h6 Event Title
+            input placeholder="Enter Event Name" type="text"/
+
+            h6 Event Entry Type
+            select.paid
+              option Paid
+
+            label If Paid Entry Cost Minimum
+            select.small
+              option
+                | -select dropdown-
+
+            h6 Event Sub Type
+            select
+              option
+                | -select dropdown-
+
+            .time-section.container-fluid
+              .time-element
+                h6 Event From
+                i.fa.fa-calendar
+                select
+                  option select
+              .time-element
+                h6 Event To
+                i.fa.fa-calendar
+                select
+                  option select
+              .time-element
+                h6 Time
+                i.fa.fa-clock-o
+                select
+                  option select
+              .time-element
+                h6 Time Zone
+                i.fa.fa-globe
+                select
+                  option select
+
+            h6 Event Refference Website
+            input placeholder="Enter Event Refference Website" type="text"/
+
+            h6.image Event Image
+            input.image placeholder="Browse File From" type="text"/
+            button.upload Upload
+
+            h6.partner Add Event Partner
+            button.btn-plus
+              i.fa.fa-plus
+            .partner-section
+              .partner-element
+                h6 Partner 1
+                button.btn-remove x
+              .partner-element
+                h6 Partner 1
+                button.btn-remove x
+            input placeholder="Enter Name" type="text"/
+
+            h6.image Partner Logo
+            input.image placeholder="Browse File From" type="text"/
+            button.upload Upload
+          .event-right
+            h6 Event Description
+            textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+
+            h6 Event Venue
+
+            h6 Address line 1
+            input placeholder="Enter here" type="text"/
+
+            h6 Address line 2
+            input placeholder="Enter here" type="text"/
+
+            h6 Country
+            select
+              option
+                | -select dropdown-
+
+            h6 City
+            select
+              option
+                | -select dropdown-
+
+            h6 Region
+            select
+              option
+                | -select dropdown-
+
+            h6 Zip/Pin Code
+            input placeholder="Enter here" type="text"/
+        .btn-group-event
+          button.btn-cancel Cancel
+          button.btn-submit Submit
+      ul.your-idea
+        li.title
+          = image_tag 'icon-postyouridea.png'
+          h4 Post your idea
+        li.close-idea Closed Ideas
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.btn-plus
+          = link_to "#" do
+            button
+              i.fa.fa-plus
+          end
+  .clearfix

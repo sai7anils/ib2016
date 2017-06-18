@@ -1,0 +1,10 @@
+- @users.investor.each do |user|
+      - investor = user.investor
+      .entrepreneur-element
+        = image_tag user.avatar, class: 'text-center'
+        .entrepreneur-info
+          h4 = user.fullname
+          h5 = user.location
+          .line
+          .a-tag-homepage
+            = link_to "Read More", investor_path(user)

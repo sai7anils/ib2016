@@ -1,0 +1,19 @@
+<div id="order_state_code_wrapper">
+  <% parent_region ||= params[:parent_region] %>
+  <% parent_city ||= params[:parent_city] %>
+  <% cities = CS.cities(parent_city, parent_region) %>
+  <% if cities.nil? %>
+    <%= text_field(:event, :city, placeholder: 'e.g New York', required: true, class: 'form-control') %>
+  <% else %>
+     <i class="select-arrow"></i>
+     <%= select(:event, :city, cities, {}, {class: 'form-control'}) %>
+  <% end %>
+</div>
+<%= javascript_tag defer: 'defer' do -%>
+  var cityText = '<%= f.object.city %>';
+  if (cityText != null) {
+    try {
+      $('#event_city').val(cityText);
+    } catch(err) {}
+  }
+<% end %>

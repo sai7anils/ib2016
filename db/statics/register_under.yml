@@ -1,0 +1,13 @@
+---
+- id: 1
+  name: Founder
+- id: 2
+  name: Co-Founder
+- id: 3
+  name: Representative
+- id: 4
+  name: CEO
+- id: 5
+  name: Sales Manager
+- id: 6
+  name: Others

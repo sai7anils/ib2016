@@ -1,0 +1,93 @@
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="<%= admin_root_path %>"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+      <li class="active">Startups</li>
+    </ol>
+  </div><!--/.row-->
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">All Startups</h1>
+    </div>
+  </div><!--/.row-->
+  <div class="alert alert-success message-success hide">
+    <b>Well done!</b> Startup has been deleted successfully.
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= form_tag startups_admin_user_index_path, method: :get, role: :search, class: "form-horizontal" do %>
+            <div class="form-group">
+              <label class="control-label col-md-2">Name or Email</label>
+              <div class="col-md-10">
+                <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Name Or Email", id: "search-user" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Location</label>
+              <div class="col-md-10">
+                <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "City, Region, Country..." %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Address</label>
+              <div class="col-md-10">
+                <%= text_field_tag :address, params[:address], class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                <%= submit_tag "Search", class: "btn btn-primary" %>
+              </div>
+            </div>
+          <% end %>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th width="25%">Username</th>
+                <th width="25%">Full Name</th>
+                <th width="35%">Email</th>
+                <th width="15%">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @startups.each do |startup| %>
+                <tr>
+                  <td>
+                    <%= image_tag startup.user.avatar, class: 'user-avatar' %>
+                    <%= startup.user.try(:username) %>
+                  </td>
+                  <td><%= startup.user.try(:fullname) %></td>
+                  <td><%= startup.user.try(:email) %></td>
+                  <td>
+                    <%= link_to admin_user_path(startup.user), class: "btn btn-success" do %>
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    <% end %>
+                    <%= link_to edit_admin_user_path(startup.user), class: 'btn btn-primary' do %>
+                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <% end %>
+                    <%= link_to "#", "onClick" => "deleteUser(#{startup.user.id}, event);" , id: startup.user.id, "data-url" => admin_ajax_delete_user_path(startup.user), class: 'btn btn-danger delete_user' do %>
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+              <% if @startups.count.zero? %>
+                <tr><td colspan="4">No results</td></tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel-footer">
+          <%= paginate @startups, :theme => 'twitter-bootstrap-3',
+                   :pagination_class => "pagination-sm"  %>
+        </div>
+      </div>
+    </div>
+  </div><!--/.row-->
+
+</div>
+
+<%= render "admin/commons/modal_cofirm" %>

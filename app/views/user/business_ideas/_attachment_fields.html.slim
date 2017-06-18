@@ -1,0 +1,6 @@
+.nested-fields
+  .field
+    = pb.label :name
+    br
+    = pb.file_field :file
+  = link_to_remove_association "remove attachment", pb

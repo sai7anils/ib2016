@@ -1,0 +1,6 @@
+if @message == "failure"
+  $('#modalErrorMessage').find('li').text('Something error! Please check your information!');
+  $('#modalErrorMessage').modal('toggle');
+else if @message == "success"
+  // $('#myModal2').find('li').text('Something error! Please check your information!');
+  $('#myModal2').modal('toggle');

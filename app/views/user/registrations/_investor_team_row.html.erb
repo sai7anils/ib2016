@@ -1,0 +1,26 @@
+<div class="row row-table <%= f.object.id.nil? ? 'hide' : '' %>">
+  <div class="col-sm-1 row-child">
+    <input data-id="<%= f.object.id %>" type="checkbox" class="team-checkbox-delete">
+  </div>
+  <div class="col-sm-4 row-child">
+    <%= f.object.name %>
+  </div>
+  <div class="col-sm-3 row-child">
+    <%= f.object.designation_name %>
+  </div>
+  <div class="col-sm-3 row-child">
+    <%= f.object.email %>
+  </div>
+  <div class="col-sm-1 row-child">
+    <a class="link-show-child-form-edit" href="#" onclick="showChildFormEdit(<%= f.object.id %>)">
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    </a>
+  </div>
+</div>
+
+<%= javascript_tag defer: 'defer' do -%>
+  function showChildFormEdit(id) {
+    event.preventDefault();
+    $('#team-form-'+id).toggleClass('hide');
+  }
+<% end -%>

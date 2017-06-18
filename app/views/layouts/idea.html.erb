@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Ideaburns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <%= stylesheet_link_tag    'idea', media: 'all' %>
+
+  <%= javascript_include_tag 'idea' %>
+
+  <%= csrf_meta_tags %>
+
+  <% if current_user %>
+    <script>
+      var uid  = <%= current_user.id %>
+    </script>
+  <% end %>
+
+  <script>
+   new WOW().init();
+ </script>
+
+ <script>
+   $(function() {
+    $('#idea-bar').scrollFix();
+  });
+</script>
+</head>
+
+<body class="sticky-header left-side-collapsed <%= "#{@custom_controller_name || controller_name} #{action_name}" %>">
+  <section>
+    <%= render 'applications/sidebar_menu' %>
+    <div class="main-content">
+      <%= render 'applications/right_menu' %>
+
+      <%= yield %>
+
+    </div>
+    <div class="mb30"></div>
+
+    <footer>
+     <p>&copy; ideaburns.2016</p>
+   </footer>
+
+ </section>
+ <%= javascript_include_tag 'idea/bootstrap.min' %>
+ <%= javascript_include_tag 'idea/ns.hover' %>
+ <%= javascript_include_tag 'idea/jquery.nicescroll' %>
+ <%= javascript_include_tag 'idea/scripts' %>
+ <script type="text/javascript">
+
+  function DropDown(el) {
+    this.dd = el;
+    this.placeholder = this.dd.children('span');
+    this.opts = this.dd.find('ul.dropdown > li');
+    this.val = '';
+    this.index = -1;
+    this.initEvents();
+  }
+  DropDown.prototype = {
+    initEvents : function() {
+      var obj = this;
+
+      obj.dd.on('click', function(event){
+        $(this).toggleClass('active');
+        return false;
+      });
+
+      obj.opts.on('click',function(){
+        var opt = $(this);
+        obj.val = opt.text();
+        obj.index = opt.index();
+        obj.placeholder.text(obj.val);
+      });
+    },
+    getValue : function() {
+      return this.val;
+    },
+    getIndex : function() {
+      return this.index;
+    }
+  }
+
+  $(function() {
+
+    var dd = new DropDown( $('#dd') );
+
+    $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-3').removeClass('active');
+        });
+
+  });
+
+</script>
+
+<% if current_user %>
+<%= javascript_include_tag 'notification' %>
+<%= subscribe_to comment_user_ideas_path %>
+<%= subscribe_to like_user_ideas_path %>
+<%= subscribe_to rate_path %>
+<%= subscribe_to like_comment_user_ideas_path %>
+<%= subscribe_to reply_user_ideas_path %>
+<%= subscribe_to replied_reply_user_ideas_path %>
+<%= subscribe_to api_idea_intrested_path %>
+<%= subscribe_to api_idea_deal_path %>
+<%= subscribe_to api_idea_favorite_path %>
+<%= subscribe_to messages_create_user_investors_path %>
+<% end %>
+<%= render 'layouts/ga' %>
+</body>
+</html>

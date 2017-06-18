@@ -1,0 +1,53 @@
+.col-sm-9.col-sm-offset-3.col-lg-10.col-lg-offset-2.main
+  .row
+    ol.breadcrumb
+      li
+        a href=admin_root_path
+          svg.glyph.stroked.home
+            use xlink:href="#stroked-home"
+      li.active Public Ideas
+  /! /.row
+  .row
+    .col-lg-12
+      h1.page-header All Public Ideas
+  /! /.row
+  .alert.alert-success.message-success.hide
+    b Well done!
+    | Idea has been deleted successfully.
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-body
+          table.table.table-bordered.table-hover
+            form role="search"
+              .form-group
+                input#search-idea.form-control onkeypress="searchIdea(event)" placeholder=("Search Idea By Title or Category") type="text" value="#{params[:search]}" /
+            thead
+              tr
+                th width="20%"  Title
+                th width="20%"  Category
+                th width="40%"  Description
+                th width="10%"  Views
+                th width="10%"  Actions
+            tbody
+              - @ideas.each do |idea|
+                tr
+                  td = idea.try(:title)
+                  td = idea.category.try(:name)
+                  td = truncate(idea.try(:description), length: 100)
+                  td = idea.try(:views)
+                  td
+                    = link_to edit_admin_idea_path(idea), class: 'btn btn-primary' do
+                      i.fa.fa-pencil aria-hidden="true"
+
+                    | &nbsp;
+                    = link_to "#", "onClick" => "deleteIdea(#{idea.id}, event);" , id: idea.id, "data-url" => admin_idea_path(idea), class: 'btn btn-danger delete_user' do
+
+                      i.fa.fa-trash aria-hidden="true"
+              - if @ideas.count.zero?
+                tr
+                  td colspan="5"  No results
+        .panel-footer
+          = paginate @ideas, :theme => 'twitter-bootstrap-3', :pagination_class => "pagination-sm"
+  /! /.row
+= render "admin/commons/modal_cofirm"

@@ -1,0 +1,49 @@
+.c-layout-page.mt72
+  .c-content-box.c-size-md.c-bg-light-grey
+    .container
+      .row
+        .col-md-3
+        .col-md-6.col-sm-6
+          .c-opt-1.login-box
+            h3.c-font-35.login-head.mb40 = t('devise.get_regis_with_us')
+            = form_for(@user, url: registration_path(resource_name)) do |f|
+              = devise_error_messages!
+              .form-group
+                = select("user", "user_type", User.user_types.except('admin').keys, { include_blank: t('devise.select_user_type') }, class: 'form-control dd', required: true, 'data-user_type_select' => '')
+              .form-group
+                = f.text_field :username, id: 'icon-email', class: 'form-control input-lg c-square', placeholder: t('devise.username'), required: true
+                a.c-btn-forgot.c-font-12 = t('devise.minimum_character', :num => 5)
+              .form-group
+                = f.email_field :email, id: 'icon-email', class: 'form-control input-lg c-square', placeholder: t('devise.email'), required: true
+              .form-group
+                = f.password_field :password, class: 'form-control input-lg c-square', id: 'icon-password', placeholder: t('devise.password'), autocomplete: "off", required: true
+                - if @minimum_password_length
+                  a.c-btn-forgot.c-font-12 = t('devise.minimum_character', :num => @minimum_password_length)
+              .form-group
+                = f.password_field :password_confirmation, class: 'form-control input-lg c-square', id: 'icon-password', placeholder: t('devise.confirm_password'), autocomplete: "off", required: true
+              .form-group
+                .col-md-6.col-xs-6.pl0
+                  .c-checkbox
+                    = f.check_box :term, {:checked=>true, id:'login-rememberme', class:'confirmed-button c-check', disabled: true}
+                    label.c-font-thin.c-font-14 for="login-rememberme"
+                      span
+                      span.check
+                      span.box
+                      = t('devise.terms_conditions')
+                      br
+              .form-group.mb30
+                button.btn.c-theme-btn.btn-fwidth.btn-md.c-btn-uppercase.c-btn-square.c-btn-login type="submit" onclick="validate_term_condition();" = t('devise.signup')
+              .clearfix
+              .form-group
+                = link_to new_user_session_path do
+                  .c-content-divider.c-divider-sm.c-icon-bg.c-bg-grey.c-margin-b-20
+                    span = t('devise.login')
+
+= render "applications/sections"
+
+javascript:
+  setTimeout(function() {
+    var $checkbox = $('.c-check');
+    $('.new-checkbox').remove();
+    $checkbox.insertBefore($('.c-font-thin'));
+  }, 0);

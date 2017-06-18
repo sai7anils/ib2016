@@ -1,0 +1,318 @@
+<style>
+ .fa-thumbs-up::before
+ {
+   content:"\f087";
+   cursor:pointer;
+ }
+ .fa-comments-o
+ {
+   cursor:pointer;
+ }
+ .rating
+ {
+   color:White;
+ }
+ .fa-star
+ {
+   color:#FFD000;
+   font-size:22px;
+ }
+</style>
+<script>
+  $(document).ready(function () {
+    $(".reply").click(function () {
+      $(".search_industry").show();
+    });
+    $(".reply1").click(function () {
+      $(".search_industry1").show();
+    });
+    $(".reply2").click(function () {
+      $(".search_industry2").show();
+    });
+    $(".reply3").click(function () {
+      $(".search_industry3").show();
+    });
+    $(".reply4").click(function () {
+      $(".search_industry4").show();
+    });
+    $(".fa-thumbs-o-up").click(function () {
+      $(this).removeClass('fa-thumbs-o-up').addClass('fa fa-thumbs-up');
+
+    });
+    $('.fa-comments-o').click(function () {
+      $(".search-text").focus()
+    });
+  });
+</script>
+
+<div id="page-wrapper">
+
+  <div class="switches">
+    <div class="col-4">
+
+     <div class="col-md-9 p0">
+      <div data-id="<%= @idea.id %>" class="col-md-6 col-xs-12 idea-key">  <h3 class="c-font-17" style="line-height:2;"><%= t('idea.idea_details') %></h3></div>
+
+      <div class="clear"></div>
+
+
+
+      <div class="col-md-12 mb30">
+
+        <div class="switch-right-grid ">
+          <div class="switch-right-grid1">
+            <div class="col-md-12 activity-rows1">
+              <div class="col-xs-1 activity-img activity-image1">
+                <%= link_to get_profile(@idea.user) do %>
+                  <%= image_tag asset_path(@idea.user.avatar), class: 'img-resposive img-circle', style: 'width:70px;height:70px' %>
+                <% end %>
+              </div>
+              <div class="col-xs-9 activity-desc">
+                <div class="col-md-4">
+                  <h5 class="mt0">
+                    <%= link_to get_profile(@idea.user) do %>
+                      <%= @idea.user.fullname %>
+                    <% end %>
+                  </h5>
+                  <p>
+                    <SPAN>
+                      <%= image_tag asset_path('location-icon.png') %>
+                    </SPAN><%= @idea.user.location %></p>
+                    <p><SPAN>
+                      <%= image_tag asset_path('posted-icon.png') %>
+                    </SPAN><%= @idea.created_at.strftime('%d-%m-%Y') %></p>
+                  </div>
+
+
+                  <div class="col-md-3 rating">
+                    <br />
+                    <div class="rating_star">
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="rating_content c-font-12">
+                      <span class="t_rate"><%= @idea.rating %></span>
+                      <span>/10</span>
+                      <br />
+                      <br />
+                      <span><%= @idea.total_rating %></span>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-xs-12">
+                    <br />
+                    <div class="stars">
+                      <span class="rating rate"><%= t('idea.normal.rate_this') %></span>
+                      <%= rating_for @idea, "visual_effects", stars: 10, enable_half: false, path: 'star_on', class: 'rating', disable_after_rate: true %>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="clearfix"></div>
+              </div>
+
+
+              <div class="clearfix"></div>
+              <div class="idea-details">
+                <div class="col-md-12">
+                  <p style="color:#ccc;">
+                    <span class="idea-type" ><%= t('idea.normal.idea_type') %>: <%= @idea.type_name %> </span>|
+                    <span class="idea-category"><%= t('idea.normal.idea_category') %>: <%= @idea.category.name if @idea.category.present? %></span>
+                  </p>
+                </div>
+                <div class="col-md-8">
+                  <h3><%= @idea.title %></h3>
+
+                  <p class="left-idea-wraper"><%= @idea.description %></p>
+                </div>
+
+                <div class="col-md-4 mt25">
+                  <div class="right-idea-container" style="border-left:1px solid #dcdcdc;padding-left:15px;">
+                   <center class= "like-page"><div class="c100 p<%= @idea.like_per_views %> small">
+                    <span><%= @idea.like_per_views %>%</span>
+                    <div class="slice">
+                      <div class="bar"></div>
+                      <div class="fill"></div>
+                    </div>
+                  </div></center>
+                  <% if @idea.attachment.present? %>
+                    <%= image_tag asset_path(@idea.attachment), class: 'img-responsive', style: 'width:100%' %>
+                  <% end %>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="comments mt25">
+
+                <div class="col-md-9">
+                  <div class="col-md-3">
+                    <div class="comments-button"><%= t('idea.normal.comments') %></div>
+
+                  </div>
+                  <div class="col-md-9 likes" style="font-size:12px;line-height:35px;">
+                    <% if @idea.likes.count.zero? %>
+                      <%= @idea.like_description %>
+                    <% else %>
+                      <%= @idea.like_description %>
+                    <% end  %>
+                    </div>
+                  </div>
+                  <div class="col-md-3"><div class="col-sm-4 col-xs-3"><center><i class="fa fa-eye"></i><br>
+                    <span class="c-font-13"><%= @idea.views %></span>
+                  </center>
+                </div>
+                <div class="col-sm-4 col-xs-3 like-idea">
+                  <%= render 'like' %>
+                </div>
+                <div class="col-sm-4 col-xs-3 like-button" style="cursor:pointer;">
+                </div>
+                <div class="col-sm-4 col-xs-3"><center><i class="fa fa-comments-o"></i><br>
+                <span class="c-font-12 idea-cmt-count"><%= @idea.comments.count %></span>
+                </center>
+              </div></div>
+              <div class="clear"></div>
+            </div>
+            <div class="comment-details">
+              <div class="col-lg-8 plr0 form-comment-section">
+
+                <%= form_tag comment_user_ideas_path, remote: true do %>
+                <%= text_area_tag 'message', '', class: 'col-sm-12 form-control form-comment', placeholder: t('idea.normal.write_a_comment'), 'data-id' => "#{@idea.id}" %>
+                <% button_tag t('idea.normal.post'), type: 'button', class: 'btn btn-default pull-right', onclick: "postCommentIdea(#{@idea.id})", style: "margin-top: 10px" %>
+                <% end %>
+                <b id="notice"><%= t('idea.normal.press_esc') %> <i><%= t('idea.normal.cancel') %></i>.</b>
+
+                <div id="comments">
+                  <!--<% @idea.comments.where(parent_id: nil).each do |comment| %>
+                  <%= render 'comment', comment: comment %>
+                  <% end %>-->
+                </div>
+                <div class="load-more"><i class="fa fa-spinner fa-spin"></i> <%= t('idea.load_more') %></div>
+
+
+                <div class="clearfix"></div>
+              </div>
+              <div class="col-lg-4">
+
+                <div class="col-md-12 mtres20"><p><span9><%= t('idea.normal.more_from', :author => @idea.user.fullname) %></span9></p></div>
+                <% if @ideas.present? %>
+                <% @ideas.each do | idea | %>
+                  <div class="col-md-6 text-center mb15" style="margin-bottom: 10px">
+                    <%= link_to user_idea_path(idea) do %>
+                      <%= image_tag(idea.image, class: 'idea-thumbimg') %>
+                    <% end %>
+                  </div>
+                <% end %>
+                <% else %>
+                <i><small><%= t('idea.normal.no_more_to_load') %></small></i>
+                <% end %>
+                <!--<div class="col-md-6 text-center mb15">
+                  <%= image_tag('thumbs-img1.jpg') %>
+                </div>-->
+                <div class="col-md-12"><div class="border"></div>
+                </div>
+                <div class="col-md-12 mtres20"><p><span9><%= t('idea.normal.top_view') %></span9></p></div>
+                <% @most_views.each do | idea | %>
+                  <div class="col-md-6 text-center mb15" style="margin-bottom: 10px">
+                    <%= link_to user_idea_path(idea) do %>
+                      <%= image_tag(idea.image, class: 'idea-thumbimg') %>
+                    <% end %>
+                  </div>
+                <% end %>
+
+              </div>
+
+
+              <div class="clearfix"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <%= render 'applications/closed_ideas' %>
+  <div class="clearfix"></div>
+</div>
+</div>
+
+</div>
+
+<%= render 'api/idea/modal' %>
+
+<script>
+$(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+  var html = '<%= j (render partial: 'user/ideas/tooltip') %>';
+  $(".tooltip-like").tooltip({
+    title: html,
+    html: true
+  }).on('mouseenter', function(){});
+  var idea = <%= @idea.id %>
+  var countEnter = 0;
+
+  $('.edit-comment-area').keydown(function(e){
+    var edit_cmt_id = $(this).attr('data-id');
+    if (e.keyCode == 13  && !e.shiftKey){
+      e.preventDefault();
+      var comment = $(this).val();
+      _updateComment(edit_cmt_id, comment);
+      $('#comment-container-'+edit_cmt_id).text(comment);
+      $('#comment-id-'+edit_cmt_id).toggle();
+      $('#comment-container-'+edit_cmt_id).toggle();
+      return false;
+    }else if (e.keyCode == 27) {
+      _editComment(edit_cmt_id);
+    }
+  });
+
+  $('#notice').hide();
+  $('.form-comment').keydown(function(e){
+    $('#notice').show();
+    if (e.keyCode == 13  && !e.shiftKey){
+      e.preventDefault();
+      postCommentIdea(idea);
+      $('#notice').hide();
+      return false;
+    }else if (e.keyCode == 27) {
+      $(this).val('');
+      $('#notice').hide();
+    }
+  });
+
+  <% if !@idea.comments.count.zero? %>
+    scrollMoreComments();
+  <% end %>
+});
+
+$('.show-all-idea-like').on('click', function(){
+  var thisIdea = parseInt($(this).attr('data-id'));
+  $.get( '/api/idea/user_idea_liked/' + thisIdea, { } )
+    .done(function( data ) {
+      $('.modal-body').html(data);
+      $('#userLikeModal').modal('show');
+  });
+});
+
+
+function scrollMoreComments() {
+  var page = 1;
+  var url =  "/api/idea/comments/" + <%= @idea.id %> + "/" + page;
+  var comments = $('#comments');
+  comments.load(url);
+  page++;
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+      $('.load-more').css({"display":"block"});
+      url =  "/api/idea/comments/" + <%= @idea.id %> + "/" + page;
+      page++;
+      $.get( url, { } )
+        .done(function( data ) {
+          comments.append(data);
+      });
+    }
+  });
+}
+</script>

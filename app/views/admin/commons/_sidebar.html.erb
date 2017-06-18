@@ -1,0 +1,72 @@
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+  <form role="search">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search">
+    </div>
+  </form>
+  <ul class="nav menu">
+    <li class="<%= controller_name == 'home' && action_name == 'index' ? 'active' : '' %>"><a href="<%= admin_root_path %>"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
+
+    <li class="parent <%= controller_name == 'user' ? 'active' : '' %>">
+      <a role="button" data-toggle="collapse" href="#userSection" aria-expanded="false" aria-controls="userSection">
+        <span>
+          <svg class="glyph stroked male-user">
+            <use xlink:href="#stroked-male-user"></use>
+          </svg>
+        </span>
+        User
+      </a>
+      <ul class="children collapse" id="userSection">
+        <li>
+          <a class="" href="<%= new_admin_user_path %>">
+            <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Add User
+          </a>
+        </li>
+        <li>
+          <a class="" href="<%= admin_user_index_path %>">
+            <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> All Users
+          </a>
+        </li>
+        <li>
+          <a class="" href="<%= entrepreneurs_admin_user_index_path %>">
+            <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Entrepreneurs
+          </a>
+        </li>
+        <li>
+          <a class="" href="<%= investors_admin_user_index_path %>">
+            <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Investors
+          </a>
+        </li>
+        <li>
+          <a class="" href="<%= startups_admin_user_index_path %>">
+            <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Startups
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="<%= controller_name == 'ideas' ? 'active' : '' %>"><a href="<%= admin_ideas_path %>"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Public Ideas</a></li>
+
+    <li class="<%= controller_name == 'business_ideas' ? 'active' : '' %>"><a href="<%= admin_business_ideas_path %>"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg>Business Ideas</a></li>
+
+    <li class="<%= controller_name == 'events' ? 'active' : '' %>">
+      <a href="<%= admin_events_path %>">
+        <span data-toggle="collapse" href="#sub-item-2"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> </span> Events
+      </a>
+    </li>
+    <li class="<%= controller_name == 'orders' ? 'active' : '' %>">
+      <a href="<%= admin_orders_path %>">
+        <span data-toggle="collapse" href="#sub-item-2"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> </span> Orders
+      </a>
+    </li>
+    <li class="<%= controller_name == 'transactions' ? 'active' : '' %>">
+      <a href="<%= admin_transactions_path %>">
+        <span data-toggle="collapse" href="#sub-item-2"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> </span> Transactions
+      </a>
+    </li>
+    <li role="presentation" class="divider"></li>
+    <li class="<%= controller_name == 'setting' ? 'active' : '' %>"><a href="<%=  edit_admin_setting_path(setting_id()) %>"><svg class="glyph stroked gear"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroked-gear"></use></svg> Settings</a></li>
+
+  </ul>
+
+</div><!--/.sidebar-->

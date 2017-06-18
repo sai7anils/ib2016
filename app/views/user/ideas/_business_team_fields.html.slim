@@ -1,0 +1,37 @@
+.nested-fields
+  .row.child-team-row.hide
+    .col-sm-3#team-name
+    .col-sm-3#team-role
+    .col-sm-3#team-skills
+    .col-sm-2.text-right
+      button.btn-team-edit type="button" onclick="$(this).parent().parent().next('.child-team-row-form').toggleClass('hide');$('.child-team-row-form').css({'border':'1px solid #fdcf2f', 'padding-left':'20px', 'padding-bottom':'10px'})"
+        = fa_icon 'pencil-square-o'
+      button.btn-team-delete type="button" onclick="$(this).parent().parent().next('.child-team-row-form').find('button.btn-remove-team').trigger('click')"
+        = fa_icon 'trash'
+  .child-team-row-form
+    = link_to_remove_association f do
+      button.btn-remove-team.btn.hide type="button"
+        = fa_icon 'trash'
+        | &nbsp;
+        = t('idea.remove')
+    = f.text_field :name, placeholder: t('idea.business.enter_name'), class: 'team-name', maxlength: "40"
+    = f.text_field :role, placeholder: t('idea.business.enter_role'), class: 'team-role'
+    = f.text_field :skills, placeholder: t('idea.business.enter_skills'), class: 'team-skills'
+    = f.select :joined, BusinessTeam::JOINED.collect {|k, v| [ k, v ] }, { include_blank: t('idea.business.select_joined_in_team') }, style: 'margin-top:10px'
+    h6.h6-left = t('idea.business.profile_image')
+    = f.file_field :profile_image, accept: 'image/png,image/gif,image/jpeg'
+
+javascript:
+  $('.team-capabilities .nested-fields .child-team-row').addClass('hide');
+  $('.team-capabilities .team-content').css('border','1px solid #fdcf2f');
+  $('.team-capabilities .nested-fields input.team-name').keyup(function(){
+    $(this).parent().prev('.child-team-row').find('#team-name').text($(this).val());
+  });
+
+  $('.team-capabilities .nested-fields input.team-role').keyup(function(){
+    $(this).parent().prev('.child-team-row').find('#team-role').text($(this).val());
+  });
+
+  $('.team-capabilities .nested-fields input.team-skills').keyup(function(){
+    $(this).parent().prev('.child-team-row').find('#team-skills').text($(this).val());
+  });

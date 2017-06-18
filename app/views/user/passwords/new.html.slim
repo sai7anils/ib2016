@@ -1,0 +1,35 @@
+.c-layout-page.mt72
+  .c-content-box.c-size-md.c-bg-light-grey
+    .container
+      .row
+        .col-md-3
+        .col-md-6.col-sm-6
+          .c-opt-1.login-box.forget-password
+            h3.c-font-35.login-head.mb40 = t('devise.forgot_your_password')
+            = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+              - flash.each do |key, value|
+                .alert.alert-danger
+                  = value
+              .form-group
+                = f.label t('devise.enter_your_email'), for: 'login-email'
+                = f.email_field :email, class: 'form-control input-lg c-square', id: 'icon-email', placeholder: t('devise.email'), required: true
+              .form-group
+                button.btn.c-theme-btn.btn-fwidth.btn-md.c-btn-uppercase.c-btn-square.c-btn-login type="submit" = t('devise.send_me_reset_pwd')
+              .form-group
+                = link_to new_user_session_path do
+                  .btn.c-theme-btn.btn-fwidth.btn-md.c-btn-uppercase.c-btn-square.c-btn-login
+                    span = t('devise.login')
+              .clearfix
+              .form-group
+                = link_to new_user_registration_path do
+                  .c-content-divider.c-divider-sm.c-icon-bg.c-bg-grey.c-margin-b-20
+                    span = t('devise.signup')
+
+= render "applications/sections"
+
+javascript:
+  setTimeout(function() {
+    var $checkbox = $('.c-check');
+    $('.new-checkbox').remove();
+    $checkbox.insertAfter($('.c-checkbox > input[type=hidden]'));
+  }, 0);

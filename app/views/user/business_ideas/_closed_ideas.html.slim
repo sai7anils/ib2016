@@ -1,0 +1,18 @@
+ul.your-idea
+  - if current_user.entrepreneur?
+    li.title
+      = image_tag 'icon-postyouridea.png'
+      = link_to new_user_business_idea_path
+        h4 POST YOUR IDEA
+  li.close-idea Closed Ideas
+  - (@closed_ideas || []).each do |idea|
+    - if idea.business_idea.present?
+      li.idea
+        = link_to idea.business_idea.learn_more_url(current_user) do
+          h4 = idea.title
+        h5 = truncate(idea.business_idea.try(:problem_statement).to_s, :length => 50)
+  li.btn-plus
+    = link_to "#" do
+      button
+        i.fa.fa-plus
+    end

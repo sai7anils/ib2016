@@ -1,0 +1,46 @@
+= b.fields_for :market_analysis do |ma|
+  .menu-content.container-fluid.market-analysis
+    h3 = t('idea.business.market_analysis_tab')
+    .question-1
+      h6 = t('idea.business.market_analysis_ques_1')
+      ul.question.question-2
+        li.radio-question
+          = ma.radio_button :is_new, true
+          span Yes
+        li.radio-question
+          = ma.radio_button :is_new, false
+          span No
+    .question-other
+      h6 = t('idea.business.market_analysis_ques_2')
+      ul.question.question-2
+        li.radio-question
+          = ma.radio_button :have_major, true
+          span Yes
+        li.radio-question
+          = ma.radio_button :have_major, false
+          span No
+    .question-other
+      h6 = t('idea.business.market_analysis_ques_3')
+      ul.question.question-2
+        - MarketTrend.all.each do|y|
+          li.radio-question
+            = ma.radio_button :market_trend, y.id
+            span = y.name
+    .question-other
+      h6 = t('idea.business.market_analysis_ques_4')
+      ul.question.question-2
+        - MarketChannel.all.each do|y|
+          li.radio-question
+            = ma.radio_button :market_channels, y.id
+            span = y.name
+
+    .question-other.current-idea-stage.current-market-size.container-fluid
+      h6 = t('idea.business.market_analysis_ques_5')
+      ul.list-current.list-market-size
+        - MarketSize.all.each do|y|
+          li
+            = ma.radio_button :market_size, y.id, id: "martket-size-#{y.id}"
+            label for="martket-size-#{y.id}" = y.name
+    .question-other
+      h6 = t('idea.business.market_analysis_ques_6')
+      = ma.text_area :market_analyses_des, placeholder: t('idea.business.enter_text_here'), cols: 30, rows: 10, pattern: '.{80, 400}', required: true

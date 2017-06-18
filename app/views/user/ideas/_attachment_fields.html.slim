@@ -1,0 +1,9 @@
+.nested-fields
+  .field
+    .custom-file-upload
+      = f.file_field :file, class: 'upload'
+      label.sub-note-idea
+          = t('idea.business.pitch_burns_quest_3_small_text')
+
+  = link_to_remove_association f do
+    i class="fa fa-times-circle fa-2x"

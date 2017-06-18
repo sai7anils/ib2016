@@ -1,0 +1,53 @@
+<ul class="list-user-like-idea">
+    <% @idea.likes.each do |like| %>
+      <% if like.user %>
+        <% if like.user.entrepreneur? %>
+          <li>
+            <a href="<%= entrepreneur_path(like.user) %>">
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= image_tag(like.user.avatar) %>
+                </div>
+                <div class="col-sm-8">
+                  <%= like.user.fullname %>
+                  <h6><%= like.user.user_type.capitalize %></h6>
+                </div>
+              </div>
+            </a>
+          </li>
+        <% elsif like.user.investor? %>
+          <li>
+            <a href="<%= investor_path(like.user) %>">
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= image_tag(like.user.avatar) %>
+                </div>
+                <div class="col-sm-8">
+                  <%= like.user.fullname %>
+                  <h6><%= like.user.user_type.capitalize %></h6>
+                </div>
+              </div>
+            </a>
+          </li>
+        <% elsif like.user.startup? %>
+          <li>
+            <a href="<%= startup_path(like.user) %>">
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= image_tag(like.user.avatar) %>
+                </div>
+                <div class="col-sm-8">
+                  <%= like.user.fullname %>
+                  <h6><%= like.user.user_type.capitalize %></h6>
+                </div>
+              </div>
+            </a>
+          </li>
+        <% end %>
+      <% end %>
+    <% end %>
+</ul>
+
+<script type="text/javascript">
+  $('.modal-title span').text("<%= @idea.likes.count %>");
+</script>

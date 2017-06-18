@@ -1,0 +1,51 @@
+<div class="nested-fields">
+ 
+  <%= link_to_remove_association f do %>
+    <h6 class="hide"><%= t('event.remove') %></h6>
+  <% end %>
+
+  <%= f.text_field :name, placeholder: t('event.enter_text_here'), class: 'partner-name-input', id: "partner-name-id", :onchange => "addPartnerElement()", maxlength: "50" %>
+  <h6 class="image"><%= t('event.partner_logo') %></h6>
+  <%= f.file_field :logo, class: 'image input-file', accept: 'image/png,image/gif,image/jpeg'%>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  var partnerArray;
+  addPartnerElement();
+})
+  
+function addPartnerElement() {
+  var html = '';
+  partnerArray = [];
+  $('.nested-fields').each(function(){
+    if($(this).find('input[type="hidden"]').val() == 'false'){
+      partnerArray.push($(this).find('.partner-name-input'));
+    }
+  });
+  
+  for(var i = (partnerArray.length - 1); i >= 0; i--) {    
+    partner_val = $(partnerArray[i]).val();
+    btn_class = $(partnerArray[i]).attr('name');      
+    if (partner_val != '') {        
+      html += '<div data-id="'+btn_class+'" class="partner-element '+btn_class+'">';
+      html += '<h6 class="truncate">'+partner_val+'</h6>';
+      html += '<button data-id="<%= f.object.id %>" type="button" class="btn-remove">x</button>';
+      html += '</div>';
+      $('.partner-main').html(html);
+      removePartnerElem();
+    }
+   }   
+  $('.partner-main').css({"width":"70%"});
+}
+
+function removePartnerElem(){
+  $('.btn-remove').on('click', function(){
+    var child_form = $(this).parent().attr('data-id');
+    $(this).parent().remove();
+    $('input[name="'+child_form+'"]').prev().trigger('click');
+  });
+}
+
+</script>

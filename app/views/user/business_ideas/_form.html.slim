@@ -1,0 +1,171 @@
+= form_for @idea, url: user_business_ideas_path, method: 'post', html: { class: 'form-close-idea' }  do |f|
+  - if !@idea.errors.full_messages.count.zero?
+    .alert.alert-danger style="margin: 20px;"
+      ul.list-message-error
+        - @idea.errors.full_messages.each do |error_message|
+            li.alert-alert-error.alert-danger
+              = error_message
+  - if @order.errors.any?
+    .alert.alert-danger style="margin: 20px;"
+      ul.list-message-error
+        - @order.errors.full_messages.each do |error_message|
+            li.alert-alert-error.alert-danger
+              = error_message
+  - if flash[:created_business_error]
+     .alert.alert-danger style="margin: 20px;"
+        ul.list-message-error
+          li.alert-alert-error.alert-danger
+            = flash[:created_business_error]
+  = f.fields_for :business_idea do |b|
+    .close-idea.container-fluid
+      = render "form_header"
+      = render partial: "primary_details", locals: {f: f, b: b}
+      = render partial: "stage_analysis", locals: {f: f, b: b}
+      = render partial: "team_capabilities", locals: {f: f, b: b}
+      = render partial: "market_analysis", locals: {f: f, b: b}
+      = render partial: "customer_analysis", locals: {f: f, b: b}
+      = render partial: "investment_scale", locals: {f: f, b: b}
+      = render partial: "business_potencial", locals: {f: f, b: b}
+      = render partial: "competitors_scenery", locals: {f: f, b: b}
+      = render partial: "pitch_burns", locals: {f: f, b: b}
+      = render partial: "exit_strategy", locals: {f: f, b: b}
+    button.btn-submit type="button" = t('idea.business.submit')
+    button.btn-next type="button" = t('idea.business.next')
+    button.btn-validate type="button" disabled="" = t('idea.business.validate')
+
+= render "modal"
+= render "modal_error"
+= render "chart"
+<div class="modal-loading"><!-- Place at bottom of page --></div>
+
+javascript:
+  $( document ).ready(function() {
+    $('textarea[pattern=".{80, 400}"]').tooltip({'trigger':'focus', 'title': tooltipTitle(),
+    'template': '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner large"></div></div>' });
+    $('textarea[pattern=".{80, 400}"]').on('keyup', function(){
+      var text = $(this).val().length;
+      $('#lenght-text').remove();
+      var html = '<i id="lenght-text">Length : '+text+'</i>';
+      $(html).insertAfter($(this));
+    });
+
+    $('input[type="text"], input[type="number"], textarea').keyup(function(){
+      submit = false;
+    });
+
+    $('select').on('change', function(){
+      submit = false;
+    });
+
+    $('input[type="radio"]').on('change', function(){
+      submit = false;
+    });
+
+    $('input[type="file"]').change(function() {
+      submit = false;
+    });
+
+    $('.btn-edit-per-unit').click(function(){
+      renderOldModalForm(old_type);
+    });
+
+  	$(".submit-button").click(function(){
+      formComplete();
+      if ( $.inArray( false, completion ) > -1 ){
+        $('#myModal').modal('toggle');
+        $('#modalErrorMessage').modal('toggle');
+      }else{
+        if(allPer < 70){
+          drawChart();
+          $('#myModal').modal('toggle');
+          $('#validate').modal('toggle');
+        }else{
+          $(".form-close-idea").submit();
+        }
+      }
+  	});
+    $('button.btn-submit').click(function(event){
+      //$(".form-close-idea").submit();
+      if(submit == true){
+        formComplete();
+        if ( $.inArray( false, completion ) > -1 ){
+          $('#modalErrorMessage').find('li').text('Please complete required fields (*).');
+          $('#modalErrorMessage').modal('toggle');
+        }else{
+          //event.preventDefault();
+          // var valuesToSubmit = $('.form-close-idea').serialize();
+          //var formData = document.getElementsByClassName('.form-close-idea');
+          var form = $('form')[1];
+          var valuesToSubmit = new FormData(form);
+          $.ajax({
+            type: "POST",
+            url: $('.form-close-idea').attr('action'), //sumbits it to the given url of the form
+            data: valuesToSubmit,
+            contentType: false,
+            processData: false,
+            dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+          }).success(function(json){
+            if (json.location){
+              window.location.href = json.location;
+            }
+            else{
+              console.log("success", json);
+              console.log(json.idea_id);
+              //var r = $.parseJSON(json);
+              $('input[name="order[idea_id]"]').val(json.idea_id);
+            }
+          });
+          $('#myModal').modal('toggle');
+        }
+      }else{
+        $('#modalErrorMessage').find('li').text("#{t('idea.business.modal.validation_required_mess')}");
+        $('#modalErrorMessage').modal('toggle');
+      }
+    });
+    $('button.btn-validate').click(function(){
+      formComplete();
+      if ( $.inArray( false, completion ) > -1 ){
+        $('#modalErrorMessage').find('li').text("#{t('idea.business.modal.complete_required_mess')}");
+        $('#modalErrorMessage').modal('show');
+      }else{
+        drawChart();
+        $('#validate').modal('show');
+        submit = true;
+      }
+    });
+
+    // Unchecked default
+    $('#idea_business_idea_attributes_year_exp').prop('checked', false);
+    // To Age smaller than From Age
+    var from_age = 100;
+    showHideAgeOption();
+    $('#idea_business_idea_attributes_customer_analysis_attributes_from_age').on('change', function(){
+      from_age = parseInt($('#idea_business_idea_attributes_customer_analysis_attributes_from_age').val());
+      showHideAgeOption();
+    });
+
+    $('#add-competitors').trigger('click');
+
+    function showHideAgeOption() {
+      if(isNaN(from_age)){
+        $('#idea_business_idea_attributes_customer_analysis_attributes_to_age').val('');
+        $('#idea_business_idea_attributes_customer_analysis_attributes_to_age  option').addClass('hide');
+      }else{
+        $('#idea_business_idea_attributes_customer_analysis_attributes_to_age').val('');
+        $('#idea_business_idea_attributes_customer_analysis_attributes_to_age > option').each(function(){
+          if(parseInt($(this).val()) <= from_age){
+            $(this).addClass('hide');
+          }else{
+            $(this).removeClass('hide');
+          }
+        });
+      }
+    }
+  });
+
+  $body = $("body");
+
+  $(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+    ajaxStop: function() { $body.removeClass("loading"); }
+  });

@@ -1,0 +1,890 @@
+#page-wrapper
+  .switches
+    .acount-section.event-section.close-idea-section
+      .acount-title.container-fluid
+        h2 Closed Idea
+      .close-idea-content
+        .close-idea.container-fluid
+          ul.close-idea-listmenu.container-fluid
+            li.li-border-right.li-border-bottom.active
+              label
+                = image_tag asset_path 'icon-check.png'
+              | Primary Niceties
+            li.li-border-right.li-border-bottom
+              label
+                = image_tag asset_path 'icon-check.png'
+              | Early Stage Analysis
+            li.li-border-right.li-border-bottom
+              label
+                = image_tag asset_path 'icon-check.png'
+              | Team Cappabilities
+            li.li-border-right.li-border-bottom
+              label
+                = image_tag asset_path 'icon-check.png'
+              | Market Analysis
+            li.li-border-bottom
+              label
+                = image_tag asset_path 'icon-check.png'
+              | Customer Analysis
+            li.li-border-right
+              label
+                = image_tag asset_path 'icon-check.png'
+              | Investment Scale
+            li.li-border-right
+              label
+                = image_tag asset_path 'icon-check.png'
+              | Business Potential
+            li.li-border-right
+              label
+                = image_tag asset_path 'icon-check.png'
+              | Competitors Scenery
+            li.li-border-right
+              label
+                = image_tag asset_path 'icon-check.png'
+              | PitchBurns
+            li
+              label
+                = image_tag asset_path 'icon-check.png'
+              | Exit Strategy
+          .menu-content.container-fluid.primary-details
+            h3 Primary Details
+            .close-idea-left
+              h6.h6-first Target Business Lines
+              select.paid
+                option
+                  | -select dropdown-
+
+              h6 Idea Title
+              input placeholder="Enter Idea Title" type="text"/
+            .close-idea-right
+              h6.h6-first Type of Business Idea
+              select.paid
+                option
+                  | -select dropdown-
+
+              h6 Idea Tagline
+              input placeholder="Enter Idea Tagline" type="text"/
+            h6 Problem Statement
+            textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+            h6 Solution
+            textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+            .current-idea-stage.container-fluid
+              h6 Current Idea Stage?
+              ul.list-current
+                li
+                  input id="generation" type="radio"/
+                  label for="generation" Generation
+                li
+                  input id="assessment" type="radio"/
+                  label for="assessment" Assessment
+                li
+                  input id="planing" type="radio"/
+                  label for="planing" Planing
+                li
+                  input id="prototype" type="radio"/
+                  label for="prototype" Prototype
+                li
+                  input id="implimentation" type="radio"/
+                  label for="implimentation" Implimentation
+            .current-idea-stage.container-fluid
+              h6 Have this idea IP or Patent?
+              ul.list-idea-ip
+                li
+                  input type="checkbox"/
+                  span If Patented / IP
+                li
+                  input type="checkbox"/
+                  span Pending
+                li
+                  h6 Register Number
+                  input placeholder="Enter Register Number here" type="text"/
+          .menu-content.container-fluid.stage-analysis
+            h3 Early Stage Analysis
+            .question-1
+              h6 1. Motivation and Vision - What is the primary reason you are starting a business?
+              ul.question
+                li
+                  input type="checkbox"/
+                  span I have always wanted my own company
+                li
+                  input type="checkbox"/
+                  span I don't want to work for others
+                li
+                  input type="checkbox"/
+                  span I want to build weath & Capatalise on an idea
+                li
+                  input type="checkbox"/
+                  span Solving the problem in current market
+                li
+                  input type="checkbox"/
+                  span I want be a billionaire
+            .question-other
+              h6 2. How many years experience do you have in the industry in which are starting?
+              ul.question.question-2
+                li
+                  input type="checkbox"/
+                  span None
+                li
+                  input type="checkbox"/
+                  span 0-02 Years
+                li
+                  input type="checkbox"/
+                  span 05-10 Years
+                li
+                  input type="checkbox"/
+                  span 10+ Years
+            .question-other
+              h6 3. To what extent have you previously been involved in a start-up business?
+              ul.question
+                li
+                  input type="checkbox"/
+                  span None
+                li
+                  input type="checkbox"/
+                  span I have worked for a start-up business
+                li
+                  input type="checkbox"/
+                  span I have run my own startup business
+                li
+                  input type="checkbox"/
+                  span I have run more than one business
+                li
+                  input type="checkbox"/
+                  span Having an idea about statup business
+            .question-other
+              h6 4. Choose your Business mode!
+              ul.question.question-3
+                li
+                  input type="checkbox"/
+                  span Advertising
+                li
+                  input type="checkbox"/
+                  span Commission
+                li
+                  input type="checkbox"/
+                  span Market Place
+                li
+                  input type="checkbox"/
+                  span Ecommerce
+                li
+                  input type="checkbox"/
+                  span Premium
+            .question-other
+              h6 5. Explain Business Model? How you generate the money?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+            .question-other
+              h6 6. What are the steps you are going to take it for idea Execution?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+          .menu-content.container-fluid.team-capabilities
+            h3 Team Capabilities
+            .question-1
+              h6 1. Crucial Skills - Below the one skill which you think is the most important to your business idea.
+              ul.question.question-2
+                li
+                  input type="checkbox"/
+                  span Management
+                li
+                  input type="checkbox"/
+                  span Technical Expertise
+                li
+                  input type="checkbox"/
+                  span Domain Expertise
+                li
+                  input type="checkbox"/
+                  span Marketing & Sales
+                li
+                  input type="checkbox"/
+                  span Yet to be analysed
+            .question-other
+              h6.h6-left 2. Strength of your team
+              select.select-left
+                option
+                  | -select dropdown-
+            .question-other
+              h6.h6-left
+                | 3.
+                button.btn-add
+                  = image_tag asset_path 'icon-user.png'
+                  | Add Team
+              div.btn-group-team
+                button.btn-view-team-list View Team List
+                button.btn-save Save
+              .team-content.container-fluid
+                input placeholder="Enter Name" type="text"/
+                input placeholder="Enter Role has taken in Business Idea" type="text"/
+                input placeholder="Enter Skills" type="text"/
+                input placeholder="Joined in team" type="text"/
+                h6.h6-left Profile Image
+                button.btn-upload Upload
+            .question-other
+              h6 4. Team Attributes - Which of the following resources and capanbilities do you or your team possess?
+              ul.question.question-2
+                li
+                  input type="checkbox"/
+                  span Leadership/ Management
+                li
+                  input type="checkbox"/
+                  span Finance/ Operations
+                li
+                  input type="checkbox"/
+                  span Sales/ Marketing
+                li
+                  input type="checkbox"/
+                  span Technical/ Specialst
+                li
+                  input type="checkbox"/
+                  span Ready to adopt any capabilities
+          .menu-content.container-fluid.market-analysis
+            h3 Market Analysis
+            .question-1
+              h6 1. Is this idea new to the market? Yes/NO
+              ul.question.question-2
+                li
+                  input type="checkbox"/
+                  span Yes
+                li
+                  input type="checkbox"/
+                  span No
+            .question-other
+              h6 2. Would this idea have a major impact on the market?
+              ul.question.question-2
+                li
+                  input type="checkbox"/
+                  span Yes
+                li
+                  input type="checkbox"/
+                  span No
+            .question-other
+              h6 3. Market Trend - To what extent is your primary target market growing?
+              ul.question.question-2
+                li
+                  input type="checkbox"/
+                  span Low growth
+                li
+                  input type="checkbox"/
+                  span Intermittent growth
+                li
+                  input type="checkbox"/
+                  span Steady growth
+                li
+                  input type="checkbox"/
+                  span Rapid growth
+                li
+                  input type="checkbox"/
+                  span Yet to be analysed
+            .question-other
+              h6 4. Market Channels - How are you going to sell your product or service to potential customers?
+              ul.question
+                li
+                  input type="checkbox"/
+                  span Selling directly to customers
+                li
+                  input type="checkbox"/
+                  span Using Intermediaries such as distributors and retailers
+                li
+                  input type="checkbox"/
+                  span Online via the Internet
+                li
+                  input type="checkbox"/
+                  span Combination of two of the previous options
+                li
+                  input type="checkbox"/
+                  span On demand
+            .question-other.current-idea-stage.current-market-size.container-fluid
+              h6 5. Market Size - What is the total annual size of your primary target market?
+              ul.list-current.list-market-size
+                li
+                  input id="under" type="radio"/
+                  label for="under" Under $1M
+                li
+                  input id="1" type="radio"/
+                  label for="1" $1M - $10M
+                li
+                  input id="10" type="radio"/
+                  label for="10" $10M - $50M
+                li
+                  input id="50" type="radio"/
+                  label for="50" $50M - $250M
+                li
+                  input id="250" type="radio"/
+                  label for="250" $250M+
+            .question-other
+              h6 6. Do the competence, tools and production facilities for implementing the idea already exist in-house?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+          .menu-content.container-fluid.customer-analysis
+            h3 Customer Analysis
+            .question-other
+              h6 1. Does this idea solve a clearly defined customer problem in a (radically) new way? Explain?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+            .question-other
+              h6 2. How clear are you on who your next 3 big customers will be?
+              ul.question
+                li
+                  input type="checkbox"/
+                  span I have some idea as who they could be
+                li
+                  input type="checkbox"/
+                  span I know who they are likely to be
+                li
+                  input type="checkbox"/
+                  span I know who they are and know the key decision makers I need to speak.
+                li
+                  input type="checkbox"/
+                  span I know who they are, who the key desicion makers are and already have a relationship with them
+                li
+                  input type="checkbox"/
+                  span I am already in discussions with them
+            .question-other
+              h6 3. How do you convience your potential customers about you product or service?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+            .question-other
+              h6 4. What is the geographical region which you tragetting customers? (Select multiple)
+              select.paid
+                option
+                  | -select dropdown-
+            .question-other
+              h6 5. Which age is targetting?
+              .age-left
+                h6 From age
+                select.paid
+                  option
+                    | -select dropdown-
+              .age-left
+                h6 To age
+                select.paid
+                  option
+                    | -select dropdown-
+            .question-other
+              h6 6. What are the steps you are going to take it for idea Execution?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+          .menu-content.container-fluid.investment-scale
+            h3 Investment Scale
+            .question-other
+              h6 1. How much total capital do you need to go product live?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+            .question-other
+              h6 2. How much fund do you already have?
+              ul.question.question-2
+                li
+                  input type="checkbox"/
+                  span 10% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 20% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 30% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 40% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 50% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 60% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 70% of whole Capital
+                li
+                  input type="checkbox"/
+                  span Zero
+            .question-other
+              h6 3. How much fund do you like to invest?
+              ul.question.question-2
+                li
+                  input type="checkbox"/
+                  span 10% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 20% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 30% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 40% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 50% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 60% of whole Capital
+                li
+                  input type="checkbox"/
+                  span 70% of whole Capital
+                li
+                  input type="checkbox"/
+                  span Zero
+            .question-other
+              h6 4. How much funding are you seeking?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+            .question-other
+              h6 5. Offering business stake to the investor?
+              select.paid
+                option 10 - 13 ( In Percentage )
+            .question-other
+              h6 6. How will you use these funds?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+          .menu-content.container-fluid.business-potencial
+            h3.h3-left Business Potencial
+            h4.h4-right Forecast - Financial Projections
+            .menu-info
+              .instructions
+                h6 Instructions
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt commodo.
+              .question-other
+                h6
+                  | 1. What type of projection?
+                  label
+                    | (Monthly, Yearly)
+                select.paid
+                  option
+                    | -select dropdown-
+              .question-other
+                h6
+                  | 2. Choose team for Numbers to be Projected?
+                  label
+                    | (1 year, 3 years, 5 years)
+                select.paid
+                  option
+                    | -select dropdown-
+              .question-other
+                h6 3. What type of revenue stream?
+                button.btn-list-sale data-target="#myModal" data-toggle="modal" type="button"  Open Modal
+                /! Modal
+                #myModal.modal.fade role="dialog"
+                  .modal-dialog
+                    /! Modal content
+                    .modal-content
+                      .modal-header
+                        button.close data-dismiss="modal" type="button"  &times;
+                        h4.modal-title Type of Revenue
+                      .modal-body
+                        h4
+                          | Sales in Number of units
+                          label Projected numbers starts from next month. Allows only number. (No of units)
+                        .btn-group
+                          button Parameter 1
+                          button Parameter 2
+                          button Parameter 3
+                        .list-month
+                          .list-month-content.container-fluid
+                            .month.container-fluid
+                              .month-element
+                                input type="text" placeholder="May 1"/
+                              .month-element
+                                input type="text" placeholder="June 1"/
+                              .month-element
+                                input type="text" placeholder="July 1"/
+                              .month-element
+                                input type="text" placeholder="August 1"/
+                              .month-element
+                                input type="text" placeholder="September 1"/
+                              .month-element
+                                input type="text" placeholder="October 1"/
+                              .month-element
+                                input type="text" placeholder="November 1"/
+                              .month-element
+                                input type="text" placeholder="December 1"/
+                              .month-element
+                                input type="text" placeholder="January 1"/
+                              .month-element
+                                input type="text" placeholder="February 1"/
+                              .month-element
+                                input type="text" placeholder="March 1"/
+                              .month-element
+                                input type="text" placeholder="April 1"/
+                            .total Total#
+                          .list-month-content.container-fluid
+                            .month.container-fluid
+                              .month-element
+                                input type="text" placeholder="May 1"/
+                              .month-element
+                                input type="text" placeholder="June 1"/
+                              .month-element
+                                input type="text" placeholder="July 1"/
+                              .month-element
+                                input type="text" placeholder="August 1"/
+                              .month-element
+                                input type="text" placeholder="September 1"/
+                              .month-element
+                                input type="text" placeholder="October 1"/
+                              .month-element
+                                input type="text" placeholder="November 1"/
+                              .month-element
+                                input type="text" placeholder="December 1"/
+                              .month-element
+                                input type="text" placeholder="January 1"/
+                              .month-element
+                                input type="text" placeholder="February 1"/
+                              .month-element
+                                input type="text" placeholder="March 1"/
+                              .month-element
+                                input type="text" placeholder="April 1"/
+                            .total Total#
+                          .list-month-content.container-fluid
+                            .month.container-fluid
+                              .month-element
+                                input type="text" placeholder="May 1"/
+                              .month-element
+                                input type="text" placeholder="June 1"/
+                              .month-element
+                                input type="text" placeholder="July 1"/
+                              .month-element
+                                input type="text" placeholder="August 1"/
+                              .month-element
+                                input type="text" placeholder="September 1"/
+                              .month-element
+                                input type="text" placeholder="October 1"/
+                              .month-element
+                                input type="text" placeholder="November 1"/
+                              .month-element
+                                input type="text" placeholder="December 1"/
+                              .month-element
+                                input type="text" placeholder="January 1"/
+                              .month-element
+                                input type="text" placeholder="February 1"/
+                              .month-element
+                                input type="text" placeholder="March 1"/
+                              .month-element
+                                input type="text" placeholder="April 1"/
+                            .total Total#
+                      .modal-footer
+                        button.btn-next Save
+                        button.btn-validate  Clear
+
+            .list-sales
+              h4 Sales in Number of Units
+              .btn-group
+                button.btn-edit
+                  i.fa.fa-pencil-square-o
+                  | Edit
+                button.btn-delete
+                  i.fa.fa-trash-o
+                  | Delete
+              table.table-list
+                tr
+                  th May 1
+                  th June 1
+                  th July 1
+                  th August 1
+                  th September 1
+                  th October 1
+                  th November 1
+                  th December 1
+                  th January 1
+                  th February 1
+                  th March 1
+                  th April 1
+                  th Total #
+                  th Duration
+                tr
+                  td
+                    input type="checkbox" class="list-checkbox"/
+                    input type="text" class="txt-first-child" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00000"/
+                  td 1 Year
+                tr
+                  td
+                    input type="checkbox" class="list-checkbox"/
+                    input type="text" class="txt-first-child" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00000"/
+                  td 3 Years
+                tr
+                  td
+                    input type="checkbox" class="list-checkbox"/
+                    input type="text" class="txt-first-child" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00"/
+                  td
+                    input type="text" placeholder="00000"/
+                  td 5 Years
+          .menu-content.container-fluid.competitors-scenery
+            h3 Competitors Scenery
+            .question-other
+              h6.h6-left
+                | 1.
+                button.btn-add
+                  = image_tag asset_path 'icon-user.png'
+                  | Add Competators
+                label.lb-add-competator Atleast one Competators should be added
+              div.btn-group-team
+                button.btn-view-team-list View Competators
+                button.btn-save.btn-save-competator Save
+              .team-content.container-fluid
+                input placeholder="Enter Company Name" type="text"/
+                input placeholder="Enter Their Primary Business Line" type="text"/
+                input placeholder="Enter Country" type="text"/
+                input placeholder="Enter Revenue (If know)" type="text"/
+                input placeholder="Enter Website URL for reference" type="text"/
+            .question-other.container-fluid
+              h6 2. Provide graph/table (In image format) analaysis on your competators?
+              h6.h6-left.h6-upload-file Choose file to
+              .fileUpload.btn-upload
+                span Upload
+                input type="file" class="upload" /
+            .question-other
+              h6 3. How do your Business idea sustain in existing competative world?
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+          .menu-content.container-fluid.pitch-burns
+            h3 PitchBurns
+            .question-1.container-fluid
+              h6 1. Upload your own Pitch Presentation
+              h6.h6-left.h6-upload-file Choose File To
+              .fileUpload.btn-upload
+                span Upload
+                input type="file" class="upload" /
+              label.lb-upload
+                | (It allows only PPT & PDF)
+            .question-other.container-fluid
+              h6 2. Upload your video Pitch Presentation
+              h6.h6-left.h6-upload-file Choose File To
+              .fileUpload.btn-upload
+                span Upload
+                input type="file" class="upload" /
+              label.lb-upload
+                | (It allows only Video files)
+            .question-other.container-fluid
+              h6 3. Upload your any research documents / Legal documents(If any)
+              h6.h6-left.h6-upload-file Choose File To
+              .fileUpload.btn-upload
+                span Upload
+                input type="file" class="upload" /
+              label.lb-upload
+                | (Add multiple docs)
+            .question-other
+              h6 4. Upload your any research documents / Legal documents(If any)
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here"
+          .menu-content.container-fluid.exit-strategy
+            h3 Exit Strategy
+            .question-other
+              h6 1. When you prefer for exit? How you define you Business exit Strategy? Explain it.
+              h6.text-example Example:
+              ul.list-example
+                li Merger & Acquisition (M&A)
+                li Merger & Acquisition (M&A)
+                li Merger & Acquisition (M&A)
+              textarea# name="" cols="30" rows="10" placeholder="Enter text here" class="text-area-exit-strategy"
+        button.btn-submit Submit
+        button.btn-next Next
+        button.btn-validate data-target="#validate" data-toggle="modal" Validate
+        /! Modal
+        #validate.modal.fade role="dialog" 
+          .modal-dialog.modal-dialog-validate
+            /! Modal content
+            .modal-content
+              .modal-header
+                button.close data-dismiss="modal" type="button"  &times;
+                h4.modal-title My Business Idea VALIDATION
+              .modal-body
+                .modal-validation-element
+                  h5.txt-title Primary Nice ties
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage
+                    label 30
+                    | %
+                .modal-validation-element
+                  h5.txt-title Early Stage Analysis
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage 
+                    label 65
+                    | %
+                .modal-validation-element
+                  h5.txt-title Team Capabilities
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage 
+                    label 87
+                    | %
+                .modal-validation-element
+                  h5.txt-title Market Analysis
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage 
+                    label 75
+                    | %
+                .modal-validation-element
+                  h5.txt-title Customer Analysis
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage 
+                    label 32
+                    | %
+                .modal-validation-element
+                  h5.txt-title Investment Scale
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage 
+                    label 30
+                    | %
+                .modal-validation-element
+                  h5.txt-title Business Potential
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage 
+                    label 65
+                    | %
+                .modal-validation-element
+                  h5.txt-title Competitors Scenery
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage 
+                    label 87
+                    | %
+                .modal-validation-element
+                  h5.txt-title PitchBurns
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage 
+                    label 75
+                    | %
+                .modal-validation-element
+                  h5.txt-title Exit Strategy
+                  .percentage
+                    .percentage-under
+                    .percentage-above
+                  h5.txt-percentage 
+                    label 32
+                    | %
+              .modal-footer.container-fluid
+                .modal-footer-validate
+                  h4 
+                    | Total Score 
+                    label 12.5
+                    | %
+                  .percentage-circle
+                    .percentage-circle-current
+                    .percentage-circle-current-left
+                    .txt-percentage 
+                      lable 12.5
+                      | %
+                .modal-footer-validate 
+                  h4 
+                    | Good To
+                    p 
+                      | GO
+                      i.fa.fa-arrow-right
+      ul.your-idea
+        li.title
+          = image_tag 'icon-postyouridea.png'
+          h4 Post your idea
+        li.close-idea Closed Ideas
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.btn-plus
+          = link_to "#" do
+            button
+              i.fa.fa-plus
+          end
+  .clearfix

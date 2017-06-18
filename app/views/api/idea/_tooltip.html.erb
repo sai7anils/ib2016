@@ -1,0 +1,10 @@
+<% unless cmt.like_comments.count.zero? %>
+  <ul class="list-user-like">
+    <% cmt.like_comments.take(10).each do |like| %>
+        <li><%= like.user.fullname %></li>
+    <% end %>
+    <% if cmt.like_comments.count > 10 %>
+      <li>and <%= cmt.like_comments.count - 10 %> more...</li>
+    <% end %>
+  </ul>
+<% end %>

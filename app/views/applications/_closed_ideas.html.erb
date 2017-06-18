@@ -1,0 +1,59 @@
+<% if action_name == 'show' %>
+<div class="col-md-3" >
+  <div class="totalviews">
+    <%= image_tag asset_path('Totalviews-icon.png') %>
+    <span><%= t('idea.total_views') %></span> <%= @idea.try(:views) %>
+  </div>
+</div>
+<% end %>
+<div class="col-md-3 pl0" id="idea-bar">
+
+  <div class="post-idea">
+    <div class="col-xs-3 activity-img">
+      <%= image_tag asset_path('Postyouridea-icon-black.png'), class: 'img-responsive' %>
+    </div>
+    <div class="col-xs-9 pl0 activity-desc">
+
+      <h5 class="mt7" >
+        <%= link_to t('idea.post_your_idea'), new_user_idea_path %>
+      </h5>
+
+    </div>
+
+    <div class="clearfix"> </div>
+  </div>
+
+  <div class="switch-right-grid">
+    <div class="switch-right-grid1">
+      <div class="col-md-12 close-idea">
+
+        <div class="col-xs-12 activity-desc">
+          <p>
+            <%= link_to t('idea.closed_ideas'), "#" %>
+          </p>
+
+        </div>
+
+
+      </div>
+      <div class="clearfix"> </div>
+      <% (@closed_ideas || []).each do |idea| %>
+        <% if idea.business_idea.present? %>
+          <div class="idea_no">
+            <h1>
+                <% if current_user.startup || current_user.entrepreneur %>
+                <%= link_to idea.title, '#' %>
+                <% else %>
+                <%= link_to idea.title, idea.business_idea.learn_more_url(current_user) %>
+                <% end %>
+            </h1>
+            <p><%= truncate(idea.business_idea.try(:problem_statement).to_s, :length => 50) %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+<%= render partial: '/layouts/adsense' %>

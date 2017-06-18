@@ -1,0 +1,38 @@
+.col-sm-9.col-sm-offset-3.col-lg-10.col-lg-offset-2.main
+  .row
+    ol.breadcrumb
+      li
+        a href=admin_root_path
+          svg.glyph.stroked.home
+            use xlink:href="#stroked-home"
+      li.active = @user.user_type.capitalize
+  /! /.row
+  .row
+    .col-lg-12
+      h1.page-header = @user.fullname
+  /! /.row
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-body
+          table.table.table-bordered.table-hover
+            tbody
+              tr
+                th width="20%" Username
+                td width="80%" = @user.username
+              tr
+                th Full name
+                td = @user.fullname
+              tr
+                th User Type
+                td = @user.user_type
+              tr
+                th Location
+                td = @user.location
+              tr
+                th Avatar
+                td = image_tag @user.avatar
+              - unless @user.admin?
+                = render @user.user_type, @user.user_type.to_sym => @role
+
+          = link_to "Back", admin_business_ideas_path, class: "btn btn-primary"

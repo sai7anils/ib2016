@@ -1,0 +1,95 @@
+#page-wrapper
+  .switches
+    .acount-section.event-details
+      .acount-title.container-fluid
+        h2 = t('event.event_details')
+      .profile
+        .profile-content.detail-content
+          .header-detail.container-fluid
+            .header-left
+              h3 = @event.try(:title)
+              h5 = @event.event_time_content
+              h5
+                = @event.try(:event_time).to_s.upcase
+                | ,&nbsp;
+                = @event.try(:city)
+              h6
+                = t('event.category')
+                | :&nbsp;
+                = @event.category_name
+            .header-right
+              button
+                = @event.event_cost_content
+              ul.icon-group-share
+                li
+                  = link_to "http://www.facebook.com/sharer.php?u=#{user_event_url(@event)}", target: '_blank' do
+                    button
+                      i.fa.fa-facebook
+                li
+                  = link_to "http://www.tumblr.com/share/link?url=#{user_event_url(@event)}&description=#{@event.try(:title)} <br> #{@event.try(:description)}", target: '_blank' do
+                    button
+                      i.fa.fa-tumblr
+                li
+                  = link_to "https://www.linkedin.com/shareArticle?mini=true&url=#{user_event_url(@event)}&title=#{@event.title}&summary=#{@event.description}&source=LinkedIn", target: '_blank' do
+                    button
+                      i.fa.fa-linkedin
+                li
+                  button
+                    i.fa.fa-youtube-square
+          ul.list-info.menu-detail
+            li.active data-id="overview" = t('event.overview')
+            li data-id="shedule" = t('event.schedule')
+            li data-id="location" = t('event.location')
+          .detail-info.container-fluid.invester-content#overview
+            p = @event.try(:description)
+            .info-left
+              // h5 Speakers Details
+              // h6 1.Jhone Doe: xxx company CEO
+              // h6 2.Jhone Doe: xxx company CEO
+              // h6 3.Jhone Doe: xxx company CEO
+              h5.wesite Website
+              = link_to @event.try(:website), target: '_blank' do
+                h6[style="color: #008FD8"]
+                  = @event.try(:website)
+              // h5.wesite Partner
+              // ul.partner
+              //   - (@event.partners || []).each do |partner|
+              //     li.child-partner
+              //       - if partner.logo.present?
+              //         = image_tag partner.try(:logo), class: 'child-partner-img', title: partner.try(:name), alt: partner.try(:name)
+              //       - else
+              //         = image_tag "male-avatar.png", class: 'child-partner-img', title: partner.try(:name), alt: partner.try(:name)
+              //   - if @event.partners.empty?
+              //     li.child-partner No one !
+            .info-right
+              = image_tag @event.try(:event_image), class: 'event-details-image'
+          .detail-info.container-fluid.invester-content#shedule.hide
+            .info-left
+              h5 = t('event.time_schedule')
+              h6
+                i.fa.fa-calendar
+                | &nbsp; #{@event.try(:event_from).strftime("%B %d, %Y")} - #{@event.try(:event_to).strftime("%B %d, %Y")}
+              h6
+                i.fa.fa-clock-o
+                | &nbsp; #{t('event.time')}: #{@event.try(:event_time)}
+              h6
+                i.fa.fa-globe
+                | &nbsp; #{t('event.time_zone')}: #{@event.try(:timezone)}
+          .detail-info.container-fluid.invester-content#location.hide
+            .info-left
+              h5 = t('event.venue_address')
+              h6 = @event.try(:address_line_1)
+              h6 = @event.try(:address_line_2)
+              h6
+                = @event.region_name
+                | ,&nbsp;
+                = @event.country_name
+                | &nbsp;-&nbsp;
+                = @event.try(:zipcode)
+              h6 = @event.try(:city)
+            .info-right
+              = render "map"
+      = render partial: "more_events", locals: {}
+  .clearfix
+
+

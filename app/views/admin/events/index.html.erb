@@ -1,0 +1,139 @@
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="<%= admin_root_path %>"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+      <li class="active">Events</li>
+    </ol>
+  </div><!--/.row-->
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">All Events</h1>
+    </div>
+  </div><!--/.row-->
+  <div class="alert alert-success message-success hide">
+    <b>Well done!</b> Event has been deleted successfully.
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table table-bordered table-hover">
+
+            <form role="search">
+              <div class="row">
+                <div class="col-sm-3">
+                  <input onKeyPress="searchEvent(event)" id="search-event" type="text" class="form-control keyword" placeholder="Search By Key Words" value="<%= params[:keyword] %>" >
+                </div>
+                <div class="col-sm-3">
+                  <select class="select-event-country form-control">
+                    <option value=""></option>
+                    <%= options_for_select(CS.countries.collect {|k,v| [ v, k ] }, selected: params[:country]) %>
+                  </select>
+                </div>
+                <div class="col-sm-3">
+                  <select class="select-event-category form-control">
+                    <option value=""></option>
+                    <%= options_for_select(Event::EVENT_CATEGORY_TYPE.collect {|k,v| [ k, v ] }, selected: params[:category]) %>
+                  </select>
+                </div>
+                <div class="col-sm-2 text-right">
+                  <input class="event-calendar form-control" type="text" placeholder="Select Date" />
+                </div>
+                <div class="col-sm-1">
+                  <i class="fa fa-filter clear-filter" aria-hidden="true"></i>
+                </div>
+              </div>
+            </form>
+            <hr/>
+
+            <thead>
+              <tr>
+                <th width="15%">Event From</th>
+                <th width="30%">Name</th>
+                <th width="15%">Category</th>
+                <th width="20%">Location</th>
+                <th width="10%">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @events.each do |event| %>
+                <tr>
+                  <td>
+                    <%= event.try(:event_from).strftime("%b-%d-%Y") %>
+                  </td>
+                  <td><%= event.try(:title) %></td>
+                  <td><%= event.category_name %></td>
+                  <td><%= event.region_name %>, <%= event.country_name %></td>
+                  <td>
+                    <%= link_to edit_admin_event_path(event), class: 'btn btn-primary' do %>
+                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <% end %>
+                    <%= link_to "#", "onClick" => "deleteEvent(#{event.id}, event);" , id: event.id, "data-url" => admin_event_path(event), class: 'btn btn-danger delete_event' do %>
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+              <% if @events.count.zero? %>
+                <tr><td colspan="5">No results</td></tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel-footer">
+        <%= paginate @events, :theme => 'twitter-bootstrap-3',
+                   :pagination_class => "pagination-sm"  %>
+        </div>
+      </div>
+    </div>
+  </div><!--/.row-->
+<%= render "admin/commons/modal_cofirm" %>
+</div>
+
+<%= javascript_tag defer: 'defer' do -%>
+  if (window.addEventListener)
+    window.addEventListener('load', ready, false)
+  else if (window.attachEvent)
+    window.attachEvent('onload', ready)
+
+
+function ready() {
+  $(".select-event-country").select2({
+    placeholder: "Select A Country",
+    allowClear: true
+  });
+  $(".select-event-category").select2({
+    placeholder: "Select A Category",
+    allowClear: true
+  });
+
+  $(".select-event-country").on('change', function(){
+    window.location = '?country=' + $('.select-event-country').val() + '&keyword=' + $('.keyword').val() + '&date=' + $('.event-calendar').val() ;
+  });
+
+  $(".select-event-category").on('change', function(){
+    window.location = '?country=' + $('.select-event-country').val() + '&keyword=' + $('.keyword').val() + '&date=' + $('.event-calendar').val() + '&category=' + $('.select-event-category').val();
+  });
+
+  if (typeof getParameterByName('date') != "undefined" && getParameterByName('date') != null && getParameterByName('date') != '' ){
+    setDate = formatDate2(getParameterByName('date'));
+    if (typeof setDate !== "undefined"){
+      $('.event-calendar').val(setDate);
+    }
+  }
+
+  $(".event-calendar").datepicker({
+    yearRange: '2006:2050',
+    buttonText: "",
+    changeMonth: true,
+    changeYear: true})
+        .on("input change", function (e) {
+        window.location = '?country=' + $('.select-event-country').val() + '&keyword=' + $('.keyword').val() + '&date=' + formatDate(e.target.value) + '&category=' + $('.select-event-category').val();
+  });
+
+  $('.clear-filter').on('click', function(){
+    window.location = '?country=' + '&keyword=' + '&date=' + '&category=';
+  });
+}
+<% end -%>

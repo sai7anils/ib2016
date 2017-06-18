@@ -1,0 +1,51 @@
+<div class="show-all-section">
+  <button class="btn-show-all"><h6><%= t('idea.business.details.views_sales_numbers') %></h6></button>
+  <div class="form-info">
+    <div class="caret"></div>
+    <% if !@idea.business_idea.business_potencial.nil? %>
+      <div class="tabs">
+        <ul>
+         <% type =  @idea.business_idea.business_potencial.revenue_type %>
+         <% if type == 1|| type == 2 || type == 3 || type == 4 %>
+          <li data-id="1" class="tab-param-action active" id="tab-param-1">Param 1</li>
+         <% end %>
+         <% if type == 1|| type == 2 || type == 3 %>
+          <li data-id="2" class="tab-param-action" id="tab-param-2">Param 2</li>
+         <% end %>
+         <% if type == 3%>
+          <li data-id="3" class="tab-param-action" id="tab-param-3">Param 3</li>
+         <% end %>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <div class="view-total-val"><%= t('global.total') %> : 1233</div>
+        <div id="container-chart-1" class="tab-param tab-param-1 active"></div>
+        <div id="container-chart-2" class="tab-param tab-param-2"></div>
+        <div id="container-chart-3" class="tab-param tab-param-3"></div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<% if !@idea.business_idea.business_potencial.nil? %>
+<%= javascript_tag defer: 'defer' do -%>
+  var year_at = parseInt("<%= raw @idea.business_idea.business_potencial.created_at.strftime('%Y') %>");
+  var month_at = parseInt("<%= raw @idea.business_idea.business_potencial.created_at.strftime('%m') %>");
+  var created_at = "<%= raw @idea.business_idea.business_potencial.created_at.strftime('%d-%m') %>";
+  var revenue_type = parseInt("<%= raw @idea.business_idea.business_potencial.revenue_type %>");
+  var term = parseInt("<%= raw @idea.business_idea.business_potencial.term_number.to_i %>");
+  <% if @idea.business_idea.business_potencial.revenue_type == 1 && !@idea.business_idea.business_potencial.per_unit.nil? %>
+    var paramsData1 = <%= raw @idea.business_idea.business_potencial.per_unit.sale.to_json %>;
+    var paramsData2 = <%= raw @idea.business_idea.business_potencial.per_unit.price.to_json %>;
+  <% elsif @idea.business_idea.business_potencial.revenue_type == 2 && !@idea.business_idea.business_potencial.per_hour.nil? %>
+    var paramsData1 = <%= raw @idea.business_idea.business_potencial.per_hour.billable.to_json %>;
+    var paramsData2 = <%= raw @idea.business_idea.business_potencial.per_hour.hour_rate.to_json %>;
+  <% elsif @idea.business_idea.business_potencial.revenue_type == 3 && !@idea.business_idea.business_potencial.recurring.nil? %>
+    var paramsData1 = <%= raw @idea.business_idea.business_potencial.recurring.no_account.to_json %>;
+    var paramsData2 = <%= raw @idea.business_idea.business_potencial.recurring.charge.to_json %>;
+    var paramsData3 = <%= raw @idea.business_idea.business_potencial.recurring.churn_rate.to_json %>;
+  <% elsif @idea.business_idea.business_potencial.revenue_type == 4 && !@idea.business_idea.business_potencial.own_model.nil? %>
+    var paramsData1 = <%= raw @idea.business_idea.business_potencial.own_model.revenue.to_json %>;
+  <% end %>
+<% end -%>
+<% end %>

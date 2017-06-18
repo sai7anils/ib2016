@@ -1,0 +1,20 @@
+#GSCCModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" type="button"  ×
+        h5#ideaCategory #{@idea.business_idea.business_line_name}
+        h3#ideaTitle #{@idea.title}
+      hr
+      .modal-body
+        h4#myModalLabel.modal-title = t('idea.business.details.query_for')
+        br
+        = simple_form_for @message , :url => "#",:html => {"data-url" => messages_create_user_investors_path}, :authenticity_token => true do |f|
+          = f.error_notification
+          .form-inputs.modal-area
+            = f.input :detail, label: false, placeholder: t('idea.business.enter_text_here'), required: true, class:"text-modal"
+            = f.hidden_field :receiver_id, :value => @idea.user.id, required: true
+            = f.hidden_field :idea_id, :value => @idea.id, required: true
+          .modal-footer.container-fluid
+            button.btn.btn-default data-dismiss="modal" type="button"  = t('idea.business.modal.cancel')
+            button.btn.btn-submit.btn-send-request type="button" = t('idea.business.modal.send')

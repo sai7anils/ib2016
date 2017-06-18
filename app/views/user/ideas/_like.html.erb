@@ -1,0 +1,20 @@
+<center>
+  <% if current_user %>
+  <% if current_user.like?(@idea.id) %>
+  <i class="fa fa-thumbs-o-up" style="cursor:pointer;color:#FFD000"; onclick="likeIdea(<%=@idea.likes.count %>,<%= @idea.id %>, 0)"></i><br>
+  <span class="c-font-12"><%= @idea.likes.count %></span>
+  <% else %>
+  <i class="fa fa-thumbs-o-up" onclick="likeIdea(<%=@idea.likes.count %>,<%= @idea.id %>, 1)" style="cursor:pointer;"></i><br>
+  <span class="c-font-12"><%= @idea.likes.count %></span>
+  <script type="text/javascript">
+    var dislike = <%= current_user.id %>
+    if (dislike == uid) {
+      $('.like-idea').find('.fa-thumbs-o-up').css({"color": "#000000"});
+    }
+  </script>
+  <% end %>
+  <% else %>
+  <i class="fa fa-thumbs-o-up" style="cursor:pointer;"></i><br>
+  <span class="c-font-12"><%= @idea.likes.count %></span>
+  <% end %>
+</center>

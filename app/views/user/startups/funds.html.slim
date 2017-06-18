@@ -1,0 +1,102 @@
+#page-wrapper
+  .switches
+    .acount-section.business-idea-section
+      .acount-title.container-fluid
+        - if controller_name == "investors"
+          h2 My Favourites
+        - else
+          h2 Business Ideas
+      .profile
+        .profile-content.upcoming-content
+          .entrepreneur-content.container-fluid.list-idea
+            = render 'filter'
+            .fund-startup-element.container-fluid
+            	.info-section
+            		= image_tag 'img-user-business.png', :class => 'img-user'
+            		h6.text-icon
+            			= image_tag 'location-icon.png'
+            			| New York City, USA.
+            		h6 www.startuphub.com
+            		h6 Founded in 2014-15
+            		h6.view View Profile
+            		.sub-info.container-fluid
+	            		h6
+	            			= image_tag 'icon-eye-yellow.png'
+	            			| 00000000000
+	            		h6
+	            			= image_tag 'icon-pig-yellow.png'
+	            			| 00000000000
+	            .main-section
+	            	h5.title-01 Business Line
+	            	h5.title-02 Automobile
+	            	.info-element
+	            		h6 
+	            			span Funding Round : 
+	            			span.text A-Series
+	            		h6 
+	            			span Business Model : 
+	            			span.text B2B
+	            	.info-element
+	            		h6 
+	            			span Offering Business stake : 
+	            			span.text 20%
+	            		h6 
+	            			span Type of Capital : 
+	            			span.text Equity
+	            	.info-element
+	            		h6 
+	            			span Offering Business type : 
+	            			span.text Product
+	            	h4.txt-funding
+	            		= image_tag 'icon-database-yellow.png'
+	            		| Funding Goal : 2000 USD
+	            	button.btn-bar 
+	            		= image_tag 'btn-bar.png'
+      		.fund-startup-element.container-fluid
+            	.info-section
+            		= image_tag 'img-user-business.png', :class => 'img-user'
+            		h6.text-icon
+            			= image_tag 'location-icon.png'
+            			| New York City, USA.
+            		h6 www.startuphub.com
+            		h6 Founded in 2014-15
+            		h6.view View Profile
+            		.sub-info.container-fluid
+	            		h6
+	            			= image_tag 'icon-eye-yellow.png'
+	            			| 00000000000
+	            		h6
+	            			= image_tag 'icon-pig-yellow.png'
+	            			| 00000000000
+	            .main-section
+	            	h5.title-01 Business Line
+	            	h5.title-02 Automobile
+	            	.info-element
+	            		h6 
+	            			span Funding Round : 
+	            			span.text A-Series
+	            		h6 
+	            			span Business Model : 
+	            			span.text B2B
+	            	.info-element
+	            		h6 
+	            			span Offering Business stake : 
+	            			span.text 20%
+	            		h6 
+	            			span Type of Capital : 
+	            			span.text Equity
+	            	.info-element
+	            		h6 
+	            			span Offering Business type : 
+	            			span.text Product
+	            	h4.txt-funding
+	            		= image_tag 'icon-database-yellow.png'
+	            		| Funding Goal : 2000 USD
+	            	button.btn-bar 
+	            		= image_tag 'btn-bar.png'
+      .load-more
+        i.fa.fa-spinner.fa-spin
+        | Load more
+      = render 'closed_ideas'
+     
+  .clearfix

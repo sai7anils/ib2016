@@ -1,0 +1,107 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 Notifications
+      .notification
+        .content-notification
+          ul.type-notification.container-fluid
+            li Recent (@noti.count)
+            li Message Request
+            li Unread (@noti.count)
+            li
+              label Search
+              input placeholder= "Search here"type='text'/
+              button
+                i.fa.fa-search
+          .notification-element.container-fluid
+            = image_tag ''
+            .noti-info
+              h6
+                | Recommended by
+                = link_to root_path do
+                  Iain Tate, James Peterson, Janice Keller
+                end
+                | and 3 more
+              h4 The Other Olaf
+              h5 I am a snowman and my name is Olaf
+              p I was born in a castle ballroom, created by young witch at play with her sister. You might have heard this story, even heard of the snowman...
+              .author
+                = image_tag ''
+                .auto-info
+                  h6
+                    | Published in
+                    = link_to 'Master'
+                    | , written by
+                    = link_to 'James Mohney'
+                  h6
+                    | Just now
+                    i.fa.fa-bookmark
+                    | 4 min read
+            .image-right
+              = image_tag ''
+              i.fa.fa-angle-down
+          .notification-element.container-fluid
+            = image_tag ''
+            .noti-info
+              h4 15 Tricks to Appear Smart in Emails
+              h5 15 favorite tricks for appearing smart in emails
+              p If you don't care about appearing smart in emails, you can stop reading now. Oh good, we're alone. In the coporate world, there is no...
+              .author
+                = image_tag ''
+                .auto-info
+                  h6
+                    = link_to 'Sarah Cooper'
+                  h6
+                    | 5h ago
+                    i.fa.fa-bookmark
+                    | 3m read
+            .image-right
+              = image_tag ''
+              i.fa.fa-angle-down
+      ul.your-idea
+        li.title
+          = image_tag 'icon-postyouridea.png'
+          h4 Post your idea
+        li.close-idea Closed Ideas
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.btn-plus
+          = link_to "#" do
+            button
+              i.fa.fa-plus
+          end
+  .clearfix

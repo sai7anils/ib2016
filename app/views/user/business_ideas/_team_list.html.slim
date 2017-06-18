@@ -1,0 +1,22 @@
+.form-team-list
+  button.btn-view-list = t('idea.business.view_team_list')
+  .form-info
+    .caret
+    - if @idea.business_idea.team_cappabilitie.nil? || (@idea.business_idea.team_cappabilitie.present? && @idea.business_idea.team_cappabilitie.business_teams.count.zero?)
+      .team-element
+        .info-team
+          h6 = t('global.no_results')
+    - else
+      - (@idea.business_idea.team_cappabilitie.business_teams || []).each do |t|
+        .team-element
+          = image_tag t.profile_avatar
+          .info-team
+            h6 = t.try(:name)
+            .sub-info.container-fluid
+              h6 = t.try(:role)
+              h6
+                span.title = t('idea.business.details.skills')
+                span = t.try(:skills)
+              h6
+                span.title = t('idea.business.details.joined')
+                span = BusinessTeam::JOINED_NAME[t.try(:joined).to_i]

@@ -1,0 +1,11 @@
+<% publish_to replied_reply_user_ideas_path do %>
+  $('#replied_reply_<%= @root_comment.id %>').append("<%= j (render partial: 'api/idea/replied_reply_comment', :locals => { cmt: @comment }) %>");
+  <% if @status %>
+    var commenter = <%= @root_comment.user.id %>
+    if(uid == commenter){
+      notifications();
+    }
+  <% end %>
+  resetBorder();
+  hideBorderBottomLastChild();
+<% end %>

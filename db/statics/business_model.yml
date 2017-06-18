@@ -1,0 +1,11 @@
+---
+- id: 1
+  name: Advertising
+- id: 2
+  name: Commission
+- id: 3
+  name: Market Place
+- id: 4
+  name: Ecommerce
+- id: 5
+  name: Premium

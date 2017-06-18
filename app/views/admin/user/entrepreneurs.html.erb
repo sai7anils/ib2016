@@ -1,0 +1,135 @@
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="<%= admin_root_path %>"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+      <li class="active">Entrepreneurs</li>
+    </ol>
+  </div><!--/.row-->
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">All Entrepreneurs</h1>
+    </div>
+  </div><!--/.row-->
+  <div class="alert alert-success message-success hide">
+    <b>Well done!</b> Entrepreneur has been deleted successfully.
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= form_tag entrepreneurs_admin_user_index_path, method: :get, role: :search, class: "form-horizontal" do %>
+            <div class="form-group">
+              <label class="control-label col-md-2">Name or Email</label>
+              <div class="col-md-10">
+                <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Name Or Email", id: "search-user" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Location</label>
+              <div class="col-md-10">
+                <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "City, Region, Country..." %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Gender</label>
+              <div class="col-md-10">
+                <%= select_tag :gender, options_for_select(Entrepreneur.gender_options, params[:gender]), class: 'form-control dd' %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Birthday</label>
+              <div class="col-md-10">
+                <%= text_field_tag :dob, params[:dob], class: "form-control datepicker" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Profession Type</label>
+              <div class="col-md-10">
+                <%= select_tag :profession_type, options_for_select(EntrepreneurType.all.map{ |i| [i.name, i.id] }, params[:profession_type]), prompt: "- Select Profession Type -", class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Profession Company</label>
+              <div class="col-md-10">
+                <%= text_field_tag :profession_company, params[:profession_company], class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Profession Skill</label>
+              <div class="col-md-10">
+                <%= select_tag :profession_skill, options_for_select(ProfessionalSkill.all.map{ |i| [i.name, i.id] }, params[:profession_skill]), prompt: "- Select Profession Skill", class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Profession Experience</label>
+              <div class="col-md-10">
+                <%= select_tag :profession_experience, options_for_select(Entrepreneur.pro_exp_options, params[:profession_experience]), class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">University</label>
+              <div class="col-md-10">
+                <%= text_field_tag :university, params[:university], class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Address</label>
+              <div class="col-md-10">
+                <%= text_field_tag :address, params[:address], class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                <%= submit_tag "Search", class: "btn btn-primary" %>
+              </div>
+            </div>
+          <% end %>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th width="25%">Username</th>
+                <th width="25%">Full Name</th>
+                <th width="35%">Email</th>
+                <th width="15%">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @entrepreneurs.each do |entrepreneur| %>
+                <tr>
+                  <td>
+                    <%= image_tag entrepreneur.user.avatar, class: 'user-avatar' %>
+                    <%= entrepreneur.user.try(:username) %>
+                  </td>
+                  <td><%= entrepreneur.user.try(:fullname) %></td>
+                  <td><%= entrepreneur.user.try(:email) %></td>
+                  <td>
+                    <%= link_to admin_user_path(entrepreneur.user), class: "btn btn-success" do %>
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    <% end %>
+                    <%= link_to edit_admin_user_path(entrepreneur.user), class: 'btn btn-primary' do %>
+                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <% end %>
+                    <%= link_to "#", "onClick" => "deleteUser(#{entrepreneur.user.id}, event);" , id: entrepreneur.user.id, "data-url" => admin_ajax_delete_user_path(entrepreneur.user), class: 'btn btn-danger delete_user' do %>
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+              <% if @entrepreneurs.count.zero? %>
+                <tr><td colspan="4">No results</td></tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel-footer">
+          <%= paginate @entrepreneurs, :theme => 'twitter-bootstrap-3',
+                   :pagination_class => "pagination-sm"  %>
+        </div>
+      </div>
+    </div>
+  </div><!--/.row-->
+
+</div>
+
+<%= render "admin/commons/modal_cofirm" %>

@@ -1,0 +1,13 @@
+<span style="color:#78C2E9;cursor:pointer;" id="more-like-comment-action-<%= cmt.id %>" class="more-like-comment-action">
+  <% unless cmt.like_comments.count.zero? %>
+    <i class="fa fa-thumbs-up"></i> <%= cmt.like_comments.count %>
+  <% end %>
+</span>
+
+<script type="text/javascript">
+  var show = "<%= j (render partial: 'api/idea/tooltip', locals: {cmt: cmt}) %>";
+  $("#more-like-comment-action-<%= cmt.id %>").tooltip({
+    title: show,
+    html: true
+  });
+</script>

@@ -1,0 +1,42 @@
+.col-sm-9.col-sm-offset-3.col-lg-10.col-lg-offset-2.main
+  .row
+    ol.breadcrumb
+      li
+        a href=admin_root_path
+          svg.glyph.stroked.home
+            use xlink:href="#stroked-home"
+      li.active Transactions
+  /! /.row
+  .row
+    .col-lg-12
+      h1.page-header Transactions
+  /! /.row
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-body
+          table.table.table-bordered.table-hover
+            tbody
+              tr
+                th width="20%" Order
+                td width="80%" = link_to 'Order', admin_order_path(@transaction.order)
+              tr
+                th Action
+                td = @transaction.action
+              tr
+                th Amount
+                td = @transaction.amount
+              tr
+                th Success
+                td = @transaction.success
+              tr
+                th Authorization
+                td = @transaction.authorization
+              tr
+                th Message
+                td = @transaction.message
+              tr
+                th Params
+                td
+                  code = @transaction.params
+          = link_to "Back", admin_transactions_path, class: "btn btn-primary"

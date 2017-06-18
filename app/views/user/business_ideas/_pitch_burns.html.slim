@@ -1,0 +1,54 @@
+= b.fields_for :pitch_burn do |pb|
+  .menu-content.container-fluid.pitch-burns
+    h3 = t('idea.business.pitch_burns_tab')
+    .question-1.container-fluid
+      h6 = t('idea.business.pitch_burns_quest_1')
+      // h6.h6-left.h6-upload-file Choose File To
+      // .fileUpload.btn-upload
+      //   span Upload
+      //   = pb.file_field :your_own, accept: 'application/pdf,application/msword,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation', class: 'upload', id:"uploadBtn"
+      // label.lb-upload
+      //   | (It allows only PPT & PDF)
+      .custom-file-upload
+        = pb.file_field :your_own, accept: 'application/pdf,application/msword,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation', class: 'upload', id:"uploadBtn"
+        label.sub-note-idea
+          = t('idea.business.pitch_burns_quest_1_small_text')
+
+      // p id = "file-name"  No file chosen
+    .question-other.container-fluid
+      h6 = t('idea.business.pitch_burns_quest_2')
+      // h6.h6-left.h6-upload-file Choose File To
+      // .fileUpload.btn-upload
+      //   span Upload
+      //   = pb.file_field :your_video, accept: 'video/*', class: 'upload', id:"uploadBtn1"
+      // label.lb-upload
+      //   | (It allows only Video files)
+      // p id = "file-name1"  No file chosen
+      .custom-file-upload
+        = pb.file_field :your_video, accept: 'video/*', class: 'upload', id:"uploadBtn1"
+        label.sub-note-idea
+          = t('idea.business.pitch_burns_quest_2_small_text')
+    .question-other.container-fluid
+      h6 = t('idea.business.pitch_burns_quest_3')
+      // h6.h6-left.h6-upload-file Choose File To
+      // .fileUpload.btn-upload
+      //   #attachments
+      //     = pb.fields_for :attachments, :wrapper => 'inline' do |a|
+      //       = render 'user/ideas/attachment_fields', f: a
+      //     .links
+      //       = link_to_add_association pb, :attachments, :render_options => { :wrapper => 'inline' }, partial: 'user/ideas/attachment_fields'
+      //         i class="fa fa-plus-circle fa-2x"
+      //   br
+      // label.lb-upload
+      //   | (Add multiple docs)
+
+      #attachments
+        = pb.fields_for :attachments, :wrapper => 'inline' do |a|
+          = render 'user/ideas/attachment_fields', f: a
+        .links
+          = link_to_add_association pb, :attachments, :render_options => { :wrapper => 'inline' }, partial: 'user/ideas/attachment_fields'
+            i class="fa fa-plus-circle fa-2x"
+
+    .question-other
+      h6 = t('idea.business.pitch_burns_quest_4')
+      = pb.text_area :your_idea_legally, placeholder: t('idea.business.enter_text_here'), cols: 30, rows: 10, pattern: '.{80, 400}', required: true

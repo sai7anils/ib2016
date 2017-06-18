@@ -1,0 +1,123 @@
+<% if @event.errors.full_messages.present? %>
+    <div class="alert alert-danger event-message-error">
+    <ul class="list-message-error">
+    <% @event.errors.full_messages.each do |error_message| %>
+      <li class="alert-alert-error alert-danger"><%= error_message %></li>
+    <% end %>
+    </ul>
+    </div>
+  <% end %>
+<div class="event-left">
+  <h6><%= t('event.event_title') %></h6>
+  <%= f.text_field :title, placeholder: t('event.enter_text_here'), required: true, maxlength: "100" %>
+  <h6><%= t('event.event_entry_type') %></h6>
+  <%= f.select :entry_type, Event::EVENT_ENTRY_TYPE, {include_blank: t('event.select_entry_type') }, {class: 'paid', required: true } %>
+  <label class="paid-block <%= ((f.object.entry_type == 1 || f.object.entry_type.nil?)) ? 'hide' : '' %>" >If Paid Entry Cost Minimum</label>
+  <%= f.number_field :paid_entry_cost_min, placeholder: t('event.enter_text_here'), min: '1', class: ((f.object.entry_type == 1 || f.object.entry_type.nil?)) ? "hide" : "" %>
+  <h6><%= t('event.event_category') %></h6>
+  <%= f.select :event_category, Event::EVENT_CATEGORY_TYPE, {include_blank: t('event.select_category') }, {class: '', required: true } %>
+  <div class="time-section container-fluid">
+    <div class="time-element">
+      <h6><%= t('event.event_from') %></h6>
+      <i class="fa fa-calendar"></i>
+      <%= f.text_field :event_from, id: 'datepicker', required: true %>
+    </div>
+    <div class="time-element">
+      <h6><%= t('event.event_to') %></h6>
+      <i class="fa fa-calendar"></i>
+      <%= f.text_field :event_to, id: 'datepicker2', required: true %>
+    </div>
+    <div class="time-element">
+      <h6><%= t('event.time') %></h6>
+      <i class="fa fa-clock-o"></i>
+      <%= f.text_field :event_time, class: 'time ui-timepicker-input', id: 'timepicker', required: true %>
+    </div>
+    <div class="time-element">
+      <h6><%= t('event.time_zone') %></h6>
+      <i class="fa fa-globe"></i>
+      <%= f.time_zone_select :timezone, ActiveSupport::TimeZone.all.sort, model: ActiveSupport::TimeZone, default: Time.zone.name, required: true %>
+    </div>
+  </div>
+  <div class="testing container-fluid">
+    <h6><%= t('event.website') %></h6>
+    <%= f.text_field :website, placeholder: t('event.enter_website') %>
+    <h6 class="image">Event Image</h6>
+    <div class="custom-file-upload custom-file-modify">
+      <%= f.file_field :event_image, class: 'image input-file', accept: 'image/png,image/gif,image/jpeg', id: 'event-image', :data => { :max_file_size => 5.megabytes} %>
+    </div>
+    <!-- <button id="btn-event-image" type="button" class="upload">Upload</button> -->
+  </div>
+  <div class="addevent-page container-fluid">
+      <h6 class="partner"><%= t('event.add_event_partner') %></h6>
+      <div class="partner-section">
+      <div id="links">
+        <%= link_to_add_association f, :partners do %>
+          <button type="button" class="btn-plus btn-add-partner">
+            <i class="fa fa-plus"></i>
+          </button>
+        <% end %>
+      </div>
+    </div>
+      <div class="partner-main"></div>
+      <div id="partners">
+        <%= f.simple_fields_for :partners do |partner| %>
+          <%= render 'user/events/partner_fields', f: partner %>
+        <% end %>
+      </div>
+  </div>
+
+  <button type="button" class="btn-plus hide"><i class="fa fa-plus"></i></button>
+
+
+
+</div>
+
+<div class="event-right">
+  <h6><%= t('event.event_description') %></h6>
+  <%= f.text_area :description, required: true, placeholder: t('event.enter_text_here'), cols: 30, rows: 10 %>
+  <h6><%= t('event.event_venue') %></h6>
+  <h6><%= t('event.address_line_1') %></h6>
+  <%= f.text_field :address_line_1, placeholder: t('event.enter_text_here'), required: true %>
+  <h6><%= t('event.address_line_2') %></h6>
+  <%= f.text_field :address_line_2, placeholder: t('event.enter_text_here'), required: true %>
+  <h6><%= t('event.country') %></h6>
+  <%= f.country_select :country, {priority: %w(US CA), prompt: t('event.select_country') }, class: 'country-2', required: true, 'data-country_select' => '' %>
+  <h6><%= t('event.region') %></h6>
+  <%= render partial: 'subregion_select', locals: {parent_region: f.object.country} %>
+  <h6><%= t('event.city') %></h6>
+  <%= render partial: 'subcity_select', locals: {parent_region: f.object.country, parent_city: f.object.region, f:f} %>
+  <h6><%= t('event.zip') %></h6>
+  <%= f.text_field :zipcode, placeholder: 'Enter here', required: true %>
+</div>
+
+<div class="btn-group-event">
+  <%= link_to (action_name == 'new' ? user_events_path : user_my_events_path ) do %>
+    <button type="button" class="btn-cancel"><%= t('event.cancel') %></button>
+  <% end %>
+  <button onclick="$('form.event-form').submit();" type="button" class="btn-submit"> Submit </button>
+</div>
+
+<%= javascript_tag defer: 'defer' do -%>
+  $(document).ready(function() {
+    $('select[name="event[entry_type]"]').on('change', function(){
+      var entry_type = parseInt($(this).val());
+      if(entry_type != 1) {
+        $('.paid-block').removeClass('hide');
+        $('input[name="event[paid_entry_cost_min]"]').removeClass('hide');
+      }else {
+        $('.paid-block').addClass('hide');
+        $('input[name="event[paid_entry_cost_min]"]').addClass('hide');
+      }
+    });
+
+    $('#event_paid_entry_cost_min').keyup(function(){
+      var val = $(this).val();
+      if(isNaN(val)){
+        $(this).val(0);
+      }else if(val < 0){
+        val = - (val);
+        $(this).val(val);
+      }
+    });
+  });
+<% end %>

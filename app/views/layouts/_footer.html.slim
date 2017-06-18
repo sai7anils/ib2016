@@ -1,0 +1,68 @@
+a name="footer"
+footer.c-layout-footer.c-layout-footer-6.c-bg-grey-1 style=("background-color: #333 !important;background-image: url('#{asset_path('base/img/BG-Footer-iconsset.png')}')")
+  .container
+    .c-prefooter
+      .c-body
+        .row
+          .col-md-2
+          .col-md-8
+            .col-md-4.col-sm-6.col-xs-12
+              ul.c-links.c-theme-ul
+                .c-content-title-1.c-title-md.c-footer
+                  h3.c-title IDEABURNS
+                  .c-line-left.hide
+                li
+                  = link_to t('footer.entrepreneurs'), "#", class: 'link_action', id: 'entrepreneur'
+                li
+                  = link_to t('footer.investors'), "#", class: 'link_action', id: 'investor'
+                li
+                  = link_to t('footer.startups'), "#", class: 'link_action', id: 'startup'
+                li
+                  = link_to t('footer.startup_events'), '#', class: 'link_action', id: 'startupevent'
+
+            .col-md-4.col-sm-6.col-xs-12
+              ul.c-links.c-theme-ul
+                .c-content-title-1.c-title-md.c-footer
+                  h3.c-title.c-footer = t('footer.about_us')
+                  .c-line-left.hide
+                li
+                  = link_to t('footer.behind_thoughts'), home_behindIT_path
+                li
+                  = link_to t('footer.how_it_works'), home_howitwork_path
+                li
+                  = link_to t('footer.whats_next'), "#"
+
+            .col-md-4.col-sm-12.col-xs-12
+              ul.c-links.c-theme-ul
+                .c-content-title-1.c-title-md.c-footer
+                  h3.c-title.c-font-uppercase.c-font-bold  = t('footer.contact_us')
+                li
+                  = link_to t('footer.help'), "#"
+                li
+                  = link_to t('footer.terms_privacy'), home_terms_path
+                li
+                  = link_to t('footer.locate_us'), "#"
+          .col-md-2
+      .c-line style="background-color:#6C6C6C;width:65%;margin:20px auto;"
+      .c-head
+        .row
+          .col-md-12
+            .c-content-title-1.c-title-md.c-footer
+              h3.c-title.c-font-uppercase.c-font-bold.text-center = t('footer.join_with_us')
+              .c-line-left.hide
+            .socicon.social
+              = link_to "http://www.facebook.com/ideaburns" do
+                = image_tag asset_path('base/img/f.png')
+              = link_to "http://www.twitter.com/ideaburns" do
+                = image_tag asset_path('base/img/T.png')
+              = link_to "http://www.linkedin.com/ideaburns" do
+                = image_tag asset_path('base/img/In.png')
+              = link_to "http://www.instagram.com/ideaburns" do
+                = image_tag asset_path('base/img/Instagram.png'), class: 'socicon-last-child'
+            .c-content-title-1.c-title-md.c-footer
+              p.c-title.text-center &copy; ideaburns.2016
+              .c-line-left.hide
+        = render "applications/locales"
+
+.c-layout-go2top
+  i.icon-arrow-up

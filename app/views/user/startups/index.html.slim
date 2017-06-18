@@ -1,0 +1,84 @@
+#page-wrapper
+  .switches
+    .col-4
+      .col-md-9.p0
+        .col-md-2.col-xs-12
+          h3.c-font-17 style="line-height:2;"  = t('user.dashboard')
+        .col-lg-10.search-startup.container-fluid
+          .col-lg-4
+            select.business_line.form-control
+              option value=""
+              = options_for_select(BusinessLine.all.collect {|p| [ p.name, p.id ] }, selected: params[:business_line])
+          .col-lg-4
+            select.funding.form-control
+              option value=""
+              = options_for_select(Funding.type_of_funding_options, selected: params[:funding_type])
+          .col-lg-3
+            select.country.form-control
+              option value=""
+              = options_for_select(CS.countries.sort_by{|x,y|y}.collect {|k,v| [ v, k ] }, selected: params[:country])
+          .col-lg-1
+            i.fa.fa-filter.clear-filter
+        .clear
+        section.list-user
+          - if @users.present?
+            - @users.each do |user|
+              .col-md-4.mb30.idea-block
+                .entrepreneur-block.container-fluid
+                  .col-md-12.activity-rows.other-page style=("text-align: center;")
+                    = link_to get_profile(user) do
+                      .circular--landscape
+                       = image_tag asset_path(user.avatar), class: 'img-responsive'
+                    .clearfix
+                  .col-md-12.switch-right-grid-desc
+                    = link_to get_profile(user), class: 'normal-link' do
+                      h5.address-height= user.fullname
+                    h5.address-height= user.location
+                    .line
+                      = link_to t('user.read_more'),  startup_path(user), class: 'readmore',id: "entre"
+          - else
+            .col-md-12
+              = t('user.no_results')
+
+        .load-more
+          i.fa.fa-spinner.fa-spin
+          = t('user.load_more')
+      = render 'applications/closed_ideas'
+      .clearfix
+javascript:
+  $(document).ready(function () {
+    $('.state').next().find('input').attr('placeholder', "#{t('user.select_state')}");
+    $(".country").select2({
+      placeholder: "#{t('user.select_country_input')}",
+      allowClear: true
+    });
+    $(".funding").select2({
+      placeholder: "#{t('user.select_funding_type_input')}",
+      allowClear: true
+    });
+    $(".business_line").select2({
+      placeholder: "#{t('user.select_business_line_type')}",
+      allowClear: true
+    });
+    $(".country, .funding, .business_line").on('change', function(){
+      window.location = '?country=' + $('.country').val() + '&funding_type=' + $('.funding').val() + '&business_line=' + $('.business_line').val();
+    });
+    $(".clear-filter").on('click', function(){
+      window.location = '?country=' + '&funding_type=' + '&business_line=';
+    });
+  });
+  var page = 1;
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+      $('.load-more').show();
+      $.ajax({
+        url: '/user/startups/load_more/',
+        data: {country: '#{params[:country]}', business_line: '#{params[:business_line]}', funding_type: '#{params[:funding_type]}', page: (page + 1)},
+        success: function(data){
+          $('.load-more').hide();
+          $('.list-user').append(data);
+          page++;
+        }
+      });
+    }
+  });

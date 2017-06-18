@@ -1,0 +1,780 @@
+en:
+
+  global:
+    entrepreneurs: 'ENTREPRENEURS'
+    investors: 'INVESTORS'
+    startups: 'STARTUPS'
+    startup_events: 'STARTUP EVENTS'
+    read_more: 'Read More'
+    create_event: 'CREATE EVENT'
+    free: 'Free'
+    events: 'EVENTS'
+    type_here_for_events: 'Type here for events'
+    select_a_country: 'Select A Country'
+    select_a_date: 'Select Date'
+    posted_by: 'Posted by '
+    find_out_more: 'Find out more'
+    no_results: 'No results'
+    all: 'All'
+    total: 'Total '
+
+  header:
+    entrepreneurs: 'ENTREPRENEURS'
+    investors: 'INVESTORS'
+    startups: 'STARTUPS'
+    startup_events: 'STARTUP EVENTS'
+    login: 'LOGIN'
+    signup: 'SIGNUP'
+    logout: 'LOGOUT'
+    profile: 'PROFILE'
+    type_to_search: 'Type to search...'
+
+  navabar:
+    behind_it_thoughts: 'Behind IT Thoughts'
+    terms_of_use: 'Terms of use'
+    privacy_policy: 'Privacy Policy'
+    what_next: "What's Next"
+    contact_us: 'Contact US'
+
+  footer:
+    entrepreneurs: 'Entreprenuers'
+    investors: 'Investors'
+    startups: 'Startups'
+    startup_events: 'Startup Events'
+    about_us: 'ABOUT US'
+    behind_thoughts: 'Behind Thoughts'
+    how_it_works: 'How it Works'
+    whats_next: 'Whats Next'
+    contact_us: 'CONTACT US'
+    help: 'Help'
+    terms_privacy: 'Terms & Privacy'
+    locate_us: 'Locate Us'
+    join_with_us: 'JOIN WITH US'
+
+  home:
+    first_main_heading: 'THINK.SHARE.'
+    last_main_heading: 'GROW.'
+    first_main_small_text: 'Share Your Ideas with us.'
+    middle_main_small_text: ' We will find the right investments to make'
+    last_main_small_text: ' YOUR IDEAS TO GO BIG'
+    how_it_work: 'How It Works'
+    ideas: 'ideas'
+    startups: 'startups'
+    investors: 'investors'
+    deals: 'deals'
+
+    section_2:
+      first_heading: 'SHARE YOUR'
+      first_heading_bold: ' IDEAS'
+      first_small_text: 'TO MAKE THIS WORLD A BETTER PLACE'
+      second_heading: 'INNOVATIONS'
+      second_heading_bold: 'FIND'
+      second_small_text: 'TO INVEST AND CREATE REVOLUTIONS'
+
+    section_3:
+      overview: ' OVERVIEW'
+      who_we_are: 'Who we are'
+      who_we_are_content: 'Idearburns is a global online creative platform where people can add and share their ideas to the community and especially to target investors that they want to get attention. Also this is a place where startups and entrepreneurs can communicate with ideal Investors, share their thoughts and ideas to have a better view and improve the business strategy.'
+      who_we_are_ans_1: 'Turn your great ideas into successful businesses.'
+      who_we_are_ans_2: 'Build a legacy not an empire.'
+      who_we_are_ans_3: 'Make people your inspriration.'
+      who_we_are_ans_4: 'Turn your passions into profit.'
+      who_we_are_ans_5: 'Connect online global startup ecosystem.'
+      what_we_do: 'What we do'
+      what_we_do_ans_1: 'Nuturing ideas for ideaprenuers, Entrepreneurs, Startups and Investors.'
+      what_we_do_ans_2: 'Be the bridge to connect Startups and Investors.'
+      what_we_do_ans_3: "The world's first online creative ideas assessment tool."
+      what_we_do_ans_4: 'Keep your online business idea secure.'
+      what_we_do_ans_5: 'Publish your ideas into the Idea Pool and get feedback from other platform users and investors.'
+      what_we_do_ans_6: 'Chosen to be one of the most favorite platform for prestigious universities students, enthusiastic entrepreneurs.'
+      join_ideaburns: 'Join Ideaburns today!!!'
+      join_ideaburns_ans_1: 'Fill out our simple secure submision form.'
+      join_ideaburns_ans_2: 'Send it and be a part of our community.'
+      join_ideaburns_ans_3: 'Vote & like for the idea you believe that it would be successful.'
+      join_ideaburns_ans_4: 'Message to targeted investors that you would love to hear their advices.'
+
+    section_4:
+      heading: 'CONNECT ENTREPRENEURS,STARTUPS & INVESTORS AT ONE PLACE.'
+
+    section_5:
+      heading: 'BUSINESS LINES'
+      updating: 'Updating...'
+
+  how_it_work:
+    first_heading: 'HOW IT WORK'
+    second_heading: 'Here we are trying to tell how each type of user is do activities'
+    entrepreneurs: 'ENTREPRENEURS'
+    startup: 'STARTUP'
+    investor: 'INVESTOR'
+    entrepreneurs_tab:
+      step_1: 'Step 1: Registeration --> Login'
+      step_1_1: '1. Registeration - Sign up: If you are new member and an entrepreneur, please go through Sign up on the top right side of homepage for registeration'
+      step_1_2: '2. Registeration - Sign in: Clicking Signup button, It will show the box to fill in the info - go to drop down to choose user type'
+      step_1_3: '3. After completing, please go to your email to confirm your account'
+      step_1_4: '4. Then you are able to Log In and join our exciting platform'
+
+      step_2: 'Step 2: Fund Business ideas --> Access to Investors --> Schedule Meeting'
+      step_2_1: '1. To submit your idea privately to investors, please go to Fund B-idea on Leftside bar'
+      step_2_2: '2. Then you will see a form to fill in all your business idea info'
+
+      step_3: 'Step 3: Share ideas to world --> like/comment/Rate ideas'
+      step_3_1: '1. Here in the left side bar, choose the second icon - Ideate'
+      step_3_2: "2. Click on ''Public''  then you will see a box to fill in your idea. If you dont want everyone know your idea except Investors, you can choose ''Business'' instead"
+      step_3_3: "3. Your ideas will be launched to the great big world right after selecting ''Submit'' button with fully info requirement. At here you can like, share, vote and comment for any great idea that you love"
+
+      step_4: 'Step 4: View start-up events --> Add events'
+      step_4_1: '1. To see which event is going on, clicking on Event on the leftside bar'
+      step_4_2: '2. To Create your own event, choose Add events'
+      step_4_3: '3. Then you will see a table to add event info'
+
+      step_5: 'Step 5: View other Entrepreneurs, Start-ups & investors profile'
+      step_5_1: '1. To see the our community as well as Entrepreneurs, Startups and Investors, please click through each category on the left side bar'
+
+    startup_tab:
+      step_1: 'Step 1: Registeration --> Login'
+      step_1_1: '1. If you are startup and you do not have account yet, please go to SIGNUP box on the right side of the hompage'
+      step_2_2: '2. Choose Startup for user type'
+
+      step_2: 'Step 2: Fund Start-up Business --> Access to Investors -->Schedule Meeting'
+      step_2_1: '1. On the leftside bar, clicking on Fund startup to submit your idea'
+      step_2_2: '2. Fill in all the boxes required'
+
+      step_3: 'Step 3: Share ideas to world --> like/comment/Rate ideas'
+      step_3_1: '1. Here in the left side bar, choose the second icon - Ideate'
+      step_3_2: "2. Click on ''Public''  then you will see a box to fill in your idea. If you dont want everyone know your idea except Investors, you can choose ''Business'' instead"
+      step_3_3: "3. Your ideas will be launched to the great big world right after selecting ''Submit'' button with fully info requirement. At here you can like, share, vote and comment for any great idea that you love"
+
+      step_4: 'Step 4: View start-up events --> Add events'
+      step_4_1: '1. To see which event is going on, clicking on Event on the leftside bar'
+      step_4_2: '2. To Create your own event, choose Add events'
+      step_4_3: '3. Then you will see a table to add event info'
+
+      step_5: 'Step 5: View other Entrepreneurs, Start-ups & investors profile'
+      step_5_1: '1. To see the our community as well as Entrepreneurs, Startups and Investors, please click through each category on the left side bar'
+
+    investor_tab:
+      step_1: 'Step 1: Registration --> Login -->Basic Investor'
+      step_1_1: '1. For investors, you are new member? Please go to SIGNUP box on the right side of the homepage'
+      step_1_2: '2. Choose Investor for User Type'
+
+      step_2: 'Step 2: Share ideas to world --> like/comment/Rate ideas'
+      step_2_1: '1. Here in the left side bar, choose the second icon - Ideate'
+      step_2_2: "2. Click on ''Public''  then you will see a box to fill in your idea. If you dont want everyone know your idea except Investors, you can choose ''Business'' instead"
+      step_2_3: "3. Your ideas will be launched to the great big world right after selecting ''Submit'' button with fully info requirement. At here you can like, share, vote and comment for any great idea that you love"
+
+      step_3: 'Step 3: View start-up events --> Add events'
+      step_3_1: '1. To see which event is going on, clicking on Event on the leftside bar'
+      step_3_2: '2. To Create your own event, choose Add events '
+      step_3_3: '3. Then you will see a table to add event info'
+
+      step_4: 'Step 4: View other Entrepreneurs, Start-ups & investors profile'
+      step_4_1: '1. To see the our community as well as Entrepreneurs, Startups and Investors, please click through each category on the left side bar'
+
+      step_5: 'Step 5: Verified/ Accredited investor'
+      step_5_1: "1. To view Invest B-Ideas/Startups details, for example when you at Invest in B-ideas, you want to see details of this 'Agriculture', so click Learn more"
+      step_5_2: '2. To Create your own event, choose Add events'
+      step_5_3: '3. Then you will see a table to add event info'
+
+      step_6: 'Step 6: Invest in Business ideas'
+      step_6_1: "1. Choose 'Invest in B-idea' on the leftside bar to view list of Business ideas and see if you 	can invest on it or not"
+
+
+      step_7: 'Step 6: Invest in Start-up business proposals'
+      step_7_1: "1. To view list of startup business proposal, click on 'Invest in Startup' on the leftside bar"
+
+  behind_thoughts:
+    behind_thoughts: 'BEHIND THOUGHTS'
+    heading: 'We need to provide information about behind the reason being made this product.'
+    story: 'STORY'
+    story_1: "Our primary objective is to connect, to develop, and to empower internet worldwide start-up biological community. For those target of, we originated over for great delightful web result will be called ‘IdeaBurns’. –An isle about start-ups."
+    story_2: "IdeaBurns is a worldwide SaaS social stage for the gifted business visionaries, Start-up's and Speculators. Our stage 1 dispatch is to team up with the accredited investors and angle investors network by giving out potential business thoughts and early stage company proposition. We ease start-up group unfurl into their maximum capacity."
+
+    vision: 'VISION'
+    vision_1: 'With settle on this universe as healthier put to start-up biological community and inspires new innovations which the individuals hails out for Entrepreneur’s brain.'
+
+    mission: 'MISSION'
+    mission_1: 'To constantly support developing countries whose necessities will move forward their little scale endeavor economies.'
+
+  terms:
+    terms_conditions: 'TERMS & CONDITIONS'
+
+    legal_disclaimer: 'LEGAL DISCLAIMER'
+    legal_disclaimer_1: 'This is the Terms of Service understanding for ideaburns.com. All clients must read and acknowledge each part of this and some other understanding or strategy gave by ideaburns.com. On any chance that you do not consent to these terms, you are denied from utilizing ideaburns.com or any subsidiary administrations. In addition, we have rights to modify this agreement whenever.'
+
+    rules: 'THE GROUND RULES'
+    rules_1: 'The enrollment of ideaburns.com succeeds on account of the nature of its individuals and some fundamental decides that everybody holds fast to. We maintain whatever authority is needed to refuse assistance to any part or forthcoming part at anytime'
+    rules_1_a: 'a. Only 0-5 years of age start-up will apply for participation with Ideaburns.com'
+    rules_1_b: 'b. Only confirmed/licensed investors can be gotten to subsidized funded ideas and Start-up Business proposal.'
+    rules_1_c: 'c. Only certified information can be taken into the Business matter.'
+
+    trademark: 'TRADEMARK INFRINGEMENT'
+    trademark_1: 'All names and logos associated with ideaburns.com are trademarks of Ideaburns. You may not use any trademark in any manner without our written consent. Furthermore, users may not infringe on any patents, trademarks, or other copyrights of ideaburns users or any other parties whatsoever.'
+
+  sidebar:
+    edit: ' Edit '
+    ideas: ' Ideas'
+    ideate: ' Ideate'
+    events: ' Events'
+    add_events: ' Add Events'
+    fund_b_idea: ' Fund B-Idea'
+    fund_startup: ' Fund Startup'
+    invest_in_b_ideas: ' Invest in B-Ideas'
+    invest_in_startup: ' Invest in Startups'
+    entreprenuers: ' Entreprenuers'
+    startups: ' Startups'
+    investors: ' Investors'
+    my_ideas: ' My Ideas'
+    our_ideas: ' Our Ideas'
+    my_b_ideas: ' My B-Ideas'
+    our_b_ideas: 'Our B-Ideas'
+    my_events: ' My Events'
+    our_events: ' Our Events'
+
+  users_header:
+    type_keywords: 'Type keywords'
+    messages: 'Messages'
+    notifications: 'Notifications'
+    my_account: 'My Account'
+    update_profile: 'Update Profile'
+    logout: 'Logout'
+    my_favourites: 'My Favourites'
+    notifications_empty: "You have %{count} notifications"
+    messages_empty: "You have %{count} messages"
+    see_all: 'See All'
+    reply: 'Reply'
+    view_all_mess: 'View all messages'
+
+  idea:
+    post_your_idea: 'POST YOUR IDEA'
+    closed_ideas: 'CLOSED IDEAS'
+    public_ideas: 'PUBLIC IDEAS'
+    total_views: 'Total Views'
+    select_a_country: 'Select A Country'
+    select_a_category: 'Select A Category'
+    read_more: 'Reade More'
+    load_more: 'Load More'
+    learn_more: 'Learn More'
+    idea_details: 'IDEA DETAILS'
+    edit: 'Edit'
+    delete: 'Delete'
+    remove: 'Remove'
+    update_success_mess: 'Well done! Idea has been updated successfully.'
+    are_you_sure: 'Are you sure ?'
+
+    normal:
+      instructions: 'INSTRUCTIONS'
+      content_1: 'Share your ideas to world.'
+      content_2: 'Share your experience to your peers.'
+      content_3: 'Help to other Entrpreneurs, Startup founders etc. on excution of Business ideas & Startups.'
+      content_4: 'Provide valid information on startup community.'
+      idea_category: 'Idea Category*'
+      idea_title: 'Idea Title*'
+      upload_file: 'Upload File*'
+      choose_file_to: 'Choose File To'
+      upload: 'Upload'
+      idea_description: 'Idea Description*'
+      enter_idea_title_here: 'Enter Idea Title here'
+      submit: 'SUBMIT'
+      select_idea_category: '- Select Idea Category -'
+      idea_image: 'Idea Image'
+      change_image: 'Change Image'
+      rate_this: 'Rate this'
+      idea_type: 'Idea type'
+      comments: 'COMMENTS'
+      top_view: 'Top most views of Ideas'
+      write_a_comment: 'Write a comment'
+      be_the_first_like_this: 'Be the first like this'
+      more_from: "More from %{author}"
+      no_more_to_load: 'No more to load'
+      no_results: 'No results'
+      press_esc: 'Press Esc to'
+      cancel: 'cancel'
+      reply: 'Reply'
+      post: 'Post'
+      like: 'Like'
+      unlike: 'Unlike'
+
+    business:
+      my_favourites: 'My Favourites'
+      business_ideas: 'BUSINESS IDEAS'
+      search_by_location: 'Search by Location'
+      search_by_bussiness_line: 'Search by Business Line'
+      search_by_idea_stage: 'Search by Idea Stage'
+      search_by_patent: 'Search by Patent'
+      view_profile: 'View Profile'
+      problem_statement: 'Problem Statement :'
+      solution: 'Solution : '
+      current_idea_stage: 'Current Idea Stage : '
+      capital: 'Capital : '
+      seeking: 'Seeking : '
+      stake: 'stake'
+      next: 'NEXT'
+      validate: 'VALIDATE'
+      submit: 'SUBMIT'
+      save: 'SAVE'
+      clear: 'CLEAR'
+
+      primary_niceties_tab: 'Primary Niceties'
+      early_stage_analysis_tab: 'Early Stage Analysis'
+      team_capabilities_tab: 'Team Capabilities'
+      market_analysis_tab: 'Market Analysis'
+      customer_analysis_tab: 'Customer Analysis'
+      investment_scale_tab: 'Investment Scale'
+      profit_potential_tab: 'Profit Potential'
+      competitors_scenery_tab: 'Competitors Scenery'
+      pitch_burns_tab: 'Pitch Burns'
+      exit_strategy_tab: 'Exit Strategy'
+
+      primary_details: 'Primary Details'
+      target_business_lines: 'Target Business Lines(*)'
+      select_bussiness_lines: '- Select Business Lines -'
+      type_of_bussiness_idea: 'Type of Business Idea (*)'
+      select_type_bussiness_idea: '- Select Type of Business Idea -'
+      idea_title: 'Idea Title (*)'
+      idea_tagline: 'Idea Tagline(*)'
+      problem_statement_2: 'Problem Statement (*)'
+      solution_2: 'Solution (*)'
+      select_current_idea_stage: 'Current Idea Stage? (*)'
+      generation: 'Generation'
+      assessment: 'Assessment'
+      planning: 'Planning'
+      prototype: 'Prototype'
+      implimentation: 'Implimentation'
+      ip_patent: 'Have this idea IP or Patent? (*)'
+      ip_patent_1: 'If Patented / IP'
+      ip_patent_2: 'Pending'
+      ip_patent_3: 'Not yet'
+      ip_patent_4: 'Register Number'
+      enter_regis_number_here: 'Enter Register Number here'
+      enter_text_here: 'Enter text here'
+      add_team: 'Add Team'
+      view_team_list: 'View Team List'
+      select_strength: '- Select Strength -'
+
+      early_stage_analysis_ques_1: '1. Motivation and Vision - What is the primary reason you are starting a business? (*)'
+      early_stage_analysis_ques_2: '2. How many years experience do you have in the industry in which are starting? (*)'
+      early_stage_analysis_ques_3: '3. To what extent have you previously been involved in a start-up business? (*)'
+      early_stage_analysis_ques_4: '4. Choose your Business mode! (*)'
+      early_stage_analysis_ques_5: '5. Explain Business Model? How you generate the money? (*)'
+      early_stage_analysis_ques_6: '6. What are the steps you are going to take it for idea Execution?'
+
+      team_capabilities_ques_1: '1. Crucial Skills - Below the one skill which you think is the most important to your business idea. (*)'
+      team_capabilities_ques_2: '2. Strength of your team (*)'
+      team_capabilities_ques_3: '4. Team Attributes - Which of the following resources and capabilities do you or your team possess? (*)'
+
+      enter_name: 'Enter Name'
+      enter_role: 'Enter Role has taken in BusinessIdea'
+      enter_skills: 'Enter Skills'
+      select_joined_in_team: '- Select Joined in Team -'
+      profile_image: 'Profile Image'
+
+      market_analysis_ques_1: '1. Is this idea new to the market? Yes/NO (*)'
+      market_analysis_ques_2: '2. Would this idea have a major impact on the market? (*)'
+      market_analysis_ques_3: '3. Market Trend - To what extent is your primary target market growing? (*)'
+      market_analysis_ques_4: '4. Market Channels - How are you going to sell your product or service to potential customers? (*)'
+      market_analysis_ques_5: '5. Market Size - What is the total annual size of your primary target market? (*)'
+      market_analysis_ques_6: '6. Do the competence, tools and production facilities for implementing the idea already exist in-house? (*)'
+
+      customer_analysis_ques_1: ''
+      customer_analysis_ques_2: ''
+      customer_analysis_ques_3: ''
+      customer_analysis_ques_4: ''
+      customer_analysis_ques_5: ''
+      customer_analysis_ques_6: ''
+      from_age: 'From Age (*)'
+      select_from_age: '- Select From Age -'
+      to_age: 'To Age (*)'
+      select_to_age: '- Select To Age -'
+      select_region: '- Select Region -'
+
+      investment_scale_quest_1: '1. How much total capital do you need to go product live? (*)'
+      investment_scale_quest_2: '2. How much fund do you already have? (*)'
+      investment_scale_quest_3: '3. How much fund do you like to invest? (*)'
+      investment_scale_quest_4: '4. How much funding are you seeking? (*)'
+      investment_scale_quest_5: '5. Offering business stake to the investor? (*)'
+      investment_scale_quest_6: '6. How will you use these funds? (*)'
+      zero: 'Zero'
+      of_whole_capital: 'of whole Capital'
+      select_business_stake: '- Select Business Stake -'
+
+      business_potencial: 'Business Potencial'
+      business_potencial_heading_right: 'Forecast - Financial Projections'
+      instructions: 'Instructions'
+      profit_potential_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt commodo.'
+      profit_potential_ques_1: '1. What type of projection? (*)'
+      profit_potential_ques_1_small_text: '(Monthly, Yearly)'
+      profit_potential_ques_2: '2. Choose term for Numbers to be Projected? (*)'
+      profit_potential_ques_2_small_text: '(1 year, 3 years, 5 years)'
+      profit_potential_ques_3: '3. What type of revenue stream? (*)'
+      select_type_of_projection: '- Select Type Of Projection -'
+      choose_term: '- Choose Term -'
+      select_type: '- Select Type -'
+
+      competitors_scenery_ques_1: 'Atleast one Competators should be added'
+      competitors_scenery_ques_2: '2. Provide graph/table (In image format) analaysis on your competators?'
+      competitors_scenery_ques_3: '3. How do your Business idea sustain in existing competative world? (*)'
+      add_competitors: 'Add Competitors (*)'
+      view_competitors: 'View Competitors'
+      enter_company_name: 'Enter Company Name'
+      enter_primary_business_line: 'Enter Their Primary Business Line'
+      enter_revenue_if_know: 'Enter Revenue (If know)'
+      enter_website_url: 'Enter Website URL reference'
+
+      pitch_burns_quest_1: '1. Upload your own Pitch Presentation (*)'
+      pitch_burns_quest_1_small_text: '(It will allows only PPT & PDF)'
+      pitch_burns_quest_2: '2. Upload your video Pitch Presentation'
+      pitch_burns_quest_2_small_text: '(It will allows only Video files)'
+      pitch_burns_quest_3: '3. Upload your any research documents / Legal documents(If any)'
+      pitch_burns_quest_3_small_text: 'Add multiple docs'
+      pitch_burns_quest_4: '4. How far your idea legally get into the stage? (*)'
+
+      exit_strategy_quest_1: '1. When you prefer for exit? How you define your Business exit Strategy? Explain it. (*)'
+      exit_strategy_quest_1_ex: 'Example:'
+      exit_strategy_quest_1_ex_1: 'Merger & Acquisition (M&A)'
+      exit_strategy_quest_1_ex_2: 'Initial Public Offering (IPO)'
+      exit_strategy_quest_1_ex_3: 'Liquidation and close'
+
+      modal:
+        messages: 'Messages'
+        pls_check: '1. Please check'
+        your_profile: ' your profile '
+        mess_1: '2. We are going submit your idea to all investors.'
+        mess_2: '3. We are gonna charge USD 99 for this submission & providing the plan.'
+        mess_3: '4. Make sure your data is relavant and accurate.'
+        mess_4: '5. But your documents should not be shared to any investor without your approvals.'
+        cancel: 'Cancel'
+        paynow: 'Pay now'
+        complete_required_mess: 'Please complete required fields (*).'
+        validation_required_mess: 'Please validate your information!'
+        total_score: 'Total Score'
+        good_to: 'Good To'
+        go: 'GO'
+        send: 'Send'
+
+      details:
+        business_idea_details: 'Business Idea Details'
+        views: 'Views'
+        view_profile: 'View Profile'
+        intrested: 'Intrested'
+        year: 'Year'
+        years: 'Years'
+        per: 'per'
+        unit: 'Unit'
+        capital: 'Capital - '
+        seeking: 'Seeking - '
+        stake: ' Stake '
+        for: ' For '
+        ip_number: 'IP Number : '
+        team_strength: 'Team Strength'
+        motivation_vision: 'Motivation and  Vision -c'
+        industry_exp: 'Industry Experience - '
+        business_model: 'Business Model - '
+        startup_exp: 'Startup Experience - '
+        business_model_overview: 'Business Model Overview'
+        steps_4_this_idea_exc: 'Steps for this idea execution'
+        projection_type: 'Projection Type'
+        projected_term: 'Projected Term'
+        revenue_stream: 'Revenue Stream'
+        views_sales_numbers: 'Views Sales Numbers'
+        view_competators_list: 'View Competators List'
+        how_it_work: 'How it work'
+        analysis_on_competators_business: "Analysis on competator's business"
+        market_trend: 'Market Trend'
+        market_channels: 'Market Channels'
+        market_size: 'Market Size'
+        yes: 'Yes'
+        no: 'No'
+        details_ques_1: 'Is this idea new to the market?'
+        details_ques_2: 'Would this idea have a major impact on the market?'
+        details_ques_3: 'Do the competence, tools and production facilities for implementing the idea already exist in-house?'
+        details_ques_4: 'How do you address the customer problems (Issues)?'
+        details_ques_5: 'Does this idea solve a clearly defined customer problem in a (radically) new way? Explain?'
+        details_ques_6: 'How do you convience your potential customers about your product or service?'
+        3_customer: 'Three (3) big customer'
+        target_customer: 'Target customer in Geographical region'
+        age_target: 'Age Targetting'
+        init_public_offering: 'Initial Public Offering'
+        validation_score: 'Validation Score'
+        request_for_more_details: 'Request for more details'
+        deal: 'DEAL'
+        go_deal: 'GO DEAL'
+        investment_scale: 'Investment Scale'
+        capital_required: 'Capital Required'
+        fund_already_have: 'Fund already have'
+        fund_i_invest: 'Fund I invest'
+        seeking_fund: 'Seeking fund'
+        offering_business_stake: 'Offering business stake'
+        documents: 'Documents'
+        documents_file: 'Documents (file)'
+        forecast_financial_projection: 'orecast - Financial Projections'
+        revenue: 'Revenue - '
+        market_valuation: 'MARKET VALUATION'
+        favo_this_deal: 'Favorite this deal'
+        skills: 'Skills '
+        joined: 'Joined '
+        query_for: 'Query for '
+
+  event:
+    startup_events: 'STARTUP EVENTS'
+    my_events: 'MY EVENTS'
+    create_event: 'CREATE EVENT'
+    up_coming_events: 'Up Coming Events'
+    popular_events: 'Popular Events'
+    type_here_for_events: 'Type here for events'
+    select_a_country: 'Select A Country'
+    select_date: 'Select Date'
+    free: 'Free'
+    load_more: 'Load More'
+    posted_by: "Posted by %{author}"
+    find_out_more: 'Find out more'
+    edit_event: 'Edit event'
+    no_results: 'No results'
+
+    event_title: 'Event Title*'
+    event_entry_type: 'Event Entry Type*'
+    event_category: 'Event Category*'
+    event_from: 'Event From*'
+    event_to: 'Event To*'
+    time: 'Time *'
+    time_zone: 'Time zone*'
+    website: 'Event Reference Website'
+    enter_website: 'Enter Event Reference Website'
+    image: 'Event Image'
+    add_event_partner: 'Add Event Partner'
+    event_description: 'Event Description*'
+    enter_text_here: 'Enter text here'
+    event_venue: 'Event Venue'
+    address_line_1: 'Address Line 1*'
+    address_line_2: 'Address Line 2*'
+    country: 'Country*'
+    region: 'Region*'
+    city: 'City*'
+    zip: 'Zip/Pin Code'
+    pls_select_country: 'Please select country above'
+    cancel: 'Cancel'
+    submit: 'Submit'
+    select_entry_type: '- Select Event Entry Type -'
+    select_category: '- Select Event Category -'
+    partner_logo: 'Part Logo'
+    remove: 'Remove'
+    well_done: 'Wel Done !'
+    event_update_success: ' Event has been updated successfully.'
+
+    event_details: 'EVENT DETAILS'
+    category: 'Category'
+    overview: 'Overview'
+    schedule: 'Schedule'
+    location: 'Location'
+    time_schedule: 'Time schedule'
+    venue_address: 'Venue Address'
+
+
+  devise:
+    email: 'Email'
+    password: 'Password'
+    confirm_password: 'Confirm Password'
+    remember_me: 'Remember Me'
+    forgot_your_password: 'Forgot Your Password ?'
+    username: 'User Name'
+    select_user_type: '- Select User Type -'
+    minimum_character: "Minimum %{num} Characters Required *"
+    login: 'LOGIN'
+    signup: 'SIGN UP'
+    terms_conditions: 'Terms & Conditions'
+    enter_your_email: 'Enter your Email:'
+    send_me_reset_pwd: 'SEND ME RESET PASSWORD INSTRUCTIONS'
+    get_regis_with_us: 'GET REGISTER WITH US'
+
+    confirmations:
+      confirmed: "Your email address has been successfully confirmed."
+      send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+    failure:
+      already_authenticated: "You are already signed in."
+      inactive: "Your account is not activated yet."
+      invalid: "Invalid %{authentication_keys} or password."
+      locked: "Your account is locked."
+      last_attempt: "You have one more attempt before your account is locked."
+      not_found_in_database: "Invalid %{authentication_keys} or password."
+      timeout: "Your session expired. Please sign in again to continue."
+      unauthenticated: "You need to sign in or sign up before continuing."
+      unconfirmed: "You have to confirm your email address before continuing."
+    mailer:
+      confirmation_instructions:
+        subject: "Welcome to IdeaBurns"
+      reset_password_instructions:
+        subject: "Reset password instructions"
+      unlock_instructions:
+        subject: "Unlock instructions"
+      password_change:
+        subject: "Password Changed"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+      updated: "Your password has been changed successfully. You are now signed in."
+      updated_not_active: "Your password has been changed successfully."
+    registrations:
+      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+      signed_up: "Welcome! You have signed up successfully."
+      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
+      updated: "Your account has been updated successfully."
+    sessions:
+      signed_in: "Signed in successfully."
+      signed_out: "Signed out successfully"
+      already_signed_out: "Signed out successfully. "
+    unlocks:
+      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  errors:
+    messages:
+      already_confirmed: "was already confirmed, please try signing in"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+
+  user:
+    update_profile: 'UPDATE PROFILE'
+    profile_details: 'PROFILE DETAILS'
+    update_password: 'UPDATE PASSWORD'
+    profile_completion: 'Profile Compeletion'
+    last_updated_on: "Last updated on %{date} "
+    personal: 'Personal'
+    profession: 'Profession'
+    education: 'Education'
+    contact: 'Contact'
+    describe: 'Describe'
+    name: 'Name'
+    first_name: 'First name'
+    last_name: 'Last name'
+    email: 'Email'
+    email_primary: 'Email primary'
+    gender: 'Gender'
+    male: 'Male'
+    female: 'Female'
+    dob: 'DOB'
+    country: 'Country'
+    select_country: '- Select Country-'
+    region: 'Region'
+    city: 'City'
+    profession_type: 'Profession type'
+    select_profession_type: '- Select Profession Type -'
+    company: 'Company'
+    skills: 'Skills'
+    startup_experience: 'Startup Experience'
+    select_startup_experience: '- Select Startup Experience -'
+    graduation: 'Graduation'
+    select_graduation: '- Select Graduation -'
+    university_college: 'University / College'
+    mobile: 'Mobile'
+    address: 'Address'
+    email_secondary: 'Email-Secondary'
+    skype_id: 'Skype ID'
+    website: 'Website'
+    about_you: 'About You'
+    inspire_quote: 'Inspire Quote'
+    linkedin: 'Linkedin'
+    add_team: 'Add Team +'
+    add_funding: 'Add Funding +'
+    office_head: 'Office Headquarters'
+    socials_webapps: 'Social & Webapps'
+    investor_details: 'Investor Details'
+    add_portfolio: 'Add Portfolio +'
+    next: 'NEXT'
+    update: 'UPDATE'
+    clear: 'CLEAR'
+    add: 'Add'
+    delete: 'Delete'
+    remove: 'Remove'
+    date: 'Date'
+    mess_success_update_profile: 'Well done! You successfully saved profile details'
+    your_contact_phone_number: 'Your contact phone number'
+    any_useful_info_about_you: 'Any useful information about you'
+    investor_type: 'Investor Type'
+    select_investor_type: '- Select Investor Type -'
+    organization_name: 'Organization Name'
+    founded: 'Founded (year)'
+    business_lines: 'Business Lines'
+    select_bussiness_lines: '- Select Bussiness Lines -'
+    description: 'Description'
+    mission_vision: 'Mission & Vision'
+    designation: 'Designation'
+    select_designation: '- Select Designation -'
+    join_date: 'Join Date'
+    team_logo: 'Team Logo'
+    address_line_1: 'Address Line 1'
+    address_line_2: 'Address Line 2'
+    state: 'State'
+    startup_name: 'Startup Name'
+    type_funding: 'Type of Funding'
+    select_type_funding: '- Select Type of Funding -'
+    funding_amount: 'Funding Amount'
+    startup_logo: 'Startup Logo'
+    about_company: 'About Company'
+    primary_bussiness_lines: 'Primary Bussiness Lines'
+    how_it_work: 'How It Work'
+    regis_company_name: 'Register Company Name'
+    employee_strength: 'Employee Strength'
+    select_employee_strength: '- Select Employee Strength -'
+    avatar: 'Avatar'
+    amount: 'Amount'
+    by_investor: 'By Investor'
+    any_useful_info_about_company: 'Any useful information about company'
+    pls_select_country_above: 'Please select a country above'
+    current_password: 'Current Password'
+    new_password: 'New Password'
+    new_password_confirmation: 'New Password Confirmation'
+    your_current_pwd_mess: '(Your current password to confirm your changes)'
+    update_pwd_success_mess: 'Well done !  Password has been updated successfully.'
+    update_pwd_error_heading: '1 error prohibited this user from being saved:'
+    update_pwd_error_mess: "New password can't be blank"
+
+    dashboard: 'DASHBOARD'
+    select_skill_type: 'Select Skill Type'
+    select_profession_type: 'Select Profession Type'
+    select_country_input: 'Select Country'
+    read_more: 'Read More'
+    about : 'ABOUT'
+    personal_details: 'Personal Details'
+    communication: 'Communication'
+    only_investor_view_contact_details: 'Only Investor can view contact details'
+    profile_view: 'Profile View'
+    load_more: 'Load more'
+    no_results: 'No Results'
+    select_state: 'Select A State'
+    number_with_years: "%{number} years"
+    not_have_func_yet: 'Not have function yet'
+    select_business_line_type: 'Select Bussiness Line Type'
+    select_funding_type_input: 'Select Funding Type'
+    select_investor_type_input: 'Select Investor Type'
+    our_team: 'Our Team'
+    location: 'Location'
+    portfolio: 'Portfolio'
+    business_type: 'Bussiness Type'
+    funding: 'Funding'
+    investor: 'Investor'
+
+  notifications:
+    notifications: 'NOTIFICATIONS'
+    recent: 'Recent'
+    search: 'Search'
+    search_here: 'Search here'
+    ago: ' ago'
+
+  messages:
+    to_day: 'To day'
+    reply: 'Reply'
+    sent: 'Sent'
+    enter_text_here: 'Enter text here'
+

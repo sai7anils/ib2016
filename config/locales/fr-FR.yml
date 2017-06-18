@@ -1,0 +1,780 @@
+fr-FR:
+
+  global:
+    entrepreneurs: 'ENTREPRENEURS'
+    investors: 'INVESTORS'
+    startups: 'STARTUPS'
+    startup_events: 'ÉVÉNEMENTS STARTUP'
+    read_more: 'Lire la suite'
+    create_event: 'CRÉER UN ÉVÈNEMENT'
+    free: 'Gratuit'
+    events: 'ÉVÉNEMENTS'
+    type_here_for_events: 'Tapez ici pour les événements'
+    select_a_country: 'Choisissez un pays'
+    select_a_date: 'Sélectionnez date'
+    posted_by: 'posté par'
+    find_out_more: 'En savoir plus'
+    no_results: 'Aucun résultat'
+    all: 'Tout'
+    total: 'Total '
+
+  header:
+    entrepreneurs: 'ENTREPRENEURS'
+    investors: 'INVESTISSEURS'
+    startups: 'STARTUPS'
+    startup_events: 'ÉVÉNEMENTS STARTUP'
+    login: "S'IDENTIFIER"
+    signup: "S'INSCRIRE"
+    logout: 'SE DÉCONNECTER'
+    profile: 'PROFIL'
+    type_to_search: 'Tapez à la recherche ...'
+
+  navabar:
+    behind_it_thoughts: 'Derrière IT Thoughts'
+    terms_of_use: "Conditions d'utilisation"
+    privacy_policy: 'Politique de confidentialité'
+    what_next: "Et après"
+    contact_us: 'Contactez nous'
+
+  footer:
+    entrepreneurs: 'entreprenuers'
+    investors: 'Investisseurs'
+    startups: 'Startups'
+    startup_events: 'Evénements de démarrage'
+    about_us: 'À PROPOS DE NOUS'
+    behind_thoughts: 'Derrière pensées'
+    how_it_works: 'Comment cela fonctionne'
+    whats_next: 'Et après'
+    contact_us: 'CONTACTEZ NOUS'
+    help: 'Aidez-moi'
+    terms_privacy: 'Conditions et confidentialité'
+    locate_us: 'Localisez-nous'
+    join_with_us: 'AVEC NOUS REJOINDRE'
+
+  home:
+    first_main_heading: 'THINK.SHARE.'
+    last_main_heading: 'CROÎTRE.'
+    first_main_small_text: 'Partagez vos idées avec nous.'
+    middle_main_small_text: '  Nous allons trouver les bons investissements pour faire'
+    last_main_small_text: '  VOS IDÉES POUR ALLER BIG'
+    how_it_work: 'Comment cela fonctionne'
+    ideas: 'idées'
+    startups: 'startups'
+    investors: 'investisseurs'
+    deals: 'offres'
+
+    section_2:
+      first_heading: 'PARTAGEZ VOTRE'
+      first_heading_bold: '  IDÉES'
+      first_small_text: 'Pour rendre cet endroit un monde meilleur'
+      second_heading: 'INNOVATIONS'
+      second_heading_bold: 'TROUVER'
+      second_small_text: 'INVESTIR ET CRÉER REVOLUTIONS'
+
+    section_3:
+      overview: 'APERÇU'
+      who_we_are: 'Qui nous sommes'
+      who_we_are_content: "Idearburns est une plate-forme créative mondiale en ligne où les gens peuvent ajouter et partager leurs idées à la communauté et surtout de cibler les investisseurs qu'ils veulent attirer l'attention. Aussi c'est un endroit où les startups et les entrepreneurs peuvent communiquer avec les investisseurs idéales, partager leurs pensées et leurs idées pour avoir une meilleure vue et améliorer la stratégie d'entreprise."
+      who_we_are_ans_1: 'Transformez vos grandes idées en entreprises prospères.'
+      who_we_are_ans_2: "Construisez pas un héritage d'un empire."
+      who_we_are_ans_3: 'Rendre les gens de votre inspriration.'
+      who_we_are_ans_4: 'Transformez vos passions en profit.'
+      who_we_are_ans_5: 'Connect online écosystème mondial de démarrage.'
+      what_we_do: 'Ce que nous faisons'
+      what_we_do_ans_1: 'idées nuturing pour ideaprenuers, entrepreneurs, startups et investisseurs.'
+      what_we_do_ans_2: 'Soyez le pont pour relier les startups et les investisseurs.'
+      what_we_do_ans_3: "première ligne idées créatives outil d'évaluation au monde."
+      what_we_do_ans_4: "Gardez votre idée d'entreprise en ligne sécurisé."
+      what_we_do_ans_5: "Publiez vos idées dans la piscine d'idée et obtenir les commentaires des autres utilisateurs de la plateforme et les investisseurs."
+      what_we_do_ans_6: "Choisi pour être l'une des plateformes les plus favori pour les universités prestigieuses étudiants, entrepreneurs enthousiastes."
+      join_ideaburns: "Joignez-vous à Ideaburns aujourd'hui !!!"
+      join_ideaburns_ans_1: 'Remplissez notre formulaire de Submision sécurisé simple.'
+      join_ideaburns_ans_2: 'Envoyer et être une partie de notre communauté.'
+      join_ideaburns_ans_3: "Vote et comme pour l'idée que vous croyez que ce serait un succès."
+      join_ideaburns_ans_4: 'Message aux investisseurs ciblés que vous aimeriez entendre leurs conseils.'
+
+    section_4:
+      heading: 'CONNECT ENTREPRENEURS, Startups & INVESTISSEURS à un endroit.'
+
+    section_5:
+      heading: 'LIGNES DIRECTIVES'
+      updating: 'Mise à jour ...'
+
+  how_it_work:
+    first_heading: 'COMMENT ÇA MARCHE'
+    second_heading: "Ici, nous essayons de dire comment chaque type d'utilisateur est des activités do"
+    entrepreneurs: 'ENTREPRENEURS'
+    startup: 'ENTREPRENEURS'
+    investor: 'INVESTISSEUR'
+    entrepreneurs_tab:
+      step_1: 'Étape 1: Registeration -> Connexion'
+      step_1_1: "1. Registeration - Inscrivez-vous: Si vous êtes nouveau membre et un entrepreneur, s'il vous plaît passer par Inscrivez-vous sur le côté droit en haut de la page d'accueil pour registeration"
+      step_1_2: "2. Registeration - Connexion: cliquant sur le bouton Inscription, Il montrera la boîte à remplir l'info - aller à la liste déroulante pour choisir le type d'utilisateur"
+      step_1_3: "3. Après avoir terminé, s'il vous plaît allez à votre e-mail pour confirmer votre compte"
+      step_1_4: '4. Ensuite, vous êtes en mesure de se connecter et se joindre à notre plate-forme passionnante'
+
+      step_2: "Étape 2: Fonds idées d'affaires -> Accès aux investisseurs -> Calendrier des réunions"
+      step_2_1: "1. Pour soumettre votre idée en privé à des investisseurs, s'il vous plaît aller à financer B-idée sur la barre Leftside"
+      step_2_2: "2. Ensuite, vous verrez un formulaire à remplir toutes vos informations d'idée d'entreprise"
+
+      step_3: 'Étape 3: Partager des idées à monde -> idées comme / commentaire / Taux'
+      step_3_1: '1. Ici, dans la barre latérale gauche, choisissez la deuxième icône - ideate'
+      step_3_2: "2. Cliquez sur '' Public '' alors vous verrez une boîte à remplir votre idée. Si vous ne voulez pas tout le monde sait votre idée, sauf Investors, vous pouvez choisir '' Business '' au lieu"
+      step_3_3: "3. Vos idées seront lancés au grand grand monde juste après avoir sélectionné le bouton '' Soumettre '' avec des informations totalement exigence. Au ici, vous pouvez aimer, partager, vote et de commentaires pour une grande idée que vous aimez"
+
+      step_4: 'Étape 4: Afficher les événements de démarrage -> Ajouter des événements'
+      step_4_1: "1. Pour voir quel événement se passe, en cliquant sur l'événement sur la barre leftside"
+      step_4_2: '2. Pour créer votre propre événement, choisissez Ajouter des événements'
+      step_4_3: "3. Ensuite, vous verrez une table pour ajouter des informations d'événement"
+
+      step_5: "Étape 5: Voir d'autres entrepreneurs, start-up et investisseurs profil"
+      step_5_1: "1. Pour voir la notre communauté ainsi que les entrepreneurs, startups et investisseurs, s'il vous plaît cliquer dans chaque catégorie sur la barre latérale gauche"
+
+    startup_tab:
+      step_1: 'Étape 1: Registeration -> Connexion'
+      step_1_1: "1. Si vous êtes démarrage et vous ne pas encore avoir un compte, s'il vous plaît aller pour inscrire boîte sur le côté droit de la hompage"
+      step_2_2: "2. Choisissez Démarrage pour le type d'utilisateur"
+
+      step_2: "Étape 2: Fonds de démarrage d'entreprise -> Accès aux investisseurs -> Calendrier des réunions"
+      step_2_1: '1. Dans la barre leftside, en cliquant sur le démarrage du Fonds pour soumettre votre idée'
+      step_2_2: '2. Remplissez toutes les cases requises'
+
+      step_3: 'Étape 3: Partager des idées à monde -> idées comme / commentaire / Taux'
+      step_3_1: '1. Ici, dans la barre latérale gauche, choisissez la deuxième icône - ideate'
+      step_3_2: "2. Cliquez sur '' Public '' alors vous verrez une boîte à remplir votre idée. Si vous ne voulez pas tout le monde sait votre idée, sauf Investors, vous pouvez choisir '' Business '' au lieu"
+      step_3_3: "3. Vos idées seront lancés au grand grand monde juste après avoir sélectionné le bouton '' Soumettre '' avec des informations totalement exigence. Au ici, vous pouvez aimer, partager, vote et de commentaires pour une grande idée que vous aimez"
+
+      step_4: 'Étape 4: Afficher les événements de démarrage -> Ajouter des événements'
+      step_4_1: "1. Pour voir quel événement se passe, en cliquant sur l'événement sur la barre leftside"
+      step_4_2: '2. Pour créer votre propre événement, choisissez Ajouter des événements'
+      step_4_3: "3. Ensuite, vous verrez une table pour ajouter des informations d'événement"
+
+      step_5: "Étape 5: Voir d'autres entrepreneurs, start-up et investisseurs profil"
+      step_5_1: "1. Pour voir la notre communauté ainsi que les entrepreneurs, startups et investisseurs, s'il vous plaît cliquer dans chaque catégorie sur la barre latérale gauche"
+
+    investor_tab:
+      step_1: 'Étape 1: Inscription -> Connexion -> Investisseur Basic'
+      step_1_1: "1. Pour les investisseurs, vous êtes nouveau membre? S'il vous plaît aller pour inscrire boîte sur le côté droit de la page d'accueil"
+      step_1_2: "2. Choisissez investisseurs pour le type d'utilisateur"
+
+      step_2: 'Étape 2: Partager des idées à monde -> idées comme / commentaire / Taux'
+      step_2_1: '1. Ici, dans la barre latérale gauche, choisissez la deuxième icône - ideate'
+      step_2_2: "2. Cliquez sur '' Public '' alors vous verrez une boîte à remplir votre idée. Si vous ne voulez pas tout le monde sait votre idée, sauf Investors, vous pouvez choisir '' Business '' au lieu"
+      step_2_3: "3. Vos idées seront lancés au grand grand monde juste après avoir sélectionné le bouton '' Soumettre '' avec des informations totalement exigence. Au ici, vous pouvez aimer, partager, vote et de commentaires pour une grande idée que vous aimez"
+
+      step_3: 'Étape 3: Afficher les événements de démarrage -> Ajouter des événements'
+      step_3_1: "1. Pour voir quel événement se passe, en cliquant sur l'événement sur la barre leftside"
+      step_3_2: '2. Pour créer votre propre événement, choisissez Ajouter des événements '
+      step_3_3: "3. Ensuite, vous verrez une table pour ajouter des informations d'événement"
+
+      step_4: "Étape 4: Voir d'autres entrepreneurs, start-up et investisseurs profil"
+      step_4_1: "1. Pour voir la notre communauté ainsi que les entrepreneurs, startups et investisseurs, s'il vous plaît cliquer dans chaque catégorie sur la barre latérale gauche"
+
+      step_5: 'Étape 5: Vérifié / investisseur accrédité'
+      step_5_1: "1. Pour afficher Invest B-Ideas / détails Startups, par exemple lorsque vous à Invest in B idées, vous voulez voir les détails de cette «Agriculture», donc cliquez sur En savoir plus"
+      step_5_2: '2. Pour créer votre propre événement, choisissez Ajouter des événements'
+      step_5_3: "3. Ensuite, vous verrez une table pour ajouter des informations d'événement"
+
+      step_6: "Étape 6: Investir dans des idées d'affaires"
+      step_6_1: "1. Choisissez Invest in B-idée »sur la barre leftside pour afficher la liste des idées d'affaires et de voir si vous pouvez investir sur elle ou non"
+
+
+      step_7: "Étape 6: Investir dans des projets d'entreprise Start-up"
+      step_7_1: "1. Pour afficher la liste de la proposition démarrage d'entreprise, cliquez sur «Invest in Startup 'sur la barre leftside"
+
+  behind_thoughts:
+    behind_thoughts: 'DERRIÈRE PENSÉES'
+    heading: 'Nous avons besoin de fournir des informations sur la raison derrière faite ce produit.'
+    story: 'RÉCIT'
+    story_1: "Notre objectif principal est de se connecter, de développer et d'habiliter Internet dans le monde entier start-up communauté biologique. Pour ceux qui cible, nous avons pris naissance sur une grande résultat web délicieux sera appelé 'IdeaBurns'. isle -Un sujet start-ups."
+    story_2: "IdeaBurns est une étape sociale SaaS à travers le monde pour les visionnaires d'affaires doués, Start-up de et Spéculateurs. Notre étape 1 expédition est de faire équipe avec les investisseurs et les investisseurs d'angle accrédité réseau en donnant des pensées d'affaires potentielles et au début de la proposition de la compagnie de théâtre. Nous facilitons groupe de démarrage déploient dans leur capacité maximale."
+
+    vision: 'VISION'
+    vision_1: "Avec installer sur cet univers comme sain mis à la start-up communauté biologique et inspire de nouvelles innovations dont les individus salue pour le cerveau de l'Entrepreneur."
+
+    mission: 'MISSION'
+    mission_1: "Pour soutenir constamment les pays en développement dont les besoins vont aller de l'avant leurs petites économies de l'effort maximal de l'échelle."
+
+  terms:
+    terms_conditions: 'TERMES ET CONDITIONS'
+
+    legal_disclaimer: 'AVERTISSEMENT LÉGAL'
+    legal_disclaimer_1: "Ce sont les conditions d'entente de service pour ideaburns.com. Tous les clients doivent lire et reconnaître chaque partie de cela et une autre compréhension ou de stratégie donné par ideaburns.com. Sur une chance que vous ne consentez pas à ces termes, on vous refuse d'utiliser ideaburns.com ou d'administrations subsidiaires. En outre, nous avons le droit de modifier cet accord à chaque fois."
+
+    rules: 'LES RÈGLES DE BASE'
+    rules_1: "L'inscription des ideaburns.com succède à cause de la nature de ses individus et décide quelque fondamentale que tout le monde en tient à. Nous maintenons ce que l'autorité est nécessaire de refuser l'aide à une partie ou une partie à venir à tout moment"
+    rules_1_a: 'une. Seuls les 0-5 ans start-up seront applicables pour la participation avec Ideaburns.com'
+    rules_1_b: "b. Seulement confirmé / investisseurs autorisés peuvent être obtenus aux idées financés et subventionnés Start-up proposition d'affaires."
+    rules_1_c: "c. Seules les informations certifiées peuvent être prises en la matière d'affaires."
+
+    trademark: 'CONTREFAÇON DE MARQUE'
+    trademark_1: "Tous les noms et logos associés à ideaburns.com sont des marques de Ideaburns. Vous ne pouvez pas utiliser une marque déposée de quelque manière sans notre consentement écrit. En outre, les utilisateurs ne peuvent pas porter atteinte à des brevets, des marques de commerce ou d'autres droits d'auteur de ideaburns utilisateurs ou toute autre partie que ce soit."
+
+  sidebar:
+    edit: '  modifier'
+    ideas: '  Idées'
+    ideate: '  ideate'
+    events: '  Événements'
+    add_events: '  Ajouter Evénements '
+    fund_b_idea: '  Fonds B-Idée '
+    fund_startup: '  Fonds de démarrage '
+    invest_in_b_ideas: '   Investir dans B-Idées'
+    invest_in_startup: '  Investir dans Startups'
+    entreprenuers: '  entreprenuers'
+    startups: ' Startups'
+    investors: '  Investisseurs'
+    my_ideas: '  Mes idées'
+    our_ideas: '  Nos Idées '
+    my_b_ideas: '  Mon B-Idées'
+    our_b_ideas: 'Nos B-Idées'
+    my_events: '  Mes événements'
+    our_events: '  Nos événements'
+
+  users_header:
+    type_keywords: 'Type de mots-clés'
+    messages: 'messages'
+    notifications: 'Notifications'
+    my_account: 'Mon compte '
+    update_profile: 'Mettre à jour le profil '
+    logout: 'Se déconnecter'
+    my_favourites: ' Mes préférés'
+    notifications_empty: " Vous avez% {count} notifications"
+    messages_empty: "Vous avez% {count} messages "
+    see_all: 'Voir tout'
+    reply: 'Répondre'
+    view_all_mess: ' Voir tous les messages '
+
+  idea:
+    post_your_idea: 'POSTER VOTRE IDÉE  '
+    closed_ideas: ' IDÉES FERMÉ'
+    public_ideas: ' IDÉES PUBLIQUES'
+    total_views: ' Vues totales'
+    select_a_country: ' Choisissez un pays '
+    select_a_category: 'Choisir une catégorie  '
+    read_more: 'Reade Plus '
+    load_more: ' Charger plus'
+    learn_more: ' Apprendre encore plus'
+    idea_details: ' DETAILS IDEA'
+    edit: 'modifier'
+    delete: 'Effacer'
+    remove: 'Retirer'
+    update_success_mess: 'Bien joué! Idea a été mis à jour avec succès. '
+    are_you_sure: 'Êtes-vous sûr ?'
+
+    normal:
+      instructions: 'INSTRUCTIONS'
+      content_1: 'Partagez vos idées monde.'
+      content_2: 'Partagez votre expérience à vos pairs.'
+      content_3: "Aide à d'autres communaut d'affaires, les fondateurs de démarrage, etc., sur excution des idées et le démarrage d'entreprises."
+      content_4: 'Fournir des informations valables sur la communauté de démarrage.'
+      idea_category: 'Idea Catégorie *'
+      idea_title: 'Idea Titre *'
+      upload_file: 'Téléverser un fichier*'
+      choose_file_to: 'Choisissez Fichier Pour'
+      upload: 'Télécharger'
+      idea_description: 'Idée Description *'
+      enter_idea_title_here: 'Entrez Idea Titre ici'
+      submit: 'SOUMETTRE'
+      select_idea_category: '- Sélectionnez Idea Catégorie -'
+      idea_image: 'Idée image'
+      change_image: "Changer l'image"
+      rate_this: 'Évaluer ce'
+      idea_type: "Type d'idée"
+      comments: 'COMMENTAIRES'
+      top_view: 'Les plus vues sur Ideas'
+      write_a_comment: 'Écrire un commentaire'
+      be_the_first_like_this: 'Soyez le premier comme celui-ci'
+      more_from: "Plus de% {author}"
+      no_more_to_load: 'Pas plus à charger'
+      no_results: 'Aucun résultat '
+      press_esc: 'Appuyez sur Echap pour'
+      cancel: 'Annuler'
+      reply: 'Répondre'
+      post: 'Poster'
+      like: 'Comme'
+      unlike: 'contrairement à'
+
+    business:
+      my_favourites: 'Mes préférés'
+      business_ideas: "IDÉES D'AFFAIRES "
+      search_by_location: 'Recherche par Lieu'
+      search_by_bussiness_line: "Recherche par secteur d'activité"
+      search_by_idea_stage: 'Recherche par Stage Idea'
+      search_by_patent: 'Recherche par brevet'
+      view_profile: 'Voir le profil'
+      problem_statement: 'Déclaration Problème:'
+      solution: 'Solution :'
+      current_idea_stage: 'Idée actuelle étape:'
+      capital: 'capitale:'
+      seeking: 'Cherchant:'
+      stake: 'pieu'
+      next: 'PROCHAIN'
+      validate: 'VALIDER'
+      submit: 'SOUMETTRE'
+      save: 'ENREGISTRER'
+      clear: 'CLAIR'
+
+      primary_niceties_tab: 'Niceties primaires'
+      early_stage_analysis_tab: 'Analyse de stade précoce'
+      team_capabilities_tab: "Capacités de l'équipe"
+      market_analysis_tab: 'Analyse de marché'
+      customer_analysis_tab: 'Analyse de la clientèle'
+      investment_scale_tab: "Échelle d'investissement"
+      profit_potential_tab: 'Profit potentiel'
+      competitors_scenery_tab: 'concurrents Scenery'
+      pitch_burns_tab: 'Pas de Burns'
+      exit_strategy_tab: 'Stratégie de sortie'
+
+      primary_details: 'Détails primaires'
+      target_business_lines: 'Cible affaires Lines (*)'
+      select_bussiness_lines: "- Sélectionnez Secteurs d'activité -"
+      type_of_bussiness_idea: 'Type de Business Idea (*)'
+      select_type_bussiness_idea: '- Sélectionner le type de Business Idea -'
+      idea_title: 'Idea Titre (*)'
+      idea_tagline: 'Idée Slogan (*)'
+      problem_statement_2: 'Énoncé du problème (*)'
+      solution_2: 'Solution (*)'
+      select_current_idea_stage: 'Idée actuelle Stage? (*)'
+      generation: 'Génération'
+      assessment: 'Évaluation'
+      planning: 'Planification'
+      prototype: 'Prototype'
+      implimentation: 'MISE EN OEUVRE'
+      ip_patent: "Avoir cette adresse IP d'idée ou le brevet? (*)"
+      ip_patent_1: 'Si breveté / IP'
+      ip_patent_2: 'en attendant'
+      ip_patent_3: 'Pas encore'
+      ip_patent_4: "Numéro d'enregistrement"
+      enter_regis_number_here: 'Entrez enregistrer Nombre ici'
+      enter_text_here: 'Entrez le texte ici'
+      add_team: 'Ajouter équipe'
+      view_team_list: "Voir la liste de l'équipe"
+      select_strength: '- Sélectionnez Force -'
+
+      early_stage_analysis_ques_1: '1. Motivation et Vision - Quelle est la principale raison pour laquelle vous démarrez une entreprise? (*)'
+      early_stage_analysis_ques_2: "2. Combien d'années d'expérience avez-vous dans l'industrie dans laquelle commencent? (*)"
+      early_stage_analysis_ques_3: '3. Dans quelle mesure avez-vous déjà été impliqué dans une start-up? (*)'
+      early_stage_analysis_ques_4: "4. Choisissez votre mode d'affaires! (*)"
+      early_stage_analysis_ques_5: "5. Expliquer Business Model? Comment générer de l'argent? (*)"
+      early_stage_analysis_ques_6: "6. Quelles sont les mesures que vous allez prendre pour idée d'exécution?"
+
+      team_capabilities_ques_1: "1. Compétences cruciales - Moins d'une compétence que vous pensez est le plus important de votre idée d'entreprise. (*)"
+      team_capabilities_ques_2: '2. La force de votre équipe (*)'
+      team_capabilities_ques_3: '4. Équipe Attributs - Laquelle des ressources et des capacités suivantes ne vous ou votre équipe possèdent? (*)'
+
+      enter_name: 'Entrez le nom'
+      enter_role: 'Entrez Rôle a pris à BusinessIdea'
+      enter_skills: 'Entrez les compétences'
+      select_joined_in_team: "- Sélectionnez rejoint dans l'équipe -"
+      profile_image: 'Photo de profil'
+
+      market_analysis_ques_1: '1. Est-ce une idée nouvelle sur le marché? Oui Non (*)'
+      market_analysis_ques_2: '2. Est-ce que cette idée a un impact majeur sur le marché? (*)'
+      market_analysis_ques_3: '3. La tendance du marché - Dans quelle mesure est votre principal marché cible de plus en plus? (*)'
+      market_analysis_ques_4: 'Canaux 4. Market - Comment allez-vous vendre votre produit ou service à des clients potentiels? (*)'
+      market_analysis_ques_5: '5. Taille du marché - Quelle est la taille totale annuelle de votre marché cible primaire? (*)'
+      market_analysis_ques_6: "6. Faites les compétences, les outils et les installations de production pour mettre en œuvre l'idée existent déjà en interne? (*)"
+
+      customer_analysis_ques_1: ''
+      customer_analysis_ques_2: ''
+      customer_analysis_ques_3: ''
+      customer_analysis_ques_4: ''
+      customer_analysis_ques_5: ''
+      customer_analysis_ques_6: ''
+      from_age: 'De Age (*)'
+      select_from_age: '- Sélectionnez De Age -'
+      to_age: 'Vieillir (*)'
+      select_to_age: '- Sélectionnez Pour Age -'
+      select_region: '- Choisissez une région -'
+
+      investment_scale_quest_1: "1. Combien capital total avez-vous besoin d'aller vivre produit? (*)"
+      investment_scale_quest_2: '2. Combien de fonds avez-vous déjà? (*)'
+      investment_scale_quest_3: '3. Combien de fonds que vous aimez à investir? (*)'
+      investment_scale_quest_4: "4. Combien d'argent demandez-vous? (*)"
+      investment_scale_quest_5: "5. Offrant participation des entreprises à l'investisseur? (*)"
+      investment_scale_quest_6: '6. Comment allez-vous utiliser ces fonds? (*)'
+      zero: 'Zéro'
+      of_whole_capital: "de l'ensemble de la capitale"
+      select_business_stake: "- Sélectionnez Stake d'affaires -"
+
+      business_potencial: 'affaires Potencial'
+      business_potencial_heading_right: 'Prévisions - Projections financières'
+      instructions: 'Instructions'
+      profit_potential_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet orcl in nisi tincidunt commodo.'
+      profit_potential_ques_1: '1. Quel type de projection? (*)'
+      profit_potential_ques_1_small_text: '(Mensuel, annuel)'
+      profit_potential_ques_2: '2. Choisissez un terme pour les numéros à projeter? (*)'
+      profit_potential_ques_2_small_text: '(1 an, 3 ans, 5 ans)'
+      profit_potential_ques_3: '3. Quel type de flux de revenus? (*)'
+      select_type_of_projection: '- Sélectionnez le type de projection -'
+      choose_term: '- Choisissez un terme -'
+      select_type: '- Sélectionner le genre -'
+
+      competitors_scenery_ques_1: 'Atleast un Competators devraient être ajoutés'
+      competitors_scenery_ques_2: '2. Fournir graphiques / tableaux (en format image) analaysis sur vos competators?'
+      competitors_scenery_ques_3: "3. Comment votre idée d'entreprise sustain dans le monde competative existant? (*)"
+      add_competitors: 'Ajouter les concurrents (*)'
+      view_competitors: 'Voir les concurrents'
+      enter_company_name: "Entrez Nom de l'entreprise"
+      enter_primary_business_line: "Entrez Leur ligne principale de l'entreprise"
+      enter_revenue_if_know: 'Entrez Revenu (Si le savoir)'
+      enter_website_url: 'Entrez la référence URL de site web'
+
+      pitch_burns_quest_1: '1. Téléchargez votre propre Pas Présentation (*)'
+      pitch_burns_quest_1_small_text: '(Il permet seulement PPT et PDF)'
+      pitch_burns_quest_2: '2. Télécharger votre vidéo Emplacement Présentation'
+      pitch_burns_quest_2_small_text: '(Il sera permet uniquement les fichiers vidéo)'
+      pitch_burns_quest_3: '3. Envoyez vos tout document de recherche / documents juridiques (le cas échéant)'
+      pitch_burns_quest_3_small_text: 'Ajouter plusieurs docs'
+      pitch_burns_quest_4: '4. Dans quelle mesure votre idée obtenir légalement dans le stade? (*)'
+
+      exit_strategy_quest_1: "1. Lorsque vous préférez pour la sortie? Comment vous définissez votre stratégie de sortie d'affaires? Explique le. (*)"
+      exit_strategy_quest_1_ex: 'Exemple:'
+      exit_strategy_quest_1_ex_1: 'Fusion & Acquisition (M & A)'
+      exit_strategy_quest_1_ex_2: 'Initial Public Offering (IPO de)'
+      exit_strategy_quest_1_ex_3: 'Liquidation et à proximité'
+
+      modal:
+        messages: 'Messages'
+        pls_check: "1. S'il vous plaît vérifier"
+        your_profile: ' votre profil'
+        mess_1: '2. Nous allons soumettre votre idée à tous les investisseurs.'
+        mess_2: '3. Nous sommes va frais USD 99 pour cette présentation et fournir le plan.'
+        mess_3: '4. Assurez-vous que vos données sont relavant et précis.'
+        mess_4: '5. Mais vos documents ne doivent pas être partagés à tout investisseur sans vos approbations.'
+        cancel: 'Annuler'
+        paynow: 'Payez Maintenant'
+        complete_required_mess: "S'il vous plaît remplir les champs obligatoires (*)."
+        validation_required_mess: "S'il vous plaît valider vos informations!"
+        total_score: 'Score total'
+        good_to: 'Bon de'
+        go: 'ALLER'
+        send: 'Envoyer'
+
+      details:
+        business_idea_details: "Idée d'affaires Détails"
+        views: 'Vues'
+        view_profile: 'Voir le profil'
+        intrested: 'intrested'
+        year: 'An'
+        years: 'Années'
+        per: 'par'
+        unit: 'Unité'
+        capital: 'Capital -'
+        seeking: 'Cherche -'
+        stake: ' Pieu'
+        for: ' Pour'
+        ip_number: 'Nombre IP:'
+        team_strength: 'équipe Force'
+        motivation_vision: 'Motivation et Vision -c'
+        industry_exp: 'Expérience industrielle -'
+        business_model: "Modèle d'affaires -"
+        startup_exp: 'Expérience de démarrage -'
+        business_model_overview: 'Business Model Présentation'
+        steps_4_this_idea_exc: 'Étapes pour cette exécution idée'
+        projection_type: 'Type de projection'
+        projected_term: 'durée projetée'
+        revenue_stream: 'Flux de revenus'
+        views_sales_numbers: 'Numbers Vues de vente'
+        view_competators_list: 'Voir la liste Competators'
+        how_it_work: 'Comment ça marche'
+        analysis_on_competators_business: "Analyse sur l'activité competator"
+        market_trend: 'Tendance du marché'
+        market_channels: 'Canaux de marché'
+        market_size: 'La taille du marché'
+        yes: 'Oui'
+        no: 'Non'
+        details_ques_1: 'Cette idée est nouveau sur le marché?'
+        details_ques_2: 'Serait cette idée un impact majeur sur le marché?'
+        details_ques_3: "Est-ce que les compétences, les outils et les installations de production pour la mise en œuvre de l'idée existent déjà en interne?"
+        details_ques_4: 'Comment abordez-vous les problèmes des clients (Problèmes)?'
+        details_ques_5: 'Est-ce que cette idée de résoudre un problème client clairement défini dans un (radicalement) nouvelle façon? Explique?'
+        details_ques_6: 'Comment pensez-vous Convience vos clients potentiels sur votre produit ou service?'
+        3_customer: 'Trois (3) gros client'
+        target_customer: 'client cible dans la région géographique'
+        age_target: 'Age Ciblage'
+        init_public_offering: 'Offre publique initiale'
+        validation_score: 'validation Score'
+        request_for_more_details: 'Demande pour plus de détails'
+        deal: 'TRAITER'
+        go_deal: 'GO DEAL'
+        investment_scale: "Échelle d'investissement"
+        capital_required: 'Capital requis'
+        fund_already_have: 'Fonds ont déjà'
+        fund_i_invest: "Fonds j'investis"
+        seeking_fund: 'A la recherche de fonds'
+        offering_business_stake: "Offrant enjeu d'affaires"
+        documents: 'Documents'
+        documents_file: 'Documents (fichier)'
+        forecast_financial_projection: 'orecast - Projections financières'
+        revenue: 'Revenu -'
+        market_valuation: 'VALORISATION DE MARCHÉ'
+        favo_this_deal: 'Favorite cet accord'
+        skills: 'Compétences'
+        joined: 'relié'
+        query_for: 'Query for'
+
+  event:
+    startup_events: 'ÉVÉNEMENTS STARTUP'
+    my_events: 'MES ÉVÉNEMENTS'
+    create_event: 'CRÉER UN ÉVÈNEMENT'
+    up_coming_events: 'Évènements à venir'
+    popular_events: 'Événements populaires'
+    type_here_for_events: 'Tapez ici pour les événements'
+    select_a_country: 'Choisissez un pays'
+    select_date: 'Sélectionnez date'
+    free: 'Gratuit'
+    load_more: 'Charger plus'
+    posted_by: "Publié par% {author}"
+    find_out_more: 'En savoir plus'
+    edit_event: "Modifier l'événement"
+    no_results: 'Aucun résultat'
+
+    event_title: "Titre de l'événement*"
+    event_title: 'Event Entry Type *'
+    event_entry_type: "Catégorie de l'événement *"
+    event_category: 'Événement De *'
+    event_from: 'Event To *'
+    event_to: 'Temps *'
+    time: 'Fuseau horaire*'
+    time_zone: 'Event Reffence Site'
+    website: 'Entrez Reffence Event Website'
+    enter_website: "Image de l'événement"
+    image: "Ajouter un partenaire de l'événement"
+    add_event_partner: "Description de l'évenement*"
+    event_description: 'Entrez le texte ici'
+    enter_text_here: "Lieu de l'événement"
+    event_venue: 'Adresse 1*'
+    address_line_1: 'Adresse Ligne 2*'
+    address_line_2: 'Pays*'
+    country: 'Région*'
+    region: 'Ville*'
+    city: 'Zip Code / Pin'
+    zip: "S'il vous plaît sélectionner le pays ci-dessus"
+    pls_select_country: 'Annuler'
+    cancel: 'Soumettre'
+    submit: "- Sélectionnez l'événement Type d'entrée -"
+    select_entry_type: "- Sélectionnez Catégorie de l'événement -"
+    select_category: 'Partie Logo'
+    partner_logo: 'Retirer'
+    remove: 'Bien joué !'
+    well_done: ''
+    event_update_success: ' Event a été mis à jour avec succès. '
+    event_details: "DÉTAILS DE L'ÉVÈNEMENT"
+    category: 'Catégorie'
+    overview: 'aperçu'
+    schedule: 'Programme'
+    location: 'Emplacement'
+    time_schedule: 'Horaire'
+    venue_address: 'Lieu Adresse'
+
+
+  devise:
+    email: 'Email'
+    password: 'Mot de passe'
+    confirm_password: 'Confirmez le mot de passe'
+    remember_me: 'Souviens-toi de moi'
+    forgot_your_password: 'Mot de passe oublié ?'
+    username: "Nom d'utilisateur"
+    select_user_type: "- Sélectionner le type d'utilisateur -"
+    minimum_character: "% {num} caractères minimum requis *"
+    login: "S'IDENTIFIER"
+    signup: "S'INSCRIRE"
+    terms_conditions: 'termes et conditions'
+    enter_your_email: 'Entrer votre Email:'
+    send_me_reset_pwd: 'Envoyez-moi RAZ INSTRUCTIONS DE MOT DE PASSE'
+    get_regis_with_us: 'GET INSCRIRE AVEC NOUS'
+
+    confirmations:
+      confirmed: "Votre adresse e-mail a été confirmée avec succès."
+      send_instructions: "Vous recevrez un email avec des instructions sur la façon de confirmer votre adresse e-mail en quelques minutes."
+      send_paranoid_instructions: "Si votre adresse e-mail existe dans notre base de données, vous recevrez un courriel avec des instructions sur la façon de confirmer votre adresse e-mail en quelques minutes."
+    failure:
+      already_authenticated: "Vous êtes déjà connecté."
+      inactive: "Votre compte n'est pas encore activé."
+      invalid: "Invalid% {authentication_keys} ou mot de passe."
+      locked: "Ton compte est bloqué."
+      last_attempt: "Vous avez une tentative plus avant que votre compte est verrouillé."
+      not_found_in_database: "Invalid% {authentication_keys} ou mot de passe."
+      timeout: "Votre session a expiré. S'il vous plaît vous connecter à nouveau pour continuer."
+      unauthenticated: "Vous devez vous connecter ou vous inscrire avant de continuer."
+      unconfirmed: "Vous devez confirmer votre adresse e-mail avant de continuer."
+    mailer:
+      confirmation_instructions:
+        subject: "Bienvenue à IdeaBurns"
+      reset_password_instructions:
+        subject: "Réinitialiser les instructions de mot de passe"
+      unlock_instructions:
+        subject: "Débloquez instructions"
+      password_change:
+        subject: "Mot de passe changé"
+    omniauth_callbacks:
+      failure: "Impossible de vous authentifier à partir de %{type} car %{reason}"
+      success: "Avec succès authentifié à partir de %{type} compte."
+    passwords:
+      no_token: "Vous ne pouvez pas accéder à cette page sans en provenance d'un e-mail de réinitialisation. Si vous ne venez d'un e-mail de réinitialisation de mot, s'il vous plaît assurez-vous que vous avez utilisé l'URL complète fournie."
+      send_instructions: "Vous recevrez un email avec des instructions sur la façon de réinitialiser votre mot de passe dans quelques minutes."
+      send_paranoid_instructions: "Si votre adresse e-mail existe dans notre base de données, vous recevrez un lien de récupération de mot de passe à votre adresse e-mail en quelques minutes."
+      updated: "Votre mot de passe a été changé avec succès. Vous êtes maintenant connecté."
+      updated_not_active: "Votre mot de passe a été changé avec succès."
+    registrations:
+      destroyed: "Au revoir! Votre compte a été annulé avec succès. Nous espérons te revoir bientôt."
+      signed_up: "Bienvenue! Vous avez signé avec succès."
+      signed_up_but_inactive: "Vous avez signé avec succès. Cependant, nous ne pouvions pas vous connecter parce que votre compte n'a pas encore été activé."
+      signed_up_but_locked: "Vous avez signé avec succès. Cependant, nous ne pouvions pas vous connecter parce que votre compte est verrouillé."
+      signed_up_but_unconfirmed: "Un message avec un lien de confirmation a été envoyé à votre adresse e-mail. S'il vous plaît suivez le lien pour activer votre compte."
+      update_needs_confirmation: "Vous mis à jour votre compte avec succès, mais nous avons besoin de vérifier votre nouvelle adresse e-mail. S'il vous plaît vérifier votre e-mail et cliquez sur le lien de confirmation pour confirmer votre nouvelle adresse e-mail."
+      updated: "Votre compte a été mis à jour avec succès."
+    sessions:
+      signed_in: "Signé à succès."
+      signed_out: "Signé avec succès."
+      already_signed_out: "Signé avec succès."
+    unlocks:
+      send_instructions: "Vous recevrez un email avec des instructions sur la façon de déverrouiller votre compte en quelques minutes."
+      send_paranoid_instructions: "Si votre compte existe, vous recevrez un courriel avec des instructions sur la façon de le déverrouiller en quelques minutes."
+      unlocked: "Votre compte a été débloqué avec succès. S'il vous plait, connectez-vous pour continuer."
+  errors:
+    messages:
+      already_confirmed: "a déjà été confirmé, s'il vous plaît essayez de vous connecter"
+      confirmation_period_expired: "a besoin d'être confirmée dans% {} période, s'il vous plaît demander un nouveau"
+      expired: "a expiré, s'il vous plaît demander un nouveau"
+      not_found: "pas trouvé"
+      not_locked: "n'a pas été verrouillé"
+      not_saved:
+        one: "1 erreur interdit ce %{resource} d'être sauvés:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+
+  user:
+    update_profile: 'METTRE À JOUR LE PROFIL'
+    profile_details: 'DETAILS PROFIL'
+    update_password: 'MISE À JOUR MOT DE PASSE'
+    profile_completion: 'profil Compeletion'
+    last_updated_on: "Dernière mise à jour le %{date}"
+    personal: 'Personnel'
+    profession: 'Métier'
+    education: 'Éducation'
+    contact: 'Contact'
+    describe: 'Décrire'
+    name: 'prénom'
+    first_name: 'Prénom'
+    last_name: 'Nom de famille'
+    email: 'Email'
+    email_primary: 'Email primaire'
+    gender: 'Le genre'
+    male: 'Mâle'
+    female: 'Femelle'
+    dob: 'DOB'
+    country: 'Pays'
+    select_country: '- Sélectionner le pays-'
+    region: 'Région'
+    city: 'Ville'
+    profession_type: 'Type de profession'
+    select_profession_type: '- Sélectionner le type de profession -'
+    company: 'Compagnie'
+    skills: 'Compétences'
+    startup_experience: 'Expérience de démarrage'
+    select_startup_experience: '- Sélectionnez Expérience de démarrage -'
+    graduation: "L'obtention du diplôme"
+    select_graduation: '- Sélectionnez Graduation -'
+    university_college: 'Collège universitaire'
+    mobile: 'Mobile'
+    address: 'Adresse'
+    email_secondary: 'Email-secondaire'
+    skype_id: 'identifiant Skype'
+    website: 'Site Internet'
+    about_you: 'Au propos de vous'
+    inspire_quote: 'Inspirez Quote'
+    linkedin: 'Linkedin'
+    add_team: 'Ajouter Team +'
+    add_funding: 'Ajouter Financement +'
+    office_head: 'Siège de bureau'
+    socials_webapps: 'Social & Webapps'
+    investor_details: 'Détails des investisseurs'
+    add_portfolio: 'Ajouter portefeuille +'
+    next: 'PROCHAIN'
+    update: 'METTRE À JOUR'
+    clear: 'CLAIR'
+    add: 'Ajouter'
+    delete: 'Effacer'
+    remove: 'Retirer'
+    date: 'date'
+    mess_success_update_profile: 'Bien joué! Vous avez enregistré avec succès les détails du profil'
+    your_contact_phone_number: 'Votre numéro de téléphone de contact'
+    any_useful_info_about_you: 'Toutes les informations utiles sur vous'
+    investor_type: "Type d'investisseur"
+    select_investor_type: "- Sélectionner le type d'investisseur -"
+    organization_name: "nom de l'organisation"
+    founded: 'Fondé (année)'
+    business_lines: 'Lignes directives'
+    select_bussiness_lines: '- Sélectionnez Bussiness Lines -'
+    description: 'La description'
+    mission_vision: 'La vision de la mission'
+    designation: 'La désignation'
+    select_designation: '- Sélectionner Désignation -'
+    join_date: "date d'inscription"
+    team_logo: "Logo de l'équipe"
+    address_line_1: 'Adresse 1'
+    address_line_2: 'Adresse Ligne 2 '
+    state: 'Etat'
+    startup_name: 'Nom de démarrage'
+    type_funding: 'Type de financement'
+    select_type_funding: '- Sélectionner le type de financement -'
+    funding_amount: 'Montant du financement'
+    startup_logo: 'Logo démarrage'
+    about_company: 'À propos de la société'
+    primary_bussiness_lines: 'Primary Bussiness Lines'
+    how_it_work: 'Comment ça marche'
+    regis_company_name: "Inscrivez-vous Nom de l'entreprise"
+    employee_strength: 'Force des employés'
+    select_employee_strength: '- Choisir des employés Force -'
+    avatar: 'Avatar'
+    amount: 'Montant'
+    by_investor: 'Par Investor'
+    any_useful_info_about_company: "Toutes les informations utiles sur l'entreprise"
+    pls_select_country_above: "S'il vous plaît sélectionner un pays au-dessus"
+    current_password: 'Mot de passe actuel'
+    new_password: 'nouveau mot de passe'
+    new_password_confirmation: 'Confirmation du nouveau mot de passe'
+    your_current_pwd_mess: '(Votre mot de passe actuel pour confirmer vos modifications)'
+    update_pwd_success_mess: 'Bien joué ! Mot de passe a été mis à jour avec succès.'
+    update_pwd_error_heading: "1 erreur interdit cet utilisateur d'être sauvé:"
+    update_pwd_error_mess: "Nouveau mot de passe ne peut pas être vide"
+
+    dashboard: 'TABLEAU DE BORD'
+    select_skill_type: 'Sélectionner le type de compétence'
+    select_profession_type: 'Sélectionner le type de profession'
+    select_country_input: 'Sélectionner le pays'
+    read_more: 'Lire la suite'
+    about : 'SUR'
+    personal_details: 'Dérailleurs personnels'
+    communication: 'la communication'
+    only_investor_view_contact_details: 'Seuls les investisseurs peuvent consulter les détails de contact'
+    profile_view: 'Voir le profil'
+    load_more: 'Charger plus'
+    no_results: 'Aucun résultat'
+    select_state: 'Sélectionner un état'
+    number_with_years: "% {nombre} ans"
+    not_have_func_yet: 'Ne pas avoir encore la fonction'
+    select_business_line_type: 'Sélectionner le type Bussiness Ligne'
+    select_funding_type_input: 'Sélectionner le type de financement'
+    select_investor_type_input: "Sélectionner le type d'investisseur"
+    our_team: 'Notre équipe'
+    location: 'Emplacement'
+    portfolio: 'Portefeuille'
+    business_type: 'Type de Bussiness'
+    funding: 'Financement'
+    investor: 'Investisseur'
+
+  notifications:
+    notifications: 'NOTIFICATIONS'
+    recent: 'Récent'
+    search: 'Chercher'
+    search_here: 'Cherche ici'
+    ago: ' depuis'
+
+  messages:
+    to_day: "Aujourd'hui"
+    reply: 'Répondre'
+    sent: 'Envoyé'
+    enter_text_here: 'Entrez le texte ici'
+

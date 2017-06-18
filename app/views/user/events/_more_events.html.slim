@@ -1,0 +1,8 @@
+ul.your-idea
+  li.title
+    = image_tag 'icon-postyouridea.png'
+    = link_to new_user_events_path do
+      h4 = t('event.create_event')
+  li.close-idea = t('event.popular_events')
+  = render 'user/events/load_popular_event'
+

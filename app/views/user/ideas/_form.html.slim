@@ -1,0 +1,42 @@
+= form_for [:user, @idea], html: { class: 'form-horizontal form-open-idea' }  do |f|
+  - if !@idea.errors.full_messages.count.zero?
+    .alert.alert-danger style="margin: 20px;"
+      ul.list-message-error
+        - @idea.errors.full_messages.each do |error_message|
+            li.alert-alert-error.alert-danger
+              = error_message
+  .form-group
+    label.col-sm-5.control-label for="selector1"  = t('idea.normal.idea_category')
+    .col-sm-7
+      i.select-arrow
+      = f.select :category_id, Category.all.collect {|p| [ p.name, p.id ] }, { include_blank: t('idea.normal.select_idea_category') }, class: 'form-control1', id: 'category_id', required: true
+  .form-group
+    label.col-sm-5.control-label for="disabledinput"  = t('idea.normal.idea_title')
+    .col-sm-7
+      = f.text_field :title, class: 'form-control1', placeholder: t('idea.normal.enter_idea_title_here'), id: 'disabledinput', maxlength: "100", required: true
+  .form-group
+    label.col-sm-5.control-label for="disabledinput"  = t('idea.normal.idea_description')
+    .col-sm-12
+      = f.text_area :description, class: 'form-control1', style: 'height: 80px; margin-top: 10px', required: true
+  - if !f.object.attachment.blank?
+    .form-group
+      label.col-sm-5.control-label = t('idea.normal.idea_image')
+      .col-sm-7
+        = image_tag (f.object.attachment), class: 'preview-img-idea'
+  .form-group
+    label.col-sm-5.control-label for="disabledinput"
+      = !f.object.attachment.blank? ? t('idea.normal.change_image') : t('idea.normal.upload_file')
+    .col-sm-7.input-image-length
+      = f.file_field :attachment, id: 'idea-file', accept: 'image/png,image/gif,image/jpeg', id: 'event-image', :data => { :max_file_size => 5.megabytes}
+  /!.form-group
+    label.col-sm-5.control-label for="disabledinput"  Idea Type
+    .col-sm-7
+      .col-sm-5
+        = f.radio_button :idea_type, false
+        <span class="label-radio">Closed Idea</span>
+      .col-sm-5
+        = f.radio_button :idea_type, true
+        <span class="label-radio">Public Idea</span>
+  .form-group
+    .pull-right
+      input#submit-idea.btn.btn-idea type="submit" value=(t('idea.normal.submit')) /

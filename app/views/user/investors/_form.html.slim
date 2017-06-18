@@ -1,0 +1,53 @@
+= simple_form_for @identity, :url => identities_create_user_investors_path  do |f|
+  - if !@identity.errors.full_messages.count.zero?
+    .alert.alert-danger style="margin: 20px;"
+      ul.list-message-error
+        - @identity.errors.full_messages.each do |error_message|
+            li.alert-alert-error.alert-danger
+              = error_message
+
+  .form-inputs
+    .row
+      .col-lg-6.identity-section
+        h6 1. Upload your photocopy of Identity Proof(If any)
+        h6.h6-left.h6-upload-file Choose File To
+        .fileUpload.btn-upload
+          span Upload
+          = f.file_field :indentity_proof, class: "form-control upload", accept: 'image/png,image/gif,image/jpeg'
+      .col-lg-6.identity-section
+        h6 2. Upload your Nationality(Passport) Identity Proof(If any)
+        h6.h6-left.h6-upload-file Choose File To
+        .fileUpload.btn-upload
+          span Upload
+          = f.file_field :nationality_identity_proof, class: "form-control upload", accept: 'image/png,image/gif,image/jpeg'
+    .row
+      .col-lg-6.identity-section
+        h6 3. Please upload Unique Identity document(If any)
+        .fileUpload
+          #attachments
+            = f.simple_fields_for :attachments do |attachment|
+              = render 'user/investors/attachment_fields', f: attachment
+            .links
+              = link_to_add_association f, :attachments, partial: 'user/investors/attachment_fields'
+                i class="fa fa-plus-circle"
+        label.lb-upload
+          | (You can add multiple docs)
+      .col-lg-6.identity-section
+        h6 4. Upload your Previous Investment document proofs(If any)
+        h6.h6-left.h6-upload-file Choose File To
+        .fileUpload.btn-upload
+          span Upload
+          = f.file_field :unique_identity_document, class: "form-control upload"
+  .form-actions
+    = button_to "Cancel", user_ideas_path, class: "btn btn-cancel"
+    = f.button :submit, "Submit", class: "btn-submit"
+
+
+    javascript:
+      $('.upload').on('change', function(){
+          var arr = document.getElementsByClassName("h6-upload-file");
+          var id = ['investor_identity_indentity_proof', 'investor_identity_nationality_identity_proof', 'investor_identity_unique_identity_document'];
+          arr[id.indexOf(this.id)].innerHTML = this.value;
+
+      });
+

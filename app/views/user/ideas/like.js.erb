@@ -1,0 +1,21 @@
+<% publish_to like_user_ideas_path do %>
+  <% if @status %>
+    var author = <%= @idea.user.id %>
+    if(uid == author){
+      notifications();
+    }
+  <% end %>
+
+  var idea = <%= @idea.id %>
+  var current_id = parseInt($('.idea-key').attr('data-id'));
+  if (idea == current_id){
+    $('.like-idea').html("<%= j (render partial: 'user/ideas/like', :locals => { comment: @comment }) %>");
+    $.get('/api/idea/like/'+ idea, function(data){
+      $('.like-page').html(data);
+    });
+
+    $.get('/api/idea/likes/'+ idea, function(data){
+      $('.likes').html(data);
+    });
+  }
+<% end %>

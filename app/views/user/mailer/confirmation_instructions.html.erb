@@ -1,0 +1,27 @@
+<p>Welcome <%= @email %>!</p>
+<img alt="Icon" class="c-desktop-logo" src="base/img/Ideaburn-logo.png" />
+<p>You can confirm your account email through the link below:</p>
+<%= image_tag "http://s27.postimg.org/t7h3b43nn/Ideaburn_logo.png" %>
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p>Hi <%= @email %>!</p>
+
+Thank you for signing up to IdeaBurns.
+
+Please confirm your email address to activate your account.
+
+<p><%= link_to 'Confirm Email Address', confirmation_url(@resource, confirmation_token: @token) %></p>
+( keep background logo color as yellow)
+
+If clicking this button doesn't work, please copy and paste the URL below:
+
+<p><%= link_to confirmation_url(@resource, confirmation_token: @token) %></p>
+
+Why confirmation is important
+
+Confirming your email address lets us know you're you, helps us protect your security and privacy and ensures that you get emails from us.
+
+Thank you
+
+Best,
+Ideaburns team,
+contact@ideaburns.com

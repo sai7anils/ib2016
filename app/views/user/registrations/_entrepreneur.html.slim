@@ -1,0 +1,156 @@
+= f.fields_for :entrepreneur do |entrepreneur|
+  .tab-content
+    #tab1.tab-pane.fade.in.active
+      /! start name
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.first_name')
+          .input
+            = entrepreneur.text_field :first_name, placeholder: "e.g John", id: "first_name", required: true, maxlength: "40"
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.last_name')
+          .input
+            = entrepreneur.text_field :last_name, placeholder: "e.g. Doe", id: "last_name", required: true, maxlength: "40"
+      /! end name
+      /! start email phone
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.email_primary')
+          .input
+            = f.email_field :email, autofocus: "", placeholder: "email@domain.com", id: "email", disabled: ''
+        .col-md-6.col-xs-12.unit
+          /! start budget
+          label.label = t('user.gender')
+          .input
+            = entrepreneur.radio_button :gender, true
+            = t('user.male')
+            | &nbsp;&nbsp;
+            = entrepreneur.radio_button :gender, false
+            = t('user.female')
+
+      /! end email phone
+      /! start email phone
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.dob')
+          .input
+            = entrepreneur.text_field :dob, id: "dob-datepicker"
+            = image_tag asset_path('Date-Calendar_icon.png'), class: 'ui-datepicker-trigger'
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.country')
+          label.input.select
+            = f.country_select :country, {priority: %w(US CA), prompt: t('user.select_country')}, class: 'country-2', required: true, 'data-country_select' => ''
+            i
+      /! end email phone
+      /! start email phone
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.region')
+          label.input.select
+            = render partial: 'subregion_select', locals: {parent_region: f.object.country}
+            i
+
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.city')
+          label.input.select
+            = render partial: 'subcity_select', locals: {parent_region: f.object.country, parent_city: f.object.region}
+
+
+      /! end email phone
+    #tab2.tab-pane.fade
+      .j-row
+        /! start country
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.profession_type')
+          label.input.select
+            = entrepreneur.select :profession_type, Entrepreneur.pro_type_options, id: 'prof', required: true
+            i
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.company')
+          .input
+            = entrepreneur.text_field :profession_company, id: 'company', placeholder: 'Facebook, Inc', required: true
+      /! end country
+      /! start city post code
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.skills')
+          label.input.select
+            = entrepreneur.select :profession_skill, Entrepreneur.pro_skill_options, id: 'skills'
+            i
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.startup_experience')
+          label.input.select
+            = entrepreneur.select :profession_experience, Entrepreneur.pro_exp_options, id: 'exp', required: true
+            i
+      /! end city post code
+    #tab3.tab-pane.fade
+      /! start country
+      .col-md-12.unit
+        label.label = t('user.graduation')
+        label.input.select
+          = entrepreneur.select :graduation, Entrepreneur.graduation_options, id: 'graduation', required: true
+          i
+      /! end country
+      /! start address
+      .col-md-12.unit
+        label.label = t('user.university_college')
+        .input
+          = entrepreneur.text_field :university, id: 'univ', placeholder: 'Harvard University', required: true
+      /! end address
+    #tab4.tab-pane.fade
+      /! start mobile
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.mobile')
+        .input
+          = entrepreneur.text_field :mobile, id: 'phone', placeholder: '(186)285-7925', required: true
+          span.tooltip.tooltip-right-top = t('user.your_contact_phone_number')
+      /! end mobile
+      /! start position
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.address')
+        .input
+          = entrepreneur.text_field :address, id: 'address', placeholder: 'e.g. 443 Seventh Avenue, 16th Floor', required: true
+      /! end position
+      /! start position
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.email_secondary')
+        .input
+          = entrepreneur.email_field :email_second, id: 'email-s', placeholder: 'email@domain.com', required: true
+      /! end position
+      /! start position
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.skype_id')
+        .input
+          = entrepreneur.text_field :skype, id: 'skype', placeholder: 'Skype ID', required: true
+      /! end position
+      /! start position
+      .col-md-12.col-xs-12.unit
+        label.label = t('user.website')
+        .input
+          = entrepreneur.text_field :website, id: 'web', placeholder: 'e.g. www.example.com', required: true
+      /! end position
+    #tab5.tab-pane.fade
+      /! start message
+      .col-md-12.unit
+        label.label = t('user.about_you')
+        .input
+          = entrepreneur.text_area :about, spellcheck: "false", required: true
+          span.tooltip.tooltip-right-top = t('user.any_useful_info_about_you')
+      /! end message
+      /! start message
+      .col-md-12.unit
+        label.label  = t('user.inspire_quote')
+        .input
+          = entrepreneur.text_area :inspire_quote, spellcheck: "false", required: true
+          span.tooltip.tooltip-right-top = t('user.inspire_quote')
+      /! end message
+      /! start message
+      .col-md-12.col-xs-12.unit
+        label.label = t('user.linkedin')
+        .input
+          = entrepreneur.text_field :linkedin, id: 'linkedin', placeholder: 'e.g. www.linkedin.com/somthing/', required: true
+      /! end message
+      /! start response from server
+      #response
+      /! end response from server
+/! end /.content

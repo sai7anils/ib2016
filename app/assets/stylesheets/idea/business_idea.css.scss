@@ -1,0 +1,291 @@
+.team-capabilities, .competitors-scenery {
+  a.add_fields{
+    color: transparent;
+  }
+  a {
+    button.btn-remove-team {
+      margin-top: 10px;
+      background-color: #f2f4f3;
+      border: 1px solid #d7d7d7;
+      color: #313131;
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+}
+
+.business-potencial {
+  .list-current {
+    label {
+      width: auto !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+}
+
+.row.child-team-row {
+  padding: 5px;
+  border: 1px solid #fdcf2f;
+  // border-top: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.month-element.disabled {
+  background-color: #f2f4f3 !important;
+}
+
+button.params-1, button.params-2, button.params-3{
+  background-color: #e0e0e0 !important;
+}
+
+button.params-1.active, button.params-2.active, button.params-3.active{
+  background-color: #fdcf2f !important;
+}
+
+#per-unit-save {
+  padding: 7px 20px;
+  float: right;
+  margin-top: 5px;
+  color: white;
+  background-color: #333;
+  text-transform: uppercase;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+#per-unit-clear {
+  padding: 7px 20px;
+  float: right;
+  margin-top: 5px;
+  color: white;
+  background-color: #b8b8b8;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 14px;
+}
+h4.chart-go-to {
+  cursor: pointer;
+}
+.search-section.business-idea {
+  .select2-container{
+    border: none !important;
+    width: 100% !important;
+  }
+  .select2-selection--single {
+    color: #999;
+  }
+  .select2-container {
+    background-color: transparent;
+  }
+  .clear-search-business-idea{
+    cursor: pointer;
+  }
+}
+
+a.view-profile {
+  color: #a5a5a5 !important;
+}
+
+.business-idea-left {
+  min-height: 320px;
+}
+.large.tooltip-inner {
+  max-width: 300px;
+  padding: 10px;
+}
+
+#lenght-text {
+  font-style: normal;
+  color: #a5a5a5;
+  font-size: 11px;
+  width: 100%;
+  float: left;
+}
+
+.business_idea_link {
+  color: #fdcf2f;
+}
+.business_idea_link:hover, .business_idea_link:visited {
+  color: #fdcf2f;
+}
+
+.message-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.show-all-section {
+  button.btn-show-all.active{
+    h6 {
+      color: #FFF !important;
+    }
+  }
+
+  .form-info{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+    border: 1px solid #fdcf2f;
+    z-index: 9999;
+    left: 0;
+    display: none;
+
+    &.active{
+      display: block;
+    }
+
+    .caret{
+      width: 0px;
+      height: 0px;
+      border-top: 0px solid transparent;
+      border-left: 11px solid transparent;
+      border-bottom: 10px solid white;
+      border-right: 11px solid transparent;
+      position: absolute;
+      top: -10px;
+      right: 65px;
+      display: inline-block;
+      vertical-align: middle;
+
+    }
+
+    .tabs {
+      height: 40px;
+      width: 100%;
+
+      ul {
+        margin-top: 10px;
+
+        li {
+          float: left !important;
+          width: 80px;
+          padding: 5px !important;
+          border-right: 1px solid #fdcf2f;
+          border-left: none !important;
+          margin-right: 0px !important;
+          font-size: 13px;
+        }
+
+        li:last-child{
+          border-right: none !important;
+        }
+      }
+    }
+
+    .tab-content {
+      width: 100%;
+      min-height: 300px;
+      background-color: #fff;
+      padding: 10px;
+
+      .tab-param{
+        width: 100%;
+        min-height: 300px;
+        background-color: #fff;
+        display: none;
+      }
+      .tab-param.active{
+        display: block;
+      }
+    }
+  }
+}
+
+.txt-percentage:hover{
+  // width: 65px !important;
+  // height: 65px !important;
+  // top: 7.5px !important;
+  // left: 7.5px !important;
+}
+
+
+.btn-request {
+  cursor: pointer;
+}
+
+.modal-area{
+  #message_detail {
+    outline: 0;
+    border: 1px solid #d7d7d7;
+    width: 95%;
+  }
+}
+.tab-param-action{
+  cursor: pointer;
+}
+
+.tab-param-action.active {
+  color: #fdcf2f;
+}
+
+.view-total-val{
+  position: absolute;
+  right: 20px;
+  z-index: 9999;
+  top: 10px;
+  color: #444;
+  font-size: 13px;
+}
+.acount-section.business-idea-section {
+  min-height:  550px;
+
+  .my_favourites{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fdcf2f;
+    z-index: 9999;
+    visibility: hidden;
+    cursor: pointer;
+
+    &:hover{
+      color: #7f7f7f;
+    }
+  }
+
+  .event-element.container-fluid:hover .my_favourites {
+    visibility: visible;
+  }
+
+}
+img.icon-intrested:hover {
+  cursor: pointer;
+}
+
+.modal-loading {
+    display:    none;
+    position:   fixed;
+    z-index:    1051;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+                url('http://i.stack.imgur.com/FhHRx.gif')
+                50% 50%
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal-loading element will be visible */
+body.loading .modal-loading {
+    display: block;
+}
+.team-content{
+  .nested-fields{
+    padding-top: 20px;
+  }
+}

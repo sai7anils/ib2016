@@ -1,0 +1,236 @@
+<div id="left_scroll" class="left-side sticky-left-side">
+  <div class="logo">
+    <span1>
+      <%= link_to image_tag('Ideaburn-logo.png'), root_path %>
+    </span1>
+    <span>
+      <%= link_to image_tag('logo-collapsed.png'), root_path %>
+    </span>
+  </div>
+  <div class="logo-icon text-center" style="background-image: url(<%= current_user.avatar %>)">
+    <h1><%= current_user.fullname %></h1>
+    <p><%= current_user.user_type.capitalize %></p>
+    <div class="edit-icon">
+      <p>
+        <a href="<%= edit_user_registration_path %>">
+          <span>
+            <%= image_tag('Side-Nav-photo-Edit-icons.png') %>
+          </span>
+          <span2>
+            <%= t('sidebar.edit') %>
+          </span2>
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="left-side-inner">
+    <ul class="nav nav-pills nav-stacked custom-nav">
+
+      <li id="tbl10" class="<%= 'active' if controller_name == 'ideas' && (action_name == 'index' || action_name == 'show') %>">
+        <a href="<%= user_ideas_path %>">
+          <%= image_tag('newicon/IdeasPublic.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.ideas') %></span>
+          <span class="right-arrow">
+            <% if controller_name == 'ideas' && action_name == 'index' %>
+              <%= image_tag('arrow-right.png') %>
+            <% else %>
+              <%= image_tag('arrow-left.png') %>
+            <% end %>
+          </span>
+        </a>
+      </li>
+
+      <li id="tbl9" class="<%= 'active' if controller_name == 'ideas' && ( action_name == 'new' ||  !current_user.entrepreneur? && action_name == 'business_new' ) %>">
+        <a href="<%= new_user_idea_path %>">
+          <%= image_tag('newicon/Ideate.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.ideate') %></span>
+          <span class="right-arrow">
+            <% if (controller_name == 'ideas' && ( action_name == 'new') || ( action_name == 'business_new' )) %>
+              <%= image_tag('arrow-right.png') %>
+            <% else %>
+              <%= image_tag('arrow-left.png') %>
+            <% end %>
+          </span>
+        </a>
+      </li>
+
+      <li class="bottom-line"></li>
+
+      <li id="tbl1" class="<%= 'active' if controller_name == 'events' && action_name == 'index' %>">
+        <a href="<%= user_events_path %>">
+          <%= image_tag('SideNav-Icons-1.png', style: "visibility:hidden;") %><span> &nbsp;<%= t('sidebar.events') %></span>
+          <span class="right-arrow">
+            <% if controller_name == 'events' && action_name == 'index' %>
+              <%= image_tag('arrow-right.png') %>
+            <% else %>
+              <%= image_tag('arrow-left.png') %>
+            <% end %>
+          </span>
+        </a>
+      </li>
+
+      <li id="tbl5" class="<%= 'active' if controller_name == 'events' && action_name == 'new' %>">
+        <a href="<%= new_user_events_path %>">
+          <%= image_tag('newicon/add-events.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.add_events') %></span>
+          <span class="right-arrow">
+            <% if controller_name == 'events' && action_name == 'index' %>
+              <%= image_tag('arrow-right.png') %>
+            <% else %>
+              <%= image_tag('arrow-left.png') %>
+            <% end %>
+          </span>
+        </a>
+      </li>
+
+      <li class="bottom-line"></li>
+
+      <% if current_user.entrepreneur? %>
+
+        <li id="tbl16" class="<%= 'active' if controller_name == 'ideas' &&  action_name == 'business_new' %>">
+          <%= link_to new_user_business_idea_path do%>
+            <%= image_tag('newicon/fund-B-Idea.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.fund_b_idea') %></span>
+            <span class="right-arrow">
+              <% if controller_name == 'entrepreneur' && action_name == 'index' %>
+                <%= image_tag('arrow-right.png') %>
+              <% else %>
+                <%= image_tag('arrow-left.png') %>
+              <% end %>
+            </span>
+          <% end %>
+        </li>
+
+      <% end %>
+
+      <% if current_user.startup? %>
+
+         <li id="tbl15">
+          <a href="<%= new_user_fund_startup_path %>">
+            <%= image_tag('newicon/fund-startup.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.fund_startup') %></span>
+            <span class="right-arrow">
+              <% if controller_name == 'startup' && action_name == 'index' %>
+                <%= image_tag('arrow-right.png') %>
+              <% else %>
+                <%= image_tag('arrow-left.png') %>
+              <% end %>
+            </span>
+          </a>
+        </li>
+      <% end %>
+
+      <% if current_user.investor? %>
+
+        <li id="tbl13" class="<%= 'active' if controller_name == 'ideas' &&  (action_name == 'business_show' || action_name == 'business_index') %>">
+          <%= link_to user_business_ideas_path do %>
+            <%= image_tag('newicon/invest-in-Businessidea.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.invest_in_b_ideas') %></span>
+            <span class="right-arrow">
+              <% if controller_name == 'ideas' && action_name == 'business_index' %>
+                <%= image_tag('arrow-right.png') %>
+              <% else %>
+                <%= image_tag('arrow-left.png') %>
+              <% end %>
+            </span>
+          <% end %>
+        </li>
+
+        <li id="tbl14">
+          <%= link_to user_fund_startups_path do %>
+            <%= image_tag('newicon/invest-in-Startupidea.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.invest_in_startup') %></span>
+            <span class="right-arrow">
+              <% if controller_name == 'startup' && action_name == 'index' %>
+                <%= image_tag('arrow-right.png') %>
+              <% else %>
+                <%= image_tag('arrow-left.png') %>
+              <% end %>
+            </span>
+          <% end %>
+        </li>
+
+      <% end %>
+
+      <li class="bottom-line"></li>
+
+      <li id="tbl6" class="<%= 'active' if controller_name == 'entrepreneurs' && action_name == 'index'%>">
+        <a href="<%= user_entrepreneurs_path %>">
+          <%= image_tag('newicon/interprenuer.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.entreprenuers') %></span>
+          <span class="right-arrow">
+            <%= image_tag('arrow-left.png') %>
+          </span>
+        </a>
+      </li>
+
+       <li id="tbl7" class="<%= 'active' if controller_name == 'startups' && action_name == 'index'%>">
+        <a href="<%= user_startups_path %>">
+          <%= image_tag('newicon/startup.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.startups') %></span>
+          <span class="right-arrow">
+            <%= image_tag('arrow-left.png') %>
+          </span>
+        </a>
+      </li>
+
+       <li id="tbl8" class="<%= 'active' if controller_name == 'investors' && action_name == 'index'%>">
+          <a href="<%= user_investors_path %>">
+            <%= image_tag('newicon/investor.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.investors') %></span>
+            <span class="right-arrow">
+              <%= image_tag('arrow-left.png') %>
+            </span>
+        </a>
+      </li>
+
+      <li class="bottom-line"></li>
+
+      <li id="tbl2" class="<%= 'active' if controller_name == 'ideas' && action_name == 'my_ideas' %>">
+        <a href="<%= user_my_ideas_path %>">
+          <%= image_tag('newicon/myideas.png', style: "visibility:hidden;") %><span> &nbsp; <% if current_user.entrepreneur? %><%= t('sidebar.my_ideas') %> <%else%><%= t('sidebar.our_ideas') %> <%end%></span>
+          <span class="right-arrow">
+            <% if controller_name == 'ideas' && action_name == 'my_ideas' %>
+              <%= image_tag('arrow-right.png') %>
+            <% else %>
+              <%= image_tag('arrow-left.png') %>
+            <% end %>
+          </span>
+        </a>
+      </li>
+
+      <% if current_user.entrepreneur? %>
+        <li id="tbl12" class="<%= 'active' if controller_name == 'business_ideas' && action_name == 'index' %>">
+          <a href="<%= user_business_ideas_path %>">
+            <%= image_tag('newicon/my-BusinessIdeas.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.my_b_ideas') %></span>
+            <span class="right-arrow">
+              <% if controller_name == 'business_ideas' && action_name == 'index' %>
+                <%= image_tag('arrow-right.png') %>
+              <% else %>
+                <%= image_tag('arrow-left.png') %>
+              <% end %>
+            </span>
+          </a>
+        </li>
+      <% else %>
+        <li id="tbl12">
+          <a href="#">
+            <%= image_tag('newicon/my-BusinessIdeas.png', style: "visibility:hidden;") %><span> &nbsp; <%= t('sidebar.our_b_ideas') %></span>
+            <span class="right-arrow">
+              <% if controller_name == 'ideas' && action_name == 'index' %>
+                <%= image_tag('arrow-right.png') %>
+              <% else %>
+                <%= image_tag('arrow-left.png') %>
+              <% end %>
+            </span>
+          </a>
+        </li>
+      <% end %>
+
+
+      <li id="tbl11" class="<%= 'active' if controller_name == 'events' && action_name == 'my_events' %>">
+        <a href="<%= user_my_events_path %>">
+          <%= image_tag('newicon/My-events.png', style: "visibility:hidden;")%><span> &nbsp; <% if current_user.entrepreneur? %> <%= t('sidebar.my_events') %> <%else%> <%= t('sidebar.our_events') %> <%end%></span>
+          <span class="right-arrow">
+            <% if controller_name == 'events' && action_name == 'my_events' %>
+              <%= image_tag('arrow-right.png') %>
+            <% else %>
+              <%= image_tag('arrow-left.png') %>
+            <% end %>
+          </span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</div>

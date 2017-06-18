@@ -1,0 +1,81 @@
+.entrepreneur-section.startupevent-section#startupevent
+  .entrepreneur-title.container-fluid
+    h4.title-link
+      | Ideaburns
+      .icon-caret
+    h4.title-text = t('global.startup_events')
+    button.btn-close X
+    = link_to new_user_event_path do
+      button.btn-create
+        i.fa.fa-clipboard
+        = t('global.create_event')
+  .entrepreneur-content.container-fluid
+    ul.search-section
+      li
+        input.keyword placeholder="Type here for events" type="text" /
+      li.select-block
+        i.fa.fa-map-marker
+        select.select-event-country
+          option value="" = t('global.select_a_country')
+          = options_for_select(CS.countries.collect {|k,v| [ v, k ] }, selected: params[:country])
+      li.event-calendar-block
+        i.fa.fa-calendar
+        input.event-calendar type="text" placeholder=(t('global.select_a_date')) /
+      li
+        i.fa.fa-filter.clear-filter
+
+    h4.title-text = t('global.events')
+    .list-events
+      - if (@events || []).count.zero?
+         .col-md-12 = t('global.no_results')
+      - (@events || []).each do |event|
+        .event-element.container-fluid class=(event.finished? ? '' : 'opacity' )
+          .element-left
+            i.fa.fa-calendar
+            h4.date = event.try(:event_from).strftime("%b %d %Y")
+            h6
+              = t('global.posted_by')
+              = event.user.fullname
+          .element-right
+            h6
+              = event.event_from.try(:strftime, "%b %d")
+              | &nbsp;@&nbsp;
+              = event.try(:event_time)
+              | &nbsp;-&nbsp;
+              = event.event_to.try(:strftime, "%b %d")
+            h6
+              = event.try(:address_line_1)
+              | ,&nbsp;
+              = event.try(:address_line_2)
+              | ,&nbsp;
+              = event.try(:city)
+              | ,&nbsp;
+              = event.region_name
+              | ,&nbsp;
+              = event.country_name
+              | &nbsp;-&nbsp;
+              = event.try(:zipcode)
+            = link_to user_event_path(event) do
+              h4 = event.try(:title)
+            .text-left
+              .line
+              = link_to user_event_path(event) do
+                h6 = t('global.find_out_more')
+            .text-right
+              h6 = event.event_cost_content
+    /!.event-element.container-fluid
+      .element-left
+        i.fa.fa-calendar
+        h4.date April 13th 2016
+        h6 Posted by Idea Burns
+      .element-right
+        h6 March 1 @ 10:00 am - April 29 @ 5:00 pm
+        h6 91 Springboard Office, E-43/1, Okhia Phase, Bangalore - 560047
+        h4 Startup Weekend Financial Inclusion
+        .text-left
+          .line
+          h6 Find out more
+        .text-right
+          h6 $59.00
+
+= javascript_include_tag 'events-home'

@@ -1,0 +1,219 @@
+= f.fields_for :startup do |startup|
+  .tab-content
+    #tab1.tab-pane.fade.in.active
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.startup_name')
+          .input
+            = startup.text_field :name, placeholder: t('user.startup_name'), id: "first_name", required: true
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.founded')
+          .input
+            = startup.text_field :founded, id: "datepicker4"
+            = image_tag asset_path('Date-Calendar_icon.png'), class: 'ui-datepicker-trigger'
+        .col-md-12.unit
+          label.label = t('user.about_company')
+          .input
+            = startup.text_area :about, spellcheck: "false", placeholder: t('user.about_company'), required: true
+            span.tooltip.tooltip-right-top = t('user.any_useful_info_about_company')
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.primary_bussiness_lines')
+          label.input.select
+            i
+            = startup.select :category, PrimaryBusinessLine.all.collect {|p| [ p.name, p.id ] }, { include_blank: t('user.select_bussiness_lines') }, class: '', required: true
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.website')
+          .input
+            = startup.text_field :website, id: 'web', placeholder: 'e.g. www.example.com', required: true
+        .col-md-12.unit
+          label.label = t('user.how_it_work')
+          .input
+            = startup.text_area :work, spellcheck: "false", placeholder: t('user.how_it_work'), required: true
+            span.tooltip.tooltip-right-top = t('user.how_it_work')
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.regis_company_name')
+          .input
+            = startup.text_field :reg_company_name, id: 'web', placeholder: t('user.regis_company_name'), required: true
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.employee_strength')
+          label.input.select
+            i
+            = startup.select :strength, Startup.employee_strength_options, class: '', required: true
+        .col-md-12.col-xs-12.unit
+          label.label = t('user.mission_vision')
+          .input
+            = startup.text_field :mission, id: 'web', placeholder: t('user.mission_vision'), required: true
+
+    #tab2.tab-pane.fade.in
+      #teams
+        = startup.simple_fields_for :teams do |team|
+          = render 'team_fields', f: team
+      #links
+        .add-team-action.text-right
+          .btn-group.block-button
+            = link_to_add_association startup, :teams, class: 'btn btn-primary btn-custom btn-add-team-form' do
+              = fa_icon 'user', {class: ''}
+              | &nbsp;
+              = t('user.add')
+            button.btn.btn-primary.btn-custom.btn-delete-team.disabled type="button"
+              = fa_icon 'trash'
+              | &nbsp;
+              = t('user.delete')
+
+    #tab3.tab-pane.fade.in
+      #fundings
+        = startup.simple_fields_for :fundings do |funding|
+          = render 'funding_fields', f: funding
+        #links
+          .add-team-action.text-right
+            .btn-group.block-button
+              = link_to_add_association startup, :fundings, class: 'btn btn-primary btn-custom btn-add-fundding-form' do
+                = fa_icon 'user', {class: ''}
+                | &nbsp;
+                = t('user.add')
+              button.btn.btn-primary.btn-custom.btn-delete-fundding.disabled type="button"
+                = fa_icon 'trash'
+                | &nbsp;
+                = t('user.delete')
+    #tab4.tab-pane.fade.in
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.address_line_1')
+          .input
+            = startup.text_field :address_line_1, id: 'address-line-1', placeholder: t('user.address_line_1'), required: true
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.address_line_2')
+          .input
+            = startup.text_field :address_line_2, id: 'address-line-1', placeholder: t('user.address_line_2'), required: true
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.country')
+          label.input.select
+            i
+            = f.country_select :country, {priority: %w(US CA), prompt: t('user.select_country') }, class: 'country-2', required: true, 'data-country_select' => ''
+
+        .col-md-6.col-xs-12.unit
+          /! start budget
+          label.label = t('user.state')
+          label.input.select
+            = render partial: 'subregion_select', locals: {parent_region: f.object.country}
+            i
+          i
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.city')
+          label.input.select
+            = render partial: 'subcity_select', locals: {parent_region: f.object.country, parent_city: f.object.region}
+    #tab5.tab-pane.fade.in
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label Facebook
+          .input
+            = startup.text_field :facebook, id: 'facebook', placeholder: 'https://facebook.com/something', required: true
+        .col-md-6.col-xs-12.unit
+          label.label Twitter
+          .input
+            = startup.text_field :twitter, id: 'twitter', placeholder: 'https://twitter.com/something', required: true
+        .col-md-6.col-xs-12.unit
+          label.label Linkedin
+          .input
+            = startup.text_field :linkedin, id: 'linkedin', placeholder: 'https://linkedin.com/something', required: true
+        .col-md-6.col-xs-12.unit
+          label.label IOS App
+          .input
+            = startup.text_field :ios_app, id: 'ios_app', placeholder: 'https://itunes.apple.com/something', required: true
+        .col-md-6.col-xs-12.unit
+          label.label Android App
+          .input
+            = startup.text_field :adroid_app, id: 'adroid_app', placeholder: 'https://play.google.com/something', required: true
+        .col-md-6.col-xs-12.unit
+          label.label Windows App
+          .input
+            = startup.text_field :window_app, id: 'window_app', placeholder: 'https://something.com', required: true
+
+javascript:
+  $(document).ready(function() {
+    function onchangeSelected(){
+      $('.select-type-funding').on('change',function(){
+        if ( (this.value == 1) || (this.value==2) ){
+          $(this).parent().parent().parent().find("#by_invester").val('');
+          $(this).parent().parent().parent().find("#by_invester").attr('disabled','');
+        }
+        else{
+          $(this).parent().parent().parent().find("#by_invester").removeAttr('disabled','');
+        }
+      })
+    }
+    $('.add_fields').on('click', function(){
+      setTimeout(function(){onchangeSelected()}, 1000);
+    });
+
+    var checked = false;
+    $(':checkbox').change(function() {
+      $('.team-checkbox-delete').each(function(){
+        if($(this).is(':checked')) {
+          checked = true;
+          return false;
+        }else {
+          checked = false;
+        }
+      });
+      if(checked == true){
+        $('.btn-delete-team').removeClass('disabled');
+      }else{
+        $('.btn-delete-team').addClass('disabled');
+      }
+    });
+
+    $('.btn-delete-team').on('click', function(){
+      $('.team-checkbox-delete').each(function(){
+        if($(this).is(':checked')) {
+          var id = $(this).attr('data-id');
+          $('.btn-delete-team').addClass('disabled');
+          var inputHidden = $('#team-form-'+id).find('input[type="hidden"]');
+          $(inputHidden).attr('value', true);
+          $('.team-'+id).hide();
+        }
+      });
+    });
+
+    var checked2 = false;
+    $(':checkbox').change(function() {
+      $('.fundding-checkbox-delete').each(function(){
+        if($(this).is(':checked')) {
+          checked2 = true;
+          return false;
+        }else {
+          checked = false;
+        }
+      });
+      if(checked2 == true){
+        $('.btn-delete-fundding').removeClass('disabled');
+      }else{
+        $('.btn-delete-fundding').addClass('disabled');
+      }
+    });
+
+    $('.btn-delete-fundding').on('click', function(){
+      $('.fundding-checkbox-delete').each(function(){
+        if($(this).is(':checked')) {
+          var id = $(this).attr('data-id');
+          $('.btn-delete-fundding').addClass('disabled');
+          var inputHidden = $('#fundding-form-'+id).find('input[type="hidden"]');
+          $(inputHidden).attr('value', true);
+          $('.fundding-'+id).hide();
+        }
+      });
+    });
+
+    $('.btn-add-team-form, .btn-add-fundding-form').on('click', function(){
+      setTimeout(function(){
+        $('.form-datepicker').datepicker({
+          yearRange: '1930:2050',
+          buttonText: "",
+          changeMonth: true,
+          changeYear: true,
+          maxDate: 0,
+          dateFormat: 'yy-mm-dd'});
+      }, 0);
+    })
+  });

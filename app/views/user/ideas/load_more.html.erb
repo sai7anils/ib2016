@@ -1,0 +1,80 @@
+<% @ideas.each do |idea| %>
+    <div class="col-md-6 mb30 idea-block">
+      <div class="switch-right-grid ">
+        <div class="switch-right-grid1">
+          <div class="col-md-12 activity-rows">
+            <div class="col-xs-3">
+              <%= image_tag asset_path(idea.user.avatar), class: 'img-responsive img-circle' %>
+            </div>
+            <div class="col-xs-9 activity-desc pl0">
+              <h5>
+                <% if idea.user.entrepreneur? %>
+                  <%= link_to idea.user.fullname, entrepreneur_path(idea.user) %>
+                <% elsif idea.user.startup? %>
+                  <%= link_to idea.user.fullname, "#" %>
+                <% else %>
+                  <%= link_to idea.user.fullname, "#" %>
+                <% end %>
+              </h5>
+              <p><%= idea.category.name %></p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="col-md-12 bg-white p0">
+            <p class="col-md-6 text-left">
+              <%= image_tag asset_path('location-icon-grey.png'), style: 'vertical-align:top;' %>
+              <%= idea.user.location %></p><p class="col-md-6 text-right">
+              <%= image_tag asset_path('submitdate-icon.png'), style: 'vertical-align:top;' %>
+              <%= idea.created_at.strftime('%B %d, %Y') %></p>
+            </div>
+            <div class="col-md-12 switch-right-grid-desc">
+              <h3><%= idea.title.truncate(50) %></h3>
+              <p> <%= idea.description.truncate(250) %></p>
+              <p>
+                <% if idea.my_idea?(current_user)  %>
+                  <div class="idea-edit-action">
+                    <%= link_to edit_user_idea_path(idea), "data-toggle" => "tooltip", title: t('idea.edit') do %>
+                      <i class="fa fa-edit"></i>
+                    <% end %>
+                  </div>
+                <% end %>
+                <%= link_to t('global.read_more'), user_idea_path(idea), class: 'readmore' %>
+              </p>
+            </div>
+            <div class="col-md-12 comment">
+              <div class="col-md-7 col-xs-12 p-left">
+                <div class="col-md-4 col-xs-3"><center>
+                  <%= image_tag asset_path('Views-Icon-small.png') %>
+                  <br />
+                  <span><%= idea.views %></span>
+                </center>
+              </div>
+              <div class="col-md-4 col-xs-4"><center>
+                <%= image_tag asset_path('Like-icons-small.png') %>
+                <br />
+                <span><%= idea.likes.count %></span>
+              </center>
+            </div>
+            <div class="col-md-4 col-xs-3"><center>
+              <%= image_tag asset_path('comments-icons-small.png') %>
+              <br />
+              <span><%= idea.comments.count %></span>
+            </center>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="col-md-5 ">
+          <div class="disabled-rating"></div>
+          <%= rating_for idea, "visual_effects", stars: 10, enable_half: false, path: 'star_on', class: 'rating' %>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<% end %>
+
+<%= javascript_include_tag 'jquery.raty.js', 'ratyrate' %>

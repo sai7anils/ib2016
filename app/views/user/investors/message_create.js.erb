@@ -1,0 +1,11 @@
+<% publish_to  messages_create_user_investors_path do %>
+  <% if @status %>
+    var current_user = parseInt("<%= raw current_user.id %>");
+    var receiver_user = parseInt("<%= raw @message.receiver_id %>");
+    if(receiver_user == uid){
+      $('.msg-icon').find('.badge11').css({'display' : 'block'});
+    }
+    $('#GSCCModal').modal('hide');
+  <% else %>
+  <% end %>
+<% end %>

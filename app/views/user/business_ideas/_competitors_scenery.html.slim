@@ -1,0 +1,30 @@
+= b.fields_for :competitor do |c|
+  .menu-content.container-fluid.competitors-scenery
+    h3  = t('idea.business.competitors_scenery_tab')
+    .question-other
+      h6.h6-left
+        | 1.
+        button.btn-add#add-competitors type="button"
+          = image_tag asset_path 'icon-user.png'
+          = t('idea.business.add_competitors')
+        label.lb-add-competator = t('idea.business.competitors_scenery_ques_1')
+      div.btn-group-team
+        button.btn-view-team-list#view-competitors-scenery type="button"  = t('idea.business.view_competitors')
+        button.btn-save.btn-save-competator#bnt-save-competitors-scenery type="button" = t('idea.business.save')
+      .team-content.container-fluid style="border:none; height:auto"
+        #competitor_teams
+          = c.simple_fields_for :competitor_teams do |competitor_team|
+            = render 'user/ideas/competitor_team_fields', f: competitor_team
+        #links
+          = link_to_add_association 'add task', c, :competitor_teams, partial: 'user/ideas/competitor_team_fields'
+    .question-other.container-fluid
+      h6 = t('idea.business.competitors_scenery_ques_2')
+      .custom-file-upload
+        = c.file_field :image, accept: 'image/png,image/gif,image/jpeg', class: 'upload'
+      // h6.h6-left.h6-upload-file Choose file to
+      // .fileUpload.btn-upload
+      //   span Upload
+      //   = c.file_field :image, accept: 'image/png,image/gif,image/jpeg', class: 'upload'
+    .question-other
+      h6 = t('idea.business.competitors_scenery_ques_3')
+      = c.text_area :about, placeholder: t('idea.business.enter_text_here'), cols: 30, rows: 10, pattern: '.{80, 400}', required: true

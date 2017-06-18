@@ -1,0 +1,127 @@
+#page-wrapper
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'j-formsa j-forms profile-update-form', id: 'profile-update-form' }) do |f|
+    .form-content-header
+      .row
+        .col-sm-2 style="padding-top: 15px"
+          h3 = t('user.update_profile')
+        .col-sm-7
+          - if flash[:update_success]
+            .alert.alert-success.update-profile-message
+              = t('user.mess_success_update_profile')
+    .switches
+      .col-4
+        .col-md-11.p0.background-profile
+          .col-md-2.mb30.nopad align="center"
+            .change_picture data-photo="#{current_user.photo}"
+              center
+                = image_tag asset_path(@user.avatar), class: 'mb8', id: 'image-preview'
+            .update_border
+            button#get_file.update-p style=("text-align: center;") type="button"
+              <i class="fa fa-camera"></i>
+            = f.file_field :photo, :as => :file, accept: 'image/png,image/gif,image/jpeg', id: 'my_file'
+            h4.last-update = t('user.last_updated_on', :date => @user.try(:updated_at).strftime('%F'))
+            .profile-circle
+              center
+                .c100.small class=("p#{current_user.profile_percentage.first[:number].ceil}")
+                  span = current_user.profile_percentage.first[:text]
+                  .slice
+                    .bar
+                    .fill
+            h4.profile-complete = t('user.profile_completion')
+          .col-md-10.mb30.p0.nopad
+            .col-md-12.p0
+              .personal-details
+                .tab-content
+                  #horizontal-form.tab-pane.active
+
+                    = devise_error_messages!
+                    .header.text-center
+                    /! end /.header
+                    .content
+                      .col-md-12.col-xs-12
+                        h3.c-font-17.mob-center.text-left style="line-height:2;" = t('user.profile_details')
+                      - if current_user.entrepreneur?
+                        ul.nav.nav-tabs.tabsec
+                          li.active
+                            a data-toggle="tab" href="#tab1"  = t('user.personal')
+                          li
+                            a data-toggle="tab" href="#tab2"  = t('user.profession')
+                          li
+                            a data-toggle="tab" href="#tab3"  = t('user.education')
+                          li
+                            a data-toggle="tab" href="#tab4"  = t('user.contact')
+                          li
+                            a data-toggle="tab" href="#tab5"  = t('user.describe')
+                      - if current_user.startup?
+                        ul.nav.nav-tabs.tabsec
+                          li.active
+                            a data-toggle="tab" href="#tab1"  = t('user.company')
+                          li
+                            a data-toggle="tab" href="#tab2"  = t('user.add_team')
+                          li
+                            a data-toggle="tab" href="#tab3"  = t('user.add_funding')
+                          li
+                            a data-toggle="tab" href="#tab4"  = t('user.office_head')
+                          li
+                            a data-toggle="tab" href="#tab5"  = t('user.socials_webapps')
+                      - if current_user.investor?
+                        ul.nav.nav-tabs.tabsec
+                          li.active
+                            a data-toggle="tab" href="#tab1"  = t('user.investor_details')
+                          li
+                            a data-toggle="tab" href="#tab2"  = t('user.add_team')
+                          li
+                            a data-toggle="tab" href="#tab3"  = t('user.office_head')
+                          li
+                            a data-toggle="tab" href="#tab4"  = t('user.add_portfolio')
+                          li
+                            a data-toggle="tab" href="#tab5"  = t('user.socials_webapps')
+
+                      = render partial: "entrepreneur", locals: {f: f} if current_user.entrepreneur?
+                      = render partial: "startup", locals: {f: f} if current_user.startup?
+                      = render partial: "investor", locals: {f: f} if current_user.investor?
+                    .footer
+                      button.primary-btn.btn-next.hide data-button-next='' type="submit"  = t('user.next')
+                      button.primary-btn.btn-submit data-button-next='' type="submit" formnovalidate=''  = t('user.update')
+                      button.primary-btn.btn-clear type="button"  = t('user.clear')
+                    /! end /.footer
+  .clearfix
+- if @investor_type == 1 || @investor_type == 2
+  javascript:
+      $('ul.tabsec > li:nth-child(3)').find('a').text('Contact');
+      $('ul.tabsec > li:nth-child(2)').hide();
+      $('.tab-content').find('.type2').show();
+      $('.tab-content').find('.type3').hide();
+
+javascript:
+  try{
+    document.getElementById("my_file").onchange = function () {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        document.getElementById("image-preview").src = e.target.result;
+      };
+      reader.readAsDataURL(this.files[0]);
+    };
+  }catch(err){}
+  var region =  $('#user_region').val();
+  var city = $('#user_city').val();
+  $('.btn-clear').on('click', function(){
+    document.getElementById("profile-update-form").reset();
+    $('select.country-2').trigger('change');
+    setTimeout(function(){
+      try {
+        $('#user_region').val(region).trigger('change');
+        } catch(err) {}
+      try {
+        $('#user_region').val(region);
+      } catch(err) {}
+
+      try {
+        $('#user_city').val(city).trigger('change');
+        } catch(err) {}
+      try {
+        $('#user_city').val(city);
+      } catch(err) {}
+    }, 1000);
+
+  });

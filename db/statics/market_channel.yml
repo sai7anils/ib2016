@@ -1,0 +1,11 @@
+---
+- id: 1
+  name: Selling directly to customers
+- id: 2
+  name: Using Intermediaries such as distributors and retailers
+- id: 3
+  name: Online via the Internet
+- id: 4
+  name: Combination of two of the previous options
+- id: 5
+  name: On demand

@@ -1,0 +1,32 @@
+= f.fields_for :valuation do |v|
+  .profile.fund
+    .profile-content.fund-content
+      h3 Valuations
+      h6 How many common and preferred shares or units are currently outstanding ?
+      // input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+      = v.text_field :currently_outstanding, placeholder: 'Enter your text here (allow only numbers in $)', required: true
+
+      h6 How much total fund you startup raised so far ?
+      // input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+      = v.text_field :total_fund, placeholder: 'Enter your text here (allow only numbers in $)', required: true
+
+      // h6 How much total fund you startup raised so far ?
+      // // input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+      // = v.text_field :currently_outstanding, placeholder: 'Enter your text here (allow only numbers in $)', required: true
+
+      h6 How much and what type of capital is the startup currently seeking ?
+      // select
+      //   option Equity
+      = v.select :seeking, Valuation::TYPE_CAPITAL.collect {|p| [ p.first, p.last ] }, { include_blank: '- Select Type Of Capital -' }, class: '', required: true
+      h6 Provide the company's estimated pre-money valuation
+      // input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+      = v.text_field :pre_money, placeholder: 'Enter your text here (allow only numbers in $)', required: true
+
+      h6 Offering business stake to the investor ?
+      // select
+      //   option Select Numbers 1-90(%)
+      = v.select :business_stake, Valuation::PERCENTAGE.collect {|p| [ "#{p} %", p ] }, { include_blank: '- Select Business Stake -' }, class: 'paid', required: true
+
+      h6 How will you use these funds ?
+      // textarea# name="" cols="30" rows="3" placeholder="Enter text here"
+      = v.text_area :use_fund, placeholder: 'Enter your text here', required: true, required: true, pattern: '.{100, 600}', cols: "30", rows: "4"

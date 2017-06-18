@@ -1,0 +1,69 @@
+// Profile Circle
+$( document ).ready(function() {
+    var totalField = 1;
+    var numField = 1;
+    var $input = $('form.profile-update-form input');
+    var $select = $('form.profile-update-form select');
+    var $area = $('form.profile-update-form textarea');
+    var user_photo = $('.change_picture').attr('data-photo');
+    $input.each(function(){
+      var type = $(this).attr('type');
+      if (type == 'text' || type == 'email') {
+        totalField++;
+        if ($(this).val() != '') {
+          numField++;
+        }
+      }
+    });
+
+    $select.each(function(){
+      totalField++;
+      if ($(this).val()) {
+        numField++;
+      }
+    });
+
+    $area.each(function(){
+      totalField++;
+      if ($(this).val() !== '') {
+        numField++;
+      }
+    });
+
+    try {
+      if($('input[type="radio"]')) {
+        totalField++;
+        $('input[type="radio"]').each(function(){
+          if($(this).is(':checked')){
+            numField++;
+          }
+        });
+      }
+
+      if($('#user_investor_attributes_investor_type').is(':visible') && $('#user_investor_attributes_investor_type').val() != 1){
+        if($('#first_name').val() == '') {numField++};
+        if($('#last_name').val() == '') {numField++};
+        if($('#email').val() == '') {numField++};
+        if($('#datepicker').val() == '') {numField++};
+      }else if ($('#user_investor_attributes_investor_type').is(':visible') && $('#user_investor_attributes_investor_type').val() == 1) {
+        if($('#name').val() == '') {numField++};
+        if($('#web').val() == '') {numField++};
+        if($('#user_investor_attributes_founded').val() == '') {numField++};
+      }
+    }catch(err){}
+    calPer(numField, totalField);
+});
+
+function calPer(current, total) {
+  var per = current / total ;
+  //var c = Number((per).toFixed(2)) * 100;
+  var c = $('.c100').text();
+  c = c.replace("p", "");
+  c = Math.round(parseInt(c));
+  if (c > 100 ) {c=100;}
+  if (c > 50) {
+    $('.fill').css({"border-color": "#fed000"});
+  }
+  //$('.c100').addClass('p'+c);
+  //$('.c100 > span').text(c + '%');
+}

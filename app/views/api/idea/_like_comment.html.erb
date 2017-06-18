@@ -1,0 +1,9 @@
+<span class="like-comment-action">
+<% if current_user %>
+  <% if current_user.like_comment?(cmt.id) %>
+    <span id="comment-like-id-<%= cmt.id %>" onclick="likeIdeaComment(<%= cmt.id %>, 0)" style="color:#78C2E9;cursor:pointer;"><%= t('idea.normal.unlike') %></span>
+  <% else %>
+    <span id="comment-like-id-<%= cmt.id %>" onclick="likeIdeaComment(<%= cmt.id %>, 1)" style="color:#78C2E9;cursor:pointer;"><%= t('idea.normal.like') %></span>
+  <% end %>
+<% end %>
+</span>

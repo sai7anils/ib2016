@@ -1,0 +1,19 @@
+- if @expand || false
+  - @groups.each do |group|
+    .date #{group.first.to_date.strftime("%B #{group.first.to_date.day.ordinalize}, %Y")}
+    - Message.by_date(current_user, group.first.to_date).each do |message|
+      .message-element
+        .image-user
+          = image_tag message.sender.avatar
+        .info
+          h5
+            span #{message.sender.username}
+            span.request-detail onclick="changeText('#{message.idea.title}');" #{message.idea.title}
+          p #{message.detail}
+          h6.left
+            i.fa.fa-clock-o
+            | #{message.created_at.strftime("%H:%M %p")}
+          h6.left
+            = link_to reply_message_user_ideas_path(:idea_id => message.idea.id, :message_id => message.id, :div_id => message.id), remote: true, id: "parent-#{message.id}" do
+              i.fa.fa-reply-all
+              = t('messages.reply')

@@ -1,0 +1,11 @@
+<div id="order_state_code_wrapper">
+  <% parent_region ||= params[:parent_region] %>
+  <% country = Carmen::Country.coded(parent_region) %>
+  <% if country.nil? %>
+    <%= text_field(:event, :region, disabled: '', placeholder: "Please select a country above", class: 'form-control') %>
+  <% elsif country.subregions? %>
+    <%= subregion_select(:event, :region, parent_region, {}, { :class => 'form-control' }) %>
+  <% else %>
+    <%= text_field(:event, :region, placeholder: 'e.g California', required: true, class: 'form-control') %>
+  <% end %>
+</div>

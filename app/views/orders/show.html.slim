@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Idea:
+  = @order.idea_id
+p
+  strong Ip address:
+  = @order.ip_address
+p
+  strong First name:
+  = @order.first_name
+p
+  strong Last name:
+  = @order.last_name
+p
+  strong Card type:
+  = @order.card_type
+p
+  strong Card expires on:
+  = @order.card_expires_on
+
+= link_to 'Edit', edit_order_path(@order)
+'|
+= link_to 'Back', orders_path

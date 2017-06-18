@@ -1,0 +1,89 @@
+// #page-wrapper
+//   .switches
+//     .acount-section.business-idea-section
+//       - if flash[:notice]
+//         .alert.alert-success.message-success style="max-width:70%"
+//           = flash[:notice]
+//       .acount-title.container-fluid
+//         - if controller_name == "investors"
+//           h2 My Favourites
+//         - else
+//           h2 Startup Funds
+//       .profile
+//         .profile-content.upcoming-content
+
+//       .load-more
+//         i.fa.fa-spinner.fa-spin
+//         | Load more
+//       = render 'user/business_ideas/closed_ideas'
+//       // = render 'identity_modal'
+//   .clearfix
+
+#page-wrapper
+  .switches
+    .acount-section.business-idea-section
+      .acount-title.container-fluid
+        - if controller_name == "investors"
+          h2 My Favourites
+        - else
+          h2 Startup Funds
+      .profile
+        .profile-content.upcoming-content
+          .entrepreneur-content.container-fluid.list-idea
+            = render 'filter'
+            - @funds.each do |fund|
+              .fund-startup-element.container-fluid
+
+                .info-section
+                  // = image_tag 'img-user-business.png', :class => 'img-user'
+                  = link_to get_profile(fund.startup.user) do
+                    = image_tag fund.startup.user.avatar, :class => 'img-user'
+                  h6.text-icon
+                    = image_tag 'location-icon.png'
+                    | #{fund.startup.user.location}.
+                  //h6 www.startuphub.com
+                  h6 #{fund.startup.website}
+                  h6 Founded in #{fund.startup.founded}
+                  = link_to get_profile(fund.startup.user)
+                    h6.view View Profile
+                  .sub-info.container-fluid
+                    h6
+                      = image_tag 'icon-eye-yellow.png'
+                      | #{fund.views}
+                    h6
+                      = image_tag 'icon-pig-yellow.png'
+                      | 00000000000
+                .main-section
+                  h5.title-01 Business Line
+                  h5.title-02 #{fund.startup.category_name}
+                  .info-element
+                    h6
+                      span Funding Round:
+                      span.text &nbsp;A-Series
+                    h6
+                      span Business Model:
+                      span.text &nbsp;#{fund.business_potential.fund_business_model.business_type_name}
+                  .info-element
+                    h6
+                      span Offering Business stake:
+                      span.text &nbsp;#{fund.valuation.business_stake} %
+                    h6
+                      span Type of Capital:
+                      span.text &nbsp;#{fund.valuation.capital_type_name}
+                  .info-element
+                    h6
+                      span Offering Business type:
+                      // span.text Product
+                      span.text &nbsp;#{fund.product_service.offering_type_name}
+                  h4.txt-funding
+                    = image_tag 'icon-database-yellow.png'
+                    | Funding Goal: &nbsp;#{fund.valuation.total_fund} USD
+                  = link_to user_fund_startup_path(fund) do
+                    button.btn-bar
+                      = image_tag 'btn-bar.png'
+      .load-more
+        i.fa.fa-spinner.fa-spin
+        | Load more
+      = render 'closed_ideas'
+
+  .clearfix

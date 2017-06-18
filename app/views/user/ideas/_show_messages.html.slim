@@ -1,0 +1,42 @@
+- if @today.present?
+  .date = t('messages.to_day')
+  - @today.each do |message|
+    .message-element id="message_#{message.id}"
+      .image-user
+        = image_tag message.sender.photo
+      .info
+        h5
+          span #{message.sender.username}
+          // span.request-detail onclick="changeText('#{message.idea.title}');" #{message.idea.title}
+          span.request-detail #{message.idea.title}
+        p #{message.detail}
+        h6.left
+          i.fa.fa-clock-o
+          | #{message.created_at.strftime("%H:%M %p")}
+        h6.left
+          = link_to reply_message_user_ideas_path(:idea_id => message.idea.id, :message_id => message.id, :div_id => message.id), remote: true, id: "parent-#{message.id}"
+            i.fa.fa-reply-all
+            = t('messages.reply')
+- unless @groups.blank?
+  .date #{@groups.first.first.to_date.strftime("%B #{@groups.first.first.to_date.day.ordinalize}, %Y")}
+  - @messages = Message.by_date(current_user, @groups.first.first.to_date)
+  - @messages.each do |message|
+      .message-element id="message_#{message.id}"
+        .image-user
+          = image_tag message.sender.avatar
+        .info
+          h5
+            span #{message.sender.username}
+            // span.request-detail onclick="changeText('#{message.idea.title}');" #{message.idea.title}
+            span.request-detail #{message.idea.title}
+          p #{message.detail}
+          h6.left
+            i.fa.fa-clock-o
+            | #{message.created_at.strftime("%H:%M %p")}
+          h6.left
+            = link_to reply_message_user_ideas_path(:idea_id => message.idea.id, :message_id => message.id, :div_id => message.id), remote: true, id: "parent-#{message.id}"
+              i.fa.fa-reply-all
+              = t('messages.reply')
+          - if @messages.last == message
+            h6.left#expand-all-messages
+            = link_to "Expand all", expand_messages_user_ideas_path, remote: true, disabled: true, id: "expand-messages"

@@ -1,0 +1,227 @@
+= f.fields_for :investor do |investor|
+  .tab-content
+    #tab1.tab-pane.fade.in.active
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.investor_type')
+          label.input.select
+            i
+            = investor.select :investor_type, Investor.type_options, required: true
+        .col-md-6.col-xs-12.unit.type3
+          label.label = t('user.organization_name')
+          .input
+            = investor.text_field :name, placeholder: t('user.organization_name'), id: "name", required: true
+        .col-md-6.col-xs-12.unit.type2
+          label.label = t('user.first_name')
+          .input
+            = investor.text_field :first_name, placeholder: t('user.first_name'), id: "first_name", required: true, maxlength: "40"
+        .col-md-6.col-xs-12.unit.type2
+          label.label = t('user.last_name')
+          .input
+            = investor.text_field :last_name, placeholder: t('user.last_name'), id: "last_name", required: true, maxlength: "40"
+        .col-md-6.col-xs-12.unit.type2
+          label.label = t('user.email_primary')
+          .input
+            = f.email_field :email, autofocus: "", placeholder: "email@domain.com", id: "email", disabled: ''
+        .col-md-6.col-xs-12.unit.type2
+          /! start budget
+          label.label = t('user.gender')
+          label.input
+            = investor.radio_button :gender, true
+            = t('user.male')
+            | &nbsp;&nbsp;
+            = investor.radio_button :gender, false
+            | &nbsp;
+            = t('user.female')
+            i
+        .col-md-6.col-xs-12.unit.type2
+          label.label = t('user.dob')
+          .input
+            = investor.text_field :dob, id: "datepicker"
+            = image_tag asset_path('Date-Calendar_icon.png'), class: 'ui-datepicker-trigger'
+        .col-md-6.col-xs-12.unit.type3
+          label.label = t('user.founded')
+          label.input.select
+            i
+            = investor.select :founded, Investor.year_options, class: '', required: true
+        .col-md-6.col-xs-12.unit.type3
+          label.label = t('user.website')
+          .input
+            = investor.text_field :website, id: 'web', placeholder: 'e.g. www.example.com', required: true
+        .col-md-12.col-xs-12.unit
+          label.label = t('user.business_lines')
+          label.input
+            = investor.select :business_line,  options_for_select(BusinessLine.all.collect {|p| [ p.name, p.id ] }, @business_lines), { include_blank: t('user.select_bussiness_lines') }, id: 'business_lines', required: true, :multiple => true
+        .col-md-12.col-xs-12.unit
+          label.label  = t('user.description')
+          .input
+            = investor.text_area :description, spellcheck: "false", placeholder: t('user.description'), required: true
+            span.tooltip.tooltip-right-top  = t('user.description')
+        .col-md-12.col-xs-12.unit
+          label.label = t('user.mission_vision')
+          .input
+            = investor.text_area :mission, spellcheck: "false", placeholder: t('user.mission_vision'), required: true
+            span.tooltip.tooltip-right-top = t('user.mission_vision')
+
+
+    #tab2.tab-pane.fade.in
+      #investor_teams
+        = investor.simple_fields_for :investor_teams do |team|
+          = render 'investor_team_fields', f: team
+      #links
+        .add-team-action.text-right
+          .btn-group.block-button
+            = link_to_add_association investor, :investor_teams, class: 'btn btn-primary btn-custom btn-add-team-form' do
+              = fa_icon 'user', {class: ''}
+              | &nbsp;
+              = t('user.add')
+            button.btn.btn-primary.btn-custom.btn-delete-team.disabled type="button"
+              = fa_icon 'trash'
+              | &nbsp;
+              = t('user.delete')
+    #tab3.tab-pane.fade.in
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.address_line_1')
+          .input
+            = investor.text_field :address_line_1, id: 'address-line-1', placeholder: t('user.address_line_1'), required: true
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.address_line_2')
+          .input
+            = investor.text_field :address_line_2, id: 'address-line-1', placeholder: t('user.address_line_2'), required: true
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.country')
+          label.input.select
+            i
+            = f.country_select :country, {priority: %w(US CA), prompt: t('user.select_country') }, class: 'country-2', required: true, 'data-country_select' => ''
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.state')
+          label.input.select
+            = render partial: 'subregion_select', locals: {parent_region: f.object.country}
+            i
+        .col-md-6.col-xs-12.unit
+          label.label = t('user.city')
+          label.input.select
+            = render partial: 'subcity_select', locals: {parent_region: f.object.country, parent_city: f.object.region}
+        .col-md-6.col-xs-12.unit.type2
+          label.label = t('user.skype_id')
+          .input
+            = investor.text_field :skype, id: 'web', placeholder: t('user.skype_id'), required: true
+        .col-md-6.col-xs-12.unit.type2
+          label.label = t('user.website')
+          .input
+            = investor.text_field :website_secondary, id: 'web', placeholder: 'e.g. www.example.com', required: true
+    #tab4.tab-pane.fade.in
+      #portfolios
+        = investor.simple_fields_for :portfolios do |p|
+          = render 'portfolio_fields', f: p
+      #links
+        .add-team-action.text-right
+          .btn-group.block-button
+            = link_to_add_association investor, :portfolios, class: 'btn btn-primary btn-custom btn-add-portfolio-form' do
+              = fa_icon 'user', {class: ''}
+              | &nbsp;
+              = t('user.add')
+            button.btn.btn-primary.btn-custom.btn-delete-portfolio.disabled type="button"
+              = fa_icon 'trash'
+              | &nbsp;
+              = t('user.delete')
+    #tab5.tab-pane.fade.in
+      .j-row
+        .col-md-6.col-xs-12.unit
+          label.label Facebook
+          .input
+            = investor.text_field :facebook, id: 'facebook', placeholder: 'https://facebook.com/something', required: true
+        .col-md-6.col-xs-12.unit
+          label.label Twitter
+          .input
+            = investor.text_field :twitter, id: 'twitter', placeholder: 'https://twitter.com/something', required: true
+        .col-md-6.col-xs-12.unit
+          label.label Linkedin
+          .input
+            = investor.text_field :linkedin, id: 'linkedin', placeholder: 'https://linkedin.com/something', required: true
+        .col-md-6.col-xs-12.unit.type3
+          label.label IOS App
+          .input
+            = investor.text_field :ios_app, id: 'ios_app', placeholder: 'https://itunes.apple.com/something', required: true
+        .col-md-6.col-xs-12.unit.type3
+          label.label Android App
+          .input
+            = investor.text_field :adroid_app, id: 'adroid_app', placeholder: 'https://play.google.com/something', required: true
+        .col-md-6.col-xs-12.unit.type3
+          label.label Windows App
+          .input
+            = investor.text_field :windows_app, id: 'window_app', placeholder: 'https://something.com', required: true
+
+javascript:
+  $(document).ready(function() {
+    var checked = false;
+    $(':checkbox').change(function() {
+      $('.team-checkbox-delete').each(function(){
+        if($(this).is(':checked')) {
+          checked = true;
+          return false;
+        }else {
+          checked = false;
+        }
+      });
+      if(checked == true){
+        $('.btn-delete-team').removeClass('disabled');
+      }else{
+        $('.btn-delete-team').addClass('disabled');
+      }
+    });
+
+    $('.btn-delete-team').on('click', function(){
+      $('.team-checkbox-delete').each(function(){
+        if($(this).is(':checked')) {
+          var id = $(this).attr('data-id');
+          $('.btn-delete-team').addClass('disabled');
+          var inputHidden = $('#team-form-'+id).find('input[type="hidden"]');
+          $(inputHidden).attr('value', true);
+          $('.team-'+id).hide();
+        }
+      });
+    });
+
+    $('.btn-add-team-form, .btn-add-portfolio-form').on('click', function(){
+      setTimeout(function(){
+        $('.form-datepicker').datepicker({
+          yearRange: '2006:2050',
+          buttonText: "",
+          changeMonth: true,
+          changeYear: true,
+          maxDate: '+0D',
+          dateFormat: 'yy-mm-dd'});
+      }, 0);
+    })
+
+    var checked2 = false;
+    $(':checkbox').change(function() {
+      $('.portfolio-checkbox-delete').each(function(){
+        if($(this).is(':checked')) {
+          checked2 = true;
+          return false;
+        }else {
+          checked = false;
+        }
+      });
+      if(checked2 == true){
+        $('.btn-delete-portfolio').removeClass('disabled');
+      }else{
+        $('.btn-delete-portfolio').addClass('disabled');
+      }
+    });
+
+    $('.btn-delete-portfolio').on('click', function(){
+      $('.portfolio-checkbox-delete').each(function(){
+        if($(this).is(':checked')) {
+          var id = $(this).attr('data-id');
+          $('.btn-delete-portfolio').addClass('disabled');
+          var inputHidden = $('#portfolio-form-'+id).find('input[type="hidden"]');
+          $(inputHidden).attr('value', true);
+          $('.portfolio-'+id).hide();
+        }
+      });
+    });
+  });

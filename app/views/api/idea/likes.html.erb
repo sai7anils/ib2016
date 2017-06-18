@@ -1,0 +1,29 @@
+<% if @idea.likes.count.zero? %>
+  <%= @idea.like_description %>
+<% else %>
+  <%= @idea.like_description %>
+  <div class="tooltip top" role="tooltip">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+      Some tooltip text!
+    </div>
+  </div>
+<% end  %>
+
+<script type="text/javascript">
+  var des_html = "<%= @idea.like_description %>";
+  $('.likes').html(des_html);
+  var html = "<%= j (render partial: 'user/ideas/tooltip') %>";
+  $(".tooltip-like").tooltip({
+    title: html,
+    html: true
+  }).on('mouseenter', function(){});
+  $('.show-all-idea-like').on('click', function(){
+    var thisIdea = parseInt($(this).attr('data-id'));
+    $.get( '/api/idea/user_idea_liked/' + thisIdea, { } )
+      .done(function( data ) {
+        $('.modal-body').html(data);
+        $('#userLikeModal').modal('show');
+      });
+  });
+</script>

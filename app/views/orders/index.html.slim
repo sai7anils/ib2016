@@ -1,0 +1,31 @@
+h1 Listing orders
+
+table
+  thead
+    tr
+      th Idea
+      th Ip address
+      th First name
+      th Last name
+      th Card type
+      th Card expires on
+      th
+      th
+      th
+
+  tbody
+    - @orders.each do |order|
+      tr
+        td = order.idea_id
+        td = order.ip_address
+        td = order.first_name
+        td = order.last_name
+        td = order.card_type
+        td = order.card_expires_on
+        td = link_to 'Show', order
+        td = link_to 'Edit', edit_order_path(order)
+        td = link_to 'Destroy', order, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Order', new_order_path

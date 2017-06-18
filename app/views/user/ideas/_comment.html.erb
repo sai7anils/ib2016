@@ -1,0 +1,129 @@
+<% comment ||= @comment %>
+<% from_time = Time.now %>
+<div class="col-md-12">
+  <div class="col-sm-1 col-xs-2 pl0 children-comment">
+    <%= image_tag comment.user.avatar, width: 39, height: 37 %>
+  </div>
+  <div class="col-sm-10 mb15 col-xs-10">
+    <div class="comment-main" style="border-bottom:1px solid #ccc;margin-bottom:12px;padding-bottom: 10px;">
+      <p class="c-font-18 mb5">
+        <% if comment.user.entrepreneur? %>
+          <%= link_to entrepreneur_path(comment.user) do %>
+            <span9><%= comment.user.fullname %></span9>
+          <% end %>
+        <% elsif comment.user.investor? %>
+          <%= link_to investor_path(comment.user) do %>
+            <span9><%= comment.user.fullname %></span9>
+          <% end %>
+        <% elsif comment.user.startup? %>
+          <%= link_to startup_path(comment.user) do %>
+            <span9><%= comment.user.fullname %></span9>
+          <% end %>
+        <% end %>
+      </p>
+      <div id="comment-container-<%= comment.id %>" class="comment-container"><%= comment.message %></div>
+      <% if current_user.id == comment.user.id %>
+        <div class="edit-comment-hover"><a onclick="_editComment(<%= comment.id %>);" href="javascript:void(0);" data-toggle="tooltip" title="<%= t('idea.edit') %>"><i class="fa fa-pencil"></i></a></div>
+        <div id="comment-id-<%= comment.id %>" class="edit-comment-form">
+          <%= form_tag '#', remote: true do %>
+            <%= text_area_tag 'message', comment.message, class: 'col-sm-12 form-control edit-comment-area', placeholder: t('idea.normal.write_a_comment'), id: "edit_comment_#{comment.id}", "data-id" => "#{comment.id}" %>
+          <% end %>
+          <div class="clearfix"></div>
+          <b><%= t('idea.normal.press_esc') %> <i><%= t('idea.normal.cancel') %></i>.</b>
+        </div>
+      <% end %>
+      <p>
+        <%= render partial: 'api/idea/like_comment', locals: {cmt: comment} %>
+        <span style="color:#78C2E9;cursor:pointer;" onclick="$('#form_reply_<%= comment.id %>').toggleClass('d_none')"><%= t('idea.normal.reply') %> </span>
+        <%= render partial: 'api/idea/more_like_comment', locals: {cmt: comment} %>
+        <time class="timeago" datetime="<%= comment.created_at.to_time.iso8601 %>"><%= comment.created_at %></time>
+      </p>
+      <div class="clearfix"></div>
+    </div>
+    <div class="replied-container" id="reply_<%= comment.id %>">
+      <% comment.comments.order_asc.each do |reply| %>
+      <div class="col-md-12 mt20 plr0 " style="border-bottom:1px solid #ccc;">
+        <div class="col-sm-1 col-xs-2 pl0">
+          <%= image_tag reply.user.avatar, width: 39, height: 37 %>
+        </div>
+        <div class="col-sm-11 col-xs-10 pr0">
+          <div class="form-group">
+
+          <div id="comment-container-<%= reply.id %>" class="comment-container"><%= reply.message %></div>
+            <% if current_user.id == reply.user.id %>
+              <div class="edit-reply-hover"><a onclick="_editComment(<%= reply.id %>);" href="javascript:void(0);" data-toggle="tooltip" title="<%= t('idea.edit') %>"><i class="fa fa-pencil"></i></a></div>
+              <div id="comment-id-<%= reply.id %>" class="edit-comment-form">
+                <%= form_tag '#', remote: true do %>
+                  <%= text_area_tag 'message', reply.message, class: 'col-sm-12 form-control edit-comment-area', placeholder: t('idea.normal.write_a_comment'), id: "edit_comment_#{reply.id}", "data-id" => "#{reply.id}" %>
+                <% end %>
+                <div class="clearfix"></div>
+                <b><%= t('idea.normal.press_esc') %> <i><%= t('idea.normal.cancel') %></i>.</b>
+              </div>
+            <% end %>
+            <p>
+              <span style="color:#78C2E9;cursor:pointer;" onclick="$('#form_reply_<%= comment.id %>').toggleClass('d_none')"><%= t('idea.normal.reply') %> </span>
+              <span><%= comment.created_at.strftime('%d-%m-%Y') %>
+              </span>
+            </p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="col-md-12 mt20 plr0 d_none" id="form_reply_<%= comment.id %>">
+      <div class="col-sm-11 col-xs-10 pr0 reply-comment-container">
+        <div class="form-group">
+          <%= form_tag '#', remote: true do %>
+          <%= text_area_tag 'message', '', class: 'col-sm-12 form-control reply-comment-area', placeholder: t('idea.normal.write_a_comment'), id: "message_#{comment.id}", "data-id" => "#{comment.id}" %>
+          <% link_to t('idea.normal.reply'), '#', class: '', onclick: "replyCommentIdea(#{comment.id})" %>
+          <% end %>
+          <div class="clearfix"></div>
+          <b><%= t('idea.normal.press_esc') %> <i><%= t('idea.normal.cancel') %></i>.</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.load-more').css({"display":"none"});
+  $('[data-toggle="tooltip"]').tooltip();
+  $('.edit-comment-area').keydown(function(e){
+    var edit_cmt_id = $(this).attr('data-id');
+    if (e.keyCode == 13  && !e.shiftKey){
+      e.preventDefault();
+      var comment = $(this).val();
+      _updateComment(edit_cmt_id, comment);
+      $('#comment-container-'+edit_cmt_id).text(comment);
+      $('#comment-id-'+edit_cmt_id).toggle();
+      $('#comment-container-'+edit_cmt_id).toggle();
+      return false;
+    }else if (e.keyCode == 27) {
+      _editComment(edit_cmt_id);
+    }
+  });
+
+  $('.reply-comment-area').keydown(function(e){
+    var cmt_id = $(this).attr('data-id');
+    if (e.keyCode == 13  && !e.shiftKey){
+      countEnter++;
+      if(countEnter == 1){
+        replyCommentIdea(cmt_id);
+      }
+      return false;
+    }else if (e.keyCode == 27) {
+      $('#form_reply_'+cmt_id).toggleClass('d_none');
+    }
+  });
+  jQuery(document).ready(function() {
+    $("time.timeago").timeago();
+  });
+
+  var commenter = <%= comment.user.id %>
+  if(uid != commenter ){
+    $('#comment-container-<%= comment.id %>').next('.edit-comment-hover').remove();
+    $('#comment-id-<%= comment.id %>').remove();
+  }
+</script>

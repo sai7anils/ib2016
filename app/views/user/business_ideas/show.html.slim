@@ -1,0 +1,311 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 = t('idea.business.details.business_idea_details')
+        - if @idea.user == current_user
+          span.dropdown.options
+            a.dropdown-toggle data-toggle="dropdown" area-expanded="false" href="#"
+              i.lnr.lnr-chevron-down
+            ul.dropdown-menu
+              li = link_to t('idea.edit'), edit_user_business_idea_path(@idea)
+              li = link_to t('idea.delete'), user_business_idea_path(@idea), method: :delete, data: { confirm: "Are you sure?" }
+        ul.group-view
+          li
+            = image_tag 'icon-eyes.png'
+            h6.title = t('idea.business.details.views')
+            h6 = @idea.try(:views)
+          li
+            = image_tag 'icon-intrested.png', :class => 'icon-intrested', 'onclick' => "intrested(event, #{@idea.id});"
+            h6.title.title2 = t('idea.business.details.intrested')
+            = render 'intrested'
+      .business-idea-detail
+        .business-content
+          .info-user.container-fluid
+            .img-info.container-fluid
+              .image-user
+                = link_to get_profile(@idea.user), target: '_blank' do
+                  button = t('idea.business.details.view_profile')
+                = image_tag @idea.user.avatar
+              .user-info
+                = link_to get_profile(@idea.user), target: '_blank' do
+                  h5 = @idea.user.fullname
+                h6 = @idea.user.entrepreneur.pro_type_name
+                h6
+                  = image_tag 'icon-location.png'
+                  = @idea.user.country_name
+                h6.date = @idea.created_at.strftime('%m-%d-%y %H:%M:%S %p')
+            .content-info
+              h5 = @idea.business_idea.business_line_name
+              h6 = @idea.try(:title).to_s
+              ul.group-info
+                li
+                  span.title = t('idea.business.details.capital')
+                  span = @idea.business_idea.investment_scale.nil? ? "$0" : "$#{@idea.business_idea.investment_scale.try(:fund_already).to_i}"
+                li
+                  span.title = t('idea.business.details.seeking')
+                  span = @idea.business_idea.investment_scale.nil? ? "$0" : "$#{@idea.business_idea.investment_scale.try(:fund_you_seeking).to_i}"
+                  = t('idea.business.details.for')
+                  span = @idea.business_idea.investment_scale.nil? ? "0% #{t('idea.business.details.stake')}" : "#{@idea.business_idea.investment_scale.try(:offering_business).to_i}% #{t('idea.business.details.stake')}"
+              - if @idea.business_idea.try(:ip_patent).to_i == 100
+                = image_tag 'icon-logo.jpg', :class => 'icon-logo'
+              h4.ip-number = "#{t('idea.business.details.ip_number')} #{@idea.business_idea.try(:register_number).to_i}"
+          .text-content.container-fluid
+            .problem
+              h6 = t('idea.business.problem_statement')
+              p = @idea.business_idea.try(:problem_statement).to_s
+              .tagline
+                h6 = t('idea.business.type_of_bussiness_idea')
+                p = @idea_type
+
+            .solution
+              h6 = t('idea.business.solution')
+              p = @idea.business_idea.try(:solution).to_s
+              .tagline
+                h6 = t('idea.business.idea_tagline')
+                p = @idea.business_idea.tagline
+
+          .current-idea-team.container-fluid
+            .current-idea
+              h5 = t('idea.business.current_idea_stage')
+              h6 = @idea.business_idea.idea_stage_name
+            .team
+              h5
+                = t('idea.business.details.team_strength')
+                p = @idea.business_idea.team_cappabilitie.nil? ? 0 : @idea.business_idea.team_cappabilitie.business_teams.count
+              = render partial: "team_list"
+          .stage-analysis.container-fluid
+            .title-stage
+              = image_tag 'icon-stage.jpg'
+              h6 = t('idea.business.early_stage_analysis_tab')
+            .content-stage
+              h6
+                span.title = t('idea.business.details.motivation_vision')
+                span = @idea.business_idea.motivation_vision_name
+              ul
+                li
+                  h6
+                    span.title = t('idea.business.details.industry_exp')
+                    span = @idea.business_idea.year_exp_name
+                li
+                  h6
+                    span.title = t('idea.business.details.business_model')
+                    span = @idea.business_idea.business_model_name
+              h6
+                span.title = t('idea.business.details.startup_exp')
+                span = @idea.business_idea.startup_business_name
+          .text-content.business-step.container-fluid
+            .problem
+              h6 = t('idea.business.details.business_model_overview')
+              p = @idea.business_idea.try(:des_business_model).to_s
+              .caret
+            .solution
+              h6 = t('idea.business.details.steps_4_this_idea_exc')
+              p = @idea.business_idea.try(:idea_execution).to_s
+          .stage-analysis.business-potential.container-fluid
+            .title-stage
+              h5 = t('idea.business.details.forecast_financial_projection')
+              = image_tag 'icon-business.jpg'
+              h6 = t('idea.business.business_potencial')
+              .caret
+            .content-stage
+              ul.business
+                li
+                  h6.title = t('idea.business.details.projection_type')
+                  h6
+                    p = @idea.business_idea.business_potencial.nil? ? nil : @idea.business_idea.business_potencial.projection_type_name
+                li
+                  h6.title = t('idea.business.details.projected_term')
+                  h6 = @idea.business_idea.business_potencial.nil? ? nil? : @idea.business_idea.business_potencial.term_number_name.html_safe
+                li
+                  h6.title = t('idea.business.details.revenue_stream')
+                  h6 = @idea.business_idea.business_potencial.nil? ? nil? : @idea.business_idea.business_potencial.revenue_type_name.html_safe
+
+                li
+                  = image_tag 'icon-chart.jpg'
+                  /! h6 View Sales Numbers
+                  = render partial: "show_all"
+          .stage-analysis.business-potential.container-fluid
+            .title-stage
+              h5.title-competetar = t('idea.business.competitors_scenery_tab')
+              = image_tag 'icon-competator.jpg'
+              .caret
+            .content-stage.content-competetar
+              ul.business
+                li.company
+                  .company-name
+                    h6 = @idea.business_idea.competitor.competitor_teams.first.try(:name) if @idea.business_idea.competitor.present?
+                  - if @idea.business_idea.competitor.present?
+                    - if @idea.business_idea.competitor.competitor_teams.count > 0
+                      h6 = "#{t('idea.business.details.revenue')} #{@idea.business_idea.competitor.competitor_teams.first.try(:revenue)}"
+                      h6.link = link_to "http://#{@idea.business_idea.competitor.competitor_teams.first.try(:website)}", target: '_blank', class: 'business_idea_link' do
+                        = truncate(@idea.business_idea.competitor.competitor_teams.first.try(:website).to_s, length: 20)
+                    = render "company_list"
+                li.howitwork
+                  h6.title = t('idea.business.details.how_it_work')
+                  p = @idea.business_idea.competitor.nil? ? nil : @idea.business_idea.competitor.try(:about).to_s
+                  h6.title  = t('idea.business.details.analysis_on_competators_business')
+                  h6.graph = @idea.business_idea.competitor.nil? ? nil : @idea.business_idea.competitor.image_name
+          .stage-analysis.business-potential.market-valuation.container-fluid
+            .title-stage
+              h5.title-market = t('idea.business.details.market_valuation')
+              = image_tag 'icon-market.jpg', :class => 'icon-market'
+            .content-stage.content-market
+              ul.container-fluid
+                li.small
+                  h6.title = t('idea.business.details.market_trend')
+                  h6  = @idea.business_idea.market_analysis.nil? ? nil : @idea.business_idea.market_analysis.market_trend_name
+                li.large
+                  h6.title = t('idea.business.details.market_channels')
+                  h6 = @idea.business_idea.market_analysis.nil? ? nil : @idea.business_idea.market_analysis.market_channels_name
+                li.small
+                  h6.title = t('idea.business.details.market_size')
+                  h6.price = @idea.business_idea.market_analysis.nil? ? nil : @idea.business_idea.market_analysis.market_size_name
+          ul.question.container-fluid
+            li.container-fluid
+              h6 = t('idea.business.details.details_ques_1')
+              h6.answer = @idea.business_idea.market_analysis.nil? ? t('idea.business.details.no') : @idea.business_idea.market_analysis.is_new_name
+            li.container-fluid
+              h6 = t('idea.business.details.details_ques_2')
+              h6.answer = @idea.business_idea.market_analysis.nil? ? t('idea.business.details.no') : @idea.business_idea.market_analysis.have_major_name
+          .question-2
+            h6 = t('idea.business.details.details_ques_3')
+            p = @idea.business_idea.market_analysis.nil? ? nil : @idea.business_idea.market_analysis.try(:market_analyses_des).to_s
+          .stage-analysis.business-potential.customer-analysis.container-fluid
+            .title-stage
+              h5.title-competetar = t('idea.business.customer_analysis_tab')
+              = image_tag 'icon-customer.jpg'
+            .content-stage.content-market.content-customer
+              ul.container-fluid
+                li.large
+                  h6.title = t('idea.business.details.3_customer')
+                  h6 = @idea.business_idea.customer_analysis.nil? ? nil : @idea.business_idea.customer_analysis.big_customer_name
+                li.small
+                  h6.title = t('idea.business.details.target_customer')
+                  h6.price = @idea.business_idea.customer_analysis.nil? ? nil : @idea.business_idea.customer_analysis.regions_name
+                li.small
+                  h6.title = t('idea.business.details.age_target')
+                  h6.price = @idea.business_idea.customer_analysis.nil? ? nil : @idea.business_idea.customer_analysis.age_range
+          .question-2
+            h6 = t('idea.business.details.details_ques_4')
+            p = @idea.business_idea.customer_analysis.nil? ? nil : @idea.business_idea.customer_analysis.try(:steps)
+          .question-2
+            h6 = t('idea.business.details.details_ques_5')
+            p = @idea.business_idea.customer_analysis.nil? ? nil : @idea.business_idea.customer_analysis.try(:idea_solve)
+          .question-2
+            h6 = t('idea.business.details.details_ques_6')
+            p = @idea.business_idea.customer_analysis.nil? ? nil : @idea.business_idea.customer_analysis.try(:about)
+
+          .stage-analysis.business-potential.customer-analysis.exit-strategy.container-fluid
+            .title-stage
+              h5.title-competetar = t('idea.business.exit_strategy_tab')
+              = image_tag 'icon-exit.png'
+              .caret
+            .content-stage.content-market.content-customer.content-exit
+              h6.title-text
+                | IPO
+                span = t('idea.business.details.init_public_offering')
+              p.content-text = @idea.business_idea.exit_strategie.nil? ? nil : @idea.business_idea.exit_strategie.try(:business_exit_strategy)
+
+      ul.your-idea
+        .validate-score.container-fluid
+          h5 Idea Burns
+          h6  = t('idea.business.details.validation_score')
+          .percentage-circle
+            .percentage-circle-current
+            .percentage-circle-current-left
+            .txt-percentage
+              label = @idea.business_idea.validation_score.first[:number]
+              | %
+        .span4.proj-div data-target="#GSCCModal" data-toggle="modal" class="button btn-request"
+          = t('idea.business.details.request_for_more_details')
+          i.fa.fa-long-arrow-right
+        = render "request_modal"
+
+        .favorite.container-fluid
+          - if @favorite
+            .favorited
+              = image_tag 'icon-favorited.png', 'onclick' => "favorite(event, #{@idea.id});"
+            .no-favorite style='display: none; opacity: 0'
+              = image_tag 'icon-favorite.png', 'onclick' => "favorite(event, #{@idea.id});"
+          - else
+            .no-favorite
+              = image_tag 'icon-favorite.png', 'onclick' => "favorite(event, #{@idea.id});"
+            .favorited style='display: none; opacity: 0'
+              = image_tag 'icon-favorited.png', 'onclick' => "favorite(event, #{@idea.id});"
+          h6 = t('idea.business.details.favo_this_deal')
+        .favorite.container-fluid
+          - if @deal
+            button.icon-thumb
+              i class="fa fa-thumbs-up fa-2x"
+              = t('idea.business.details.deal')
+          - else
+            button.btn-godeal onclick="deal(event, #{@idea.id});"
+              = image_tag 'icon-deal.jpg'
+              = t('idea.business.details.go_deal')
+            button.icon-thumb style='display: none; opacity: 0'
+              i class="fa fa-thumbs-up fa-2x"
+              = t('idea.business.details.deal')
+        ul.investment
+          li.header.container-fluid
+            = image_tag 'icon-investment.jpg'
+            h6  = t('idea.business.investment_scale_tab')
+          li
+            h6 = t('idea.business.details.capital_required')
+            h6.price = @idea.business_idea.investment_scale.nil? ? $0 : number_to_currency(@idea.business_idea.investment_scale.try(:total_capital).to_i)
+          li
+            h6 = t('idea.business.details.fund_already_have')
+            h6.price = @idea.business_idea.investment_scale.nil? ? $0 : number_to_currency(@idea.business_idea.investment_scale.try(:fund_already).to_i)
+          li
+            h6 = t('idea.business.details.fund_i_invest')
+            h6.price = @idea.business_idea.investment_scale.nil? ? $0 : number_to_currency(@idea.business_idea.investment_scale.try(:fund_like_to_invest).to_i)
+          li
+            h6 = t('idea.business.details.seeking_fund')
+            h6.price = @idea.business_idea.investment_scale.nil? ? $0 : number_to_currency(@idea.business_idea.investment_scale.try(:fund_you_seeking).to_i)
+          li
+            h6 = t('idea.business.details.offering_business_stake')
+            h6.price = @idea.business_idea.investment_scale.nil? ? "0% #{t('idea.business.details.stake')}" : "#{@idea.business_idea.investment_scale.try(:offering_business).to_i}% #{t('idea.business.details.stake')}"
+        ul.investment.pitch-burn
+          li.header.container-fluid
+            = image_tag 'icon-pitch.jpg', :class => 'icon-pitch'
+            h6.title-pitch-burn = t('idea.business.pitch_burns_tab')
+            h6.sub-title = t('idea.business.details.documents')
+          li
+            h6.title-file = t('idea.business.details.documents_file')
+            - if @idea.business_idea.pitch_burn.present?
+              - if @idea.business_idea.pitch_burn.your_own_name.present? && @idea.business_idea.pitch_burn.your_own_name.first[:extn] == '.pdf'
+                h6.file
+                  = image_tag 'icon-pdf.jpg'
+                  = link_to @idea.business_idea.pitch_burn.your_own.url, target: '_blank' do
+                    span = @idea.business_idea.pitch_burn.your_own_name.first[:name]
+
+              - (@idea.business_idea.pitch_burn.attachments || []).each do |at|
+                - unless at.file_name.nil?
+                  - if ['.pdf'].include? at.file_name.first[:extn].to_s
+                    h6.file
+                      = image_tag 'icon-pdf.jpg'
+                      = link_to at.file_url, target: '_blank' do
+                        span = at.file_name.first[:name]
+          li
+            - if @idea.business_idea.pitch_burn.present?
+              - if @idea.business_idea.pitch_burn.your_own_name.present?
+                - if ['.ppt', '.pptx'].include? @idea.business_idea.pitch_burn.your_own_name.first[:extn]
+                  h6.file
+                    = image_tag 'icon-ppt.jpg'
+                    = link_to @idea.business_idea.pitch_burn.your_own.url, target: '_blank' do
+                      span = @idea.business_idea.pitch_burn.your_own_name.first[:name]
+
+              - (@idea.business_idea.pitch_burn.attachments || []).each do |at|
+                - unless at.file_name.nil?
+                  - if ['.ppt', '.pptx'].include? at.file_name.first[:extn].to_s
+                    h6.file
+                      = image_tag 'icon-ppt.jpg'
+                      = link_to at.file_url, target: '_blank' do
+                        span = at.file_name.first[:name]
+          li
+            h6.title-file Videos
+            .video.container-fluid
+              - if @idea.business_idea.pitch_burn.present? && @idea.business_idea.pitch_burn.video_url.present?
+                = link_to @idea.business_idea.pitch_burn.video_url.first[:url], target: "_blank" do
+                  = image_tag @idea.business_idea.pitch_burn.video_url.first[:thumb]
+  .clearfix

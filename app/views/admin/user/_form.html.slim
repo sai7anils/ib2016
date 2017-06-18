@@ -1,0 +1,25 @@
+= form_for(@user, url: admin_user_index_path, method: 'POST') do |f|
+  - if !@user.errors.full_messages.count.zero?
+    .alert.alert-danger style="margin: 20px;"
+      ul.list-message-error
+        - @user.errors.full_messages.each do |error_message|
+            li.alert-alert-error.alert-danger
+              = error_message
+  .col-sm-6
+    .form-group
+      = select("user", "user_type", User.user_types.keys, { include_blank: '- Select User Type -' }, class: 'form-control dd', required: true, 'data-user_type_select' => '')
+  .col-sm-6
+    .form-group
+      = f.text_field :username, id: 'icon-email', class: 'form-control', placeholder: 'User Name', required: true
+  .col-sm-6
+    .form-group
+      = f.email_field :email, id: 'icon-email', class: 'form-control', placeholder: 'Email', required: true
+  .col-sm-6
+    .form-group
+      = f.password_field :password, class: 'form-control', id: 'icon-password', placeholder: 'Password', autocomplete: "off", required: true
+  .col-sm-6
+    .form-group
+      = f.password_field :password_confirmation, class: 'form-control c-square', id: 'icon-password', placeholder: 'Confirm Password', autocomplete: "off", required: true
+  .col-sm-12
+    .form-group
+      button.btn.btn-primary type="submit" Submit

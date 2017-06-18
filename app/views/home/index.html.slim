@@ -1,0 +1,214 @@
+= render "applications/sections"
+.c-layout-page
+  /! Slider
+  section.c-layout-revo-slider.c-layout-revo-slider-8s style="max-height: 100%; width: 100%; margin-top: 0px"
+    .tp-banner-container.tp-fullscreen.tp-fullscreen-mobile
+      .tp-banner.test
+        ul
+          li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-style="dark"
+            = image_tag asset_path('base/img/MainSlide-BG.jpg'), "data-bgposition" => "center center", "data-bgfit" => "cover", "data-bgrepeat" => "no-repeat", 'style' => "width: 100%; max-height: 630px"
+            .caption.customin.customout data-x="center" data-y="center" data-hoffset="" data-voffset="-30" data-speed="500" data-start="1000" data-customin="x:0;y:0;z:0;rotationX:0.5;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="600"
+              h3.c-main-title.c-font-79.c-font-center.c-font-uppercase.c-font-white.c-block
+                = t('home.first_main_heading')
+                b = t('home.last_main_heading')
+              p.banner-p
+                span = t('home.first_main_small_text')
+                = t('home.middle_main_small_text')
+                span = t('home.last_main_small_text')
+              div align="center"
+                / = link_to "How It Works", "http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1", class: "video how-it-works", title: 'How It Works'
+                = link_to t('home.how_it_work'), home_howitwork_path, class: 'how-it-works'
+              .caption.randomrotateou data-x="center" data-y="center" data-hoffset="" data-voffset="200" data-speed="300" data-start="1500" data-easing="Back.easeOut"
+
+  /! Action Bar
+  .c-action-bar.c-action
+    .container
+      .col-md-12
+        .col-md-3.col-xs-3
+          center
+            = image_tag asset_path('base/img/Home-Icons-Ideas.png'), class: 'img-responsive'
+            .clear
+            span.c-counter.c-span.text-center.idea-text data-counter="counterup" = number_with_delimiter @ideas_count
+            span.idea.idea-text = t('home.ideas')
+        .col-md-3.col-xs-3
+          center
+            = image_tag asset_path('base/img/Home-Icons-Startups.png'), class: 'img-responsive'
+            .clear
+            span.c-counter.c-span.text-center.idea-text data-counter="counterup" = number_with_delimiter @startups_count
+            span.idea.idea-text = t('home.startups')
+        .col-md-3.col-xs-3
+          center
+            = image_tag asset_path('base/img/Home-Icons-Investers.png'), class: 'img-responsive'
+            .clear
+            span.c-counter.c-span.text-center.idea-text data-counter="counterup" style="color: #FFD101; font-weight: 600;" = number_with_delimiter @investors_count
+            span.idea.idea-text = t('home.investors')
+        .col-md-3.col-xs-3
+          center
+            = image_tag asset_path('base/img/Home-Icons-Deals.png'), class: 'img-responsive'
+            .clear
+            span.c-counter.c-span.text-center.idea-text data-counter="counterup" style="color: #FFD101; font-weight: 600;" = number_with_delimiter @deals_count
+            span.idea.idea-text = t('home.deals')
+
+  /! Community Section
+  .c-content-box.c-size-md.c-bg-light-grey
+    .container
+      .row
+        .col-md-6.col-sm-6
+          .c-content-step-1.c-opt-1
+            .c-icon.pb0
+              span
+                .wow.fadeInLeft
+                  = image_tag asset_path('base/img/Shareyourideas-icon.png'), class: 'img-responsive share_ideas'
+            .c-title.c-font-40.c-font-uppercase
+              = t('home.section_2.first_heading')
+              span = t('home.section_2.first_heading_bold')
+
+            .c-description.c-font-20
+              = t('home.section_2.first_small_text')
+        .col-md-6.col-sm-6.animate.fadeInLeft
+          .c-content-step-1.c-opt-1
+            .c-icon.pb0
+              span
+                .wow.fadeInRight
+                  = image_tag asset_path('base/img/FindInnovations-icons.png'), class: 'img-responsive share_ideas'
+            .c-title.c-font-40.c-font-uppercase
+              span = t('home.section_2.second_heading_bold')
+              = t('home.section_2.second_heading')
+
+            .c-description.c-font-17
+              = t('home.section_2.second_small_text')
+  /! Overview
+  .c-content-box.c-size-md.c-bg-light-grey.pt35
+    .container
+      .c-content-title-1
+        h3.c-center
+          b ideaburns
+          = t('home.section_3.overview')
+      .row
+        .c-content-panel
+          .c-body
+            .c-content-tab-1
+              .row
+                .col-md-2.col-sm-12.col-xs-12
+                  ul.nav.nav-tabs.tabs-left.c-font-uppercase.c-font-bold
+                    li.active#tbl1
+                      = link_to "#tab_16_1" ,"data-toggle" => "tab" do
+                        = image_tag asset_path('base/img/content/backgrounds/ideaburn-iconsStaratups.png'), style: "visibility: hidden;"
+                    li#tbl2
+                      = link_to "#tab_16_2", "data-toggle" => "tab" do
+                        = image_tag asset_path('base/img/content/backgrounds/ideaburn-iconsStaratups.png'), style: "visibility: hidden;"
+                    li#tbl3
+                      = link_to "#tab_16_3", "data-toggle" => "tab" do
+                        = image_tag asset_path('base/img/content/backgrounds/ideaburn-iconsStaratups.png'), style: "visibility: hidden;"
+                .col-md-10.col-sm-12.col-xs-12
+                  .tab-content.c-padding-sm
+                    .tab-pane.active#tab_16_1
+                      h1.c-font-22.startup = t('home.section_3.who_we_are')
+                      p style="text-align:justify"
+                        = t('home.section_3.who_we_are_content')
+                        |
+                        ul.list-unstyled.luanch-list
+                          li
+                            = fa_icon 'rocket'
+                            = t('home.section_3.who_we_are_ans_1')
+                          li
+                            = fa_icon 'hand-o-right'
+                            = t('home.section_3.who_we_are_ans_2')
+                          li
+                            = fa_icon 'star'
+                            = t('home.section_3.who_we_are_ans_3')
+                          li
+                            = fa_icon 'smile-o'
+                            = t('home.section_3.who_we_are_ans_4')
+                          li
+                            = fa_icon 'globe'
+                            = t('home.section_3.who_we_are_ans_5')
+                    .tab-pane.pane-text.fade#tab_16_2
+                      h1.c-font-22.startup = t('home.section_3.what_we_do')
+                      p
+                        ul.list-about
+                          li = t('home.section_3.what_we_do_ans_1')
+                          li = t('home.section_3.what_we_do_ans_2')
+                          li = t('home.section_3.what_we_do_ans_3')
+                          li = t('home.section_3.what_we_do_ans_4')
+                          li = t('home.section_3.what_we_do_ans_5')
+                          li = t('home.section_3.what_we_do_ans_6')
+                    .tab-pane.pane-text#tab_16_3
+                      h1.c-font-22.startup = t('home.section_3.join_ideaburns')
+                      p
+                        ul.ist-about
+                          li = t('home.section_3.join_ideaburns_ans_1')
+                          li = t('home.section_3.join_ideaburns_ans_2')
+                          li = t('home.section_3.join_ideaburns_ans_3')
+                          li = t('home.section_3.join_ideaburns_ans_4')
+
+  /! Connect Section
+  .c-content-box.c-size-md.c-bg-grey-color
+    .container
+      .c-content-blog-post-card-1-slider
+        h3.c-center.mb20 style="text-transform: uppercase;"  = t('home.section_4.heading')
+      .row
+        .col-md-12
+          center
+            = image_tag asset_path('base/img/Flowchart-icons-grey.png'), class: 'img-responsive', width: '900px'
+
+
+  /! BUSSINESS LINES
+  .c-content-box.c-size-md.c-overflow-hide.c-bg-light-grey
+    .container
+      .c-content-title-1
+        h3.c-center style="color: #333; text-transform: uppercase;"  = t('home.section_5.heading')
+      .row
+        .col-md-12
+          #sliders
+            = link_to "#", class: 'buttons prev' do
+              = fa_icon 'chevron-left'
+            .viewport
+              ul.overview
+                .c-content-tab-1.c-theme.c-margin-t-30
+                  .nav-justified
+                    ul.nav.nav-tabs.nav-justified.mb30 style="border-bottom: 2px solid #ccc;"
+                      - Category.all.each_with_index do |category, index|
+                        li class=("active" if index.zero?)
+                          center
+                            = link_to "#tab_category_#{category.id}", "data-toggle" => "tab" do
+                              = image_tag asset_path(category.image)
+                          = link_to "#tab_category_#{category.id}", "data-toggle" => "tab" do
+                            = category.name
+            = link_to "#", class: 'buttons next' do
+              = fa_icon 'chevron-right'
+
+          .tab-content
+            - Category.all.each_with_index do |category, index|
+              .tab-pane.tab-cont id="tab_category_#{category.id}" class=("active" if index.zero?)
+                .col-md-7
+                  h1.c-font-20 = category.name
+                  - if @ideas[index]
+                    h2 = @ideas[index].title
+                    p = @ideas[index].description.truncate(300)
+                    p
+                      span = link_to "Read More >", user_idea_path(@ideas[index])
+                    .col-md-4.mt10 align="center"
+                      = image_tag asset_path('base/img/Home-Icons-Ideas-small.png'), class: 'bg-icons'
+                      .clearfix
+                      span.c-counter data-counter="counterup" = category.ideas.count
+                      span.c-font-12 &nbsp;ideas
+
+                    / .col-md-4.mt10 align="center"
+                    /   = image_tag asset_path('base/img/Home-Icons-Investers-small.png'), class: 'bg-icons'
+                    /   .clearfix
+                    /   span.c-counter data-counter="counterup" 6,669
+                    /   span.c-font-12 &nbsp;investers
+
+                    / .col-md-4.mt10 align="center"
+                    /   = image_tag asset_path('base/img/Home-Icons-Deals-small.png'), class: 'bg-icons'
+                    /   .clearfix
+                    /   span.c-counter data-counter="counterup" 6,669
+                    /   span.c-font-12 &nbsp;deals
+                  - else
+                    .tab-pane.tab-cont id="tab_category_#{category.id}" class=("active" if index.zero?)
+                      = t('home.section_5.updating')
+
+                .col-md-5
+                  - if @ideas[index]
+                    = image_tag asset_path(@ideas[index].attachment), class: 'img-responsive'

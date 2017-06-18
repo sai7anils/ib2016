@@ -1,0 +1,37 @@
+- (@events || []).each do |event|
+  .event-element.container-fluid class=(event.finished? ? '' : 'opacity' )
+    .element-left
+      i.fa.fa-calendar
+      h4.date = event.try(:event_from).strftime("%b %d %Y")
+      h6
+        | Posted by &nbsp;
+        = event.user.fullname
+    .element-right
+      /! h6 March 1 @ 10:00 am - April 29 @ 5:00 pm
+      h6
+        = event.event_from.try(:strftime, "%b %d")
+        | &nbsp;@&nbsp;
+        = event.try(:event_time)
+        | &nbsp;-&nbsp;
+        = event.event_to.try(:strftime, "%b %d")
+
+      h6
+        = event.try(:address_line_1)
+        | ,&nbsp;
+        = event.try(:address_line_2)
+        | ,&nbsp;
+        = event.try(:city)
+        | ,&nbsp;
+        = event.region_name
+        | ,&nbsp;
+        = event.country_name
+        | &nbsp;-&nbsp;
+        = event.try(:zipcode)
+      = link_to user_event_path(event) do
+        h4 = event.try(:title)
+      .text-left
+        .line
+        = link_to user_event_path(event) do
+          h6 Find out more
+      .text-right
+        h6 = event.event_cost_content

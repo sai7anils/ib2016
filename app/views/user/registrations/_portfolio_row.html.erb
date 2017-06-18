@@ -1,0 +1,27 @@
+<div class="row row-table <%= f.object.id.nil? ? 'hide' : '' %>">
+  <div class="col-sm-1 row-child">
+    <input data-id="<%= f.object.id %>" type="checkbox" class="portfolio-checkbox-delete">
+  </div>
+  <div class="col-sm-4 row-child">
+    <%= f.object.name %>
+  </div>
+  <div class="col-sm-3 row-child">
+    <%= number_to_currency(f.object.amount.to_i, :unit => "$ ") %>
+  </div>
+  <div class="col-sm-3 row-child">
+    <%= f.object.type_name %>
+  </div>
+  <div class="col-sm-1 row-child">
+    <a class="link-show-child-form-edit" href="#" onclick="showChildFormEdit1(<%= f.object.id %>, event)">
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    </a>
+  </div>
+</div>
+
+<%= javascript_tag defer: 'defer' do -%>
+  function showChildFormEdit1(id, event) {
+    event.preventDefault();
+    $('#portfolio-form-'+id).toggleClass('hide');
+    return false;
+  }
+<% end -%>

@@ -1,0 +1,12 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 Messages (#{@messages.count})
+        // .title-idea
+        //   h4 Business Idea Title
+      .business-idea-detail
+        .business-content.message-content
+          = render partial:'show_messages'
+  .clearfix
+

@@ -1,0 +1,48 @@
+<% if @message.count.zero? %>
+  <li>
+    <div class="info col-sm-12 text-center">
+      <p><%= t('users_header.messages_empty', :count => 0) %></p>
+    </div>
+  </li>
+<% else %>
+  <% @message.each do |message| %>
+    <li>
+      <%= link_to "#{message_user_ideas_path}#message_#{message.id}" do %>
+        <%= image_tag message.sender.avatar %>
+        <div class="info">
+          <h5>
+            <span>
+              <% if message.receiver_id == current_user.id %>
+                  <%= message.sender.fullname %>
+
+              <% else %>
+
+                  <%= message.receiver.fullname %>
+
+              <% end %>
+            </span>
+            <span class="date"><%= message.created_at.strftime('%B %d') %></span>
+          </h5>
+          <% if message.sender.id != current_user.id %>
+            <h6><%= message.idea.try(:title) %></h6>
+          <% else %>
+            <h6>[<%= t('users_header.reply') %>] <%= message.idea.try(:title) %></h6>
+          <% end %>
+          <p><%= truncate(message.try(:detail), lenght: 20) %></p>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+  <li style="width: 100%!important; text-align: center; padding: 5px;">
+    <%= link_to message_user_ideas_path, "style" => "color: #888" do %>
+      <button class="view-all"><%= t('users_header.view_all_mess') %></button>
+    <% end %>
+  </li>
+  <%= javascript_tag defer: 'defer' do -%>
+    <% if @message.first.receiver_id == current_user.id && !@message.first.seen %>
+      $('.msg-icon').find('.badge11').css({'display' : 'block'});
+    <% else %>
+      $('.msg-icon').find('.badge11').css({'display' : 'none'});
+    <% end %>
+  <% end -%>
+<% end %>

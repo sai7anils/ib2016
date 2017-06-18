@@ -1,0 +1,57 @@
+span.right-arrow {
+  position: absolute;
+  right: 20px;
+}
+
+li#tbl1:hover {
+  background: hsla(0, 0%, 0%, 0) asset_url("SideNav-Icons-1-hover.png") no-repeat scroll 25px 9px;
+  display: block;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+ul.has-children {
+  padding-left: 45px;
+}
+
+ul.has-children li {
+  display: none;
+  width: auto;
+  height: 30px;
+}
+
+ul.has-children > li > a:hover {
+  color: #FED000;
+}
+
+ul.has-children > li > a {
+  text-decoration: none;
+  color: #C8C8C8;
+  font-size: 13px;
+}
+
+.is-parrent:hover ul.has-children li {
+  display: block;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.left-side-collapsed ul.has-children {
+  padding: 10px;
+  background: #333 !important;
+  padding-left: 0px;
+  top: 10px !important;
+
+  li{
+    a:hover {
+      background: #333;
+    }
+  }
+}
+

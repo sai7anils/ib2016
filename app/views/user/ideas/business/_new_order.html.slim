@@ -1,0 +1,46 @@
+#myModal1.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" style="top: 10%;width:50%;margin:auto"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  ×
+        h4#myModalLabel.modal-title Payment
+      .modal-body
+        = form_for @order do |f|
+          .col-lg-6
+            p
+              = f.hidden_field :idea_id
+              = f.label :first_name
+              br/
+              = f.text_field :first_name, required: true
+          .col-lg-6
+            p
+              = f.label :last_name
+              br/
+              = f.text_field :last_name, required: true
+          .col-lg-12
+            p
+              = f.label :card_type
+              br/
+              = f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]]
+          .col-lg-6
+            p
+              = f.label :card_number
+              br/
+              = f.text_field :card_number, required: true
+          .col-lg-6
+            p
+              = f.label :card_verification, "Card Verification Value (CVV)"
+              br/
+              = f.text_field :card_verification, required: true
+          .col-lg-12
+            p
+              = f.label :card_expires_on
+              br/
+              = f.date_select :card_expires_on, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true
+          .modal-footer
+            button.btn.btn-default data-dismiss="modal" type="button"  Cancel
+            button.btn.btn-primary.btn-payment type="submit" Pay now
+            / a href="#myModal2" data-toggle="modal" type="submit" data-dismiss="modal" class="btn btn-primary btn-default" data-remote="true" Pay now
+            /= link_to 'Pay now', "#", remote: true, type: "submit", class: "btn btn-primary"
+

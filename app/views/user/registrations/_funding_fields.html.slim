@@ -1,0 +1,27 @@
+.nested-fields class="fundding-#{f.object.id}"
+  = render partial: 'fundding_row', locals: {f: f}
+  .j-row.team-form-row id="fundding-form-#{f.object.id}" class=(f.object.id.nil? ? '' : 'hide') style="border-bottom: 1px solid #DBDBDB !important"
+    .col-md-12.col-xs-12.unit
+      = link_to_remove_association f do
+        button.btn.btn-delete type="button"
+          = fa_icon 'trash', {class: ''}
+          | &nbsp;
+          = t('user.remove')
+    .col-md-6.col-xs-12.unit
+      label.label = t('user.type_funding')
+      label.input.select
+        i
+        = f.select :funding_type, Funding.type_of_funding_options,{include_blank: t('user.select_type_funding') }, {class: 'select-type-funding', required: true }
+    .col-md-6.col-xs-12.unit
+      label.label = t('user.amount')
+      .input
+        = f.number_field :amount, id: 'amount', placeholder: t('user.amount'), required: true
+    .col-md-6.col-xs-12.unit
+      label.label = t('user.date')
+      .input
+        = f.text_field :date, class: 'form-datepicker'
+        = image_tag asset_path('Date-Calendar_icon.png'), class: 'ui-datepicker-trigger'
+    .col-md-6.col-xs-12.unit
+      label.label = t('user.by_investor')
+      .input
+        = f.text_field :by_investor, id: 'by_invester', placeholder: t('user.by_investor'), required: true

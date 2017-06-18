@@ -1,0 +1,64 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 Messages (#{@messages.count})
+      .business-idea-detail
+        .business-content.message-content
+          - if @today.present?
+            .date Today
+            - @today.each do |message|
+              .message-element
+                .image-user
+                  = image_tag message.sender.photo
+                .info
+                  h5
+                    span #{message.sender.username}
+                    span.request-detail #{message.idea.title}
+                  p #{message.detail}
+                  h6.left
+                    i.fa.fa-clock-o
+                    | #{message.created_at.strftime("%H:%M %p")}
+                  h6.left
+                    i.fa.fa-reply-all
+                    | Reply
+          - @groups.each do |group|
+            .date #{group.first.to_date.strftime("%B #{group.first.to_date.day.ordinalize}, %Y")}
+            - Message.by_date(current_user, group.first.to_date).each do |message|
+              .message-element
+                .image-user
+                  = image_tag message.sender.photo
+                .info
+                  h5
+                    span #{message.sender.username}
+                    span.request-detail #{message.idea.title}
+                  p #{message.detail}
+                  h6.left
+                    i.fa.fa-clock-o
+                    | #{message.created_at.strftime("%H:%M %p")}
+                  h6.left
+                    i.fa.fa-reply-all
+                    | Reply
+
+      ul.your-idea
+        .validate-score.container-fluid
+          h5 Idea Burns
+          h6 Validation Score
+          .percentage-circle
+            .percentage-circle-current
+            .percentage-circle-current-left
+            .txt-percentage
+              label 45
+              | %
+        button.btn-request
+          | Request for more details
+          i.fa.fa-long-arrow-right
+        .favorite.container-fluid
+          = image_tag 'icon-favorite.jpg'
+          h6 Favorite this deal
+        .favorite.container-fluid
+          button.btn-godeal.btn-thumbup
+            i class="fa fa-thumbs-up fa-2x"
+            | DEAL
+  .clearfix
+

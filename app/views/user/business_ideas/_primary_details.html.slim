@@ -1,0 +1,64 @@
+.menu-content.container-fluid.primary-details
+  h3 = t('idea.business.primary_details')
+  .close-idea-left
+    h6.h6-first = t('idea.business.target_business_lines')
+    = b.select :business_line, BusinessLine.all.collect {|p| [ p.name, p.id ] }, { include_blank: t('idea.business.select_bussiness_lines') }, class: 'paid', required: true
+
+    h6 = t('idea.business.idea_title')
+    = f.text_field :title, placeholder: t('idea.business.enter_text_here'), required: true, pattern: '.{80, 400}'
+  .close-idea-right
+    h6.h6-first = t('idea.business.type_of_bussiness_idea')
+    = b.select :business_idea_type, BusinessIdeaType.all.collect {|p| [ p.name, p.id ] }, { include_blank: t('idea.business.select_type_bussiness_idea') }, class: 'paid', required: true
+
+    h6 = t('idea.business.idea_tagline')
+    = b.text_field :tagline, placeholder: t('idea.business.enter_text_here'), pattern: '.{80, 400}'
+  h6 = t('idea.business.problem_statement_2')
+  = b.text_area :problem_statement, placeholder: t('idea.business.enter_text_here'), required: true, pattern: '.{80, 400}'
+  h6 = t('idea.business.solution_2')
+  = b.text_area :solution, placeholder: t('idea.business.enter_text_here'), cols: 30, rows: 10, required: true, pattern: '.{80, 400}'
+  .current-idea-stage.container-fluid
+    h6 = t('idea.business.select_current_idea_stage')
+    ul.list-current
+      li
+        = b.radio_button :idea_stage, '50', id: 'generation'
+        label for="generation" = t('idea.business.generation')
+      li
+        = b.radio_button :idea_stage, '60', id: 'assessment'
+        label for="assessment" = t('idea.business.assessment')
+      li
+        = b.radio_button :idea_stage, '70', id: 'planing'
+        label for="planing" = t('idea.business.planning')
+      li
+        = b.radio_button :idea_stage, '80', id: 'prototype'
+        label for="prototype" = t('idea.business.prototype')
+      li
+        = b.radio_button :idea_stage, '90', id: 'implimentation'
+        label for="implimentation" = t('idea.business.implimentation')
+  .current-idea-stage.container-fluid
+    h6 = t('idea.business.ip_patent')
+    ul.question.question-2 style="float:left;width:500px;margin-top: -16px; margin-left: 20px;"
+      li.radio-question
+        = b.radio_button :ip_patent, '100'
+        span = t('idea.business.ip_patent_1')
+      li.radio-question
+        = b.radio_button :ip_patent, '90'
+        span = t('idea.business.ip_patent_2')
+      li.radio-question
+        = b.radio_button :ip_patent, '30'
+        span = t('idea.business.ip_patent_3')
+      li#register_number style="display: none;"
+        h6 = t('idea.business.ip_patent_4')
+        = b.number_field :register_number, placeholder: t('idea.business.enter_regis_number_here'), min: 0
+
+javascript:
+  $(document).ready(function () {
+    $('input[name="idea[business_idea_attributes][ip_patent]"]').change(function () {
+      $('input[name="idea[business_idea_attributes][ip_patent]"]').prop( "checked", false );
+      $(this).prop( "checked", true );
+      if($(this).val() == "30"){
+        $('li#register_number').hide();
+      }else{
+        $('li#register_number').show();
+      }
+    });
+  });

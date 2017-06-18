@@ -1,0 +1,25 @@
+<% from_time = Time.now %>
+<% if !@notifications.count.zero? %>
+<% (@notifications || []).each do |notification| %>
+  <li class="sub-notification">
+    <div class="sub-notification-left">
+       <%= image_tag(notification.try(:user).nil? ? '' : notification.user.avatar ) %>
+    </div>
+    <div class="sub-notification-middle">
+      <%= link_to notification.message, user_idea_path(notification.idea) %>
+      <br/>
+      <% if notification.commented? %>
+        <i class="fa fa-commenting-o"></i>
+      <% elsif notification.liked? %>
+        <i class="fa fa-thumbs-up"></i>
+      <% elsif notification.rated? %>
+        <i class="fa fa-star-o"></i>
+      <% end %>
+      <i class="minutes"><%= distance_of_time_in_words(notification.created_at, from_time) %> ago</i>
+    </div>
+    <div class="sub-notification-right">
+       <%= image_tag(notification.idea.attachment) %>
+    </div>
+  </li>
+<% end %>
+<% end %>

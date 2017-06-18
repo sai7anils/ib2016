@@ -1,0 +1,149 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 = @user.fullname
+        h3 = t('user.profile_view')
+      .profile
+        .profile-content
+          .profile-image.startupdetail-image
+            = image_tag @user.avatar
+          .profile-info
+            h3 = t('user.about ')
+            p.user-about = @user.startup.try(:about)
+            ul.list-info.startupdetail-info.startup-list-info
+              li.active = t('user.company')
+              li = t('user.our_team')
+              li = t('user.funding')
+              li = t('user.location')
+              li class=(current_user.investor? ? '' : 'disabled') = t('user.socials_webapps')
+          .profile-element.container-fluid.invester-content
+            .info-element
+              h4 = t('user.startup_name')
+              h5 = @user.startup.try(:name)
+            .info-element
+              h4 = t('user.regis_company_name')
+              h5 = @user.startup.try(:reg_company_name)
+            .info-element
+              h4 = t('user.founded')
+              h5 = @user.startup.try(:founded)
+            .info-element style = "max-width: 280px"
+              h4 = t('user.primary_bussiness_lines')
+              h5 = @user.startup.try(:category_name)
+            .info-element style = "max-width: 280px"
+              h4 = t('user.employee_strength')
+              h5 = @user.startup.try(:employee_strength)
+            .info-element
+              h4 = t('user.website')
+              h5 = @user.startup.try(:website)
+            h4 = t('user.how_it_work')
+            p = @user.startup.try(:work)
+            h4 = t('user.mission_vision')
+            p = @user.startup.try(:mission)
+          .profile-element.container-fluid.invester-content.team-element
+            - (@user.startup.try(:teams) || []).each do |team|
+              .element-info.container-fluid.team-row
+                .info-image
+                  = image_tag team.try(:image)
+                .info
+                  h3 = team.try(:name)
+                  h5 = team.designation_name
+                  .info-detail
+                    p = t('user.join_date')
+                    p = team.try(:joined_date)
+                  .info-detail
+                    i.fa.fa-mobile
+                    p = team.try(:mobile)
+                  .info-detail
+                    i.fa.fa-envelope-o
+                    p = team.try(:email)
+                  .info-detail
+                    i.fa.fa-skype
+                    p = team.try(:skype)
+                  .info-detail
+                    i.fa.fa-linkedin
+                    p = team.try(:linkedin)
+          .profile-element.container-fluid.invester-content
+            - (@user.startup.try(:fundings) || []).each do |funding|
+              .element-info.container-fluid.team-row
+                .info-detail
+                  label = t('user.type_funding')
+                  label = funding.funding_name
+                .info-detail
+                  label = t('user.amount')
+                  label = funding.try(:amount)
+                .info-detail
+                  label = t('user.join_date')
+                  label = funding.try(:date)
+                .info-detail
+                  label = t('user.investor')
+                  label = funding.try(:by_investor)
+          .profile-element.container-fluid.invester-content
+            .info-element
+              h4 = t('user.address_line_1')
+              p = @user.startup.try(:address_line_1)
+            .info-element
+              h4 = t('user.address_line_2')
+              p = @user.startup.try(:address_line_2)
+            .info-element
+              h4 = t('user.country')
+              p = @user.country_name
+            .info-element
+              h4 = t('user.region')
+              p = @user.region_name
+            .info-element
+              h4 = t('user.city')
+              p = @user.city
+          .profile-element.container-fluid.invester-content
+            .info-element
+              h4 Facebook
+              h5 = @user.startup.try(:facebook)
+            .info-element
+              h4 Twitter
+              h5 = @user.startup.try(:twitter)
+            .info-element
+              h4 Linkedin
+              h5 = @user.startup.try(:linkedin)
+            .info-element
+              h4 IOS App
+              h5 = @user.startup.try(:ios_app)
+            .info-element
+              h4 Android App
+              h5 = @user.startup.try(:adroid_app)
+            .info-element
+              h4 Windows App
+              h5 = @user.startup.try(:window_app)
+      ul.your-idea
+        li.title
+          = image_tag 'icon-postyouridea.png'
+          h4.mt7
+            = link_to t('idea.post_your_idea'), new_user_idea_path
+        li.close-idea = t('idea.closed_ideas')
+        - (@ideas || []).each do |idea|
+          li.idea
+            = link_to user_idea_path(idea) do
+              h4 = idea.title
+            end
+            h5 = truncate(idea.try(:description).to_s, length: 70)
+
+        li.btn-plus
+          = link_to "#" do
+            button
+              i.fa.fa-plus
+          end
+  .clearfix
+
+= render 'applications/modal'
+
+javascript:
+  $('ul.startup-list-info li.disabled').on('click', function(){
+    var message = "#{t('user.only_investor_view_contact_details')}";
+    $('.modal-body').html(message);
+    $('.modal-dialog').css({
+      "float": "left",
+      "margin-left": "62px",
+      "width": $('.profile').width() +"px"
+    });
+    $('#alertModal').modal('show');
+  });
+

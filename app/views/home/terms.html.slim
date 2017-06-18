@@ -1,0 +1,21 @@
+= render "applications/sections"
+.terms-section
+	.terms-title
+		h3 = t('terms.terms_conditions')
+	ul.list
+		li
+			.line
+			h5 = t('terms.legal_disclaimer')
+			p = t('terms.legal_disclaimer_1')
+		li
+			.line
+			h5 = t('terms.rules')
+			p = t('terms.rules_1')
+			ul.sub-list
+				li = t('terms.rules_1_a')
+				li = t('terms.rules_1_b')
+				li = t('terms.rules_1_c')
+		li
+			.line
+			h5 = t('terms.trademark')
+			p = t('terms.trademark_1')

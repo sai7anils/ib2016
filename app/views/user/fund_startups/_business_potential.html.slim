@@ -1,0 +1,141 @@
+= f.fields_for :business_potential do |bp|
+  .profile.fund
+    .profile-content.fund-content
+      h3 Business Potential
+      = bp.fields_for :fund_business_model do |bm|
+        /Business model
+        h6.tag Business model
+        .content-business
+          h6.left Type of Business model
+          // select.left
+          //   option B2B
+          = bm.select :type, FundBusinessModel::TYPE_BUSINESS_MODEL.collect{|p| [p.first, p.last]}, { include_blank: '- Select Business model -' }, class: 'paid', required: true
+        .content-business
+          h6.left.title-select Type of Business model
+          // select.left
+          //   option Licencing, Subscription
+          = bm.select :subtype, FundBusinessModel::SUBTYPE_BUSINESS_MODEL.collect{|p| [p.first, p.last]}, { include_blank: '- Select Sub Business model -' }, class: 'paid', required: true
+        h6 How this startup possess the business model ?
+        // textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+        = bm.text_area :startup_process, placeholder: 'Enter text here', required: true, pattern: '.{100, 600}', cols: "30", rows: "4"
+
+        h6 How much did you spend on the MVP?
+        // textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+        = bm.text_area :mvp, placeholder: 'Enter text here', required: true, pattern: '.{100, 600}', cols: "30", rows: "4"
+      = bp.fields_for :fund_market_trend do |mt|
+        /Market Trend
+        h6.tag style="background-color: #6CC6C4" Market Trend
+        .content-business
+          h6.left.large Market Trend - To what extent is your primary target market growing?
+          // select.left.small
+          //   option Intermittent growth
+          = mt.select :market_growing, FundMarketTrend::MARKET_TREND.collect{|p| [p.first, p.last]}, { include_blank: '- Select Market Growing -' }, class: 'paid', required: true
+
+        h6 Market Channels - How are you going to sell your product or service to potential customers?
+        p How this startup possess the business model ?
+        // textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+        = mt.text_area :startup_process, placeholder: 'Enter text here', required: true, pattern: '.{100, 600}', cols: "30", rows: "4"
+
+        .content-business
+          h6.left.large Market Size - What is the total annual size of your primary target market ?
+          // select.left.small
+          //   option $50M - $250M, $250M+
+          = mt.select :market_size, FundMarketTrend::MARKET_SIZE.collect{|p| [p.first, p.last]}, { include_blank: '- Select Market Size -' }, class: 'paid', required: true
+
+        h6 Describe the company's sales plan ?
+        // textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+        = mt.text_area :describe, placeholder: 'Enter text here', required: true, pattern: '.{100, 600}', cols: "30", rows: "4"
+
+        h6 Approx. Market share that your startup Possess ?
+        // input type="text" placeholder="Enter your text here"/
+        = mt.text_field :approx, placeholder: 'Enter text here', required: true
+      = bp.fields_for :customer_problem do |cp|
+        /Customer Problem
+        h6.tag style="background-color: #6CC6C4" Customer Problem
+        h6 Does your startup solve a clearly defined customer problem in a (radically) new way? Explain ?
+        // textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+        = cp.text_area :explain, placeholder: 'Enter text here', required: true, pattern: '.{100, 600}', cols: "30", rows: "4"
+        .content-business.container-fluid
+          h6.left.large What is the geographical region which you targetting customers ?
+          .right-select
+            - CustomerProblem::REGION.each do |c|
+              .select-element
+                //input type="checkbox"/
+                = check_box_tag "fund_startup[business_potential_attributes][customer_problem_attributes][region][]", c.last
+                span.input-checkbox
+                select
+                  option #{c.first}
+              // .select-element
+              //   input type="checkbox"/
+              //   span.input-checkbox
+              //   select
+              //     option NorthAmerica
+              // .select-element
+              //   input type="checkbox"/
+              //   span.input-checkbox
+              //   select
+              //     option MiddleEast
+          //= cp.select :region, CustomerProblem::TARGET.collect{|p| [p.first, p.last]}, { include_blank: '- Select Region -' }, class: 'paid', required: true
+        h6 Which age is startup business targetting ?
+        .age.container-fluid
+          .age-element.container-fluid
+            h6.left From Age
+            // select.left.small
+            //   option 14 years
+            = cp.select :from_age, CustomerProblem::FROM.collect{|p| ["#{p}", p]}, { include_blank: '- Select Age -' }, class: 'left small', required: true
+
+          .age-element.container-fluid
+            h6.left To Age
+            // select.left.small
+            //   option 45 years
+            = cp.select :to_age, CustomerProblem::TO.collect{|p| ["#{p}", p]}, { include_blank: '- Select Age -' }, class: 'left small', required: true
+
+        h6 Who are your potential competitors ?
+        //textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+        = cp.text_area :potential_competitor, placeholder: 'Enter text here', required: true, pattern: '.{100, 600}', cols: "30", rows: "4"
+
+        h6 Have you reached out to potential customers for feedback ?
+        ul.radio-button
+          li
+            // input id="1" type="radio" name="1"/
+            = cp.radio_button :checkout, true
+            span for="1" Yes
+          li
+            // input id="2" type="radio" name="1"/
+            = cp.radio_button :checkout, false
+            span for="2" No
+      = bp.fields_for :competitive_protection do |c|
+        / Competative Protection
+        h6.tag style="background-color: #6FBEE1" Competative Protection
+        h6 Describe the Startup's startegy for ongoing competative protection ?
+        // textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+        = c.text_area :strategy, placeholder: 'Enter text here', required: true, pattern: '.{100, 600}', cols: "30", rows: "4"
+
+        .competator-section
+          // h6 Atleast one Competator should be added
+          // button
+          //   = image_tag 'icon-add.png'
+          //   | Add Competators
+          // button View Competators
+          // button.btn-save Save
+          // .competator-content
+          //   input type="text" placeholder="Enter Company Name"/
+          //   input type="text" placeholder="Enter Their Primary Business Line"/
+          //   input type="text" placeholder="Enter Country"/
+          //   input type="text" placeholder="Enter Revenue (If know)"/
+          //   input type="text" placeholder="Enter Website URL for reference"/
+          h6 Atleast one Competator should be added
+          button.btn-edit.btn-add#add-competitors type="button"
+            = image_tag asset_path 'icon-user.png'
+            | Add Competators (*)
+          // = link_to_add_association c, :competitor_teams, partial: 'user/ideas/competitor_team_fields', class: 'btn-add', id: 'add-competitors' do
+
+
+          button.btn-edit.btn-view-team-list#view-competitors-fund type="button" View Competators
+          button.btn-edit.btn-save.btn-save-competator#bnt-save-competitors-fund type="button" Save
+          .competator-content
+            #competitor_teams
+              = c.simple_fields_for :competitor_teams do |competitor_team|
+                = render 'user/ideas/competitor_team_fields', f: competitor_team
+            #links
+              = link_to_add_association 'add task', c, :competitor_teams, partial: 'user/ideas/competitor_team_fields'

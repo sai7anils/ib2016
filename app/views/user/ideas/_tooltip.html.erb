@@ -1,0 +1,12 @@
+<ul class="list-user-like">
+    <% @idea.likes.like_tooltip.take(10).each do |like| %>
+        <li>
+        <% if like.user %>
+          <%= like.user.fullname.blank? ? like.user.username : like.user.fullname %>
+        <% end %>
+        </li>
+    <% end %>
+    <% if @idea.likes.count > 10 %>
+      <li>and <%= @idea.likes.count - 10 %> more...</li>
+    <% end %>
+</ul>

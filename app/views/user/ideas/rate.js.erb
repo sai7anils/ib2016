@@ -1,0 +1,16 @@
+<% publish_to rate_path do %>
+  var author = <%= @idea.user.id %>
+  <% if @status %>
+  if(uid == author){
+    notifications();
+  }
+  <% end %>
+
+  var idea = <%= @idea.id %>
+  var current_id = parseInt($('.idea-key').attr('data-id'));
+  if (idea == current_id){
+   $.get('/api/idea/rating/'+ idea, function(data){
+      $('.rating_content').html(data);
+   });
+  }
+<% end %>

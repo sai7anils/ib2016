@@ -1,0 +1,101 @@
+.acount-section {
+  p.user-about::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+  }
+
+  p.user-about::-webkit-scrollbar:horizontal {
+    width: 5px;
+    border-radius: 10px;
+  }
+
+  p.user-about::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  }
+
+  p.user-about::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 208, 0);
+    outline: none;
+    -webit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+  }
+  p.text {
+    min-height: 130px;
+  }
+  #load_detail{
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .message-tab{
+    padding: 20px;
+    h4{
+      font-weight: bold;
+    }
+    img{
+      padding: 10px 0px;
+    }
+  }
+}
+
+.sticky-header.left-side-collapsed {
+  .acount-section {
+    overflow-y: auto;
+
+    .info-content.container-fluid {
+      min-height: 244px;
+    }
+
+    p.user-about {
+      height: 120px;
+      overflow-y: hidden;
+      padding-right: 10px;
+    }
+
+    p.user-about:hover {
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    .entrepreneur-list-info, .investor-list-info, .startup-list-info {
+      margin-top: 10px !important;
+      min-height: 100%;
+    }
+  }
+}
+
+.sticky-header {
+  .acount-section {
+    overflow-y: auto;
+
+    .info-content.container-fluid {
+      min-height: 244px;
+    }
+
+    p.user-about {
+      height: 120px;
+      overflow-y: hidden;
+      padding-right: 10px;
+    }
+
+    p.user-about:hover {
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    .entrepreneur-list-info, .investor-list-info, .startup-list-info {
+      margin-top: 10px !important;
+      min-height: 100%;
+
+      li {
+        margin-right: 15px !important;
+      }
+    }
+  }
+}
+
+.message_detail{
+  textarea{
+    width: 100%;
+    height: 100px;
+  }
+}

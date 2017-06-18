@@ -1,0 +1,31 @@
+---
+  - id: 1
+    name: en
+    title: English
+  - id: 2
+    name: vi
+    title: Tiếng Việt
+  - id: 3
+    name: es
+    title: Español
+  - id: 4
+    name: fr-FR
+    title: Français
+  - id: 4
+    name: it
+    title: Italiano
+  - id: 6
+    name: nl
+    title: Nederlands
+  - id: 7
+    name: pt
+    title: Português
+  - id: 8
+    name: ko
+    title: 한국어
+  - id: 9
+    name: ja
+    title: 日本語
+  - id: 10
+    name: zh-CN
+    title: 中文

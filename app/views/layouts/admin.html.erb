@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Idea Burns - Admin Dashboard</title>
+<%= csrf_meta_tags %>
+<%= stylesheet_link_tag 'admin', media: 'all' %>
+
+</head>
+
+<body class="admin <%= "#{@custom_controller_name || controller_name} #{action_name}" %>">
+  <%= render 'admin/commons/header' %>
+
+  <%= render partial: 'admin/commons/sidebar' %>
+
+  <%= yield %>
+  <%= javascript_include_tag 'admin' %>
+  <script>
+    $('#calendar').datepicker({
+    });
+
+    !function ($) {
+        $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+      if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+      if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+  </script>
+</body>
+
+</html>

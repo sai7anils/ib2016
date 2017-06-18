@@ -1,0 +1,25 @@
+= render "applications/sections"
+.terms-section
+	.terms-title
+		h3 = t('behind_thoughts.behind_thoughts')
+		h4 = t('behind_thoughts.heading')
+	ul.list
+		li
+			.icon-terms
+				= image_tag 'goal.png'
+			.line.behind
+			h5 = t('behind_thoughts.story')
+			p = t('behind_thoughts.story_1')
+			p = t('behind_thoughts.story_2')
+		li
+			.icon-terms
+				= image_tag 'telescope.png'
+			.line.behind
+			h5 = t('behind_thoughts.vision')
+			p = t('behind_thoughts.vision_1')
+		li
+			.icon-terms
+				= image_tag 'target.png'
+			.line.behind
+			h5 = t('behind_thoughts.mission')
+			p = t('behind_thoughts.mission_1')

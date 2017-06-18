@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Idea Burns Team,</h1>
+    <p>
+      You have a request for verification of <%= @user.fullname %>,
+    </p>
+    <p>
+      <% if @user.investor.investor_identity.present?  %>
+        <% if @user.investor.investor_identity.indentity_proof.present? %>
+          Identity Proof : <br />
+          <%= image_tag @user.investor.investor_identity.indentity_proof, style: 'width: 200px' %><br />
+        <% end %>
+        <% if @user.investor.investor_identity.nationality_identity_proof.present? %>
+          Nationality(Passport) Identity Proof : <br />
+          <%= image_tag @user.investor.investor_identity.nationality_identity_proof, style: 'width: 200px' %><br />
+        <% end %>
+        <% if @user.investor.investor_identity.unique_identity_document.present? %>
+          Previous Investment document proofs : <br />
+          <%= link_to @user.investor.investor_identity.unique_identity_document.url, @user.investor.investor_identity.unique_identity_document.url %><br />
+        <% end %>
+        <% if @user.investor.investor_identity.attachments.present? %>
+          Unique Identity document : <br />
+          <% @user.investor.investor_identity.attachments.each  do |doc| %>
+            <% if doc.file && !doc.file.url.nil? %>
+              <%= link_to doc.file.url, doc.file.url %><br />
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </p>
+    <p>
+      Please click the link below: <%= confirm_email_user_investor_url(@user.investor.confirm_token) %> to verification for this investor.
+    </p>
+    <p>Thanks and have a great day!</p>
+  </body>
+</html>

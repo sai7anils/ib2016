@@ -1,0 +1,55 @@
+.row
+  .col-lg-12
+    .panel.panel-default
+      .panel-heading
+        h4 UPDATE IDEA
+      .panel-body
+        = form_for(@idea, url: admin_idea_path) do |f|
+          - if flash[:notice]
+              .alert.alert-success
+                b Well done&nbsp;
+                = flash[:notice]
+              </div>
+          - if !@idea.errors.full_messages.count.zero?
+            .alert.alert-danger
+              ul.list-message-error
+                - @idea.errors.full_messages.each do |error_message|
+                    li.alert-alert-error.alert-danger
+                      = error_message
+
+          .form-group
+            label.col-sm-5.control-label for="selector1"  Idea Category*
+            .col-sm-3
+              i.select-arrow
+              = f.select :category_id, Category.all.collect {|p| [ p.name, p.id ] }, { include_blank: '- Select Idea Category -' }, class: 'form-control', id: 'category_id'
+              br
+          .form-group
+            label.col-sm-5.control-label for="disabledinput"  Idea Title*
+            .col-sm-7
+              = f.text_field :title, class: 'form-control', placeholder: 'Enter Idea Title here', id: 'disabledinput'
+              br
+          .form-group
+            label.col-sm-5.control-label for="disabledinput"  Idea Description*
+            .col-sm-7
+              = f.text_area :description, class: 'form-control', style: 'height: 80px; margin-top: 10px'
+              br
+          - if !f.object.attachment.blank?
+            .form-group
+              label.col-sm-5.control-label Idea Image
+              .col-sm-7
+                = image_tag (f.object.attachment), class: 'preview-img-idea'
+              br
+          .form-group
+            label.col-sm-5.control-label for="disabledinput"
+              = !f.object.attachment.blank? ? 'Change Image' : 'Upload File'
+            .col-sm-7.input-image-length
+              = f.file_field :attachment, id: 'idea-file', accept: 'image/png,image/gif,image/jpeg', id: 'event-image', :data => { :max_file_size => 5.megabytes}
+              br
+          .form-group
+            .footer
+              .col-sm-12.text-right
+                button.btn.btn-danger onclick="clearForm()" type="button" id="clear-form"  Clear
+                | &nbsp;
+                button.btn.btn-primary type="submit"  Update
+      .panel-footer
+/! /.row

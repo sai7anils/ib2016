@@ -1,0 +1,74 @@
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="<%= admin_root_path %>"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+      <li class="active">Dashboard</li>
+    </ol>
+  </div><!--/.row-->
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Dashboard</h1>
+    </div>
+  </div><!--/.row-->
+  <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-3">
+      <div class="panel panel-blue panel-widget ">
+        <div class="row no-padding">
+          <div class="col-sm-3 col-lg-5 widget-left">
+            <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
+          </div>
+          <div class="col-sm-9 col-lg-7 widget-right">
+            <div class="large"><%= @data[:ideas] %></div>
+            <div class="text-muted">Ideas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+      <div class="panel panel-orange panel-widget">
+        <div class="row no-padding">
+          <div class="col-sm-3 col-lg-5 widget-left">
+            <svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg>
+          </div>
+          <div class="col-sm-9 col-lg-7 widget-right">
+            <div class="large"><%= @data[:comments] %></div>
+            <div class="text-muted">Comments</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+      <div class="panel panel-teal panel-widget">
+        <div class="row no-padding">
+          <div class="col-sm-3 col-lg-5 widget-left">
+            <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
+          </div>
+          <div class="col-sm-9 col-lg-7 widget-right">
+            <div class="large"><%= @data[:users] %></div>
+            <div class="text-muted">Users</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+      <div class="panel panel-red panel-widget">
+        <div class="row no-padding">
+          <div class="col-sm-3 col-lg-5 widget-left">
+            <svg class="glyph stroked app-window-with-content"><use xlink:href="#stroked-app-window-with-content"></use></svg>
+          </div>
+          <div class="col-sm-9 col-lg-7 widget-right">
+            <div class="large"><%= @data[:idea_views] %></div>
+            <div class="text-muted">Page Views</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--/.row-->
+
+</div>  <!--/.main-->

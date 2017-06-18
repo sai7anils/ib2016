@@ -1,0 +1,34 @@
+.nested-fields class="portfolio-#{f.object.id}"
+  = render partial: 'portfolio_row', locals: {f: f}
+  .j-row.team-form-row id="portfolio-form-#{f.object.id}" class=(f.object.id.nil? ? '' : 'hide') style="border-bottom: 1px solid #DBDBDB !important"
+      .col-md-12.col-xs-12.unit
+        = link_to_remove_association f do
+          button.btn.btn-delete type="button"
+            = fa_icon 'trash', {class: ''}
+            | &nbsp;
+            = t('user.remove')
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.startup_name')
+        .input
+          = f.text_field :name, id: 'startup-name', placeholder: t('user.startup_name'), required: true
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.website')
+        .input
+          = f.text_field :website, id: 'web', placeholder: 'e.g. www.example.com', required: true
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.type_funding')
+        label.input.select
+          i
+          = f.select :fundding_type, Investor.type_of_funding_options, class: '', required: true
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.funding_amount')
+        .input
+          = f.number_field :amount, id: 'funding_amount ', placeholder: t('user.funding_amount'), required: true
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.startup_logo')
+        .input
+          / = f.object.send :logo
+          - if f.object.logo?
+            = image_tag f.object.logo.url, class: 'img-responsive startup-logo-preview'
+          = f.file_field  :logo, :as => :file, accept: 'image/png,image/gif,image/jpeg', id: "startup-logo"
+      

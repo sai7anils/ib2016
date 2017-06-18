@@ -1,0 +1,50 @@
+.nested-fields
+  .row.child-team-row.hide
+    .col-sm-3#company-name
+    .col-sm-3#bus-line
+    .col-sm-3#website
+    .col-sm-2.text-right
+      button.btn-team-edit type="button" onclick="$(this).parent().parent().next('.child-team-row-form').toggleClass('hide');$('.child-team-row-form').css({'border':'1px solid #fdcf2f', 'padding-left':'20px', 'padding-bottom':'10px'})"
+        = fa_icon 'pencil-square-o'
+      button.btn-team-delete type="button" onclick="$(this).parent().parent().next('.child-team-row-form').find('button.btn-remove-team').trigger('click')"
+        = fa_icon 'trash'
+  .child-team-row-form
+    = link_to_remove_association f, class: 'hide' do
+      button.btn-remove-team.btn.hide type="button"
+        = fa_icon 'trash'
+        | &nbsp;
+        = t('idea.remove')
+    = f.text_field :name, placeholder: t('idea.business.enter_company_name'), class: 'company-name', maxlength: "40"
+    = f.text_field :business_line, placeholder: t('idea.business.enter_primary_business_line'), class: 'bus-line'
+    = f.country_select :country, {priority: %w(US CA), prompt: t('idea.select_a_country') }, style: "margin-top: 10px"
+    = f.text_field :revenue, placeholder: t('idea.business.enter_revenue_if_know')
+    = f.text_field :website, placeholder: t('idea.business.enter_website_url'), class: 'website'
+
+javascript:
+  $('.competitors-scenery .nested-fields .child-team-row').addClass('hide');
+  $('.competitors-scenery .team-content').css('border','1px solid #fdcf2f');
+  $('.competitors-scenery .nested-fields input.company-name').keyup(function(){
+    $(this).parent().prev('.child-team-row').find('#company-name').text($(this).val());
+  });
+
+  $('.competitors-scenery .nested-fields input.bus-line').keyup(function(){
+    $(this).parent().prev('.child-team-row').find('#bus-line').text($(this).val());
+  });
+
+  $('.competator-content .nested-fields input.website').keyup(function(){
+    $(this).parent().prev('.child-team-row').find('#website').text($(this).val());
+  });
+
+  $('.competator-content .nested-fields .child-team-row').addClass('hide');
+  $('.competator-content .team-content').css('border','1px solid #fdcf2f');
+  $('.competator-content .nested-fields input.company-name').keyup(function(){
+    $(this).parent().prev('.child-team-row').find('#company-name').text($(this).val());
+  });
+
+  $('.competator-content .nested-fields input.bus-line').keyup(function(){
+    $(this).parent().prev('.child-team-row').find('#bus-line').text($(this).val());
+  });
+
+  $('.competator-content .nested-fields input.website').keyup(function(){
+    $(this).parent().prev('.child-team-row').find('#website').text($(this).val());
+  });

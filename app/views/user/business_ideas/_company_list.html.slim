@@ -1,0 +1,21 @@
+.form-competetors
+  button.btn-competetors  = t('idea.business.details.view_competators_list')
+  .form-info-competetors
+    - if @idea.business_idea.competitor.nil? || (@idea.business_idea.competitor.present? && @idea.business_idea.competitor.competitor_teams.count.zero?)
+      .team-element
+        .info-team
+          h6 = t('global.no_results')
+    - else
+      - @idea.business_idea.competitor.competitor_teams.each do |compe|
+        .team-element
+          .info-team
+            .sub-info.container-fluid
+              h6.title style=("color:#" + "%06x" % (rand * 0xffffff))
+                = compe.try(:name)
+              h6.country = compe.country_name
+              h6.revenue
+                span.title = "#{t('idea.business.details.revenue')}"
+                span = compe.try(:revenue)
+              h6.website
+                = link_to "http://#{compe.try(:website)}", class: 'business_idea_link', target: '_blank' do
+                  = compe.try(:website)

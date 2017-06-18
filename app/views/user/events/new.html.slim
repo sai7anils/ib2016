@@ -1,0 +1,12 @@
+#page-wrapper
+  .switches
+    .acount-section.event-section
+      .acount-title.container-fluid
+        h2 = t('event.create_event')
+      .event-content
+        .event.container-fluid
+          = simple_form_for(@event, url: user_events_path, html: { method: :post, class: 'event-form', id: 'create-event-form' }) do |f|
+            = render partial: "form", locals: {f: f}
+
+      = render partial: "more_events", locals: {}
+  .clearfix

@@ -1,0 +1,45 @@
+- if f.object.present?
+  .nested-fields class="team-#{f.object.id}"
+    = render partial: 'investor_team_row', locals: {f: f}
+    .j-row.team-form-row id="team-form-#{f.object.id}" class=(f.object.id.nil? ? '' : 'hide') style="border-bottom: 1px solid #DBDBDB !important"
+      .col-md-12.col-xs-12.unit
+        = link_to_remove_association f do
+          button.btn.btn-delete type="button"
+            = fa_icon 'trash', {class: ''}
+            | &nbsp;
+            = t('user.remove')
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.name')
+        .input
+          = f.text_field :name, placeholder: t('user.name'), id: "name", required: true, maxlength: "40"
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.designation')
+        label.input.select
+          i
+          = f.select :designation, Investor.designation_options, class: '', required: true
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.join_date')
+        .input
+          = f.text_field :joined_date, class: 'form-datepicker'
+          = image_tag asset_path('Date-Calendar_icon.png'), class: 'ui-datepicker-trigger'
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.email')
+        .input
+          = f.email_field :email, id: 'email', placeholder: 'email@domain.com', required: true
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.mobile')
+        .input
+          = f.text_field :mobile, id: 'phone', placeholder: '(186)285-7925', required: true
+          span.tooltip.tooltip-right-top = t('user.mobile')
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.skype_id')
+        .input
+          = f.text_field :skype, id: 'web', placeholder: 'Skype ID', required: true
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.linkedin')
+        .input
+          = f.text_field :linkedin, id: 'web', placeholder: 'e.g. www.linkedin.com/something/', required: true
+      .col-md-6.col-xs-12.unit
+        label.label = t('user.team_logo')
+        .input
+          = f.file_field :image, :as => :file, accept: 'image/png,image/gif,image/jpeg', id: "team-logo"

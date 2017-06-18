@@ -1,0 +1,345 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 Fund Startup
+        ul.list-menu
+          li#product.active
+            .icon 
+              = image_tag 'icon-product.png'
+              .line
+            h6 Product & Services
+          li
+            .icon 
+              = image_tag 'icon-potential.png'
+              .line
+            h6 Business Potential
+          li
+            .icon 
+              = image_tag 'icon-dollar.png'
+              .line
+            h6 Financials
+          li
+            .icon 
+              = image_tag 'icon-legal.png'
+              .line
+            h6 Legal & Advisors
+          li#valuation
+            .icon 
+              = image_tag 'icon-dollar.png'
+              .line
+            h6 Valuations
+          li
+            .icon 
+              = image_tag 'icon-folder.png'
+            h6 Pitch Burns
+      .profile.fund
+        .profile-content.fund-content
+          h3 Product & Services
+
+          h6 What is all about Product & Service offering ?
+          textarea# name="" cols="30" rows="5" placeholder="Enter text here"
+
+          h6.left Select offering Primary business : 
+          select.left
+            option Product
+
+          h6 Product Name
+          textarea# name="" cols="30" rows="2" placeholder="Enter text here"
+
+          h6.left.small Product Type : 
+          select.left.large
+            option Software
+
+          h6.left.small Product Subtype : 
+          select.left.large
+            option Enterprise
+
+          h6 Product Description
+          textarea# name="" cols="30" rows="2" placeholder="Enter text here"
+
+          h6 Product Competative
+          textarea# name="" cols="30" rows="2" placeholder="Enter text here"
+      .profile.fund
+        .profile-content.fund-content
+          h3 Business Potential
+          
+          /Business model 
+          h6.tag Business model 
+          .content-business
+            h6.left Type of Business model
+            select.left
+              option B2B
+          .content-business
+            h6.left.title-select Type of Business model
+            select.left
+              option Licencing, Subscription 
+          h6 How this startup possess the business model ? 
+          textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+          h6 How much did you spend on the MVP? 
+          textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+
+          /Market Trend
+          h6.tag style="background-color: #6CC6C4" Market Trend
+          .content-business
+            h6.left.large Market Trend - To what extent is your primary target market growing?
+            select.left.small
+              option Intermittent growth
+          h6 Market Channels - How are you going to sell your product or service to potential customers? 
+          p How this startup possess the business model ? 
+          textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+          .content-business
+            h6.left.large Market Size - What is the total annual size of your primary target market ?
+            select.left.small
+              option $50M - $250M, $250M+
+          h6 Describe the company's sales plan ?  
+          textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+          h6 Approx.Market share that your startup Possess ?  
+          input type="text" placeholder="Enter your text here"/
+          
+          /Customer Problem
+          h6.tag style="background-color: #6CC6C4" Customer Problem
+          h6 Does your startup solve a clearly defined customer problem in a (radically) new way? Explain ?  
+          textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+          .content-business.container-fluid
+            h6.left.large What is the geographical region which you tragetting customers ?
+            .right-select
+              .select-element
+                input type="checkbox"/
+                span.input-checkbox
+                select
+                  option Intermittent growth
+              .select-element
+                input type="checkbox"/
+                span.input-checkbox
+                select
+                  option NorthAmerica
+              .select-element
+                input type="checkbox"/
+                span.input-checkbox
+                select
+                  option MiddleEast
+          h6 Which age is startup business targetting ? 
+          .age.container-fluid
+            .age-element.container-fluid
+              h6.left From Age
+              select.left.small
+                option 14 years
+            .age-element.container-fluid
+              h6.left To Age
+              select.left.small
+                option 45 years
+          h6 Who are your potential competitors ?  
+          textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+          h6 Have you reached out to potential customers for feedback ?
+          ul.radio-button
+            li 
+              input id="1" type="radio" name="1"/
+              span for="1" Yes
+            li 
+              input id="2" type="radio" name="1"/
+              span for="2" No
+
+          / Competative Protection
+          h6.tag style="background-color: #6FBEE1" Competative Protection
+          h6 Describe the Startup's startegy for ongoing competative protection ?  
+          textarea# name="" cols="30" rows="4" placeholder="TextArea (here minimum 100 characters and 600 maximum)"
+          .competator-section
+            h6 Atleast one Competator should be added
+            button 
+              = image_tag 'icon-add.png'
+              | Add Competators
+            button View Competators
+            button.btn-save Save
+            .competator-content
+              input type="text" placeholder="Enter Company Name"/
+              input type="text" placeholder="Enter Their Primary Business Line"/
+              input type="text" placeholder="Enter Country"/
+              input type="text" placeholder="Enter Revenue (If know)"/
+              input type="text" placeholder="Enter Website URL for reference"/
+      .profile.fund
+        .profile-content.fund-content
+          h3 Financials
+
+          h6 Your startup revenues stream measure in ? 
+          select
+            option Customer
+
+          h6 How often the startup peforms accounting and finacial calculations ? 
+          select
+            option Monthly
+
+          h6 Previous Year Revenue
+          input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+
+          h6 Current Year Revenue
+          input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+
+          h6 Previous Year NetProfit
+          input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+
+          h6 Have you done crowdfunding ?
+          ul.radio-button
+            li 
+              input id="1" type="radio" name="1"/
+              span for="1" Yes
+            li 
+              input id="2" type="radio" name="1"/
+              span for="2" No
+
+          h6 Has an accelerator/incubator put money in startup?
+          ul.radio-button
+            li 
+              input id="1" type="radio" name="2"/
+              span for="1" Yes
+            li 
+              input id="2" type="radio" name="2"/
+              span for="2" No
+
+          h6 Upload your CurrentYear/Previous Financial year Balance Sheet document ?
+          .custom-file-upload
+            input type="file" id="file" name="myfiles[]"/
+            span.sub-note 
+              | (Add multiple docs: only PPT/DOC/PDF)
+
+          h6 Upload your CurrentYear/Previous Financial year Cash Flow document ?
+          .custom-file-upload
+            input type="file" id="file" name="myfiles[]"/
+            span.sub-note 
+              | Add multiple docs: only PPT/DOC/PDF)
+
+          h6 How much equity and debt has the company raised; what is the capitalization structure ?
+          textarea# name="" cols="30" rows="3" placeholder="TextArea (here minium 100 characters and 600 maximum)"
+      .profile.fund
+        .profile-content.fund-content
+          h3 Legal & Advisors
+
+          h6 Has the startup employed the use of any professional advisors ?
+          ul.radio-button
+            li 
+              input id="1" type="radio" name="1"/
+              span for="1" Yes
+            li 
+              input id="2" type="radio" name="1"/
+              span for="2" No
+
+          h6 Does the startup have a functioning board of advisors ?
+          ul.radio-button
+            li 
+              input id="1" type="radio" name="2"/
+              span for="1" Yes
+            li 
+              input id="2" type="radio" name="2"/
+              span for="2" No
+
+          h6 How many members are on the startup's board of advisors ? 
+          select
+            option Select Dropdown
+
+          h6 How many hours of professional advice have been utilized by the company ? 
+          select
+            option Select Dropdown
+
+          h6 How many members are on the company's board of directors / managers ? 
+          select
+            option Select Dropdown
+      .profile.fund
+        .profile-content.fund-content
+          h3 Valuations
+
+          h6 How many common and preferred shares or units are currently outstanding ?
+          input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+
+          h6 How much total fund you startup raised so far ? 
+          input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+
+          h6 How much total fund you startup raised so far ? 
+          input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+
+          h6 How much and what type of capital is the startup currently seeking ? 
+          select
+            option Equity
+
+          h6 Provide the company's estimated pre-money valuation
+          input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+
+          h6 Offering business stake to the investor ? 
+          select
+            option Select Numbers 1-90(%)
+
+          h6 How will you use these funds ?
+          textarea# name="" cols="30" rows="3" placeholder="Enter text here"
+      .profile.fund
+        .profile-content.fund-content
+          h3 Pitch Burns
+          
+          h6 Upload Startup Pitch Presentation
+          .custom-file-upload
+            input type="file" id="file" name="myfiles[]"/
+            span.sub-note 
+              | (It will allows only  PPT & PDF)
+
+          h6 Upload Startup Video Pitch Presentation
+          .custom-file-upload
+            input type="file" id="file" name="myfiles[]"/
+            span.sub-note 
+              | (It will allows only  Video files)
+
+          h6 Upload your any research documents / Legal documents (If any)
+          .custom-file-upload
+            input type="file" id="file" name="myfiles[]"/
+            span.sub-note 
+              | (Add multiple docs)
+
+          h6 When you prefer for exit ?  
+          select
+            option Merger & Acquisition (M&A)
+
+          h6 How will valuation of an exit be determined given market comparables?
+          textarea# name="" cols="30" rows="3" placeholder="Enter text here"
+      ul.your-idea
+        li.title
+          = image_tag 'icon-postyouridea.png'
+          h4 Post your idea
+        li.close-idea Closed Ideas
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.idea
+          = link_to "#" do
+            h4 Idea 1 Name
+          end
+          h5 Description about that...
+        li.btn-plus
+          = link_to "#" do
+            button
+              i.fa.fa-plus
+          end
+  .clearfix

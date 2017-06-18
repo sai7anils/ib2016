@@ -1,0 +1,27 @@
+      <% @users.each do |user| %>
+          <div class="col-md-6 mb30 idea-block">
+
+                <div class="col-md-12 activity-rows other-page" style="text-align: center;">
+
+                  <%= link_to get_profile(user) do %>
+                    <%= image_tag asset_path(user.avatar), class: 'text-center' %>
+                  <% end %>
+
+                  <div class="clearfix"></div>
+
+                </div>
+
+                  <div class="col-md-12 switch-right-grid-desc">
+                    <%= link_to get_profile(user), class: 'normal-link' do %>
+                      <h5 class="address-height"><%= user.fullname %></h5>
+                    <% end %>
+
+                    <h5 class="address-height"><%= user.location %></h5>
+                      <div class="line">
+                        <%= link_to 'Read More',  startup_path(user), class: 'readmore',id: "entre" %>
+                      </div>
+                  </div>
+          </div>
+
+
+      <% end %>

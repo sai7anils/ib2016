@@ -1,0 +1,13 @@
+- notifications.each do |noti|
+  .notification-element.container-fluid
+    .noti-info-left
+      - if noti.commented?
+        i class="fa fa-comments-o "
+      - elsif noti.liked?
+        i class="fa fa-thumbs-o-up"
+      - else
+        i class="fa fa-star"
+      h5 #{noti.user.username} #{noti.message.humanize}
+    .noti-info-right
+      = image_tag ("#{noti.user.photo}"), title: "#{noti.user.username.capitalize}: #{noti.user.email} "
+      h5 #{time_ago_in_words(noti.created_at)} ago

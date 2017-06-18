@@ -1,0 +1,11 @@
+= b.fields_for :exit_strategie do |es|
+  .menu-content.container-fluid.exit-strategy
+    h3  = t('idea.business.exit_strategy_tab')
+    .question-other
+      h6 = t('idea.business.exit_strategy_quest_1')
+      h6.text-example = t('idea.business.exit_strategy_quest_1_ex')
+      ul.list-example
+        li = t('idea.business.exit_strategy_quest_1_ex_1')
+        li = t('idea.business.exit_strategy_quest_1_ex_2')
+        li = t('idea.business.exit_strategy_quest_1_ex_3')
+      = es.text_area :business_exit_strategy, placeholder: t('idea.business.enter_text_here'), cols: 30, rows: 10, pattern: '.{80, 400}', required: true

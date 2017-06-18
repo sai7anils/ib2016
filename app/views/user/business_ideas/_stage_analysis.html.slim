@@ -1,0 +1,36 @@
+.menu-content.container-fluid.stage-analysis
+  h3 = t('idea.business.early_stage_analysis_tab')
+  .question-1
+    h6 = t('idea.business.early_stage_analysis_ques_1')
+    ul.question
+      - PrimaryReason.all.each do|pr|
+        li.radio-question
+          = b.radio_button :motivation_vision, pr.id
+          span = pr.name
+  .question-other
+    h6 = t('idea.business.early_stage_analysis_ques_2')
+    ul.question.question-2
+      - BusinessIdea::YEARS.each do|y|
+        li.radio-question
+          = b.radio_button :year_exp, y[1]
+          span = y[0]
+  .question-other
+    h6 = t('idea.business.early_stage_analysis_ques_3')
+    ul.question
+      - BusinessAnswer.all.each do|ba|
+        li.radio-question
+          = b.radio_button :startup_business, ba.id
+          span = ba.name
+  .question-other
+    h6 = t('idea.business.early_stage_analysis_ques_4')
+    ul.question.question-3
+      - BusinessModel.all.each do|bm|
+        li.radio-question
+          = b.radio_button :business_model, bm.id
+          span = bm.name
+  .question-other
+    h6 = t('idea.business.early_stage_analysis_ques_5')
+    = b.text_area :des_business_model, placeholder: t('idea.business.enter_text_here'), cols: 30, rows: 10, pattern: '.{80, 400}', required: true
+  .question-other
+    h6 = t('idea.business.early_stage_analysis_ques_6')
+    = b.text_area :idea_execution, placeholder: t('idea.business.enter_text_here'), cols: 30, rows: 10, pattern: '.{80, 400}'

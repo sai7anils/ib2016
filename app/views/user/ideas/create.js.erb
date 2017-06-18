@@ -1,0 +1,11 @@
+<% publish_to comment_user_ideas_path do %>
+  $(".comment-details #comments").prepend("<%= j (render partial: 'user/ideas/comment', :locals => { comment: @comment }) %>");
+  var commenter = <%= @comment.user.id %>
+  var author = <%= @comment.idea.user.id %>
+  if(uid == author && uid != commenter){
+    notifications();
+  }
+  scrollMoreComments();
+  resetBorder();
+  hideBorderBottomLastChild();
+<% end %>

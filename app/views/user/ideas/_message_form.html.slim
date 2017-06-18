@@ -1,0 +1,50 @@
+// .message-element
+//   .image-user
+//     = image_tag current_user.photo
+//   .info
+//     h5
+//       span #{message.sender.username}
+//       span.request-detail Requested for more details
+//     p #{message.detail}
+//     h6.left
+//       i.fa.fa-clock-o
+//       | #{message.created_at.strftime("%H:%M %p")}
+//     h6.left
+//       i.fa.fa-reply-all
+//       | Sent
+
+.reply-message
+  .message-element
+    .image-user
+      = image_tag current_user.photo
+    .info
+      h5
+        span #{current_user.username}
+        span.request-detail #{@idea.title}
+      = simple_form_for message , :url => "#",:html => {"data-url" => messages_create_user_investors_path}, :authenticity_token => true do |f|
+        = f.error_notification
+        .form-inputs
+          = f.input :detail, label: false, class: "form-control", placeholder: t('messages.enter_text_here'), required: true
+          = f.hidden_field :receiver_id, :value => @parent.sender.id, required: true
+          = f.hidden_field :idea_id, :value => @idea.id, required: true
+
+          h6.left
+            i.fa.fa-clock-o
+            | #{Time.now.strftime("%H:%M %p")}
+
+          h6.left
+            i.fa.fa-reply-all
+            button.btn.btn-submit.btn-send-request type="button" = t('messages.sent')
+
+javascript:
+  $('.btn-send-request').click(function(event){
+    event.preventDefault();
+    if($('#message_detail').val() == ''){
+      $('#message_detail').css({'border-color':'#F78181'});
+    }else{
+      var url = $('form#new_message').attr('data-url');
+      var data = $('form#new_message').serializeArray();
+      sendRequest(url, data);
+      $(this).parents('.message-element').remove();
+    }
+  });

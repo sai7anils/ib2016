@@ -1,0 +1,31 @@
+.table {
+  th {
+    padding-left: 10px !important;
+  }
+  td {
+    vertical-align: middle !important;
+  }
+}
+
+img.user-avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.update-password-form {
+  width: 100%;
+}
+
+.form-error-messages {
+  h2 {
+    color: #a94442 !important;
+  }
+}
+
+.select2-selection.select2-selection--single{
+  height: 33px !important;
+}
+
+.clear-filter {
+  cursor: pointer;
+}

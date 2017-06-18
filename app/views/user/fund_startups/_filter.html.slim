@@ -1,0 +1,19 @@
+ul.search-section.business-idea.row style="margin-left:0px; margin-right:0px"
+  li.col-sm-3
+    select.select-location.form-control
+      option value="" Search by Location
+      = options_for_select(CustomerAnalysis.regions.map{ |k, v| [v, k]}, selected: params[:location])
+  li.col-sm-3
+    select.select-business-line.form-control
+      option value="" Search by Business line
+      = options_for_select(BusinessLine.all.collect {|p| [ p.name, p.id ] }, selected: params[:business_line])
+  li.col-sm-3
+    select.select-idea-stage.form-control
+      option value="" Search by Idea Stage
+      = options_for_select(BusinessIdea::STAGE_NAME.collect {|k, v| [ v, k ] }, selected: params[:idea_stage])
+  li.col-sm-2
+    select.select-patent.form-control
+      option value="" Search by Patent
+      = options_for_select(BusinessIdea::PATENT.collect {|k, v| [ v, k ] }, selected: params[:patent])
+  li.col-sm-1.text-right.clear-search-business-idea
+    i.fa.fa-filter

@@ -1,0 +1,41 @@
+= f.fields_for :legal_advisor do |la|
+  .profile.fund
+    .profile-content.fund-content
+      h3 Legal & Advisors
+
+      h6 Has the startup employed the use of any professional advisors ?
+      ul.radio-button
+        li
+          //input id="1" type="radio" name="1"/
+          = la.radio_button :professional_advisor, true
+          span for="1" Yes
+        li
+          //input id="2" type="radio" name="1"/
+          = la.radio_button :professional_advisor, false
+          span for="2" No
+
+      h6 Does the startup have a functioning board of advisors ?
+      ul.radio-button
+        li
+          // input id="1" type="radio" name="2"/
+          = la.radio_button :board_advisor, true
+          span for="1" Yes
+        li
+          //input id="2" type="radio" name="2"/
+          = la.radio_button :board_advisor, false
+          span for="2" No
+
+      h6 How many members are on the startup's board of advisors ?
+      // select
+      //   option Select Dropdown
+      = la.select :member, LegalAdvisor::MEMBER.collect{|p| ["#{p}", p]}, { include_blank: '- Select Number Of Members -' }, class: 'paid', required: true
+
+      h6 How many hours of professional advice have been utilized by the company ?
+      // select
+      //   option Select Dropdown
+      = la.select :professional_advice, LegalAdvisor::MEMBER.collect{|p| [(p > 1) ? "#{p} hours" : "#{p} hour", p]}, { include_blank: '- Select Number Of Hours -' }, class: 'paid', required: true
+
+      h6 How many members are on the company's board of directors / managers ?
+      // select
+      //   option Select Dropdown
+      = la.select :board_manager, LegalAdvisor::MEMBER.collect{|p| ["#{p}", p]}, { include_blank: '- Select Number Of Members -' }, class: 'paid', required: true

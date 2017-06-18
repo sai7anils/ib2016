@@ -1,0 +1,17 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 Investor Identities
+      .profile
+        #identity-section
+          .profile-content.upcoming-content
+            .entrepreneur-content.container-fluid.list-idea
+              h6.h6-left Please submit at least two documents for Valid Investor verification on to use this Busines Idea portfolio
+              = render 'form'
+      .load-more
+        i.fa.fa-spinner.fa-spin
+        | Load more
+      = render 'user/ideas/business/closed_ideas'
+  .clearfix
+

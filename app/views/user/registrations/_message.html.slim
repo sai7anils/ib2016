@@ -1,0 +1,21 @@
+.message-tab
+  .notification-element.container-fluid
+    .noti-info
+      .header-message
+      .content
+        h4 The Other Olaf
+        h5 I am a snowman and my name is Olaf
+      p I was born in a castle ballroom, created by young witch at play with her sister. You might have heard this story, even heard of the snowman...
+      .author
+        = image_tag 'ideabox-user-icon.png'
+        br
+        .auto-info
+          h6
+            | Published in
+            = link_to ' Master', notification_path
+            | , written by
+            = link_to ' James Mohney', notification_path
+          h6
+            i.fa.fa-bookmark
+            |  Just now,
+            |  4 min read

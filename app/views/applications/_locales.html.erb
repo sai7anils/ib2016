@@ -1,0 +1,6 @@
+<div class="locales">
+  Language:
+  <select onChange="this.options[this.selectedIndex].value && (window.location = 'lang/' + this.options[this.selectedIndex].value);">
+    <%= options_for_select(Locales.all.map{|l| [l.title, l.name]}, selected: session[:locale] ) %>
+  </select>
+</div>

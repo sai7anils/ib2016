@@ -1,0 +1,11 @@
+<div id="order_state_code_wrapper">
+  <% parent_region ||= params[:parent_region] %>
+  <% parent_city ||= params[:parent_city] %>
+  <% cities = CS.cities(parent_city, parent_region) %>
+  <% if cities.nil? %>
+    <%= text_field(:user, :city, placeholder: 'e.g New York', required: true) %>
+  <% else %>
+     <i class="select-arrow"></i>
+     <%= select(:user, :city, cities) %>
+  <% end %>
+</div>

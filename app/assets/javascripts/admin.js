@@ -1,0 +1,12 @@
+//= require ./admin/jquery-1.11.1.min
+//= require ./admin/bootstrap.min
+//= require ./admin/chart.min
+//= require ./admin/chart-data
+//= require ./admin/easypiechart
+//= require ./admin/bootstrap-datepicker
+//= require ./admin/lumino.glyphs
+//= require ./admin/custom
+//= require ./idea/select2.full
+//= require ./idea/jquery-ui
+//= require ./jquery.timepicker
+//= require ./idea/event

@@ -1,0 +1,46 @@
+.nested-fields class="team-#{f.object.id}"
+  = render partial: 'team_row', locals: {f: f}
+  .j-row.team-form-row id="team-form-#{f.object.id}" class=(f.object.id.nil? ? '' : 'hide') style="border-bottom: 1px solid #DBDBDB !important"
+    .col-md-12.col-xs-12.unit
+      = link_to_remove_association f do
+        button.btn.btn-delete type="button"
+          = fa_icon 'trash', {class: ''}
+          | &nbsp;Remove
+    .col-md-6.col-xs-12.unit
+      label.label Name
+      .input
+        = f.text_field :name, id: 'web', placeholder: 'Name', required: true, maxlength: "40"
+    .col-md-6.col-xs-12.unit
+      label.label Designation
+      label.input.select
+        i
+        = f.select :designation, Startup.designation_options, class: '', required: true
+    .col-md-6.col-xs-12.unit
+      label.label Joined Date
+      .input
+        = f.text_field :joined_date, class: 'form-datepicker'
+        = image_tag asset_path('Date-Calendar_icon.png'), class: 'ui-datepicker-trigger'
+    .col-md-6.col-xs-12.unit
+      label.label Email ID
+      .input
+        = f.text_field :email, id: 'email', placeholder: 'email@domain.com', required: true
+    .col-md-6.col-xs-12.unit
+      label.label Mobile
+      .input
+        = f.text_field :mobile, id: 'phone', placeholder: 'phone/mobile', required: true
+        span.tooltip.tooltip-right-top Phone number
+    .col-md-6.col-xs-12.unit
+      label.label Skype ID
+      .input
+        = f.text_field :skype, id: 'skype', placeholder: 'Skype ID', required: true
+    .col-md-6.col-xs-12.unit
+      label.label Linkedin Profile
+      .input
+        label
+        = f.text_field :linkedin, id: 'linkedin', placeholder: 'e.g. www.linkedin.com/somthing/', required: true
+    .col-md-6.col-xs-12.unit
+      label.label Avatar
+      .input
+        = f.file_field :image, :as => :file, accept: 'image/png,image/gif,image/jpeg', id: 'team_file'
+        = image_tag f.object.image_url(:thumb) if f.object.image_url.present?
+

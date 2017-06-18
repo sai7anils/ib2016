@@ -1,0 +1,47 @@
+.col-sm-9.col-sm-offset-3.col-lg-10.col-lg-offset-2.main
+  .row
+    ol.breadcrumb
+      li
+        a href=admin_root_path
+          svg.glyph.stroked.home
+            use xlink:href="#stroked-home"
+      li.active Orders
+  /! /.row
+  .row
+    .col-lg-12
+      h1.page-header Orders
+  /! /.row
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-body
+          table.table.table-bordered.table-hover
+            tbody
+              tr
+                th width="20%" Idea
+                td width="80%" = link_to 'Idea', admin_business_idea_path(@order.business_idea)
+              tr
+                th IP Address
+                td = @order.ip_address
+              tr
+                th First name
+                td = @order.first_name
+              tr
+                th Last name
+                td = @order.last_name
+              tr
+                th Card Type
+                td = @order.card_type
+              tr
+                th Card Expiry Date
+                td = @order.card_expires_on
+              tr
+                th Date
+                td = @order.created_at.strftime('%d-%m-%Y')
+              tr
+                th Transactions
+                td
+                  - @order.transactions.each do |transaction|
+                    p = link_to transaction.authorization, admin_transaction_path(transaction)
+
+          = link_to "Back", admin_orders_path, class: "btn btn-primary"

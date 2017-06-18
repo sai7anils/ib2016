@@ -1,0 +1,5 @@
+<% publish_to api_idea_intrested_path do %>
+  $('h6.title2').next().remove();
+  var like = <%= @idea.likes.count %>;
+  $("<h6>"+like+"</h6>").insertAfter('h6.title2');
+<% end %>

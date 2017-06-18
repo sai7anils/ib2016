@@ -1,0 +1,33 @@
+= f.fields_for :product_service do |ps|
+  .profile.fund
+    .profile-content.fund-content
+      h3 Product & Services
+
+      h6 What is all about Product & Service offering ?
+      //textarea# name="" cols="30" rows="5" placeholder="Enter text here"
+      = ps.text_area :about, placeholder: 'Enter text here', required: true, pattern: '.{100, 600}', cols: "30", rows: "6"
+      h6.left Select offering Primary business :
+      // select.left
+      //   option Product
+      = ps.select :primary_business, ProductService::OFFERING.collect {|p| [ p.first, p.last ] }, { include_blank: '- Select Primary Business -' }, class: 'left', required: true
+      h6 Product Name
+      //textarea# name="" cols="30" rows="2" placeholder="Enter text here"
+      = ps.text_field :name, placeholder: 'Enter text here', required: true, pattern: '.{100, 300}'
+
+      h6.left.small Product Type :
+      // select.left.large
+      //   option Software
+      = ps.select :type, ProductService::PRODUCT_TYPE.collect {|p| [ p.first, p.last ] }, { include_blank: '- Select Product Type -' }, class: 'left large', required: true
+
+      h6.left.small Product Subtype :
+      // select.left.large
+      //   option Enterprise
+      = ps.select :subtype, ProductService::PRODUCT_SUBTYPE.collect {|p| [ p.first, p.last ] }, { include_blank: '- Select Product Subtype -' }, class: 'left large', required: true
+
+      h6 Product Description
+      // textarea# name="" cols="30" rows="2" placeholder="Enter text here"
+      = ps.text_area :description, placeholder: 'Enter text here', required: true, pattern: '.{100, 300}', cols: "30", rows: "3"
+
+      h6 Product Competative
+      //textarea# name="" cols="30" rows="2" placeholder="Enter text here"
+      = ps.text_area :product_competitive, placeholder: 'Enter text here', required: true, pattern: '.{100, 300}', cols: "30", rows: "3"

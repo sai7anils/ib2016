@@ -1,0 +1,8 @@
+Hi <%= @user.username %>,
+===============================================
+
+You have successfully submited identities to Ideaburns,
+
+To learn more the idea, Please click the link below: <%= confirm_email_user_investor_url(@user.investor.confirm_token) %>.
+
+Thanks for joining and have a great day!

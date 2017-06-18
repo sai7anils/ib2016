@@ -1,0 +1,11 @@
+---
+- id: 1
+  name: Low growth
+- id: 2
+  name: Intermittent growth
+- id: 3
+  name: Steady growth
+- id: 4
+  name: Rapid growth
+- id: 5
+  name: Yet to be analysed

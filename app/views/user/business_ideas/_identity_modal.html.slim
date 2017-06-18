@@ -1,0 +1,90 @@
+#modalIdentity.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" style="top: 1%;width:80%;margin:auto"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  ×
+        h4#myModalLabel.modal-title Investor Verification
+      .modal-body
+        .alert.alert-danger.hide
+          ul.list-message-error
+            li.alert-alert-error.alert-danger Indentity proof can't be blank
+
+        = render "user/investors/form"
+      .modal-footer
+        button.btn.btn-default.btn-submit-form type="button"
+          | GO&nbsp;
+          i.fa.fa-arrow-right
+        button.btn.btn-default data-dismiss="modal" type="button"  Cancel
+
+
+javascript:
+  $(document).ready(function () {
+    $('.btn-submit-form').click(function(){
+      if($('input[name="investor_identity[indentity_proof]"]').val() == ''){
+        $('.alert-danger').removeClass('hide');
+      }else{
+        $('.new_investor_identity').submit();
+      }
+    });
+    
+    $('#modalIdentity').on('hidden.bs.modal', function (e) {
+      $('.alert-danger').addClass('hide');
+    });
+
+  });
+css:
+  .alert-danger {
+    margin-bottom: none;
+  }
+  .btn-cancel, .btn-submit {
+    display: none;
+  }
+
+  .modal, .modal-open .modal {
+    overflow-y: none !important;
+  }
+
+  .modal-content .modal-body {
+    background-color: #FFF !important;
+    overflow-y: auto;
+    max-height: 300px;
+  }
+
+  .modal-header {
+    background-color: #FFF !important;
+  }
+
+  .modal-footer {
+    background-color: #18a393 !important;
+  }
+
+  .h6-upload-file{
+    float: left;
+  }
+
+  .btn-upload {
+    margin-top: -5px !important;
+  }
+
+  .btn-default, .btn-default:hover, .btn-default:focus {
+    color: #FFF;
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 18px;
+    outline: none !important;
+  }
+
+  .btn-submit-form, .btn-submit-form:hover, .btn-submit-form:focus {
+    font-size: 36px;
+  }
+
+  .btn-submit-form i {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-top: -5px;
+  }
+
+  .remove_fields.dynamic i {
+    font-size: 18px;
+  }

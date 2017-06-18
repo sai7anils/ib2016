@@ -1,0 +1,42 @@
+.loadmore-click
+  - (@load_popular_events || []).each do |event|
+      li.idea
+        = link_to user_event_path(event) do
+          h4 = event.try(:title)
+        end
+        h5 = event.description.to_s.truncate(30)
+  li.btn-plus
+      = link_to user_events_path, id: 'addmore', data: {page: @page || 1}  do
+        button
+          i.fa.fa-plus
+
+
+  javascript:
+       $('#addmore').click(function (event) {
+        event.preventDefault(); // Prevent link from following its href
+        
+        // get page number
+        var page_number = $('#addmore').attr('data-page');
+
+        $.ajax({
+
+            // make a get request to the server
+            type: "GET",
+            // get the url from the href attribute of our link
+            url: $(this).attr('href'),
+            // send the last id to our rails app
+            data: {
+                page: page_number
+            },
+            // the response will be a script
+            dataType: "script",
+
+            // upon success 
+            success: function () {
+               
+            },
+            error: function(){
+              
+            }
+        });
+      });

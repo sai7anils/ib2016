@@ -1,0 +1,777 @@
+ja:
+
+  global:
+    entrepreneurs: '起業家'
+    investors: '投資家の皆様'
+    startups: 'スタートアップ'
+    startup_events: 'STARTUPイベント'
+    read_more: '続きを読む'
+    create_event: 'イベントを作成'
+    free: 'フリー'
+    events: 'イベント'
+    type_here_for_events: 'イベントのためにここに入力し'
+    select_a_country: '国を選択'
+    select_a_date: '日付を選択'
+    posted_by: '投稿者'
+    find_out_more: '詳細はこちら'
+    no_results: '結果がありません'
+    all: 'すべて'
+    total: '合計'
+
+  header:
+    entrepreneurs: '起業家'
+    investors: '投資家の皆様'
+    startups: 'スタートアップ'
+    startup_events: 'STARTUPイベント'
+    login: 'ログイン'
+    signup: 'サインアップ'
+    logout: 'ログアウト'
+    profile: 'プロフィール'
+    type_to_search: '検索すると入力...'
+
+  navabar:
+    behind_it_thoughts: 'IT思考の背後にあります'
+    terms_of_use: '利用規約'
+    privacy_policy: '個人情報保護方針'
+    what_next: "次は何ですか"
+    contact_us: 'お問い合わせ'
+
+  footer:
+    entrepreneurs: 'Entreprenuers'
+    investors: '投資家'
+    startups: 'スタートアップ'
+    startup_events: 'スタートアップイベント'
+    about_us: '私たちに関しては'
+    behind_thoughts: '思考の背後にあります'
+    how_it_works: '使い方'
+    whats_next: '次は何ですか'
+    contact_us: 'お問い合わせ'
+    help: '助けて'
+    terms_privacy: '利用規約とプライバシー'
+    locate_us: 'お探し'
+    join_with_us: '米国と結合'
+
+  home:
+    first_main_heading: 'THINK.SHARE。'
+    last_main_heading: 'GROW。'
+    first_main_small_text: '私たちと一緒にあなたのアイデアを共有します。'
+    middle_main_small_text: ' 我々は右の投資は行うことができます'
+    last_main_small_text: ' BIGに行くためにあなたのアイデア'
+    how_it_work: '使い方'
+    ideas: '考え'
+    startups: 'スタートアップ'
+    investors: '投資家'
+    deals: 'お得な情報'
+
+    section_2:
+      first_heading: 'あなたを共有します'
+      first_heading_bold: ' IDEAS'
+      first_small_text: 'THIS WORLD A BETTER場所を作るために'
+      second_heading: 'INNOVATIONS'
+      second_heading_bold: 'FIND'
+      second_small_text: '投資し、REVOLUTIONSを作成するには'
+
+    section_3:
+      overview: ' 概要 '
+      who_we_are: '私たちは誰'
+      who_we_are_content: 'Idearburnsは、人々が追加と共有自分の考えを社会に、特に彼らが注目を取得したい投資家をターゲットにすることができるグローバルなオンライン創造的なプラットフォームです。また、これはスタートアップや起業家がより良いビューを持ち、事業戦略を改善するために自分の考えやアイデアを共有し、理想的な投資家との通信が可能な場所です。'
+      who_we_are_ans_1: '成功した企業にあなたの素晴らしいアイデアをオンにします。'
+      who_we_are_ans_2: 'レガシーない帝国を構築します。'
+      who_we_are_ans_3: '人々にあなたのinsprirationを行います。'
+      who_we_are_ans_4: '利益にあなたの情熱を回します。'
+      who_we_are_ans_5: 'オンライングローバルスタートアップのエコシステムを接続します。'
+      what_we_do: '私達がすること'
+      what_we_do_ans_1: 'ideaprenuers、起業家、ベンチャー・投資家のためのアイデアをNuturing。'
+      what_we_do_ans_2: 'スタートアップと投資家を接続するためのブリッジです。'
+      what_we_do_ans_3: "世界初のオンライン創造的なアイデアの評価ツール。"
+      what_we_do_ans_4: '安全確実なオンラインビジネスのアイデアをしてください。'
+      what_we_do_ans_5: 'アイデアプールにあなたのアイデアを公開し​​、他のプラットフォームのユーザーや投資家からのフィードバックを得ます。'
+      what_we_do_ans_6: '名門大学の学生、熱狂的な起業家のための最も好きなプラットフォームの一つになるように選択。'
+      join_ideaburns: '今日Ideaburns参加！'
+      join_ideaburns_ans_1: '私たちの単純なセキュリティで保護さsubmisionフォームに必要事項を記入してください。'
+      join_ideaburns_ans_2: 'それを送信し、我々のコミュニティの一部です。'
+      join_ideaburns_ans_3: 'あなたはそれが成功すると考えているアイデアのためのような＆投票。'
+      join_ideaburns_ans_4: 'あなたは彼らのアドバイスを聞くのが大好きだ目標と投資家へのメッセージ。'
+
+    section_4:
+      heading: 'CONNECT起業家、一箇所にスタートアップ＆投資家。'
+
+    section_5:
+      heading: 'ビジネスライン'
+      updating: '更新...'
+
+  how_it_work:
+    first_heading: 'ITがどのように働きますか'
+    second_heading: 'ここでは、ユーザの各タイプが活動を行う方法を教えしようとしています'
+    entrepreneurs: '起業家'
+    startup: '起動'
+    investor: '投資家'
+    entrepreneurs_tab:
+      step_1: 'ステップ1：Registeration - >ログイン'
+      step_1_2: '1. Registeration - サインアップ：あなたは新しいメンバーと起業家であれば、registerationのためのホームページの右上にサインアップを介してアクセスしてください'
+      step_1_3: '2. Registeration - ログイン：クリック申し込みボタン、それは情報を埋めるためにボックスが表示されます - ユーザータイプを選択するドロップダウンに行きます'
+      step_1_4: '3.完了後、アカウントを確認するためにあなたの電子メールにアクセスしてください'
+
+      step_2: '4.次に、あなたはでのログインし、私たちのエキサイティングなプラットフォームに参加することができます'
+      step_2_1: 'ステップ2：ファンドビジネスのアイデア - >投資家へのアクセス - >スケジュール会議'
+      step_2_2: '1.投資家に個人的にあなたのアイデアを送信するには、LeftsideバーのB-アイデアに資金を供給するためにアクセスしてください'
+
+      step_3: '2.次に、すべてのあなたのビジネスのアイデアの情報を記入するフォームが表示されます'
+      step_3_1: 'ステップ3：世界にアイデアを共有 - > /コメント/レートのアイデアのように'
+      step_3_2: "1.ここでは、左サイドバーで、2番目のアイコンを選択します - 想像します"
+      step_3_3: "''公開 ''あなたはあなたのアイデアを記入するボックスが表示されます2.クリックします。あなたは誰もが投資家を除いて、あなたのアイデアを知っているたくない場合は、代わりに ''ビジネス ''を選択することができます"
+
+      step_4: '3.あなたのアイデアは、右完全に情報要件を持つ」ボタンを「送信」」を選択した後に巨大な世界に起動されます。ここでは、あなたは、あなたが愛するすべての偉大なアイデアの共有、投票やコメントを好きなことができます'
+      step_4_1: 'ステップ4：Viewが起動イベント - >イベントを追加します。'
+      step_4_2: '1.どのイベントがleftsideバー上のイベントをクリックし、起こっているのを確認するには'
+      step_4_3: '2.イベントの追加]を選択し、独自のイベントを作成します'
+
+      step_5: 'ステップ5：ビュー他の起業家、新興企業＆投資家のプロフィール'
+      step_5_1: '私たちのコミュニティだけでなく、起業家、ベンチャーと投資家を表示するには1.左のサイドバー上の各カテゴリを介してクリックしてください。'
+
+    startup_tab:
+      step_1: 'ステップ1：Registeration - >ログイン'
+      step_1_1: '1.あなたが起動され、あなたはまだアカウントをお持ちでない場合は、hompageの右側にあるサインアップボックスにアクセスしてください'
+      step_2_2: '2.ユーザー・タイプの起動を選択してください'
+
+      step_2: 'ステップ2：ファンドスタートアップビジネス - >投資家へのアクセス - >スケジュール会議'
+      step_2_1: 'leftsideバーで1、あなたのアイデアを提出する基金の起動時にクリックします'
+      step_2_2: '2.必要なすべてのボックスに入力します'
+
+      step_3: 'ステップ3：世界にアイデアを共有 - > /コメント/レートのアイデアのように'
+      step_3_1: '1.ここでは、左サイドバーで、2番目のアイコンを選択します - 想像します'
+      step_3_2: "''公開 ''あなたはあなたのアイデアを記入するボックスが表示されます2.クリックします。あなたは誰もが投資家を除いて、あなたのアイデアを知っているたくない場合は、代わりに ''ビジネス ''を選択することができます"
+      step_3_3: "3.あなたのアイデアは、右完全に情報要件を持つ」ボタンを「送信」」を選択した後に巨大な世界に起動されます。ここでは、あなたは、あなたが愛するすべての偉大なアイデアの共有、投票やコメントを好きなことができます"
+
+      step_4: 'ステップ4：Viewが起動イベント - >イベントを追加します。'
+      step_4_1: '1.どのイベントがleftsideバー上のイベントをクリックし、起こっているのを確認するには'
+      step_4_2: '2.イベントの追加]を選択し、独自のイベントを作成します'
+      step_4_3: '3.次に、あなたがイベント情報を追加するために、表が表示されます'
+
+      step_5: 'ステップ5：ビュー他の起業家、新興企業＆投資家のプロフィール'
+      step_5_1: '私たちのコミュニティだけでなく、起業家、ベンチャーと投資家を表示するには1.左のサイドバー上の各カテゴリを介してクリックしてください。'
+
+    investor_tab:
+      step_1: 'ステップ1：登録 - >ログイン - >基本投資家'
+      step_1_1: '投資家のために1.は、あなたは新しいメンバーですか？ホームページの右側にあるサインアップボックスにアクセスしてください'
+      step_1_2: '2.ユーザー・タイプのための投資を選択してください'
+
+      step_2: 'ステップ2：世界にアイデアを共有 - > /コメント/レートのアイデアのように'
+      step_2_1: '1.ここでは、左サイドバーで、2番目のアイコンを選択します - 想像します'
+      step_2_2: "''公開 ''あなたはあなたのアイデアを記入するボックスが表示されます2.クリックします。あなたは誰もが投資家を除いて、あなたのアイデアを知っているたくない場合は、代わりに ''ビジネス ''を選択することができます"
+      step_2_3: "3.あなたのアイデアは、右完全に情報要件を持つ」ボタンを「送信」」を選択した後に巨大な世界に起動されます。ここでは、あなたは、あなたが愛するすべての偉大なアイデアの共有、投票やコメントを好きなことができます"
+
+      step_3: 'ステップ3：表示が起動イベント - >イベントを追加します。'
+      step_3_1: '1.どのイベントがleftsideバー上のイベントをクリックし、起こっているのを確認するには'
+      step_3_2: '2.イベントの追加]を選択し、独自のイベントを作成します'
+      step_3_3: '3.次に、あなたがイベント情報を追加するために、表が表示されます'
+
+      step_4: 'ステップ4：ビュー​​他の起業家、新興企業＆投資家のプロフィール'
+      step_4_1: '私たちのコミュニティだけでなく、起業家、ベンチャーと投資家を表示するには1.左のサイドバー上の各カテゴリを介してクリックしてください。'
+
+      step_5: 'ステップ5：検証済み/認定投資家'
+      step_5_1: "B-アイデアに投資であなたは、あなたがこの「農業」の詳細を確認したい場合など、投資のB-アイデア/スタートアップの詳細を表示するので、詳細をご覧くださいクリックし1"
+      step_5_2: '2.イベントの追加]を選択し、独自のイベントを作成します'
+      step_5_3: '3.次に、あなたがイベント情報を追加するために、表が表示されます'
+
+      step_6: 'ステップ6：ビジネスのアイデアに投資'
+      step_6_1: "「ビジネスアイデアのリストを表示し、あなたがそれに投資したりすることはできませんかどうかを確認するためにleftsideバーの「B-アイデアに投資する」を選択して下さい "
+
+
+      step_7: "ステップ6：スタートアップ事業の提案に投資"
+      step_7_1: "1.は、スタートアップビジネスの提案のリストを表示leftsideバーの「スタートアップに投資する」をクリックします"
+
+  behind_thoughts:
+    behind_thoughts: 'THOUGHTS BEHIND'
+    heading: '我々は、この製品を作られている理由の背後についての情報を提供する必要があります。'
+    story: 'ストーリー'
+    story_1: "私たちの主な目的は、接続するために開発し、世界中起動生物学的コミュニティをインターネットに力を与えることです。もの目標のために、我々は偉大な楽しいウェブ結果に対してオーバー起源」IdeaBurns 'と呼ばれます。スタートアップについて-an島。"
+    story_2: "IdeaBurnsは才能ビジネス先見、スタートアップのと投機家のための世界的なSaaS型社会の段階です。私たちのステージ1の発送は、潜在的なビジネス思考と早期会社の提案を与えることで認定された投資家や角度投資家ネットワークと提携することです。我々は、起動グループを容易に彼らの最大容量に広げます。"
+
+    vision: 'ビジョン'
+    vision_1: 'この宇宙に落ち着くと健康には、起動するために生物学的なコミュニティを入れて、個人が起業家の脳のために出身新たな技術革新を促すよう。'
+
+    mission: 'ミッション'
+    mission_1: '常にその必需前方に彼らの小さな規模の努力の経済を移動する途上国を支援します。'
+
+  terms:
+    terms_conditions: '利用規約'
+
+    legal_disclaimer: '法的放棄声明'
+    legal_disclaimer_1: 'これはideaburns.comのサービスの理解の規約です。すべてのクライアントが読み込まれ、このそれぞれの部分を確認し、他のいくつかの理解や戦略はideaburns.comによって与えなければなりません。あなたはこれらの条件に同意しないことを万が一で、あなたはideaburns.comまたは任意の子会社の投与を利用することから拒否されます。さらに、当社はいつでも本契約を変更する権利を持っています。'
+
+    rules: 'グラウンドルール'
+    rules_1: 'ideaburns.comの登録は、その人の性格のアカウントに成功し、いくつかの基本的には誰もがへの高速保持していることを決定します。私たちは、いつでも任意の一部または今後の部分への支援を拒否するために必要とされているものの権威を維持します'
+    rules_1_a: 'A。年齢スタートアップの唯一の0-5年はIdeaburns.comに参加を申請します'
+    rules_1_b: 'B。唯一の確認/ライセンス投資家が補助金資金を供給アイデアやスタートアップビジネスの提案に頂いすることができます。'
+    rules_1_c: 'C。唯一の認定情報は、ビジネスの問題に取り込むことができます。'
+
+    trademark: '商標権侵害'
+    trademark_1: 'ideaburns.comに関連付けられているすべての名称およびロゴは、Ideaburnsの商標です。あなたは私たちの書面による同意なしに、いかなる方法で任意の商標を使用することはできません。また、ユーザーが任意の特許、商標、またはideaburnsユーザーまたはいかなる他の当事者の他の著作権を侵害しないことがあります。'
+
+  sidebar:
+    edit: ' 編集'
+    ideas: ' 考え'
+    ideate: '想像します'
+    events: ' イベント'
+    add_events: 'イベントを追加'
+    fund_b_idea: ' ファンドB-アイデア'
+    fund_startup: ' ファンドスタートアップ '
+    invest_in_b_ideas: ' B-アイデアに投資 '
+    invest_in_startup: ' スタートアップへの投資 '
+    entreprenuers: ' Entreprenuers '
+    startups: ' スタートアップ '
+    investors: ' 投資家 '
+    my_ideas: ' 私のアイデア '
+    our_ideas: '私たちのアイデア'
+    my_b_ideas: ' 私のB-アイデア '
+    our_b_ideas: '私たちのB-アイデア'
+    my_events: ' 自分のイベント '
+    our_events: ' 当社のイベント '
+
+  users_header:
+    type_keywords: 'キーワードを入力'
+    messages: 'メッセージ'
+    notifications: 'お知らせ'
+    my_account: 'マイアカウント'
+    update_profile: 'プロフィールを更新'
+    logout: 'ログアウト'
+    my_favourites: '私のお気に入り'
+    notifications_empty: "あなたは％{数}通知を持っています"
+    messages_empty: "あなたは％{数}のメッセージを持っています"
+    see_all: 'すべてを見る'
+    reply: '応答'
+    view_all_mess: 'すべてのメッセージを見ます'
+
+  idea:
+    post_your_idea: 'あなたのアイデアをPOST'
+    closed_ideas: 'CLOSED IDEAS'
+    public_ideas: 'PUBLIC IDEAS'
+    total_views: '総視聴数が多い順'
+    select_a_country: '国を選択'
+    select_a_category: 'カテゴリーを選ぶ'
+    read_more: 'Readeの詳細 '
+    load_more: '以上の負荷 '
+    learn_more: 'もっと詳しく知る'
+    idea_details: 'IDEAの詳細'
+    edit: '編集'
+    delete: '削除'
+    remove: '削除します'
+    update_success_mess: 'よくやった！アイデアが正常に更新されました。'
+    are_you_sure: '本気ですか ？'
+
+    normal:
+      instructions: '説明書'
+      content_1: '世界にあなたのアイデアを共有しています。'
+      content_2: '同僚にあなたの経験を共有しています。'
+      content_3: 'ビジネス・アイデアのスタートアップのexcution上の他のEntrpreneurs、スタートアップのファウンダーなどに役立ちます。'
+      content_4: 'スタートアップコミュニティ上で有効な情報を提供します。'
+      idea_category: 'アイディア部門*'
+      idea_title: 'アイデアタイトル*'
+      upload_file: 'ファイルをアップロードする*'
+      choose_file_to: 'するファイルを選択します。'
+      upload: 'アップロード'
+      idea_description: 'アイデアの説明*'
+      enter_idea_title_here: 'ここではアイデアのタイトルを入力します。'
+      submit: 'SUBMIT'
+      select_idea_category: '- 選択アイディア部門 -'
+      idea_image: 'アイデアイメージ'
+      change_image: 'イメージ変更'
+      rate_this: 'これを評価します'
+      idea_type: 'アイデアタイプ'
+      comments: 'コメント'
+      top_view: 'アイデアの一番上の景色'
+      write_a_comment: 'コメントを書く'
+      be_the_first_like_this: 'このような最初の'
+      more_from: "{著者}％から詳細"
+      no_more_to_load: 'これ以上の負荷に'
+      no_results: '結果がありません'
+      press_esc: 'Escキーを押しへ'
+      cancel: 'キャンセル'
+      reply: '応答'
+      post: '役職'
+      like: '以下のような'
+      unlike: '異なり、'
+
+    business:
+      my_favourites: '私のお気に入り'
+      business_ideas: 'ビジネスのアイデア'
+      search_by_location: '所在地で探します'
+      search_by_bussiness_line: 'ビジネスラインで検索'
+      search_by_idea_stage: 'アイデア段階で検索'
+      search_by_patent: '特許で検索'
+      view_profile: 'プロフィールを見る'
+      problem_statement: '問題文 ：'
+      solution: 'ソリューション： '
+      current_idea_stage: '現在のアイデアステージ： '
+      capital: '資本金：'
+      seeking: '探しています： '
+      stake: '杭'
+      next: '次'
+      validate: '検証'
+      submit: 'SUBMIT'
+      save: 'セーブ'
+      clear: 'CLEAR'
+
+      primary_niceties_tab: 'プライマリ細かい点'
+      early_stage_analysis_tab: '早期解析'
+      team_capabilities_tab: 'チーム機能'
+      market_analysis_tab: '市場分析'
+      customer_analysis_tab: '顧客分析'
+      investment_scale_tab: '投資規模'
+      profit_potential_tab: '潜在的利益'
+      competitors_scenery_tab: '競合他社の風景'
+      pitch_burns_tab: 'ピッチバーンズ'
+      exit_strategy_tab: '出口戦略'
+
+      primary_details: 'プライマリ詳細'
+      target_business_lines: 'ターゲットビジネスライン（*）'
+      select_bussiness_lines: '- ビジネスラインを選択します -'
+      type_of_bussiness_idea: 'ビジネスアイデアの種類（*）'
+      select_type_bussiness_idea: '- ビジネスアイデアのタイプを選択 -'
+      idea_title: 'アイデアのタイトル（*）'
+      idea_tagline: 'アイデアのタグライン（*）'
+      problem_statement_2: '問題文 （*）'
+      solution_2: 'ソリューション（*） '
+      select_current_idea_stage: '現在のアイデアステージ？ （*）'
+      generation: '世代'
+      assessment: '評価'
+      planning: '計画'
+      prototype: 'プロトタイプ'
+      implimentation: 'Implimentation'
+      ip_patent: 'このアイデアのIPまたは特許をお持ちですか？ （*）'
+      ip_patent_1: '特許取得/ IPの場合'
+      ip_patent_2: '保留中'
+      ip_patent_3: '未だに'
+      ip_patent_4: 'レジスタ番号'
+      enter_regis_number_here: 'ここでレジスタ番号を入力してください'
+      enter_text_here: 'ここにテキストを入力します。'
+      add_team: 'チームを追加'
+      view_team_list: '表示チーム一覧'
+      select_strength: '- 強さを選択してください -'
+
+      early_stage_analysis_ques_1: '1.動機とビジョン - あなたがビジネスを開始している主な理由は何ですか？ （*）'
+      early_stage_analysis_ques_2: '2.どのように多くの年の経験あなたが開始されている業界でなければなりませんか？ （*）'
+      early_stage_analysis_ques_3: 'どの程度3.あなたは以前に起動ビジネスに携わってきましたか？ （*）'
+      early_stage_analysis_ques_4: '4.あなたのビジネスモードを選択します！ （*）'
+      early_stage_analysis_ques_5: '5.ビジネスモデルを説明しますか？あなたはお金を生成する方法は？ （*）'
+      early_stage_analysis_ques_6: '6.あなたのアイデアの実行のためにそれを取るしようとしている手順を教えてください。'
+
+      team_capabilities_ques_1: '1.クルーシャルスキル - 1スキル以下は、あなたのビジネスのアイデアに最も重要だと思います。 （*）'
+      team_capabilities_ques_2: 'あなたのチームの2強（*）'
+      team_capabilities_ques_3: '4.チーム属性 - 次のリソースと能力のどちらがあなたやあなたのチームが持っているのですか？ （*）'
+
+      enter_name: '名前を入力'
+      enter_role: '入力役割がBusinessIdeaで撮影してい'
+      enter_skills: 'スキルを入力してください'
+      select_joined_in_team: '- チームで参加を選択 -'
+      profile_image: 'プロフィール画像'
+
+      market_analysis_ques_1: '1.市場への新たなこのアイデアはありますか？はい・いいえ （*）'
+      market_analysis_ques_2: '2.このアイデアは、市場に大きな影響を与えるでしょうか？ （*）'
+      market_analysis_ques_3: '3.市場動向 - あなたの主なターゲット市場が成長しているどの程度まで？ （*）'
+      market_analysis_ques_4: '4.市場のチャンネル - どのように潜在的な顧客にあなたの製品やサービスを販売するつもりですか？ （*）'
+      market_analysis_ques_5: '5.市場規模 - あなたの主なターゲット市場の年間総サイズは何ですか？ （*）'
+      market_analysis_ques_6: '6.社内ですでに存在しているのアイデアを実現するための能力、ツール、および生産設備のですか？ （*）'
+
+      customer_analysis_ques_1: ''
+      customer_analysis_ques_2: ''
+      customer_analysis_ques_3: ''
+      customer_analysis_ques_4: ''
+      customer_analysis_ques_5: ''
+      customer_analysis_ques_6: ''
+      from_age: '年齢（*）から'
+      select_from_age: '- 年齢から選択してください -'
+      to_age: '年齢（*）へ'
+      select_to_age: '- 年齢に選択してください -'
+      select_region: '- 地域を選択 -'
+
+      investment_scale_quest_1: '1.どのくらいの総資本あなたは製品が生きて行く必要があるのですか？ （*）'
+      investment_scale_quest_2: '2.あなたは既にどのくらいの資金を持っていますか？ （*）'
+      investment_scale_quest_3: '3.どのくらいの資金あなたが投資したいですか？ （*）'
+      investment_scale_quest_4: '4.あなたはどのくらいの資金を求めていますか？ （*）'
+      investment_scale_quest_5: '5.投資家へのビジネスの株式を提供？ （*）'
+      investment_scale_quest_6: '6.どのようにこれらの資金を使うのだろうか？ （*）'
+      zero: 'ゼロ'
+      of_whole_capital: '全体の資本の'
+      select_business_stake: '- ビジネスステークを選択します -'
+
+      business_potencial: 'ビジネスPotencial'
+      business_potencial_heading_right: '予測 - 財務予測'
+      instructions: '説明書'
+      profit_potential_content: 'Loremのイプサムの嘆き、AMET consecteturのadipiscingのELIT座ります。 morbusの複数形はのNiSi tinciduntのcommodoにorclとAMET座ります。 Loremのイプサムの嘆き、AMET consecteturのadipiscingのELIT座ります。 morbusの複数形はのNiSi tinciduntのcommodoにorclとAMET座ります。 Loremのイプサムの嘆き、AMET consecteturのadipiscingのELIT座ります。 morbusの複数形はのNiSi tinciduntのcommodoにorclとAMET座ります。'
+      profit_potential_ques_1: '1.投影のどのタイプ？ （*）'
+      profit_potential_ques_1_small_text: '（毎月、毎年）'
+      profit_potential_ques_2: '2.投影される数値を表す用語を選択するのか？ （*）'
+      profit_potential_ques_2_small_text: '（1年、3年、5年）'
+      profit_potential_ques_3: '3.収益源のどのタイプ？ （*）'
+      select_type_of_projection: '- プロジェクションのタイプを選択します -'
+      choose_term: '- 用語を選択してください -'
+      select_type: '- タイプを選択 -'
+
+      competitors_scenery_ques_1: '少なくとも1つのCompetatorsを追加する必要があります'
+      competitors_scenery_ques_2: '2. competatorsにanalaysis（画像フォーマットで）グラフ/表で提供されるものですか。'
+      competitors_scenery_ques_3: '3.どのようにあなたのビジネスのアイデアは、既存にcompetative世界に維持できますか？ （*）'
+      add_competitors: '（*）競技者を追加します。'
+      view_competitors: 'ビューの競技者'
+      enter_company_name: '会社名を入力します。'
+      enter_primary_business_line: '彼らの主要ビジネスラインを入力してください'
+      enter_revenue_if_know: '収益を入力します（わかっている場合）'
+      enter_website_url: '収益を入力します（わかっている場合）'
+
+      pitch_burns_quest_1: '1.あなた自身のピッチプレゼンテーションをアップロードします（*）'
+      pitch_burns_quest_1_small_text: '（それだけでPPT＆PDFを可能にします）'
+      pitch_burns_quest_2: '2.ビデオピッチのプレゼンテーションをアップロード'
+      pitch_burns_quest_2_small_text: '（それが唯一のビデオファイルを可能にします）'
+      pitch_burns_quest_3: '3.任意の研究文書/法的文書を（もしあれば）をアップロード'
+      pitch_burns_quest_3_small_text: '複数のドキュメントを追加します。'
+      pitch_burns_quest_4: '4.あなたの考えは合法的段階にどのように遠くまで行きますか？ （*）'
+
+      exit_strategy_quest_1: '1.あなたは出口のために好みますか？どのようにあなたのビジネスの出口戦略を定義しますか？説明する。 （*）'
+      exit_strategy_quest_1_ex: '例：'
+      exit_strategy_quest_1_ex_1: '合併＆買収（M＆A）'
+      exit_strategy_quest_1_ex_2: '新規株式公開（IPO）'
+      exit_strategy_quest_1_ex_3: '清算と密接'
+
+      modal:
+        messages: 'メッセージ'
+        pls_check: '1.ご確認ください'
+        your_profile: ' あなたのプロフィール'
+        mess_1: '2.我々は、すべての投資家にあなたのアイデアを提出する予定です。'
+        mess_2: '3.私たちは、この提出＆プランを提供するためのつもり料金USD 99です。'
+        mess_3: '4.データがrelavantかつ正確であることを確認してください。'
+        mess_4: '5.しかし、あなたの文書があなたの承認なしに任意の投資家に共有されるべきではありません。'
+        cancel: 'キャンセル'
+        paynow: '今払う'
+        complete_required_mess: '（*）は必須フィールドを入力してください。'
+        validation_required_mess: 'あなたの情報を有効にしてください！'
+        total_score: '合計スコア'
+        good_to: 'への良好な'
+        go: 'GO'
+        send: '送信'
+
+      details:
+        business_idea_details: 'ビジネスアイデアの詳細'
+        views: 'ビュー'
+        view_profile: 'プロフィールを見る'
+        intrested: 'intrestedて'
+        year: '年'
+        years: '年'
+        per: 'あたり'
+        unit: '単位'
+        capital: 'キャピタル - '
+        seeking: '探しています - '
+        stake: '杭'
+        for: ' ために '
+        ip_number: 'IP番号：'
+        team_strength: 'チームの強さ'
+        motivation_vision: 'モチベーションとビジョン-c'
+        industry_exp: '業界経験 - '
+        business_model: '事業の型 -'
+        business_model_overview: 'スタートアップエクスペリエンス -'
+        steps_4_this_idea_exc: 'ビジネスモデルの概要'
+        projection_type: 'このアイデアを実行するための手順'
+        projected_term: 'プロジェクションタイプ'
+        revenue_stream: '写し出された用語'
+        views_sales_numbers: '収益の流れ'
+        view_competators_list: 'ビューCompetators一覧'
+        how_it_work: 'それがどのように働きますか'
+        analysis_on_competators_business: "competatorのビジネスの分析"
+        market_trend: '市場動向'
+        market_channels: '市場チャンネル'
+        market_size: '市場規模'
+        yes: 'はい'
+        no: 'いいえ'
+        details_ques_1: 'このアイデアは、市場に新しいですか？'
+        details_ques_2: 'このアイデアは、市場に大きな影響を持っているでしょうか？'
+        details_ques_3: 'すでに社内に存在するアイデアを実現するための能力、ツール、および生産設備のですか？'
+        details_ques_4: 'あなたは、顧客の問題（問題を）どのように対処するのですか？'
+        details_ques_6: 'このアイデアは、（根本）新しい方法で明確に定義された顧客の問題を解決していますか？説明？'
+        3_customer: 'どのようにあなたの製品やサービスについてのあなたの潜在的な顧客をconvienceのですか？'
+        target_customer: 'スリー（3）ビッグ顧客'
+        age_target: '地理的領域内のターゲット顧客'
+        init_public_offering: '年齢ターゲティング'
+        validation_score: '新規株式公開'
+        request_for_more_details: '詳細については、要求'
+        deal: '対処'
+        go_deal: 'GOのDEAL '
+        investment_scale: '投資規模 '
+        capital_required: '首都必須'
+        fund_already_have: 'ファンドは、既に持っています'
+        fund_i_invest: '私が投資するファンド'
+        seeking_fund: 'ファンドを探しています'
+        offering_business_stake: 'ビジネスの株式を提供'
+        documents: 'ドキュメント'
+        documents_file: 'ドキュメント（ファイル） '
+        forecast_financial_projection: 'orecast - 財務予測'
+        revenue: '収益 -'
+        market_valuation: '市場評価'
+        favo_this_deal: 'お気に入りこの契約'
+        skills: 'スキル '
+        joined: '参加しました '
+        query_for: '以下のためのクエリ '
+
+  event:
+    startup_events: 'STARTUPイベント'
+    my_events: '自分のイベント'
+    create_event: 'イベントを作成'
+    up_coming_events: '今後のイベント'
+    popular_events: '人気のイベント'
+    type_here_for_events: 'イベントのためにここに入力し'
+    select_a_country: '国を選択'
+    select_date: '日付を選択'
+    free: 'フリー'
+    load_more: '以上の負荷'
+    posted_by: "％{著者}投稿者"
+    find_out_more: '詳細はこちら'
+    edit_event: '編集イベント'
+    no_results: '結果がありません'
+
+    event_title: 'イベントタイトル*'
+    event_entry_type: 'イベントエントリタイプ*'
+    event_category: 'イベントカテゴリ*'
+    event_from: '*からのイベント'
+    event_to: 'イベントに*'
+    time: '時間*'
+    time_zone: 'タイムゾーン*'
+    website: 'イベントReffenceウェブサイト'
+    enter_website: イベントReffenceウェブサイトを入力してください''
+    image: 'イベントイメージ'
+    add_event_partner: 'イベントパートナーを追加'
+    event_description: 'イベントの説明*'
+    enter_text_here: 'ここにテキストを入力します。'
+    event_venue: 'イベント会場'
+    address_line_1: '住所1*'
+    address_line_2: '住所2*'
+    country: '国*'
+    region: '領域*'
+    city: 'シティ*'
+    zip: '郵便番号/ピンコード'
+    pls_select_country: '上記の国を選択してください'
+    cancel: 'キャンセル'
+    submit: '提出します'
+    select_entry_type: '- イベントエントリの種類を選択します -'
+    select_category: '- イベントカテゴリを選択 -'
+    partner_logo: 'パートロゴ'
+    remove: '削除します'
+    well_done: 'WELは完了します！'
+    event_update_success: ' イベントが正常に更新されました。'
+
+    event_details: 'イベントの詳細'
+    category: 'カテゴリー'
+    overview: '概要'
+    schedule: 'スケジュール'
+    location: 'ロケーション'
+    time_schedule: 'タイムスケジュール '
+    venue_address: '会場住所 '
+
+
+  devise:
+    email: 'Eメール'
+    password: 'パスワード'
+    confirm_password: 'パスワードを認証する '
+    remember_me: '私を覚えてますか '
+    forgot_your_password: 'パスワードをお忘れですか ？'
+    username: 'ユーザー名'
+    select_user_type: '- ユーザータイプを選択します -'
+    minimum_character: "最低％{NUM}文字*必須"
+    login: 'ログイン'
+    signup: 'サインアップ'
+    terms_conditions: '利用規約'
+    enter_your_email: 'メールアドレスを入力：'
+    send_me_reset_pwd: 'PASSWORD命令をRESET ME SEND'
+    get_regis_with_us: '米国で登録GET'
+
+    confirmations:
+      confirmed: "あなたのメールアドレスが正常に確認されています。"
+      send_instructions: "あなたは数分であなたのメールアドレスを確認する方法について手順を記載したメールが届きます。"
+      send_paranoid_instructions: "あなたのメールアドレスが私達のデータベースに存在する場合、あなたは数分であなたのメールアドレスを確認する方法について手順を記載したメールが届きます。"
+    failure:
+      already_authenticated: "あなたは既に署名されます。"
+      inactive: "あなたのアカウントはまだ活性化されていません。"
+      invalid: "無効な％{authentication_keys}またはパスワード。"
+      locked: "あなたのアカウントがロックされています。"
+      last_attempt: "アカウントがロックされる前に、もう一つの試みを持っています。"
+      not_found_in_database: "無効な％{authentication_keys}またはパスワード。"
+      timeout: "セッションの有効期限が切れ。継続するには、もう一度ログインしてください。"
+      unauthenticated: "あなたはログインまたは継続する前にサインアップする必要があります。"
+      unconfirmed: "続行する前に、メールアドレスを確認する必要があります。"
+    mailer:
+      confirmation_instructions:
+        subject: "IdeaBurnsへようこそ"
+      reset_password_instructions:
+        subject: "パスワード命令をリセット"
+      unlock_instructions:
+        subject: "命令のロックを解除"
+      password_change:
+        subject: "パスワードが変更されました"
+    omniauth_callbacks:
+      failure: "％{reason} ため、％{type}からユーザーを認証できませんでした "
+      success: "正常に ％{type}のアカウントから認証されました。"
+    passwords:
+      no_token: "あなたは、パスワードリセットのメールから来ることなく、このページにアクセスすることはできません。パスワード再設定のメールから来ない場合は、あなたが提供する完全なURLを使用していることを確認してください。"
+      send_instructions: "あなたは数分であなたのパスワードをリセットする方法の手順を記載したメールが届きます。"
+      send_paranoid_instructions: "あなたのメールアドレスが私達のデータベースに存在する場合、あなたは数分であなたのメールアドレスにパスワード回復リンクを受信します。"
+      updated: "パスワードが正常に変更されました。あなたは今で署名されます。"
+      updated_not_active: "パスワードが正常に変更されました。"
+    registrations:
+      destroyed: "さようなら！アカウントが正常にキャンセルされました。私たちはすぐにまたお会いしたいと考えています。"
+      signed_up: "ようこそ！あなたが正常にサインアップしています。"
+      signed_up_but_inactive: "あなたが正常にサインアップしています。アカウントがまだアクティブ化されていないためしかし、私たちはあなたをサインインできませんでした。"
+      signed_up_but_locked: "あなたが正常にサインアップしています。アカウントがロックされているため、しかし、私たちはあなたをサインインできませんでした。"
+      signed_up_but_unconfirmed: "確認リンクを含むメッセージは、あなたのメールアドレスに送信されました。アカウントを有効にするためのリンクに従ってください。"
+      update_needs_confirmation: "あなたは成功し、アカウントを更新したが、我々は、新しいメールアドレスを確認する必要があります。あなたの電子メールをチェックし、新しいメールアドレスを確認するために、確認のリンクに従ってください。"
+      updated: "アカウントが正常に更新されました。"
+    sessions:
+      signed_in: "正常に署名しました。"
+      signed_out: "正常にサインアウト"
+      already_signed_out: "正常にログアウトしました。"
+    unlocks:
+      send_instructions: "あなたは数分でアカウントのロックを解除する方法について手順を記載したメールが届きます。"
+      send_paranoid_instructions: "あなたのアカウントが存在する場合は、数分でロックを解除する方法について手順を記載したメールが届きます。"
+      unlocked: "アカウントが正常にロックが解除されました。継続するにはログインしてください。"
+  errors:
+    messages:
+      already_confirmed: "すでに確認された、ログインしてみてください"
+      confirmation_period_expired: "％{期間}内に確認する必要があり、新しいものをリクエストしてください"
+      expired: "有効期限が切れている、新しいものをリクエストしてください"
+      not_found: "見つかりません"
+      not_locked: "ロックされていませんでした"
+      not_saved:
+        one: "1エラーが保存されることから、この％{リソース}を禁止しました："
+        other: "保存されてから、この％{リソース}を禁じ％{数}エラー："
+
+  user:
+    update_profile: 'プロフィールを更新'
+    profile_details: 'プロフィールの詳細'
+    update_password: 'UPDATEのパスワード'
+    profile_completion: 'プロフィールCompeletion'
+    last_updated_on: "最終％{日付}に更新 "
+    personal: '個人的な'
+    profession: '職業'
+    education: '教育'
+    contact: '接触'
+    describe: '説明します'
+    name: '名'
+    first_name: 'ファーストネーム'
+    last_name: '苗字'
+    email: 'Eメール'
+    email_primary: 'メールプライマリー'
+    gender: '性別'
+    male: '男性'
+    female: '女性'
+    dob: 'DOB'
+    country: '国'
+    select_country: '- 国を選択-'
+    region: '領域'
+    city: 'シティ'
+    profession_type: '職業の種類'
+    select_profession_type: '- 職業の種類を選択します -'
+    company: '会社'
+    skills: 'スキル'
+    startup_experience: 'スタートアップ経験'
+    select_startup_experience: '- スタートアップエクスペリエンスを選択 -'
+    graduation: '卒業'
+    select_graduation: '- 卒業を選択 -'
+    university_college: '大学/カレッジ'
+    mobile: 'モバイル'
+    address: '住所'
+    email_secondary: 'メールセカンダリ'
+    skype_id: 'スカイプのID'
+    website: 'ウェブサイト'
+    about_you: 'あなたについて'
+    inspire_quote: '引用をインスパイア'
+    linkedin: 'LinkedInの'
+    add_team: 'チーム+を追加'
+    add_funding: '=+資金を追加'
+    office_head: 'オフィス本社'
+    socials_webapps: '社会・Webアプリケーション]'
+    investor_details: '投資家の詳細'
+    add_portfolio: '=+ポートフォリオを追加します。'
+    next: '次'
+    update: '更新'
+    clear: 'CLEAR'
+    add: '加えます'
+    delete: '削除'
+    remove: '削除します'
+    date: '日付'
+    mess_success_update_profile: 'よくやった！あなたは成功し、プロファイルの詳細を保存します'
+    your_contact_phone_number: 'あなたの連絡先電話番号'
+    any_useful_info_about_you: 'あなたについての有益な情報'
+    investor_type: '投資家のタイプ'
+    select_investor_type: '- 投資家のタイプを選択 -'
+    organization_name: '組織名'
+    founded: '（年）設立'
+    business_lines: 'ビジネスライン'
+    select_bussiness_lines: '- 商務行を選択します -'
+    description: '説明'
+    mission_vision: 'ミッション＆ビジョン'
+    designation: '指定'
+    select_designation: '- 指定の選択 -'
+    join_date: '参加日'
+    team_logo: 'チームのロゴ'
+    address_line_1: '住所1'
+    address_line_2: '住所2'
+    state: '状態'
+    startup_name: 'スタートアップ名前'
+    type_funding: '資金の種類'
+    select_type_funding: '- 資金調達の種類の選択 -'
+    funding_amount: '資金調達額'
+    startup_logo: 'スタートアップロゴ'
+    about_company: '会社について'
+    primary_bussiness_lines: 'プライマリ商務行'
+    how_it_work: 'これは、しくみ'
+    regis_company_name: '登録会社名'
+    employee_strength: '従業員の強さ'
+    select_employee_strength: '- 従業員の強さを選択します -'
+    avatar: 'アバター'
+    amount: '量'
+    by_investor: '投資家'
+    any_useful_info_about_company: '会社に関する有用な情報'
+    pls_select_country_above: '上記の国を選択してください'
+    current_password: '現在のパスワード'
+    new_password: '新しいパスワード'
+    new_password_confirmation: '新しいパスワードの確認'
+    your_current_pwd_mess: '（あなたの現在のパスワードが変更を確認するために）'
+    update_pwd_success_mess: 'よくやった ！パスワードが正常に更新されました。'
+    update_pwd_error_heading: '1エラーが保存されてからこのユーザーを禁止しました：'
+    update_pwd_error_mess: "新しいパスワードは空白にすることはできません"
+
+    dashboard: 'ダッシュボード'
+    select_skill_type: 'スキルの種類を選択します'
+    select_profession_type: '職業の種類を選択します'
+    select_country_input: '国を選択'
+    read_more: '続きを読む'
+    about : '約'
+    personal_details: '個人的な脱線'
+    communication: 'コミュニケーション'
+    only_investor_view_contact_details: '唯一の投資家連絡先の詳細を表示することができます'
+    profile_view: 'プロフィールを見ます'
+    load_more: '負荷より'
+    no_results: '結果がありません'
+    select_state: '州を選択'
+    number_with_years: "％{番号}年"
+    not_have_func_yet: 'まだ機能を持っていません'
+    select_business_line_type: '商務線種を選択'
+    select_funding_type_input: '資金調達の種類を選択します'
+    select_investor_type_input: '投資家のタイプを選択します'
+    our_team: '私たちのチーム'
+    location: 'ロケーション'
+    portfolio: 'ポートフォリオ'
+    business_type: '商務タイプ'
+    funding: '資金調達'
+    investor: '投資家'
+
+  notifications:
+    notifications: 'NOTIFICATIONS'
+    recent: '最近'
+    search: 'サーチ'
+    search_here: '検索 '
+    ago: ' 前 '
+
+  messages:
+    to_day: '日へ'
+    reply: '応答'
+    sent: '送信されました'
+    enter_text_here: 'ここにテキストを入力します。'
+

@@ -1,0 +1,779 @@
+vi:
+
+  global:
+    entrepreneurs: 'DOANH NHÂN'
+    investors: 'NHÀ ĐẦU TƯ'
+    startups: 'STARTUPS'
+    startup_events: 'SỰ KIỆN STARTUP'
+    read_more: 'Đọc thêm'
+    create_event: 'TẠO SỰ KIỆN'
+    free: 'Miễn phí'
+    events: 'SỰ KIỆN'
+    type_here_for_events: 'Tìm sự kiện'
+    select_a_country: 'Chọn một quốc gia'
+    select_a_date: 'Chọn ngày'
+    posted_by: 'Gửi bởi '
+    find_out_more: 'Tìm hiểu thêm'
+    no_results: 'Không có kết quả'
+    all: 'Tất Cả'
+    total: 'Tổng '
+
+  header:
+    entrepreneurs: 'DOANH NHÂN'
+    investors: 'NHÀ ĐẦU TƯ'
+    startups: 'STARTUPS'
+    startup_events: 'SỰ KIỆN STARTUP'
+    login: 'ĐĂNG NHẬP'
+    signup: 'ĐĂNG KÝ'
+    logout: 'ĐĂNG XUẤT'
+    profile: 'HỒ SƠ'
+    type_to_search: 'Nhập để tìm kiếm ...'
+
+  navabar:
+    behind_it_thoughts: 'Đằng sau CNTT Thoughts'
+    terms_of_use: 'Điều khoản sử dụng'
+    privacy_policy: 'Chính sách bảo mật'
+    what_next: "Cái gì tiếp theo"
+    contact_us: 'Liên hệ chúng tôi'
+
+  footer:
+    entrepreneurs: 'Entreprenuers'
+    investors: 'Nhà đầu tư'
+    startups: 'Startups'
+    startup_events: 'Sự kiện khởi động'
+    about_us: 'VỀ CHÚNG TÔI'
+    behind_thoughts: 'Đằng sau Thoughts'
+    how_it_works: 'Làm thế nào nó hoạt động'
+    whats_next: 'Cái gì tiếp theo'
+    contact_us: 'LIÊN HỆ CHÚNG TÔI'
+    help: 'Cứu giúp'
+    terms_privacy: 'Điều khoản & Bảo mật'
+    locate_us: 'xác định vị trí hệ'
+    join_with_us: 'THAM GIA VỚI CHÚNG TÔI'
+
+  home:
+    first_main_heading: 'THINK.SHARE.'
+    last_main_heading: 'LỚN LÊN.'
+    first_main_small_text: 'Chia sẻ ý tưởng của bạn với chúng tôi.'
+    middle_main_small_text: ' Chúng tôi sẽ tìm thấy sự đầu tư đúng để làm cho'
+    last_main_small_text: ' IDEAS BẠN TO GO BIG'
+    how_it_work: 'Làm thế nào nó hoạt động'
+    ideas: 'ý tưởng'
+    startups: 'khởi động'
+    investors: 'nhà đầu tư'
+    deals: 'giao dịch'
+
+    section_2:
+      first_heading: 'CHIA SẺ CỦA BẠN'
+      first_heading_bold: ' IDEAS'
+      first_small_text: 'ĐỂ NƠI THẾ GIỚI A BETTER NÀY'
+      second_heading: 'INNOVATIONS'
+      second_heading_bold: 'TÌM THẤY'
+      second_small_text: 'ĐẦU TƯ VÀ TẠO cuộc cách mạng'
+
+    section_3:
+      overview: ' TỔNG QUAN'
+      who_we_are: 'Chúng ta là ai'
+      who_we_are_content: 'Idearburns là một nền tảng sáng tạo trực tuyến toàn cầu, nơi mọi người có thể thêm và chia sẻ ý tưởng của mình cho cộng đồng và đặc biệt là để nhắm mục tiêu các nhà đầu tư rằng họ muốn có được sự chú ý. Ngoài ra đây là nơi khởi động và các doanh nghiệp có thể giao tiếp với các nhà đầu tư lý tưởng, chia sẻ những suy nghĩ và ý tưởng của họ để có một cái nhìn tốt hơn và cải thiện các chiến lược kinh doanh.'
+      who_we_are_ans_1: 'Biến những ý tưởng tuyệt vời của bạn vào các doanh nghiệp thành công.'
+      who_we_are_ans_2: 'Xây dựng một di sản không phải là một đế chế.'
+      who_we_are_ans_3: 'Làm cho mọi người inspriration của bạn.'
+      who_we_are_ans_4: 'Biến niềm đam mê của bạn thành lợi nhuận.'
+      who_we_are_ans_5: 'Kết nối hệ sinh thái khởi động trực tuyến toàn cầu.'
+      what_we_do: 'Chúng ta làm gì'
+      what_we_do_ans_1: 'ý tưởng Nuturing cho ideaprenuers, Doanh nhân, Startups và nhà đầu tư.'
+      what_we_do_ans_2: 'Là cầu nối để kết nối Startups và nhà đầu tư.'
+      what_we_do_ans_3: "ý tưởng sáng tạo công cụ đánh giá trực tuyến đầu tiên trên thế giới."
+      what_we_do_ans_4: 'Giữ ý tưởng kinh doanh trực tuyến của bạn an toàn.'
+      what_we_do_ans_5: 'Xuất bản những ý tưởng của bạn vào các hồ bơi ý tưởng và nhận được phản hồi từ người dùng nền tảng khác và nhà đầu tư.'
+      what_we_do_ans_6: 'Chọn là một trong những nền tảng yêu thích nhất cho sinh viên các trường đại học có uy tín, các doanh nhân nhiệt tình.'
+      join_ideaburns: 'Tham gia Ideaburns nay !!!'
+      join_ideaburns_ans_1: 'Điền vào mẫu đơn submision an toàn đơn giản của chúng tôi.'
+      join_ideaburns_ans_2: 'Gửi nó và là một phần của cộng đồng chúng ta.'
+      join_ideaburns_ans_3: 'Vote & như cho ý tưởng bạn tin rằng nó sẽ thành công.'
+      join_ideaburns_ans_4: 'Thông điệp đến các nhà đầu tư nhắm mục tiêu mà bạn rất thích nghe lời khuyên của họ.'
+
+    section_4:
+      heading: 'CONNECT DOANH NHÂN, Startups & ĐẦU TƯ AT ONE NƠI.'
+
+    section_5:
+      heading: 'NGÀNH NGHỀ KINH DOANH'
+      updating: 'Đang cập nhật ...'
+
+  how_it_work:
+    first_heading: 'CÁCH LÀM VIỆC CNTT'
+    second_heading: 'Ở đây chúng ta đang cố gắng để nói như thế nào với từng loại hình sử dụng là hoạt động làm'
+    entrepreneurs: 'DOANH NHÂN'
+    startup: 'STARTUP'
+    investor: 'CHỦ ĐẦU TƯ'
+    entrepreneurs_tab:
+      step_1: 'Bước 1: Registeration -> Đăng nhập'
+      step_1_1: '1. Registeration - Đăng ký: Nếu bạn là thành viên mới và một doanh nhân, xin vui lòng đi qua Đăng ký ở phía trên bên phải của trang chủ cho Registeration'
+      step_1_2: '2. Registeration - Đăng nhập: nút bấm đăng ký, nó sẽ hiển thị hộp để điền vào các thông tin - đi để thả xuống để chọn loại người dùng'
+      step_1_3: '3. Sau khi hoàn thành, hãy truy cập vào email của bạn để xác nhận tài khoản của bạn'
+      step_1_4: '4. Sau đó, bạn có thể Đăng nhập và tham gia nền tảng thú vị của chúng tôi'
+
+      step_2: 'Bước 2: Quỹ ý tưởng kinh doanh -> Access cho nhà đầu tư -> Lên lịch họp'
+      step_2_1: '1. Trình ý tưởng của bạn riêng cho các nhà đầu tư, xin vui lòng vào Quỹ B-ý tưởng trên thanh leftside'
+      step_2_2: '2. Sau đó, bạn sẽ thấy một biểu mẫu để điền vào tất cả các thông tin ý tưởng kinh doanh của bạn'
+
+      step_3: 'Bước 3: Chia sẻ ý tưởng với thế giới -> ý tưởng như / nhận xét / Đánh giá'
+      step_3_1: '1. Ở đây trong thanh bên trái, chọn biểu tượng thứ hai - tưởng tượng'
+      step_3_2: "2. Nhấp vào '' Công '' sau đó bạn sẽ thấy một hộp để điền vào ý tưởng của bạn. Nếu bạn không muốn mọi người biết ý tưởng của bạn, ngoại trừ nhà đầu tư, bạn có thể chọn '' kinh doanh '' thay"
+      step_3_3: "3. Ý kiến ​​của bạn sẽ được đưa đến thế giới rộng lớn tuyệt vời ngay sau khi chọn '' Gửi '' nút với đầy đủ các yêu cầu thông tin. Tại đây bạn có thể thích, chia sẻ, bình chọn và bình luận cho bất kỳ ý tưởng tuyệt vời mà bạn yêu thích"
+
+      step_4: 'Bước 4: Xem khởi động sự kiện -> Thêm sự kiện'
+      step_4_1: '1. Để xem những sự kiện đang xảy ra, nhấp vào sự kiện trên thanh leftside'
+      step_4_2: '2. Tạo sự kiện riêng của bạn, chọn Thêm sự kiện'
+      step_4_3: '3. Sau đó, bạn sẽ thấy một bảng để thêm thông tin sự kiện'
+
+      step_5: 'Bước 5: Xem các nhà doanh nghiệp, Start-up & nhà đầu tư hồ sơ'
+      step_5_1: '1. Để xem các cộng đồng của chúng tôi cũng như các nhà doanh nghiệp, Startups và nhà đầu tư, xin vui lòng bấm vào mỗi một hạng mục trên thanh bên trái'
+
+    startup_tab:
+      step_1: 'Bước 1: Registeration -> Đăng nhập'
+      step_1_1: '1. Nếu bạn là khởi động và bạn không có tài khoản, xin vui lòng vào đăng ký hộp ở phía bên phải của Trang chủ của'
+      step_2_2: '2. Chọn khởi động cho loại người dùng'
+
+      step_2: 'Bước 2: Quỹ Start-up kinh doanh -> Access cho nhà đầu tư -> Lên lịch họp'
+      step_2_1: '1. Trên thanh leftside, nhấp vào khởi động Quỹ để trình ý tưởng của bạn'
+      step_2_2: '2. Điền vào tất cả các yêu cầu của'
+
+      step_3: 'Bước 3: Chia sẻ ý tưởng với thế giới -> ý tưởng như / nhận xét / Đánh giá'
+      step_3_1: '1. Ở đây trong thanh bên trái, chọn biểu tượng thứ hai - tưởng tượng'
+      step_3_2: "2. Nhấp vào '' Công '' sau đó bạn sẽ thấy một hộp để điền vào ý tưởng của bạn. Nếu bạn không muốn mọi người biết ý tưởng của bạn, ngoại trừ nhà đầu tư, bạn có thể chọn '' kinh doanh '' thay"
+      step_3_3: "3. Ý kiến ​​của bạn sẽ được đưa đến thế giới rộng lớn tuyệt vời ngay sau khi chọn '' Gửi '' nút với đầy đủ các yêu cầu thông tin. Tại đây bạn có thể thích, chia sẻ, bình chọn và bình luận cho bất kỳ ý tưởng tuyệt vời mà bạn yêu thích"
+
+      step_4: 'Bước 4: Xem khởi động sự kiện -> Thêm sự kiện'
+      step_4_1: '1. Để xem những sự kiện đang xảy ra, nhấp vào sự kiện trên thanh leftside'
+      step_4_2: '2. Tạo sự kiện riêng của bạn, chọn Thêm sự kiện'
+      step_4_3: '3. Sau đó, bạn sẽ thấy một bảng để thêm thông tin sự kiện'
+
+      step_5: 'Bước 5: Xem các nhà doanh nghiệp, Start-up & nhà đầu tư hồ sơ'
+      step_5_1: '1. Để xem các cộng đồng của chúng tôi cũng như các nhà doanh nghiệp, Startups và nhà đầu tư, xin vui lòng bấm vào mỗi một hạng mục trên thanh bên trái'
+
+    investor_tab:
+      step_1: 'Bước 1: Đăng ký -> Đăng nhập -> đầu tư cơ bản'
+      step_1_1: '1. Đối với các nhà đầu tư, bạn là thành viên mới? Xin vui lòng đến đăng ký hộp ở phía bên phải của trang chủ'
+      step_1_2: '2. Chọn nhà đầu tư cho User Type'
+
+      step_2: 'Bước 2: Chia sẻ ý tưởng với thế giới -> ý tưởng như / nhận xét / Đánh giá'
+      step_2_1: '1. Ở đây trong thanh bên trái, chọn biểu tượng thứ hai - tưởng tượng'
+      step_2_2: "2. Nhấp vào Công sau đó bạn sẽ thấy một hộp để điền vào ý tưởng của bạn. Nếu bạn không muốn mọi người biết ý tưởng của bạn, ngoại trừ nhà đầu tư, bạn có thể chọn kinh doanh thay"
+      step_2_3: "3. Ý kiến ​​của bạn sẽ được đưa đến thế giới rộng lớn tuyệt vời ngay sau khi chọn Gửi nút với đầy đủ các yêu cầu thông tin. Tại đây bạn có thể thích, chia sẻ, bình chọn và bình luận cho bất kỳ ý tưởng tuyệt vời mà bạn yêu thích"
+
+      step_3: 'Bước 3: Xem khởi động sự kiện -> Thêm sự kiện'
+      step_3_1: '1. Để xem những sự kiện đang xảy ra, nhấp vào sự kiện trên thanh leftside'
+      step_3_2: '2. Tạo sự kiện riêng của bạn, chọn Thêm sự kiện'
+      step_3_3: '3. Sau đó, bạn sẽ thấy một bảng để thêm thông tin sự kiện'
+
+      step_4: 'Bước 4: Xem các nhà doanh nghiệp, Start-up & nhà đầu tư hồ sơ'
+      step_4_1: '1. Để xem các cộng đồng của chúng tôi cũng như các nhà doanh nghiệp, Startups và nhà đầu tư, xin vui lòng bấm vào mỗi một hạng mục trên thanh bên trái'
+
+      step_5: 'Bước 5: Xác minh / nhà đầu tư được công nhận'
+      step_5_1: "1. Để xem Invest B-Ý tưởng / chi tiết Startups, ví dụ như khi bạn ở Invest trong B-ý tưởng, bạn muốn xem chi tiết này 'Nông nghiệp', do đó, bấm Tìm hiểu thêm"
+      step_5_2: '2. Tạo sự kiện riêng của bạn, chọn Thêm sự kiện'
+      step_5_3: '3. Sau đó, bạn sẽ thấy một bảng để thêm thông tin sự kiện'
+
+      step_6: 'Bước 6: Đầu tư vào những ý tưởng kinh doanh'
+      step_6_1: "1. Chọn 'Đầu tư vào B-ý tưởng' trên thanh leftside để xem danh sách các ý tưởng kinh doanh và xem nếu bạn có thể đầu tư vào nó hay không"
+
+      step_7: 'Bước 6: Đầu tư đề xuất kinh doanh Start-up'
+      step_7_1: "1. Để xem danh sách các đề xuất kinh doanh khởi động, nhấp vào 'Đầu tư vào Startup' trên thanh leftside"
+
+  behind_thoughts:
+    behind_thoughts: 'BEHIND SUY NGHĨ'
+    heading: 'Chúng tôi cần phải cung cấp thông tin về đằng sau những lý do được đưa ra sản phẩm này.'
+    story: 'CÂU CHUYỆN'
+    story_1: "Mục tiêu chính của chúng tôi là để kết nối, phát triển, và để trao quyền cho Internet trên toàn thế giới bắt đầu-up cộng đồng sinh học. Đối với những mục tiêu của chúng tôi có nguồn gốc trên cho kết quả trên web thú vị tuyệt vời sẽ được gọi là 'IdeaBurns'. đảo -An về khởi sự."
+    story_2: "IdeaBurns là một SaaS trên toàn thế giới giai đoạn xã hội đối với các thị nhân kinh doanh có năng khiếu, Start-up và đầu cơ. giai đoạn 1 công văn của chúng tôi là hợp tác với các nhà đầu tư và nhà đầu tư được công nhận góc độ mạng bằng cách đưa ra những tư tưởng kinh doanh tiềm năng và đầu đề xuất công ty giai đoạn. Chúng tôi giảm bớt nhóm khởi giăng vào công suất tối đa của họ."
+
+    vision: 'TẦM NHÌN'
+    vision_1: 'Với settle trên vũ trụ này là lành mạnh đặt để khởi động cộng đồng sinh học và truyền cảm hứng sáng tạo mới mà các cá nhân xuất thân ra cho não bộ Doanh nhân.'
+
+    mission: 'SỨ MỆNH'
+    mission_1: 'Để hỗ trợ liên tục nước đang phát triển có nhu cầu cần thiết sẽ di chuyển về phía trước nền kinh tế quy mô nỗ lực nhỏ bé của họ.'
+
+  terms:
+    terms_conditions: 'QUY & ĐIỀU KIỆN'
+
+    legal_disclaimer: 'KHUYẾN PHÁP LUẬT'
+    legal_disclaimer_1: 'Đây là Điều khoản dịch vụ hiểu biết cho ideaburns.com. Tất cả các khách hàng phải đọc và thừa nhận từng phần của điều này và một số hiểu biết hoặc chiến lược khác cho bởi ideaburns.com. Trên bất kỳ cơ hội mà bạn không đồng ý với những điều khoản này, bạn bị từ chối từ việc sử dụng ideaburns.com hoặc bất kỳ chính quyền công ty con. Ngoài ra, chúng tôi có quyền sửa đổi thỏa thuận này bất cứ khi nào.'
+
+    rules: 'CÁC QUY GROUND'
+    rules_1: 'Việc tuyển sinh của ideaburns.com thành công trên tài khoản của bản chất của các cá nhân và một số cơ bản quyết định rằng tất cả mọi người giữ vững. Chúng tôi duy trì bất cứ quyền là cần thiết để từ chối hỗ trợ cho bất kỳ một phần hoặc một phần sắp tới bất cứ lúc nào'
+    rules_1_a: 'a. Chỉ 0-5 tuổi khởi động sẽ được áp dụng cho việc tham gia với Ideaburns.com'
+    rules_1_b: 'b. Chỉ có xác nhận / nhà đầu tư được cấp phép có thể được nhận vào những ý tưởng tài trợ trợ cấp và đề nghị Start-up kinh doanh.'
+    rules_1_c: 'c. Chỉ những thông tin được chứng nhận có thể được đưa vào các vấn đề kinh doanh.'
+
+    trademark: 'THƯƠNG HIỆU VI PHẠM'
+    trademark_1: 'Tất cả tên và biểu tượng gắn liền với ideaburns.com là thương hiệu của Ideaburns. Bạn không thể sử dụng bất kỳ nhãn hiệu theo cách nào mà không cần sự đồng ý bằng văn bản của chúng tôi. Hơn nữa, người dùng có thể không vi phạm bất kỳ bằng sáng chế, nhãn hiệu hay bản quyền khác của người sử dụng ideaburns hoặc bất kỳ bên nào khác.'
+
+  sidebar:
+    edit: ' Chỉnh sửa'
+    ideas: ' ý tưởng'
+    ideate: ' tưởng tượng'
+    events: ' Sự kiện'
+    add_events: ' Thêm sự kiện'
+    fund_b_idea: ' Quỹ B-Idea'
+    fund_startup: ' Quỹ Startup'
+    invest_in_b_ideas: ' Đầu tư vào B-Ý tưởng'
+    invest_in_startup: ' Đầu tư vào Startups'
+    entreprenuers: ' Entreprenuers'
+    startups: ' Startups'
+    investors: ' Nhà đầu tư'
+    my_ideas: ' Ý tưởng của tôi'
+    our_ideas: ' Ý tưởng của chúng tôi'
+    my_b_ideas: ' B-Ý tưởng của tôi'
+    our_b_ideas: 'B-Ý tưởng của chúng tôi'
+    my_events: ' Sự kiện của tôi'
+    our_events: ' Sự kiện của chúng tôi'
+
+  users_header:
+    type_keywords: 'loại từ khóa'
+    messages: 'Tin nhắn'
+    notifications: 'thông báo'
+    my_account: 'Tài khoản của tôi'
+    update_profile: 'Cập nhật hồ sơ'
+    logout: 'Đăng xuất'
+    my_favourites: 'Sở thích của tôi'
+    notifications_empty: "Bạn có %{count} thông báo"
+    messages_empty: "Bạn có %{count} tin nhắn"
+    see_all: 'Nhìn thấy tất cả'
+    reply: 'trả lời'
+    view_all_mess: 'Xem tất cả tin nhắn'
+
+  idea:
+    post_your_idea: 'POST IDEA CỦA BẠN'
+    closed_ideas: 'IDEAS CLOSED'
+    public_ideas: 'IDEAS CÔNG'
+    total_views: 'Tổng số lần xem'
+    select_a_country: 'Chọn một quốc gia'
+    select_a_category: 'Chọn một danh mục'
+    read_more: 'Reade More'
+    load_more: 'tải More'
+    learn_more: 'Tìm hiểu thêm'
+    idea_details: 'CHI TIẾT IDEA'
+    edit: 'Chỉnh sửa'
+    delete: 'Xóa bỏ'
+    remove: 'Tẩy'
+    update_success_mess: 'Làm tốt! Ý tưởng đã được cập nhật thành công.'
+    are_you_sure: 'Bạn có chắc không ?'
+
+    normal:
+      instructions: 'HƯỚNG DẪN'
+      content_1: 'Chia sẻ ý tưởng của bạn với thế giới.'
+      content_2: 'Chia sẻ kinh nghiệm của mình với các đồng nghiệp của bạn.'
+      content_3: 'Trợ giúp để Entrpreneurs khác, người sáng lập Startup vv trên THI HÀNH ý tưởng kinh doanh & Startups.'
+      content_4: 'Cung cấp thông tin có giá trị về cộng đồng khởi động.'
+      idea_category: 'Idea loại *'
+      idea_title: 'Idea Tiêu đề *'
+      upload_file: 'Cập nhật dử liệu*'
+      choose_file_to: 'Chọn File Để'
+      upload: 'Tải lên'
+      idea_description: 'Idea Mô tả *'
+      enter_idea_title_here: 'Nhập ý tưởng đề ở đây'
+      submit: 'ĐỆ TRÌNH'
+      select_idea_category: '- Chọn loại Idea -'
+      idea_image: 'ý tưởng hình ảnh'
+      change_image: 'thay đổi hình ảnh'
+      rate_this: 'Đánh giá điều này'
+      idea_type: 'loại ý tưởng'
+      comments: 'BÌNH LUẬN'
+      top_view: 'nhất views of Ideas'
+      write_a_comment: 'Viết bình luận'
+      be_the_first_like_this: 'Hãy là người đầu tiên như thế này'
+      more_from: "Thêm từ %{author}"
+      no_more_to_load: 'Không hơn để nạp'
+      no_results: 'Ko có kết quả'
+      press_esc: 'Nhấn Esc để'
+      cancel: 'hủy bỏ'
+      reply: 'trả lời'
+      post: 'Bài đăngNhư'
+      like: 'Như'
+      unlike: 'không giống'
+
+    business:
+      my_favourites: 'Sở thích của tôi'
+      business_ideas: 'IDEAS KINH DOANH'
+      search_by_location: 'Tìm kiếm theo Địa điểm'
+      search_by_bussiness_line: 'Tìm kiếm theo đường kinh doanh'
+      search_by_idea_stage: 'Tìm kiếm theo giai đoạn ý tưởng'
+      search_by_patent: 'Tìm kiếm bằng sáng chế'
+      view_profile: 'Xem hồ sơ'
+      problem_statement: 'Báo cáo vấn đề :'
+      solution: 'Dung dịch :'
+      current_idea_stage: 'Hiện tại Idea Stage:'
+      capital: 'Thủ đô :'
+      seeking: 'tìm:'
+      stake: 'cổ phần'
+      next: 'KẾ TIẾP'
+      validate: 'VALIDATE'
+      submit: 'ĐỆ TRÌNH'
+      save: 'TIẾT KIỆM'
+      clear: 'TRONG SÁNG'
+
+      primary_niceties_tab: 'vật ăn ngon chính'
+      early_stage_analysis_tab: 'Phân tích giai đoạn sớm'
+      team_capabilities_tab: 'Khả năng đội'
+      market_analysis_tab: 'Phân tích thị trường'
+      customer_analysis_tab: 'Phân tích khách hàng'
+      investment_scale_tab: 'Quy mô đầu tư'
+      profit_potential_tab: 'tiềm năng lợi nhuận'
+      competitors_scenery_tab: 'đối thủ cạnh tranh Phong cảnh'
+      pitch_burns_tab: 'Pitch Burns'
+      exit_strategy_tab: 'Chiến lược thoát'
+
+      primary_details: 'Chi tiết chính'
+      target_business_lines: 'Mục tiêu kinh doanh Lines (*)'
+      select_bussiness_lines: '- Chọn Ngành nghề kinh doanh -'
+      type_of_bussiness_idea: 'Loại ý tưởng kinh doanh (*)'
+      select_type_bussiness_idea: '- Chọn kiểu của ý tưởng kinh doanh -'
+      idea_title: 'Idea Tiêu đề (*)'
+      idea_tagline: 'Idea Tagline (*)'
+      problem_statement_2: 'Báo cáo vấn đề (*)'
+      solution_2: 'Dung dịch (*)'
+      select_current_idea_stage: 'Hiện tại Idea Giai đoạn? (*)'
+      generation: 'thế hệ'
+      assessment: 'Thẩm định, lượng định, đánh giá'
+      planning: 'Lập kế hoạch'
+      prototype: 'Prototype'
+      implimentation: 'Implimentation'
+      ip_patent: 'Có ý tưởng này chỉ IP hoặc bằng sáng chế? (*)'
+      ip_patent_1: 'Nếu bằng sáng chế / IP'
+      ip_patent_2: 'chưa giải quyết'
+      ip_patent_3: 'Chưa'
+      ip_patent_4: 'Số đăng ký'
+      enter_regis_number_here: 'Nhập Số đăng ký tại đây'
+      enter_text_here: 'Nhập văn bản ở đây'
+      add_team: 'Thêm đội'
+      view_team_list: 'Xem Đội Danh sách'
+      select_strength: '- Chọn Strength -'
+
+      early_stage_analysis_ques_1: '1. Động lực và Vision - lý do chính khiến bạn bắt đầu một doanh nghiệp là gì? (*)'
+      early_stage_analysis_ques_2: '2. Làm thế nào nhiều năm kinh nghiệm nào bạn có trong ngành công nghiệp, trong đó đang bắt đầu? (*)'
+      early_stage_analysis_ques_3: '3. Để mức độ nào bạn đã từng tham gia vào một doanh nghiệp mới thành lập? (*)'
+      early_stage_analysis_ques_4: '4. Chọn chế độ kinh doanh của bạn! (*)'
+      early_stage_analysis_ques_5: '5. Giải thích mô hình kinh doanh? Làm thế nào bạn tạo ra tiền? (*)'
+      early_stage_analysis_ques_6: '6. các bước bạn sẽ mất nó cho ý tưởng Execution là gì?'
+
+      team_capabilities_ques_1: '1. Kỹ năng Crucial - Dưới một kỹ năng mà bạn nghĩ là quan trọng nhất đối với ý tưởng kinh doanh của bạn. (*)'
+      team_capabilities_ques_2: '2. Sức mạnh của nhóm của bạn (*)'
+      team_capabilities_ques_3: '4. Đội Thuộc tính - Mà các nguồn lực và khả năng sau đây làm bạn hoặc nhóm của bạn có? (*)'
+
+      enter_name: 'Nhập tên'
+      enter_role: 'Nhập Vai trò đã thực hiện trong BusinessIdea'
+      enter_skills: 'nhập Kỹ năng'
+      select_joined_in_team: '- Chọn Tham gia trong Team -'
+      profile_image: 'Hồ sơ ảnh'
+
+      market_analysis_ques_1: '1. Là ý tưởng này mới cho thị trường? Có không (*)'
+      market_analysis_ques_2: '2. Ý tưởng này sẽ có tác động lớn trên thị trường? (*)'
+      market_analysis_ques_3: '3. Thị trường Trend - đến mức độ nào là thị trường mục tiêu chính của bạn đang phát triển? (*)'
+      market_analysis_ques_4: 'Kênh 4. Thị trường - Làm thế nào thì bạn sẽ bán sản phẩm hoặc dịch vụ của bạn cho khách hàng tiềm năng? (*)'
+      market_analysis_ques_5: '5. Kích thị trường - kích thước tổng cộng hàng năm của thị trường mục tiêu chính của bạn là gì? (*)'
+      market_analysis_ques_6: '6. thẩm quyền, các công cụ và cơ sở sản xuất để thực hiện các ý tưởng đã tồn tại trong nhà? (*)'
+
+      customer_analysis_ques_1: ''
+      customer_analysis_ques_2: ''
+      customer_analysis_ques_3: ''
+      customer_analysis_ques_4: ''
+      customer_analysis_ques_5: ''
+      customer_analysis_ques_6: ''
+      from_age: 'Từ Tuổi (*)'
+      select_from_age: '- Chọn Từ Age -'
+      to_age: 'Để Tuổi (*)'
+      select_to_age: '- Chọn Để Age -'
+      select_region: '- Chọn vùng -'
+
+      investment_scale_quest_1: '1. Làm thế nào nhiều vốn tổng nào bạn cần phải đi sản phẩm sống? (*)'
+      investment_scale_quest_2: '2. Bạn đã có bao nhiêu quỹ? (*)'
+      investment_scale_quest_3: '3. Làm thế nào nhiều quỹ nào mà bạn thích để đầu tư? (*)'
+      investment_scale_quest_4: '4. Kinh phí bao nhiêu là bạn tìm? (*)'
+      investment_scale_quest_5: '5. Cung cấp cổ phần kinh doanh cho các nhà đầu tư? (*)'
+      investment_scale_quest_6: '6. Làm thế nào bạn sẽ sử dụng các quỹ này? (*)'
+      zero: 'số không'
+      of_whole_capital: 'của toàn bộ vốn'
+      select_business_stake: '- Chọn cổ phần Kinh doanh -'
+
+      business_potencial: 'Kinh doanh potencial'
+      business_potencial_heading_right: 'Dự báo - Dự báo tài chính'
+      instructions: 'hướng dẫn'
+      profit_potential_content: 'Lorem ipsum dolor sit Amet, consectetur adipiscing elit. Morbi ngồi Amet ORCL ở tạm thời tincidunt COMMODO. Lorem ipsum dolor sit Amet, consectetur adipiscing elit. Morbi ngồi Amet ORCL ở tạm thời tincidunt COMMODO. Lorem ipsum dolor sit Amet, consectetur adipiscing elit. Morbi ngồi Amet ORCL ở tạm thời tincidunt COMMODO.'
+      profit_potential_ques_1: '1. Loại chiế(Hàng tháng, hàng năm)u? (*)'
+      profit_potential_ques_1_small_text: '(Hàng tháng, hàng năm)'
+      profit_potential_ques_2: '2. Chọn hạn cho số được dự kiến? (*)'
+      profit_potential_ques_2_small_text: '(1 năm, 3 năm, 5 năm)'
+      profit_potential_ques_3: '3. Loại nguồn thu nhập? (*)'
+      select_type_of_projection: '- Chọn Loại Trong chiếu -'
+      choose_term: '- Chọn hạn -'
+      select_type: '- Chọn kiểu -'
+
+      competitors_scenery_ques_1: 'Ít nhất một Competators nên được bổ sung'
+      competitors_scenery_ques_2: '2. Cung cấp đồ / bảng (Trong định dạng hình ảnh) analaysis trên competators của bạn?'
+      competitors_scenery_ques_3: '3. Làm thế nào để ý tưởng kinh doanh của bạn duy trì trong thế giới competative hiện hành? (*)'
+      add_competitors: 'Thêm đối thủ cạnh tranh (*)'
+      view_competitors: 'Xem đối thủ cạnh tranh'
+      enter_company_name: 'Nhập tên công ty'
+      enter_primary_business_line: 'Nhập Primary Business Line của họ'
+      enter_revenue_if_know: 'Nhập Doanh thu (nếu biết)'
+      enter_website_url: 'Nhập tài liệu tham khảo Website URL'
+
+      pitch_burns_quest_1: '1. Tải Pitch trình bày riêng của bạn (*)'
+      pitch_burns_quest_1_small_text: '(Nó sẽ cho phép chỉ PPT & PDF)'
+      pitch_burns_quest_2: '2. Tải lên Pitch Presentation video của bạn'
+      pitch_burns_quest_2_small_text: '(Nó sẽ chỉ cho phép các tập tin Video)'
+      pitch_burns_quest_3: '3. Tải lên bất kỳ tài liệu nghiên cứu / các tài liệu pháp lý của bạn (nếu có)'
+      pitch_burns_quest_3_small_text: 'Thêm nhiều tài liệu'
+      pitch_burns_quest_4: '4. Làm thế nào đến nay ý tưởng của bạn một cách hợp pháp có được vào giai đoạn? (*)'
+
+      exit_strategy_quest_1: '1. Khi bạn thích cho lối ra? Làm thế nào bạn xác định Chiến lược xuất cảnh kinh doanh của bạn? Giải thích điều đó. (*)'
+      exit_strategy_quest_1_ex: 'Thí dụ:'
+      exit_strategy_quest_1_ex_1: 'Sáp nhập & Mua lại (M & A)'
+      exit_strategy_quest_1_ex_2: 'Ban đầu ra công chúng (IPO)'
+      exit_strategy_quest_1_ex_3: 'Thanh lý và đóng'
+
+      modal:
+        messages: 'Tin nhắn'
+        pls_check: '1. Xin vui lòng kiểm tra'
+        your_profile: ' Hồ sơ của bạn'
+        mess_1: '2. Chúng tôi sẽ trình ý tưởng của bạn cho tất cả các nhà đầu tư.'
+        mess_2: '3. Chúng tôi đang gonna phí 99 USD cho việc gửi này và cung cấp kế hoạch.'
+        mess_3: '4. Hãy chắc chắn rằng dữ liệu của bạn là relavant và chính xác.'
+        mess_4: '5. Nhưng tài liệu của bạn không nên chia sẻ với bất kỳ nhà đầu tư mà không cần sự chấp thuận của bạn.'
+        cancel: 'hủy bỏ'
+        paynow: 'trả tiền ngay'
+        complete_required_mess: 'Vui lòng điền các trường bắt buộc (*).'
+        validation_required_mess: 'Vui lòng xác nhận thông tin của bạn!'
+        total_score: 'Tổng điểm'
+        good_to: 'Tốt cho'
+        go: 'ĐI'
+        send: 'gởi'
+
+      details:
+        business_idea_details: 'Chi tiết ý tưởng kinh doanh'
+        views: 'Lượt xem'
+        view_profile: 'Xem hồ sơ'
+        intrested: 'Intrested'
+        year: 'Năm'
+        years: 'năm'
+        per: 'mỗi'
+        unit: 'Đơn vị'
+        capital: 'Thủ đô -'
+        seeking: 'tìm kiếm -'
+        stake: ' Cổ phần'
+        for: ' vì'
+        ip_number: 'Số IP:'
+        team_strength: 'đội Strength'
+        motivation_vision: 'Động lực và Vision -c'
+        industry_exp: 'Kinh nghiệm ngành công nghiệp -'
+        business_model: 'Mô hình kinh doanh -'
+        startup_exp: 'Startup Kinh nghiệm -'
+        business_model_overview: 'Mô hình Kinh doanh Tổng quan'
+        steps_4_this_idea_exc: 'Các bước để thực hiện ý tưởng này'
+        projection_type: 'Loại chiếu'
+        projected_term: 'Thời hạn dự kiến'
+        revenue_stream: 'Nguồn thu nhập'
+        views_sales_numbers: 'Số lần xem bán hàng'
+        view_competators_list: 'Xem Competators Danh sách'
+        how_it_work: 'Làm thế nào nó hoạt động'
+        analysis_on_competators_business: "Phân tích hoạt động kinh doanh của competator"
+        market_trend: 'Xu hướng thị trường'
+        market_channels: 'Các kênh thị trường'
+        market_size: 'Kích thị trường'
+        yes: 'Vâng'
+        no: 'Không'
+        details_ques_1: 'Là ý tưởng này mới cho thị trường?'
+        details_ques_2: 'Ý tưởng này sẽ có tác động lớn trên thị trường?'
+        details_ques_3: 'Do thẩm quyền, các công cụ và cơ sở sản xuất để thực hiện các ý tưởng đã tồn tại trong nhà?'
+        details_ques_4: 'Làm thế nào để bạn giải quyết các vấn đề của khách hàng (vấn đề)?'
+        details_ques_5: 'Liệu ý tưởng này giải quyết vấn đề của khách hàng được xác định rõ ràng trong một (triệt để) cách mới? Giải thích?'
+        details_ques_6: 'Làm thế nào để bạn Convience khách hàng tiềm năng của bạn về sản phẩm hoặc dịch vụ của bạn?'
+        3_customer: 'Ba (3) khách hàng lớn'
+        target_customer: 'khách hàng mục tiêu trong khu vực địa lý'
+        age_target: 'tuổi Nhắm mục tiêu'
+        init_public_offering: 'Đầu ra công chúng'
+        validation_score: 'Điểm xác Nhận'
+        request_for_more_details: 'Yêu cầu để biết thêm chi tiết'
+        deal: 'THỎA THUẬN'
+        go_deal: 'GO DEAL'
+        investment_scale: 'Quy mô đầu tư'
+        capital_required: 'Yêu cầu vốn'
+        fund_already_have: 'Quỹ đã có'
+        fund_i_invest: 'Tài trợ cho tôi đầu tư'
+        seeking_fund: 'tìm quỹ'
+        offering_business_stake: 'Cung cấp cổ phần của doanh nghiệpCác tài liệu'
+        documents: 'Các tài liệu'
+        documents_file: 'Tài liệu (file)'
+        forecast_financial_projection: 'orecast - Dự báo tài chính'
+        revenue: 'Doanh thu -'
+        market_valuation: 'ĐỊNH GIÁ THỊ TRƯỜNG'
+        favo_this_deal: 'Yêu thích thỏa thuận này'
+        skills: 'Kỹ năng'
+        joined: 'Tham gia'
+        query_for: 'truy vấn cho'
+
+  event:
+    startup_events: 'SỰ KIỆN STARTUP'
+    my_events: 'SỰ KIỆN CỦA TÔI'
+    create_event: 'TẠO TRƯỜNG'
+    up_coming_events: 'Sự kiện sắp tới'
+    popular_events: 'Sự kiện được ưa thích'
+    type_here_for_events: 'Gõ vào đây để sự kiện'
+    select_a_country: 'Chọn một quốc gia'
+    select_date: 'Chọn ngày'
+    free: 'Miễn phí'
+    load_more: 'tải More'
+    posted_by: "Được đăng bởi %{author}"
+    find_out_more: 'Tìm hiểu thêm'
+    edit_event: 'chỉnh sửa sự kiện'
+    no_results: 'Ko có kết quả'
+
+    event_title: 'Sự kiện Tiêu đề *'
+    event_entry_type: 'Loại sự kiện nhập *'
+    event_category: 'Danh mục sự kiện *'
+    event_from: 'Sự kiện Từ *'
+    event_to: 'Tổ chức sự kiện Để *'
+    time: 'Thời gian *'
+    time_zone: 'Múi giờ*'
+    website: 'Sự kiện Reffence website'
+    enter_website: 'Nhập Event Reffence website'
+    image: 'hình ảnh sự kiện'
+    add_event_partner: 'Thêm sự kiện Đối tác'
+    event_description: 'Mô tả sự kiện *'
+    enter_text_here: 'Nhập văn bản ở đây'
+    event_venue: 'Nơi diễn ra sự kiện'
+    address_line_1: 'Dòng địa chỉ 1 *'
+    address_line_2: 'Địa chỉ 2*'
+    country: 'Quốc gia*'
+    region: 'Khu vực*'
+    city: 'city ​​*'
+    zip: 'Zip / mã pin'
+    pls_select_country: 'Vui lòng chọn quốc trên'
+    cancel: 'hủy bỏ'
+    submit: 'Đệ trình'
+    select_entry_type: '- Chọn tổ chức sự kiện Entry Type -'
+    select_category: '- Chọn loại sự kiện -'
+    partner_logo: 'phần Logo'
+    remove: 'Tẩy'
+    well_done: 'Làm tốt lắm !'
+    event_update_success: ' Sự kiện đã được cập nhật thành công.'
+
+    event_details: 'CHI TIẾT SỰ KIỆN'
+    category: 'thể loại'
+    overview: 'Tổng quan'
+    schedule: 'lịch trình'
+    location: 'Vị trí'
+    time_schedule: 'Thời gian biểu'
+    venue_address: 'Địa chỉ địa điểm'
+
+
+  devise:
+    email: 'E-mail'
+    password: 'Mật khẩu'
+    confirm_password: 'Xác nhận mật khẩu'
+    remember_me: 'Ghi nhớ'
+    forgot_your_password: 'Quên mật khẩu ?'
+    username: 'tên người dùng'
+    select_user_type: '- Chọn kiểu sử dụng -'
+    minimum_character: "Buộc %{num} Nhân vật tối thiểu *"
+    login: 'ĐĂNG NHẬP'
+    signup: 'ĐĂNG KÝ'
+    terms_conditions: 'Điều khoản & Điều kiện'
+    enter_your_email: 'Nhập email của bạn:'
+    send_me_reset_pwd: 'SEND ME Reset HƯỚNG DẪN PASSWORD'
+    get_regis_with_us: 'GET ĐĂNG KÝ VỚI CHÚNG TÔI'
+
+    confirmations:
+      confirmed: "địa chỉ email của bạn đã được xác nhận thành công."
+      send_instructions: "Bạn sẽ nhận được một email với hướng dẫn làm thế nào để xác nhận địa chỉ email của bạn trong một vài phút."
+      send_paranoid_instructions: "Nếu địa chỉ email của bạn tồn tại trong cơ sở dữ liệu của chúng tôi, bạn sẽ nhận được một email với hướng dẫn làm thế nào để xác nhận địa chỉ email của bạn trong một vài phút."
+    failure:
+      already_authenticated: "Bạn đã đăng nhập."
+      inactive: "Tài khoản của bạn chưa được kích hoạt chưa."
+      invalid: "% Không hợp lệ {} authentication_keys hoặc mật khẩu."
+      locked: "Tài khoản của bạn bị khóa."
+      last_attempt: "Bạn có một nỗ lực nhiều hơn nữa trước khi tài khoản của bạn bị khóa."
+      not_found_in_database: "% Không hợp lệ {} authentication_keys hoặc mật khẩu."
+      timeout: "Phiên của bạn đã hết hạn. Vui lòng đăng nhập để tiếp tục."
+      unauthenticated: "Bạn cần đăng nhập hoặc đăng ký trước khi tiếp tục."
+      unconfirmed: "Bạn phải xác nhận địa chỉ email của bạn trước khi tiếp tục."
+    mailer:
+      confirmation_instructions:
+        subject: "Chào mừng bạn đến IdeaBurns"
+      reset_password_instructions:
+        subject: "Đặt lại mật khẩu hướng dẫn"
+      unlock_instructions:
+        subject: "mở khóa hướng dẫn"
+      password_change:
+        subject: "Mật khẩu đã được thay đổi"
+    omniauth_callbacks:
+      failure: "Không thể xác thực bạn từ %{type} loại vì  %{reason} ."
+      success: "xác thực thành công từ %{type} loại tài khoản."
+    passwords:
+      no_token: "Bạn không thể truy cập vào trang này mà không đến từ một email thiết lập lại mật khẩu. Nếu bạn đến từ một email thiết lập lại mật khẩu, hãy chắc chắn rằng bạn sử dụng URL đầy đủ cung cấp."
+      send_instructions: "Bạn sẽ nhận được một email với hướng dẫn về làm thế nào để thiết lập lại mật khẩu của bạn trong một vài phút."
+      send_paranoid_instructions: "Nếu địa chỉ email của bạn tồn tại trong cơ sở dữ liệu của chúng tôi, bạn sẽ nhận được một liên kết khôi phục mật khẩu tại địa chỉ email của bạn trong một vài phút."
+      updated: "Mật khẩu của bạn đã được thay đổi thành công. Bây giờ bạn đã đăng nhập."
+      updated_not_active: "Mật khẩu của bạn đã được thay đổi thành công."
+    registrations:
+      destroyed: "Tạm biệt! Tài khoản của bạn đã được hủy thành công. Mong rằng chúng tôi sẽ sớm gặp lại bạn."
+      signed_up: "Chào mừng bạn! Bạn đã đăng ký thành công."
+      signed_up_but_inactive: "Bạn đã đăng ký thành công. Tuy nhiên, chúng tôi không thể đăng nhập cho bạn bởi vì tài khoản của bạn chưa được kích hoạt."
+      signed_up_but_locked: "Bạn đã đăng ký thành công. Tuy nhiên, chúng tôi không thể đăng nhập cho bạn bởi vì tài khoản của bạn bị khóa."
+      signed_up_but_unconfirmed: "Một thông điệp có liên kết xác nhận đã được gửi đến địa chỉ email của bạn. Hãy làm theo các liên kết để kích hoạt tài khoản của bạn."
+      update_needs_confirmation: "Bạn đã cập nhật tài khoản của bạn thành công, nhưng chúng ta cần phải xác minh địa chỉ email mới của bạn. Hãy kiểm tra email của bạn và làm theo các liên kết xác nhận để xác nhận địa chỉ email mới của bạn."
+      updated: "Tài khoản của bạn đã được cập nhật thành công."
+    sessions:
+      signed_in: "Đăng nhập thành công."
+      signed_out: "Đăng xuất thành công"
+      already_signed_out: "Đăng xuất thành công."
+    unlocks:
+      send_instructions: "Bạn sẽ nhận được một email với hướng dẫn làm thế nào để mở khóa tài khoản của bạn trong một vài phút."
+      send_paranoid_instructions: "Nếu tài khoản của bạn tồn tại, bạn sẽ nhận được một email với hướng dẫn làm thế nào để mở khóa nó trong một vài phút."
+      unlocked: "Tài khoản của bạn đã được mở khóa thành công. Vui lòng đăng nhập để tiếp tục."
+  errors:
+    messages:
+      already_confirmed: "đã được xác nhận, hãy thử đăng nhập"
+      confirmation_period_expired: "cần phải được xác nhận trong vòng %{} kỳ, vui lòng yêu cầu một cái mới"
+      expired: "đã hết hạn, hãy yêu cầu một cái mới"
+      not_found: "không tìm thấy"
+      not_locked: "không bị khóa"
+      not_saved:
+        one: "1 lỗi bị cấm này nguồn từ việc lưu lại:"
+        other: " %{Count} lỗi cấm này nguồn từ việc lưu lại:"
+
+  user:
+    update_profile: 'CẬP NHẬT HỒ SƠ'
+    profile_details: 'CHI TIẾT HỒ SƠ'
+    update_password: 'CẬP NHẬT PASSWORD'
+    profile_completion: 'Hồ sơ Compeletion'
+    last_updated_on: "Cập nhật lần cuối vào %{date}"
+    personal: 'Cá nhân'
+    profession: 'Chuyên nghiệp'
+    education: 'Giáo dục'
+    contact: 'Tiếp xúc'
+    describe: 'Miêu tả'
+    name: 'Tên'
+    first_name: 'Tên đầu tiên'
+    last_name: 'tên họ'
+    email: 'E-mail'
+    email_primary: 'email chính'
+    gender: 'tính'
+    male: 'Nam giới'
+    female: 'Giống cái'
+    dob: 'Ngày sinh'
+    country: 'Quốc gia'
+    select_country: '- Chọn quốc gia-'
+    region: 'Khu vực'
+    city: 'thành phố'
+    profession_type: 'loại nghề'
+    select_profession_type: '- Chọn loại nghề nghiệp -'
+    company: 'Công ty'
+    skills: 'Kỹ năng'
+    startup_experience: 'Kinh nghiệm khởi động'
+    select_startup_experience: '- Chọn Startup Kinh nghiệm -'
+    graduation: 'Tốt nghiệp'
+    select_graduation: '- Chọn Tốt Nghiệp -'
+    university_college: 'Đại học / Cao đẳng'
+    mobile: 'di động'
+    address: 'Địa chỉ nhà'
+    email_secondary: 'Email-THCS'
+    skype_id: 'Skype ID'
+    website: 'Trang mạng'
+    about_you: 'Về bạn'
+    inspire_quote: 'Inspire Quote'
+    linkedin: 'Linkedin'
+    add_team: 'Thêm đội +'
+    add_funding: 'Thêm tài trợ +'
+    office_head: 'trụ sở văn phòng'
+    socials_webapps: 'Xã hội & ứng dụng web'
+    investor_details: 'Chi tiết đầu tư'
+    add_portfolio: 'Thêm danh mục đầu tư +'
+    next: 'KẾ TIẾP'
+    update: 'CẬP NHẬT'
+    clear: 'TRONG SÁNG'
+    add: 'Thêm vào'
+    delete: 'Xóa bỏ'
+    remove: 'Tẩy'
+    date: 'Ngày'
+    mess_success_update_profile: 'Làm tốt! Bạn lưu thành công chi tiết hồ sơ'
+    your_contact_phone_number: 'số điện thoại liên lạc của bạn'
+    any_useful_info_about_you: 'Bất kỳ thông tin hữu ích về bạn'
+    investor_type: 'Loại Chủ đầu tư'
+    select_investor_type: '- Chọn kiểu đầu tư -'
+    organization_name: 'tên tổ chức'
+    founded: 'Được thành lập (năm)'
+    business_lines: 'Các ngành dịch vụ'
+    select_bussiness_lines: '- Chọn Bussiness Lines -'
+    description: 'Sự miêu tả'
+    mission_vision: 'Sứ mệnh & Tầm nhìn'
+    designation: 'sự chỉ định'
+    select_designation: '- Chọn Chỉ -'
+    join_date: 'Ngày tham gia'
+    team_logo: 'đội Logo'
+    address_line_1: 'Dòng địa chỉ 1'
+    address_line_2: 'Địa chỉ 2'
+    state: 'Tiểu bang'
+    startup_name: 'Startup Tên'
+    type_funding: 'Loại tài trợ'
+    select_type_funding: '- Chọn Loại Tài trợ -'
+    funding_amount: 'Số tiền tài trợ'
+    startup_logo: 'Logo khởi động'
+    about_company: 'Giới thiệu công ty'
+    primary_bussiness_lines: 'Tiểu học Bussiness dòng'
+    how_it_work: 'Làm thế nào còn làm việc'
+    regis_company_name: 'Đăng ký tên Công ty'
+    employee_strength: 'Nhân viên Strength'
+    select_employee_strength: '- Chọn nhân viên Strength -'
+    avatar: 'hình đại diện'
+    amount: 'Số tiền'
+    by_investor: 'bằng cách đầu tư'
+    any_useful_info_about_company: 'Bất kỳ thông tin hữu ích về công ty'
+    pls_select_country_above: 'Vui lòng chọn một quốc gia trên'
+    current_password: 'Mật khẩu hiện tại'
+    new_password: 'Mật khẩu mới'
+    new_password_confirmation: 'Xác nhận mật khẩu mới'
+    your_current_pwd_mess: '(Mật khẩu hiện tại của bạn để xác nhận thay đổi của bạn)'
+    update_pwd_success_mess: 'Làm tốt ! Mật khẩu đã được cập nhật thành công.'
+    update_pwd_error_heading: '1 lỗi bị cấm sử dụng này được cứu:'
+    update_pwd_error_mess: "Mật khẩu mới không thể để trống"
+
+    dashboard: 'DƯỠNG'
+    select_skill_type: 'Chọn Loại Skill'
+    select_profession_type: 'Chọn Loại Nghề nghiệp'
+    select_country_input: 'Chọn quốc gia'
+    read_more: 'Đọc thêm'
+    about : 'TRONG KHOẢNG'
+    personal_details: 'bị trật bánh cá nhân'
+    communication: 'Giao tiếp'
+    only_investor_view_contact_details: 'Chỉ có nhà đầu tư có thể xem thông tin liên hệ'
+    profile_view: 'Hồ sơ Xem'
+    load_more: 'tải thêm'
+    no_results: 'Ko có kết quả'
+    select_state: 'Chọn Một Nhà nước'
+    number_with_years: " %{Số} năm"
+    not_have_func_yet: 'Không có chức năng chưa'
+    select_business_line_type: 'Chọn Loại Bussiness dòng'
+    select_funding_type_input: 'Chọn loại tài trợ'
+    select_investor_type_input: 'Chọn Loại Chủ đầu tư'
+    our_team: 'Đội của chúng tôi'
+    location: 'Vị trí'
+    portfolio: 'danh mục đầu tư'
+    business_type: 'Loại Bussiness'
+    funding: 'Kinh phí'
+    investor: 'người đầu tư'
+
+  notifications:
+    notifications: 'THÔNG BÁO'
+    recent: 'mới đây'
+    search: 'Tìm kiếm'
+    search_here: 'Tìm kiếm ở đây'
+    ago: ' cách đây'
+
+  messages:
+    to_day: 'để ngày'
+    reply: 'trả lời'
+    sent: 'Gởi'
+    enter_text_here: 'Nhập văn bản ở đây'
+

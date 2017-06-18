@@ -1,0 +1,30 @@
+= b.fields_for :customer_analysis do |ca|
+  .menu-content.container-fluid.customer-analysis
+    h3 = t('idea.business.customer_analysis_tab')
+    .question-other
+      h6 = t('idea.business.customer_analysis_ques_1')
+      = ca.text_area :idea_solve, placeholder: t('idea.business.enter_text_here'), cols: 30, rows: 10, pattern: '.{80, 400}', required: true
+    .question-other
+      h6 = t('idea.business.customer_analysis_ques_2')
+      ul.question
+        - BigCustomer.all.each do|y|
+            li.radio-question
+              = ca.radio_button :big_customer, y.id
+              span = y.name
+    .question-other
+      h6 = t('idea.business.customer_analysis_ques_3')
+      = ca.text_area :about, placeholder: 'Enter text here', cols: 30, rows: 10, pattern: '.{80, 400}'
+    .question-other
+      h6 = t('idea.business.customer_analysis_ques_4')
+      = select_tag 'idea[business_idea_attributes][customer_analysis_attributes][region][]', options_for_select(CustomerAnalysis.regions.map{ |k, v| [v, k]}), { include_blank: t('idea.business.select_region'), :multiple => true, class: 'paid', required: true}
+    .question-other
+      h6 = t('idea.business.customer_analysis_ques_5')
+      .age-left
+        h6 = t('idea.business.from_age')
+        = ca.select :from_age, CustomerAnalysis::AGES.collect {|p| [ p, p ] }, { include_blank: t('idea.business.select_from_age') }, class: 'paid', required: true
+      .age-left
+        h6 = t('idea.business.to_age')
+        = ca.select :to_age, CustomerAnalysis::AGES.collect {|p| [ p, p ] }, { include_blank: t('idea.business.select_to_age') }, class: 'paid', required: true
+    .question-other
+      h6 = t('idea.business.customer_analysis_ques_6')
+      = ca.text_area :steps, placeholder: t('idea.business.enter_text_here'), cols: 30, rows: 10, pattern: '.{80, 400}', required: true

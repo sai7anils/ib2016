@@ -1,0 +1,2 @@
+$(".reply-message").remove();
+$("#parent-<%=@parent.id%>").parents('.message-element').after("<%= escape_javascript(render partial: 'message_form', locals: { message: @message, idea: @idea} ) %>");

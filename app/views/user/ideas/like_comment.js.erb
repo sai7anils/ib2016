@@ -1,0 +1,33 @@
+<% publish_to like_comment_user_ideas_path do %>
+  $("#more-like-comment-action-<%= @comment.id %>").tooltip('destroy')
+  <% if @status %>
+    var author = <%= @comment.user.id %>
+    if(uid == author){
+      notifications();
+    }
+  <% end %>
+  var idea = <%= @comment.idea.id %>
+  var current_id = parseInt($('.idea-key').attr('data-id'));
+  if (idea == current_id) {
+    var show = '';
+    <% unless @comment.like_comments.count.zero? %>
+      show = '<i class="fa fa-thumbs-up"></i> <%= @comment.like_comments.count %>';
+    <% end %>
+    $('#more-like-comment-action-<%= @comment.id %>').html(show);
+    var tooltipHtml = '<ul class="list-user-like">';
+    <% @comment.like_comments.take(10).each do |like| %>
+      tooltipHtml +='<li><%= like.user.fullname %></li>';
+    <% end %>
+    <% if @comment.like_comments.count > 10 %>
+      tooltipHtml +='<li>and <%= @comment.like_comments.count - 10 %> more...</li>';
+    <% end %>
+    tooltipHtml += '</ul>';
+    setTimeout(function(){
+      $("#more-like-comment-action-<%= @comment.id %>").tooltip({
+        title: tooltipHtml,
+        html: true
+      });
+    }, 1000);
+  }
+
+<% end %>

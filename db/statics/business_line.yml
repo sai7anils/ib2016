@@ -1,0 +1,79 @@
+---
+- id: 1
+  name: Aerospace
+- id: 2
+  name: Agriculture
+- id: 3
+  name: Art &  Crafts
+- id: 4
+  name: Automative
+- id: 5
+  name: Biotechnology
+- id: 6
+  name: Chemicals
+- id: 7
+  name: Construction
+- id: 8
+  name: Consulting
+- id: 9
+  name: Digital Marketing
+- id: 10
+  name: Education
+- id: 11
+  name: Entertainment
+- id: 12
+  name: Fashion
+- id: 13
+  name: Financial
+- id: 14
+  name: Fintech
+- id: 15
+  name: Food and Beverage
+- id: 16
+  name: Gaming
+- id: 17
+  name: Healthcare Services
+- id: 18
+  name: Industrial/Energy
+- id: 19
+  name: Internet / Web Services
+- id: 20
+  name: Journalism
+- id: 21
+  name: Lifestyle
+- id: 22
+  name: Manufacturing
+- id: 23
+  name: Maritime/Shipping
+- id: 24
+  name: Marketing / Advertising
+- id: 25
+  name: Mining
+- id: 26
+  name: Music
+- id: 27
+  name: Nanotechnology
+- id: 28
+  name: Oil and Gas
+- id: 29
+  name: Photogrophy
+- id: 30
+  name: Retail
+- id: 31
+  name: RealEstate
+- id: 32
+  name: Robotics
+- id: 33
+  name: Security
+- id: 34
+  name: Sports
+- id: 35
+  name: Technology
+- id: 36
+  name: Telecommunications
+- id: 37
+  name: Transportation
+- id: 38
+  name: Travel
+- id: 39
+  name: Others

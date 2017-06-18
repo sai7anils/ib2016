@@ -1,0 +1,60 @@
+.col-sm-9.col-sm-offset-3.col-lg-10.col-lg-offset-2.main
+  .row
+    ol.breadcrumb
+      li
+        a href=admin_root_path
+          svg.glyph.stroked.home
+            use xlink:href="#stroked-home"
+      li.active Business Ideas
+  /! /.row
+  .row
+    .col-lg-12
+      h1.page-header All Business Ideas
+  /! /.row
+  .alert.alert-success.message-success.hide
+    b Well done!
+    | Idea has been deleted successfully.
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-body
+          form role="search" action="#{admin_business_ideas_path}"
+            .form-group
+              input.form-control placeholder=("Search Business Ideas") type="text" value="#{params[:keyword]}" name="keyword"
+          table.table.table-bordered.table-hover
+            thead
+              tr
+                th User
+                th Title
+                th Category
+                th Tagline
+                th Problem Statement
+                th Solution
+                th Regions
+                th Patented
+                th width="10%" Actions
+            tbody
+              - @business_ideas.each do |business_idea|
+                tr
+                  td = business_idea.username
+                  td = business_idea.title
+                  td = business_idea.category_name
+                  td = business_idea.tagline
+                  td = truncate(business_idea.problem_statement, length: 100)
+                  td = truncate(business_idea.solution, length: 100)
+                  td = business_idea.regions.join(', ')
+                  td = business_idea.patented_status
+                  td
+                    = link_to admin_business_idea_path(business_idea), class: 'btn btn-primary'
+                      i.fa.fa-eye aria-hidden="true"
+                    | &nbsp;
+                    = link_to "#", "onClick" => "deleteBusinessIdea(#{business_idea.id}, event);" , id: business_idea.id, "data-url" => admin_business_idea_path(business_idea), class: 'btn btn-danger delete_user' do
+
+                      i.fa.fa-trash aria-hidden="true"
+              - if @business_ideas.count.zero?
+                tr
+                  td colspan="9"  No results
+        .panel-footer
+          = paginate @business_ideas, :theme => 'twitter-bootstrap-3', :pagination_class => "pagination-sm"
+  /! /.row
+= render "admin/commons/modal_cofirm"

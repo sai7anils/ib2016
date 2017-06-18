@@ -1,0 +1,60 @@
+= f.fields_for :financial do |fi|
+  .profile.fund
+    .profile-content.fund-content
+      h3 Financials
+
+      h6 Your startup revenues stream measure in ?
+      // select
+      //   option Customer
+      = fi.select :revenue, Financial::REVENUE.collect {|p| [ p.first, p.last] }, { include_blank: '- Select Revenues Measure -' }, class: '', required: true
+
+      h6 How often the startup peforms accounting and finacial calculations ?
+      // select
+      //   option Monthly
+      = fi.select :often, Financial::OFTEN.collect {|p| [ p.first, p.last ] }, { include_blank: '- Select Option -' }, class: '', required: true
+
+      h6 Previous Year Revenue
+      // input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+      = fi.text_field :previous_revenue, placeholder: 'Enter your text here (allow only numbers in $)', required: true
+      h6 Current Year Revenue
+      // input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+      = fi.text_field :current_revenue, placeholder: 'Enter your text here (allow only numbers in $)', required: true
+      h6 Previous Year NetProfit
+      // input type="text" placeholder="Enter your text here (allow only numbers in $)"/
+      = fi.text_field :previous_netprofit, placeholder: 'Enter your text here (allow only numbers in $)', required: true
+      h6 Have you done crowdfunding ?
+      ul.radio-button
+        li
+          = fi.radio_button :crowd_funding, true
+          //input id="1" type="radio" name="1"/
+          span for="1" Yes
+        li
+          = fi.radio_button :crowd_funding, false
+          span for="2" No
+
+      h6 Has an accelerator/incubator put money in startup?
+      ul.radio-button
+        li
+          = fi.radio_button :put_money, true
+          span for="1" Yes
+        li
+          = fi.radio_button :put_money, true
+          span for="2" No
+
+      h6 Upload your CurrentYear/Previous Financial year Balance Sheet document ?
+      .custom-file-upload
+        //input type="file" id="file" name="myfiles[]"/
+        = fi.file_field :balance_sheets, accept: 'application/pdf,application/msword,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation', multiple: true, class: 'upload', id:"uploadBtn"
+        span.sub-note
+          | (Add multiple docs: only PPT/DOC/PDF)
+
+      h6 Upload your CurrentYear/Previous Financial year Cash Flow document ?
+      .custom-file-upload
+        //input type="file" id="file" name="myfiles[]"/
+        = fi.file_field :cash_flows, accept: 'application/pdf,application/msword,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation', multiple: true, class: 'upload', id:"uploadBtn"
+        span.sub-note
+          | Add multiple docs: only PPT/DOC/PDF)
+
+      h6 How much equity and debt has the company raised; what is the capitalization structure ?
+      //textarea# name="" cols="30" rows="3" placeholder="TextArea (here minium 100 characters and 600 maximum)"
+      = fi.text_area :equity_debt, placeholder: 'Enter your text here (allow only numbers in $)', required: true, pattern: '.{100, 600}'

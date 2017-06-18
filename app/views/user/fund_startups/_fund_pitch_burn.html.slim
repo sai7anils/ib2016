@@ -1,0 +1,37 @@
+= f.fields_for :fund_pitch_burn do |pb|
+  .profile.fund
+    .profile-content.fund-content
+      h3 Pitch Burns
+
+      h6 Upload Startup Pitch Presentation
+      .custom-file-upload
+        //input type="file" id="file" name="myfiles[]"/
+        = pb.file_field :pitch, accept: 'application/pdf,application/msword,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation', class: 'upload', id:"uploadBtn"
+        span.sub-note
+          | (It will allows only  PPT & PDF)
+
+      h6 Upload Startup Video Pitch Presentation
+      .custom-file-upload
+        //input type="file" id="file" name="myfiles[]"/
+        = pb.file_field :video, accept: 'video/*', class: 'upload', id:"uploadBtn1"
+        span.sub-note
+          | (It will allows only  Video files)
+
+      h6 Upload your any research documents / Legal documents (If any)
+      // .custom-file-upload
+      //   input type="file" id="file" name="myfiles[]"/
+      //   span.sub-note
+      //     | (Add multiple docs)
+      #attachments
+        = pb.fields_for :attachments, :wrapper => 'inline' do |a|
+          = render 'user/ideas/attachment_fields', f: a
+        .links
+          = link_to_add_association pb, :attachments, :render_options => { :wrapper => 'inline' }, partial: 'user/ideas/attachment_fields'
+            i class="fa fa-plus-circle fa-2x"
+      h6 When you prefer for exit ?
+      // select
+      //   option Merger & Acquisition (M&A)
+      = pb.select :prefer_exit, FundPitchBurn::PREFER_EXIT.collect {|p| [p.first, p.last] }, { include_blank: '- Select Prefer For Exit -' }, class: 'paid', required: true
+      h6 How will valuation of an exit be determined given market comparables?
+      // textarea# name="" cols="30" rows="3" placeholder="Enter text here"
+      = pb.text_area :validation, placeholder: 'Enter text here', required: true, pattern: '.{100, 600}', cols: "30", rows: "5"

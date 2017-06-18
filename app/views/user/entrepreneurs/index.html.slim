@@ -1,0 +1,84 @@
+#page-wrapper
+  .switches
+    .col-4
+      .col-md-9.p0
+        .col-md-3.col-xs-12
+          h3.c-font-17 style="line-height:2;"  = t('user.dashboard')
+        .col-lg-9.search-entrepreneur.container-fluid
+          .col-lg-3
+            select.skill.form-control
+              option value=""
+              = options_for_select(Entrepreneur.pro_skill_options, selected: params[:skill_type])
+          .col-lg-4
+            select.category.form-control
+              option value=""
+              = options_for_select(Entrepreneur.pro_type_options, selected: params[:profession_type])
+          .col-lg-4
+            select.country.form-control
+              option value=""
+              = options_for_select(CS.countries.collect {|k,v| [ v, k ] }, selected: params[:country])
+          .col-lg-1
+            i.fa.fa-filter.clear-filter
+        .clear
+        section.list-user
+          - if @users.present?
+            - @users.each do |user|
+              .col-md-4.mb30.idea-block
+                .entrepreneur-block.container-fluid
+                  .col-md-12.activity-rows.other-page style=("text-align: center;")
+                    = link_to get_profile(user) do
+                      .circular--landscape
+                       = image_tag asset_path(user.avatar), class: 'img-responsive'
+                    .clearfix
+                  .col-md-12.switch-right-grid-desc
+                    = link_to get_profile(user), class: 'normal-link' do
+                      h5.address-height= user.fullname
+                    h5.address-height
+                      = user.location
+                    .line
+                      = link_to t('user.read_more'),  entrepreneur_path(user), class: 'readmore',id: "entre"
+          - else
+            .col-md-12
+              = t('user.no_results')
+        .load-more
+          i.fa.fa-spinner.fa-spin
+          = t('user.load_more')
+      = render 'applications/closed_ideas'
+      .clearfix
+javascript:
+  $(document).ready(function () {
+    $('.state').next().find('input').attr('placeholder', "#{t('user.select_state')}");
+    $(".country").select2({
+      placeholder: "#{t('user.select_country_input')}",
+      allowClear: true
+    });
+    $(".category").select2({
+      placeholder: "#{t('user.select_profession_type')}",
+      allowClear: true
+    });
+    $(".skill").select2({
+      placeholder: "#{t('user.select_skill_type')}",
+      allowClear: true
+    });
+    $(".country, .category, .skill").on('change', function(){
+      window.location = '?country=' + $('.country').val() + '&profession_type=' + $('.category').val() + '&skill_type=' + $('.skill').val();
+    });
+    $(".clear-filter").on('click', function(){
+      window.location = '?country=' + '&profession_type=' + '&skill_type=';
+    });
+  });
+  var page = 1;
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+      $('.load-more').show();
+      $.ajax({
+        url: '/user/entrepreneurs/load_more/',
+        data: {country: '#{params[:country]}', skill: '#{params[:skill]}', profession_type: '#{params[:profession_type]}', page: (page + 1)},
+        success: function(data){
+          $('.load-more').hide();
+          $('.list-user').append(data);
+          page++;
+        }
+      });
+    }
+  });

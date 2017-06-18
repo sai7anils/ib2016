@@ -1,0 +1,17 @@
+#page-wrapper
+  .switches
+    .acount-section.event-section
+      .acount-title.container-fluid
+        h2 = t('event.edit_event')
+      .event-content
+        .event.container-fluid
+          - if flash[:update_event_success]
+            .alert.alert-success.update-event-message
+              b = t('event.well_done')
+              = t('event.event_update_success')
+
+          = simple_form_for(@event, url: user_event_path, html: { method: :patch, class: 'event-form', id: 'create-event-form' }) do |f|
+            = render partial: "form", locals: {f: f}
+
+      = render partial: "more_events", locals: {}
+  .clearfix

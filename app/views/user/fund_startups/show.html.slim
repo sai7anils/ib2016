@@ -1,0 +1,286 @@
+#page-wrapper
+  .switches
+    .acount-section
+      .acount-title.container-fluid
+        h2 Fund Startup Details
+      .fund-detail-content
+        .detail-title.container-fluid
+          h3.funding-goal
+            = image_tag 'icon-database.png'
+            | Funding Goal:
+            span &nbsp;No data $
+          .user-info
+            // = image_tag 'img-user-business.png', :class => 'img-user'
+            = link_to get_profile(@fund_startup.user) do
+              = image_tag @fund_startup.user_avatar, :class => 'img-user'
+            h4.name #{@fund_startup.username}
+            .info-group
+              h5
+                i.fa.fa-map-marker
+                | #{@fund_startup.startup_location}
+              h5
+                i.fa.fa-globe
+                | #{@fund_startup.startup_website}
+              h5
+                i.fa.fa-flag
+                | Founded in #{@fund_startup.startup_founded}
+          button.btn-request Request for more details
+        .sub-info-section.container-fluid
+          .title-group
+            h5 Business Line
+            h5.sub-title #{@fund_startup.startup_category_name}
+          .sub-info
+            h6
+              = image_tag 'Views-Icon-small.png'
+              | #{@fund_startup.views} views
+            h6
+              = image_tag 'icon-pig.png'
+              | Nodata investors
+        .content-section
+          h2.title
+            = image_tag 'icon-service.png'
+            | Product/ Services
+          .main-content-section
+            h5.sub-title Defined Product or services
+            p #{@fund_startup.product_service_about}.
+            ul
+              li
+                h5.sub-title Primary Business
+                p #{@fund_startup.product_service_offering_type_name}
+              li
+                h5.sub-title Product Name
+                p #{@fund_startup.product_service_name}
+              li
+                h5.sub-title Product Type
+                p #{@fund_startup.product_service_product_type}
+              li
+                h5.sub-title Product SubType
+                p #{@fund_startup.product_service_product_subtype}
+            h5.sub-title Product Details
+            p #{@fund_startup.product_service_description}
+            h5.sub-title Product Competative
+            p #{@fund_startup.product_service_product_competitive}
+        .content-section
+          h2.title
+            = image_tag 'icon-business.png'
+            | Business Objective
+          .main-content-section
+            h5.sub-title Startup Process
+            p #{@fund_startup.fund_business_model_startup_process}
+            ul
+              li
+                h5.sub-title Business Model
+                p #{@fund_startup.business_type_name}
+              li
+                h5.sub-title Sub-Business Model
+                p #{@fund_startup.business_subtype_name}
+            h5.sub-title Cost To Build An MVP
+            p #{@fund_startup.mvp}
+        .content-section
+          h2.title
+            = image_tag 'icon-market.png'
+            | Market & Sales
+          .main-content-section
+            h5.sub-title Market Channels
+            p #{@fund_startup.fund_market_trend_startup_process}
+            ul
+              li
+                h5.sub-title Market Trend
+                p #{@fund_startup.market_growing_in_text}
+              li
+                h5.sub-title Market Size (Annually)
+                p #{@fund_startup.market_size_in_text}
+              li
+                h5.sub-title Market Share (Approx. in %)
+                p #{@fund_startup.approx}
+            h5.sub-title Sales Plan
+            p #{@fund_startup.sales_plan}
+        .content-section
+          h2.title
+            = image_tag 'icon-analytics.png'
+            | Customer Analysis
+          .main-content-section
+            ul
+              li
+                h5.sub-title Target Audience
+                p #{@fund_startup.customer_target_regions} - Age: #{@fund_startup.customer_from_age} to #{@fund_startup.customer_to_age}
+              li
+                h5.sub-title Potential Customers Feedback
+                p #{@fund_startup.potential_customer_feedback_in_text}
+            h5.sub-title Soving the Customer Problem
+            p #{@fund_startup.customer_problem_explain}
+            h5.sub-title Our Potential Competitors
+            p #{@fund_startup.potential_competitor}
+        .content-section
+          h2.title
+            = image_tag 'icon-competative.png'
+            | Competative
+          .main-content-section
+            h5.sub-title Competative Strategy
+            p #{@fund_startup.competitive_protection_strategy}
+            h5.sub-title Competative List
+            table
+              tr
+                th Company Name
+                th Primary Business Line
+                th Country
+                th Revenue (if know)
+                th Website URL (Refference)
+              - @fund_startup.competitor_teams.each do |competitor_team|
+                tr
+                  td #{competitor_team.name}
+                  td #{competitor_team.business_line}
+                  td #{competitor_team.country_name}
+                  td $#{competitor_team.revenue}
+                  td #{competitor_team.website}
+        .content-section.container-fluid
+          .legal-section
+            h2.title
+              = image_tag 'icon-legal-black.png'
+              | Advisors
+            .main-content-section
+              h5.sub-title Business Entity
+              p Limited Liability Partnership
+              h5.sub-title Intellectual Property (IP)
+              p Industrial design rights
+              h5.sub-title IP Status
+              p Granted
+          .legal-section
+            h2.title
+              = image_tag 'icon-advisor.png'
+              | Advisors
+            .main-content-section
+              h5.sub-title Has the startup employed the use of any professional advisors?
+              p #{@fund_startup.legal_advisor_professional_advisor.to_yes_no.capitalize}
+              h5.sub-title Does the startup have a functioning board of advisors?
+              p #{@fund_startup.legal_advisor_board_advisor.to_yes_no.capitalize}
+              ul
+                li
+                  h5.sub-title Board of Advisors
+                  p #{@fund_startup.legal_advisor_member} Members
+                li
+                  h5.sub-title Utilized advise hours
+                  p #{@fund_startup.legal_advisor_professional_advice} Hours
+                li
+                  h5.sub-title Board of Managers
+                  p #{@fund_startup.legal_advisor_board_manager} Members
+        .content-section
+          h2.title
+            = image_tag 'icon-funding.png'
+            | Funding Rounds
+          .main-content-section
+            | No data
+            / table
+            /   tr
+            /     th Funding Round
+            /     th Amount
+            /     th Date
+            /     th By Investor
+            /   tr
+            /     td Series A
+            /     td 2000$
+            /     td 12/30/2015
+            /     td 500 Startups
+            /   tr
+            /     td Series A
+            /     td 2000$
+            /     td 12/30/2015
+            /     td 500 Startups
+        .content-section.container-fluid
+          h2.title
+            = image_tag 'icon-financial.png'
+            | Financials
+          .main-content-section
+            ul
+              li
+                h5.sub-title Revenue Stream
+                p #{@fund_startup.financial_revenue_in_text}
+              li
+                h5.sub-title Account Perfoming
+                p #{@fund_startup.financial_often_in_text}
+              li
+                h5.sub-title Current Year Revenue ($)
+                p #{@fund_startup.financial_current_revenue} $
+              li
+                h5.sub-title Previous Year NetProfit ($)
+                p #{@fund_startup.financial_previous_netprofit} $
+            ul
+              li
+                h5.sub-title Previous Year Revenue ($)
+                p #{@fund_startup.financial_previous_revenue} $
+              li
+                h5.sub-title Any Crowdfunding?
+                p #{@fund_startup.financial_crowd_funding.to_yes_no.capitalize}
+              li
+                h5.sub-title Accerlator\Incubator is invested?
+                p #{@fund_startup.financial_put_money.to_yes_no.capitalize}
+            h5.sub-title Capitalization Structure
+            p #{@fund_startup.financial_equity_debt}
+            .legal-section
+              h5.sub-title Balance sheet docs
+              - @fund_startup.financial_balance_sheets.each do |sheet|
+                p.text-small
+                  = image_tag 'icon-pdf.jpg'
+                  = link_to sheet.file.original_filename, sheet.url
+            .legal-section
+              h5.sub-title CashFlow docs
+              - @fund_startup.financial_balance_sheets.each do |sheet|
+                p.text-small
+                  = image_tag 'icon-pdf.jpg'
+                  = link_to sheet.file.original_filename, sheet.url
+        .content-section
+          h2.title
+            = image_tag 'icon-valuation.png'
+            | Valuations
+          .main-content-section
+            ul
+              li
+                h5.sub-title Funding Goal ($)
+                p Nodata
+              li
+                h5.sub-title Fund Already raised ($)
+                p #{@fund_startup.valuation_total_fund} $
+              li
+                h5.sub-title Outstanding Share
+                p #{@fund_startup.valuation_currently_outstanding} $
+              li
+                h5.sub-title Seeking for type of capital
+                p #{@fund_startup.valuation_capital_type_name}
+            ul
+              li
+                h5.sub-title Pre-Money Valuation ($/per year)
+                p #{@fund_startup.valuation_pre_money} $
+              li
+                h5.sub-title Offering Business Stake (%)
+                p #{@fund_startup.valuation_business_stake}%
+              li
+                h5.sub-title Prefer for Exit
+                p #{@fund_startup.fund_pitch_burn_prefer_exit_in_text}
+            h5.sub-title Funds will be used in ?
+            p #{@fund_startup.valuation_use_fund}
+            h5.sub-title Exit Valuation
+            p #{@fund_startup.fund_pitch_burn_validation}
+            h5.sub-title Next 5 years ?
+            p No data
+        .content-section.container-fluid
+          h2.title
+            = image_tag 'icon-picthburn.png'
+            | PitchBurns
+          .main-content-section
+            .container-fluid
+              .legal-section
+                h5.sub-title Pitch Presentation
+                p.text-small
+                  = image_tag 'icon-pdf.jpg'
+                  = link_to @fund_startup.fund_pitch_burn_pitch.file.original_filename, @fund_startup.fund_pitch_burn_pitch.url
+              .legal-section
+                h5.sub-title Research Docs
+                - @fund_startup.fund_pitch_burn_attachments.each do |attachment|
+                  p.text-small
+                    = image_tag 'icon-pdf.jpg'
+                    = link_to attachment.file.file.original_filename, attachment.file.url
+            .video
+              h5.sub-title Video's
+              = link_to @fund_startup.fund_pitch_burn_video.url
+                = image_tag 'img-video.jpg'
+

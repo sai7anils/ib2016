@@ -1,0 +1,84 @@
+<%= form_for(@settings, url: admin_setting_path, method: 'PUT') do |f| %>
+  <% if !@settings.errors.full_messages.count.zero? %>
+    <div class="alert alert-danger" style="margin: 20px;">
+      <ul class="list-message-error">
+        <% @settings.errors.full_messages.each do |error_message| %>
+          <li class="alert-alert-error alert-danger">
+            <%= error_message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Name *</label>
+      <%= f.text_field :name, class: 'form-control', placeholder: 'Name', required: true %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>URL</label>
+      <%= f.url_field :url, class: 'form-control', placeholder: 'URL'%>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>SEO Title *</label>
+      <%= f.text_field :seo_title, class: 'form-control', placeholder: 'SEO Title', required: true %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Video *</label>
+      <%= f.url_field :video, class: 'form-control', placeholder: 'Ex: http://www.youtube.com/v/ZeStnz5c2GI?fs', required: true %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Meta Description</label>
+      <%= f.text_area :meta_description, class: 'form-control', placeholder: 'Meta Description', rows: 5 %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Meta Keywords</label>
+      <%= f.text_area :meta_keywords, class: 'form-control', placeholder: 'Meta Keywords', rows: 5 %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Facebook</label>
+      <%= f.url_field :facebook, class: 'form-control', placeholder: 'Facebook' %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Linkedin</label>
+      <%= f.url_field :linkedin, class: 'form-control', placeholder: 'Linkedin' %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Tumblr</label>
+      <%= f.url_field :tumblr, class: 'form-control', placeholder: 'Tumblr' %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Instagram</label>
+      <%= f.url_field :instagram, class: 'form-control', placeholder: 'Instagram' %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>Mail from address *</label>
+      <%= f.email_field :mail_from_address, class: 'form-control', placeholder: 'Mail from address' %>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit"> Save Changes</button>
+    </div>
+  </div>
+<% end%>
