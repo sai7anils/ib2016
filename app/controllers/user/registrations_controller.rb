@@ -145,7 +145,7 @@ class User::RegistrationsController < Devise::RegistrationsController
     #devise_parameter_sanitizer.for(:account_update) do |u|
       #u.permit(:country, :city, :region, :photo, entrepreneur_attributes: [:first_name, :last_name])
    # end
-    devise_parameter_sanitizer.permit(:account_update, keys: [:country, :city, :region, :photo, entrepreneur_attributes: [:first_name, :last_name]]
+    devise_parameter_sanitizer.permit(:account_update, keys: [:country, :city, :region, :photo, entrepreneur_attributes: [:first_name, :last_name]])
   end
 
   # The path used after sign up.
